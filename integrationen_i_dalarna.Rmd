@@ -103,7 +103,7 @@ Bearbetning: Samhällsanalys, Region Dalarna"
 utbildning_85_utskrift<-utbildning_85_df %>%
   filter(utb_niva!="Uppgift saknas") %>%
     group_by(år,region,kön,utb_niva) %>%
-      summarize(antal=sum(Befolkning)) %>%
+      summarize(antal=sum(Antal)) %>%
         mutate(andel=(antal/sum(antal))*100)
 
   diagramtitel <-paste0("Utbildningsnivå (25-64 år) i Dalarna ", unique(utbildning_df$år))
