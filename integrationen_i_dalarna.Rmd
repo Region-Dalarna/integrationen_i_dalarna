@@ -1,6 +1,6 @@
 ---
 title: Integrationen i Dalarna
-author: ""
+author: "Mats Andersson"
 date: ""
 output: 
   html_document:
@@ -81,14 +81,79 @@ Här ska vi ha en sammanfattning av rapporten. Det ska vara en punktlista med de
 
 Här kommer en introduktion till rapporten. Det ska vara en kort text som förklarar vad rapporten handlar om och vad läsaren kan förvänta sig att hitta i rapporten.
 
-# Första avsnittet
-Här kommer första avsnittet. 
+*Vad är integration och varför är det viktigt?*
 
-## Första avsnittets första underrubrik
-Här är det första avsnittets första underrubrik
+# Bakgrund
+Referera till rapporten från 2019
 
-## Första avsnittets andra underrubrik
-Här är det första avsnittets andra underrubrik
+Var står vi nu?
+
+## Den utrikes födda befolkningen i Sverige och i Dalarna
+För att få en förståelse för den utrikes födda befolkningen i Dalarna och hur invandringen sett ut över tid, behöver situationen i riket som helhet analyseras. Den första större invandring som påverkat Dalarna i modern tid var den arbetskraftsinvandring som skedde efter andra världskriget. Denna epok varade i stort sett under två decennier, d.v.s. under 1950- och 1960-talet.
+
+Den svenska ekonomin expanderade snabbt efter kriget,
+vilket gjorde att efterfrågan på arbetskraft utifrån var stor. Bristen berodde även på att ålderskullarna födda på 1920- och 30-talet var små. Efter andra världskriget och fram till 1970-talet låg arbetskraftsinvandringen i hela Sverige på en förhållandevis hög nivå. Arbetskraftsinvandrarna
+kom främst från Norden, men även från övriga Europa. En överenskommelse om en gemensam nordisk arbetsmarknad år 1954, innebar att framför allt många finländare invandrade under 1960- och 70-talet då det var lågkonjunktur i Finland. I Dalarnas län bosatte sig dessa främst i kommuner där det fanns stor tillverkningsindustri som Gagnef, Borlänge, Avesta
+och Ludvika. En mycket liten andel av invandringen
+under denna tid kom från andra världsdelar. I slutet av 1970-talet upphörde i princip all arbetskraftsinvandring för en tid.
+
+I mitten av 1980-talet växte ny typ av immigration fram i Sverige. Tidigare hade de invandrare som sökt sig till Sverige av flyktingskäl främst gjort det under enstaka katastrofer. Detta scenario förändrades efter år 1984 i takt med den växande globaliseringen och politiska krav på att den rika världen bör ta sitt ansvar och acceptera flyktingar från Asien, Afrika och Mellanöstern. Sverige var ett av de länder som till en början framträdde med en jämförelsevis generös flyktingpolitik. År 1987–90 togs omkring 20 000 flyktingar emot årligen i Sverige. Detta gjorde att antalet immigranter i Dalarna ökade
+under tidsperioden.
+
+När Jugoslavien drabbades av flera inbördeskrig under
+första hälften av 1990-talet ökade antalet immigranter till Sverige väsentligt. I utsatta krigszoner, inte minst från Bosnien-Hercegovina, flydde långt över 100 000 människor till Sverige. Under andra hälften av 1990-talet minskade invandringen men har sedan dess varit högre. Under 2000-talet har invandringen ökat över tid, till stor del på grund av de människor som flyr från krig och förtryck i bland annat Irak, Afghanistan, Somalia
+och Syrien. Idag är flyktinginvandringen ett strukturellt fenomen som inte förväntas upphöra så länge det finns förtryck och krig i världen.3 Att invandringen har ökat beror även på ett ökat antal arbetskraftsinvandrare från nya EU-stater och fler utländska studenter.
+
+Efter att kriget bröt ut i Syrien 2011, ökade invandringen kraftigt och nya toppnoteringar av antalet asylsökande gjordes varje år. Under 2015 var antalet asylsökande som högst, då 162 877 personer sökte asyl i Sverige. Detta var mer än dubbelt så många som under 2014 och nästan en fördubbling av den tidigare högsta noteringen från 1992 då det var krig i forna Jugoslavien.
+
+Under den stora ökning av antalet asylsökande som
+skedde hösten 2015 hamnade migrations- och integrationsfrågorna högt upp på den politiska dagordningen och Sverige införde en mer restriktiv immigrationspolitik. I Dalarnas län slog invandringen rekord år 2016 med 4 725 personer som immigrerade under året. Därefter har antalet immigranter i länet minskat och antalet var 3 104 personer år 2017 och 2 628 personer år 2018.
+
+*Fram till stycke om asylrätt, sid 5*
+
+## Den demografiska situationen i Sverige
+Sverige är sedan några år inne i en demografisk fas
+där de stora babyboom-kullarna från slutet av 1940-
+och början av 1950-talet uppnår pensionsålder. Många
+svenska kommuner har en alltmer ålderstigen befolkning, en effekt av den urbaniseringsvåg som pågått under hela 1900-och 2000-talet då många unga lämnat landsbygden och mindre tätorter för residens- och universitetsstäder.
+
+En stor andel äldre i befolkningen medför ekonomiska påfrestningar för dessa kommuner då allt färre i arbetsför ålder ska försörja allt fler äldre och
+barn. I Långtidsutredningen år 2015 gjordes beräkningar på hur mycket kommunalskatten skulle behöva höjas i kommunerna för att upprätthålla samma servicenivå år 2040 som vi har idag, som en följd av den förändrade demografiska strukturen med en allt större andel äldre i befolkningen. Enligt dessa beräkningar behöver kommunalskatten höjas med en krona i storstadskommuner och sex kronor i glesbefolkade kommuner för att upprätthålla
+servicenivån, bara som en följd av den förändrade
+demografin. Om kostnaderna för den offentliga servicen ökar i ungefär samma takt som den har gjort historiskt behövs istället en höjning av kommunalskatten med åtta kronor i storstadskommuner och arton kronor i glesbefolkade kommuner. Det rör sig med andra ord om orimliga skattehöjningar, där beräkningarna snarare ska ses som en signal om att något måste göras åt situationen än en rekommendation till kommunerna om hur mycket skatten måste höjas. 
+
+Förutom att den demografiska situationen medför färre skattebetalare som ska försörja allt fler äldre så innebär den också ett kompetensförsörjningsproblem.
+
+*Bild över befolkningens åldersfördelning, kvinnor och män samt inrikes och utrikes födda*
+
+Vid en analys av åldersfördelningen i Dalarnas befolkning uppdelat på den inrikes- och utrikes födda befolkningen blir det tydligt att den utrikes födda befolkningen i länet är väsentligt yngre än den inrikes födda, och har en större andel personer i arbetsför ålder (se diagram 12). Detta beror på att de personer som invandrat generellt är yngre än inrikes födda. Följden blir att invandringen totalt sett har en föryngrande effekt på befolkningen. Det finns även stora variationer i medelålder mellan olika grupper av utrikes födda beroende på invandringsår och födelseland.8 Utrikes födda utgör
+cirka 13 procent av den totala befolkningen i Dalarnas län och är därmed betydligt färre än inrikes födda.
+
+Medelåldern i Dalarnas län var år 2018 totalt sett 43,6 år vilket är högre än i riket som helhet där medelåldern var 41,2 år. När de vanligaste födelseländerna i Dalarna studeras går det att urskilja stora skillnader mellan grupperna. För personer som är födda i Finland där de flesta varit i landet en längre tid är medelåldern 67 år. I Syrien, Somalia, Eritrea och Irak där majoriteten av
+befolkningen har varit en kortare tid i landet är befolkningen betydligt yngre och medelåldern varierar mellan 28–33 år.
+
+*Diagram - historisk förskjutning mellan inrikes och utrikes födda*
+
+Mellan år 2006 och 2017 minskade antalet inrikes födda i arbetsför ålder mellan 16–64 år i Dalarnas län med 17 970 personer, samtidigt som antalet utrikes födda i samma åldersgrupp ökade med 12 512 personer. Minskningen av antalet inrikes födda berodde på att ålderskullarna som fyllde 65 år var större än de som fyllde 16 år, samt en större inrikes utflyttning än inflyttning. Den inrikes födda befolkningen i arbetsför ålder minskade allra mest
+åren 2010–2015, vilket berodde på att det stora antalet personer födda i slutet av 1940-talet fyllde 65 och därmed uppnådde pensionsålder.
+
+*Prognos över fortsatt förskjutning mellan inrikes och utrikes födda*
+
+Enligt *SCB:s* befolkningsprognos förväntas antalet utrikes födda i Dalarnas län mellan 16–64 år att öka med 11 031 personer mellan 2018 och 2030, medan antalet inrikes födda personer i länet förväntas att minska med 10 228 personer, enligt prognosen. Hela den prognostiserade ökningen av antalet personer mellan 16–64 år på 803 personer i Dalarna fram till
+2030 beror således på fler utrikes födda, vilket innebär att det är där arbetskraftsreserven finns. 
+
+Enligt *Arbetsförmedlingen* är det extra viktigt för små kommuner att ta vara på den resurs som utrikesfödda kan utgöra, annars riskerar de att få mycket svårt med arbetskraftsförsörjningen.
+Arbetsförmedlingen betonar möjligheterna med att använda den arbetskraftsreserv som de utrikes födda
+utgör men ser samtidigt att det finns vissa hinder, såsom validering av nyanländas kompetens och ovilja att anställa nyanlända. De menar att Dalarnas arbetsmarknad på sikt står... *citat i gamla rapporten*
+
+#Arbetsmarknadskonjunktur och invandring - då och nu
+
+En viktig aspekt för integrationen är hur stark arbetsmarknaden är vid tidpunkten för invandringen.
+
+#Vägen till arbete
+
+
+
 
 ```{r, echo=FALSE}
 diagram_capt <- "Källa: SCB:s öppna statistikdatabas
@@ -156,8 +221,13 @@ Lite mer text. Och sedan ett till diagram.
 utb_85_fig
 ```
 
-## Här kommer en underrubrik till
-Lite text
+#Vägen till språk och utbildning
+
+#Vägen till bostad
+
+#Flyttmönster (hur flyttar de utrikes födda?)
+
+
 
 # Och så en huvudrubrik
 Här ser vi hur man gör en länk: På nationell nivå har SCB jämfört den standardvägda lönen, dvs. lönen när hänsyn tas 
@@ -165,17 +235,21 @@ till bland annat ålder och utbildningsnivå, för att synliggöra om det kan fi
 Slutsatsen blev att kvinnors standardvägda lön är ungefär 95 procent av männens standardvägda lön, det vill säga det
 finns en oförklarad löneskillnad mellan kvinnor och män [(SCB)](<https://www.scb.se/hitta-statistik/statistik-efter-amne/arbetsmarknad/loner-och-arbetskostnader/lonestrukturstatistik-hela-ekonomin/pong/tabell-och-diagram/kvinnors-lon-i-procent-av-mans-lon-efter-sektor>)_blank.
 
-## Underrubrik igen
-Lite text
 
-# Huvudrubrik
-Lite text
+# Sammanfattande diskussion
+Vad ser vi ur ett integrationsperspektiv?
 
-## Underrubrik igen
-Lite text
+Vad är positivt?
+Vad är negativt?
 
-## Underrubrik igen
-Lite text
+Hur går det i skolan?
+
+Hur kommer de i arbete?
+Var jobbar de?
+
+Hur har det ekonomiska biståndet utvecklats?
+
+Hur skulle Dalarna se ut
 
 
 ```{r, include = FALSE}
