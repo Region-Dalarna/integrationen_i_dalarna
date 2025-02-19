@@ -152,7 +152,11 @@ En viktig aspekt för integrationen är hur stark arbetsmarknaden är vid tidpun
 
 #Vägen till arbete
 
-
+*Vilka kommer i arbete?*
+*När kommer de i arbete?*
+*Vilka är de yrken som de arbetar i?*
+*Hur är matchningen mot utbildning?*
+*Kvinnor och män, jämfört med inrikes födda*
 
 
 ```{r, echo=FALSE}
@@ -223,10 +227,17 @@ utb_85_fig
 
 #Vägen till språk och utbildning
 
+*Vistelsetid och betyg i skola*
+*Vistelsetid och inträde på arbetsmarknad*
+
 #Vägen till bostad
+
+*Upplåtelseform*
+*Trångboddhet*
 
 #Flyttmönster (hur flyttar de utrikes födda?)
 
+*Longitudinell studie*
 
 
 # Och så en huvudrubrik
