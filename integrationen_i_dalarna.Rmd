@@ -69,13 +69,13 @@ Här ska vi ha en sammanfattning av rapporten. Det ska vara en punktlista med de
 
 <ul>
 
-<li>Första punkten. </li>
+<li>Första punkten </li>
 
-<li>Andra punkten.</li>
+<li>Andra punkten </li>
     
-<li>Tredje punkten.</li>
+<li>Tredje punkten </li>
 
-<li>Fjärde punkten.</li>
+<li>Fjärde punkten </li>
 
 # Introduktion {-}
 
@@ -97,7 +97,9 @@ Beroende på sammanhang kan integration ha olika betydelser:
 
 En viktig del att belysa i ett integrationsperspektiv är hur utrikes födda förhåller sig till inrikes födda inom ett antal samhällsområden. Det kan vara utbildning, arbetsmarknad, boende. Den här rapportens syfte är att redovisa aktuell statistik relaterat till utrikes föddas integration i samhället i Dalarna.
 
+Delmi.se refererar till ett antal statistikområden - arbetsmarknad, demografi, demokrati, inkomst, lagar och regelverk, utbildning och samhälle. 
 
+*titta på dessa områden och se om det är en struktur att bygga vidare på*
 
 # Bakgrund
 
@@ -165,17 +167,21 @@ Enligt *Arbetsförmedlingen* är det extra viktigt för små kommuner att ta var
 Arbetsförmedlingen betonar möjligheterna med att använda den arbetskraftsreserv som de utrikes födda
 utgör men ser samtidigt att det finns vissa hinder, såsom validering av nyanländas kompetens och ovilja att anställa nyanlända. De menar att Dalarnas arbetsmarknad på sikt står... *citat i gamla rapporten*
 
-#Arbetsmarknadskonjunktur och invandring - då och nu
+# Arbetsmarknadskonjunktur och invandring - då och nu
 
 En viktig aspekt för integrationen är hur stark arbetsmarknaden är vid tidpunkten för invandringen.
 
-#Vägen till arbete
+Hämta information från SCB som asylinvandringen
+
+# Vägen till arbete
 
 *Vilka kommer i arbete?*
 *När kommer de i arbete?*
 *Vilka är de yrken som de arbetar i?*
 *Hur är matchningen mot utbildning?*
 *Kvinnor och män, jämfört med inrikes födda*
+*Vilka arbetar inte?*
+*Hur ser etableringen ut baserat på vistelsetid?* - Kolla i rapporten om kvinnor och män
 
 
 ```{r, echo=FALSE}
@@ -244,22 +250,22 @@ Lite mer text. Och sedan ett till diagram.
 utb_85_fig
 ```
 
-#Vägen till språk och utbildning
+# Vägen till språk och utbildning
 
 *Vistelsetid och betyg i skola*
 *Vistelsetid och inträde på arbetsmarknad*
 
-#Vägen till bostad
+# Vägen till bostad
 
 *Upplåtelseform*
 *Trångboddhet*
 
-#Flyttmönster (hur flyttar de utrikes födda?)
+# Flyttmönster (hur flyttar de utrikes födda?)
 
 *Longitudinell studie*
 
 
-# Och så en huvudrubrik
+# Demokrati och tillit
 Här ser vi hur man gör en länk: På nationell nivå har SCB jämfört den standardvägda lönen, dvs. lönen när hänsyn tas 
 till bland annat ålder och utbildningsnivå, för att synliggöra om det kan finnas en diskrimineringsaspekt i lönenivån. 
 Slutsatsen blev att kvinnors standardvägda lön är ungefär 95 procent av männens standardvägda lön, det vill säga det
@@ -273,13 +279,11 @@ Vad är positivt?
 Vad är negativt?
 
 Hur går det i skolan?
-
 Hur kommer de i arbete?
 Var jobbar de?
-
 Hur har det ekonomiska biståndet utvecklats?
-
-Hur skulle Dalarna se ut
+Hur går det med demokratin och tilliten till institutioner?
+Hur skulle Dalarna se ut, utan de utrikes födda?
 
 
 ```{r, include = FALSE}
