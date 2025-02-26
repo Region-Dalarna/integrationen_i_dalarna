@@ -95,11 +95,19 @@ Beroende på sammanhang kan integration ha olika betydelser:
 
 <br>
 
-En viktig del att belysa i ett integrationsperspektiv är hur utrikes födda förhåller sig till inrikes födda inom ett antal samhällsområden. Det kan vara utbildning, arbetsmarknad, boende. Den här rapportens syfte är att redovisa aktuell statistik relaterat till utrikes föddas integration i samhället i Dalarna.
-
-Delmi.se refererar till ett antal statistikområden - arbetsmarknad, demografi, demokrati, inkomst, lagar och regelverk, utbildning och samhälle. 
+Delmi.se refererar till ett antal statistikområden - arbetsmarknad, demografi, demokrati, inkomst, lagar och regelverk, utbildning och samhälle.
 
 *titta på dessa områden och se om det är en struktur att bygga vidare på*
+
+Amnå och Stigendal (2021) betonar vikten av att vara tydlig vid användningen av begrepp kopplade till integration och hänvisar till Nationalencyklopedins definition - *integration är en process som leder till att skilda enheter förenas, men det kan även gälla resultatet av en sådan process* - och sociologins användning av begreppen strukturell och kulturell integration.
+
+Den strukturella integrationen handlar om skyldigheter och rättigheter via samhälleliga system, lagar och regler. Den kulturella integrationen handlar mer om hur vi upplever oss som integrerade via normer, värderingar och identiteter. En känsla av delaktighet skapar kulturell integration medan en lag skapar strukturell integration. I grunden handlar det här om alla individer som lever i ett land, även om den vardagliga diskussionen i mångt och mycket handlar om invandrare i förhållande till de som är födda och uppväxta i ett land.
+
+En viktig del att belysa i ett integrationsperspektiv är hur utrikes födda förhåller sig till inrikes födda inom ett antal samhällsområden. Det kan vara utbildning, arbetsmarknad, boende. Den här rapportens syfte är att redovisa aktuell statistik relaterat till utrikes föddas integration i samhället i Dalarna.
+
+Vilka dimensioner ska belysas och varför utrikes födda? Inrikes födda av två utrikes födda (andra generationens invandrare)? Utrikes födda inom olika kategorier?
+
+
 
 # Bakgrund
 
@@ -254,6 +262,7 @@ utb_85_fig
 
 *Vistelsetid och betyg i skola*
 *Vistelsetid och inträde på arbetsmarknad*
+*studerande eller inte aktiva på arbetsmarknaden utifrån vistelsetid*
 
 # Vägen till bostad
 
