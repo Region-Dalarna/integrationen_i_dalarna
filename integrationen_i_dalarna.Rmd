@@ -258,11 +258,41 @@ Lite mer text. Och sedan ett till diagram.
 utb_85_fig
 ```
 
-# Vägen till språk och utbildning
+# Vägen till (språk) och utbildning
+En fullgjord gymnasieutbildning är en av de viktigaste faktorerna för ett gott liv avseende en rad olika aspekter, såsom exempelvis hälsa, inkomst, medellivslängd och möjligheten till arbete. De med en längre utbildning lever i allmänhet längre, har en genomsnittlig högre inkomst och mår i allmänhet bättre än de med kortare utbildning. Utbildningsnivån hos utrikes födda har därför en stor påverkan för möjligheterna att etablera sig i samhället, särskilt bland de unga som anländer till Sverige under skolåren och har många år kvar i livet.
+
+Att gruppen utrikes födda är en heterogen grupp blir tydligt när utbildningsnivån studeras. Den stora skillnaden jämfört mot inrikes födda är att en större andel av de utrikes födda innehar enbart förgymnasial utbildning och en mindre andel innehar gymnasial utbildning. Andelen personer som har eftergymnasial utbildning är ungefär densamma för inrikes och utrikes födda. Arbetskraftsinvandrare är generellt sett mer högutbildade än flyktinginvandrare, och skillnaderna i utbildningsnivå är även stora mellan olika ursprungsländer.
+
+*Diagram - utbildningsnivå i Dalarna efter vistelsetid i Sverige*
+
+Eftersom det finns stora skillnader i utbildningsbakgrund bland utrikes födda, är det svårt att tala om dem som en samlad grupp. Personer med låg- och hög utbildning stöter på olika typer av utmaningar på arbetsmarknaden. En aspekt som är viktig att beakta är att över 30 % av de som invandrat de senaste 11 åren har grundskolekompetens (förgymnasial) eller lägre utbildning. Samtidigt saknas det uppgifter om utbildningsnivå för en stor andel av de utrikes födda, speciellt för de som varit en kortare tid i landet. De utrikes födda i Dalarna som har bott i Sverige en längre tid har generellt sett en högre utbildningsnivå än de som invandrat de senaste åren. Huruvida detta beror på skillnader i utbildningsnivå vid invandring, eller att de med längre vistelsetid i större grad hunnit genomfört en utbildning i Sverige framgår inte av diagrammet. Sannolikt är det en kombination av dessa två faktorer.
+
+*Diagram - Vistelsetid, utbildningsnivå och inträde på arbetsmarknaden*
+
+Idag behövs det enligt Arbetsförmedlingen i regel gymnasiekompetens för att ha en god chans att etablera sig på arbetsmarknaden, även när det gäller bristyrken.   Diagrammet ovan visar att vistelsetid i landet och utbildningsbakgrund i stor utsträckning påverkar hur stor andel personer som är sysselsatta. Generellt sett så har utrikes födda personer med låg utbildning svårare att etablera sig på arbetsmarknaden än de med gymnasieutbildning eller högre utbildning. En bidragande faktor kan vara att det finns få enkla jobb på den svenska arbetsmarknaden som inte kräver längre utbildning. År 2016 utgjordes 5 % av den förvärvsarbetande arbetskraften av yrken utan eller med kortare krav på utbildning och introduktion, vilket var lägst andel i hela EU.   För att möjliggöra att fler av de utrikes födda som flyttat till Dalarna de senaste åren ska arbeta, är det av största vikt att så många som möjligt tillgodogör sig en utbildning som efterfrågas av arbetsmarknaden.
+
+Det finns flera tänkbara anledningar till att utrikes födda i genomsnitt presterar sämre på arbetsmarknaden, även när hänsyn tas till skillnader i utbildningsnivå. Några tänkbara förklaringar kan exempelvis vara lägre kunskapar om landet, språket och kulturen. För de som flyttat till Sverige av flyktingskäl kan traumatiska upplevelser också inverka. I både Sverige och övriga västvärlden finns det emellertid gott om indikationer på att diskriminering av personer med utländskt ursprung förekommer på arbetsmarknaden. En sak som pekar på detta är att de som är födda i Sverige med utrikes födda föräldrar presterar sämre på arbetsmarknaden än de med svensk bakgrund, även när hänsyn tas till skillnader i utbildningsnivå. Det är teoretiskt möjligt att andra faktorer kan påverka utfallet, men det förefaller föga troligt att skillnaderna skulle vara stora, utan att diskriminering förekommer i någon form.  Det finns emellertid empiriskt stöd för att diskriminering på arbetsmarknaden verkligen förekommer. Flera svenska studier har undersökt frågan genom att skicka fiktiva ansökningar med påhittade personer till ett stort antal utlysta jobb. Resultatet av studierna har varit att personer med mer svenskklingande namn har betydligt större sannolikhet att bli kallad till en arbetsintervju än personer med ett utländskt klingande namn, trots att ansökningarna i övrigt är i stort sett identiska.   De ekonomiska vinsterna för samhället skulle vara stora om skillnaderna i sysselsättning och medelinkomst, mellan inrikes och utrikes födda skulle utjämnas. I den mån diskriminering förklarar denna skillnad, finns det alltså stora vinster i att bekämpa den, både för samhället och för de utrikes födda själva.  
+
+Eftersom gymnasieutbildning är viktigt för möjligheten att etablera sig på arbetsmarknaden, är en viktig aspekt att undersöka hur stor andel av avgångseleverna i årskurs 9 i länet som är behöriga till att påbörja gymnasiestudier. Ofullständiga eller låga betyg är i första hand ett problem för den enskilde, då personens valmöjligheter begränsas och etableringen på arbetsmarknaden försvåras. Att en stor andel elever inte blir behöriga till gymnasiet kan även innebära ett samhällsproblem. Samhället misslyckas med att ta tillvara på elevernas potential om de inte når målen för utbildningen i skolan. Det finns även ett starkt samband mellan dåliga skolresultat och sociala problem. Enligt Socialstyrelsen är det 8 gånger större risk att varken arbeta eller studera för den som överhuvudtaget inte påbörjat gymnasiet, jämfört med en elev som har genomfört ett studieförberedande gymnasieprogram. Det finns även en stark överrisk att varken arbeta eller studera för den som har hoppat av gymnasiet, jämfört med den som har fullföljt en gymnasieutbildning. 
+
+*Diagram 26 - Dalarnas gymnasiebehörighet, kvinnor och män, inrikes och utrikes födda 2018 och 2023*
+
+Skillnaden i andelen behöriga till gymnasiet hos avgångselever i årskurs 9 mellan de med svensk och utländsk bakgrund var stor, både inom Dalarnas län och i riket som helhet. I Dalarna var 52 % av avgångseleverna med utländsk bakgrund och 88 % med svensk bakgrund behöriga till att påbörja gymnasiet. Siffrorna för riket var 58 % av eleverna med utländsk bakgrund och 91 % av eleverna med svensk bakgrund.
+
+När avgångseleverna i årskurs 9 år 2018 i riket studeras så påverkas andelen behöriga med utländsk bakgrund mycket av migrationsbakgrund. Skillnaderna i andelen behöriga är betydligt mindre mellan elever med utländsk och svensk bakgrund när förutsättningarna är mer likvärdiga. Vid en jämförelse var 91 procent av eleverna med svensk bakgrund behöriga och 86 procent av elever med utländsk bakgrund födda i Sverige behöriga, medan 85 procent av eleverna som invandrat före skolstart var behöriga. Bland elever i riket som invandrat i årskurs 1–5 var andelen behöriga elever däremot märkbart lägre och var 67 procent. Allra lägst i riket var behörigheten bland nyanlända som invandrat de senaste 4 åren eller saknade svenskt personnummer, där andelen behöriga elever var 28 procent. Enligt Skolverket har nyanlända elever en brant uppförsbacke. Att på en kort tid lära sig svenska språket och samtidigt utveckla ämneskunskaper är en svår utmaning. Skolverket anser att det behövs ett genomtänkt och målmedvetet arbete på skolorna och att skolor som tagit emot många nyanlända bör ges ett bra stöd.  Den primära orsaken till att en lägre andel utrikes födda elever i Dalarna än i riket är behöriga, är sannolikt att en större andel är nyanlända och har en kort vistelsetid i Sverige.
 
 *Vistelsetid och betyg i skola*
-*Vistelsetid och inträde på arbetsmarknad*
+
 *studerande eller inte aktiva på arbetsmarknaden utifrån vistelsetid*
+
+*Lyft in diagram 20 från Kompetensrapporten - nedan*
+
+<br>
+```{r, echo=FALSE, fig.height=5, fig.width=9, fig.align='center', fig.cap="."}
+gg_utbniva_85$hogutb_andel_ar20_1985_2023
+```
+
+
 
 # Vägen till bostad
 
