@@ -281,9 +281,17 @@ Skillnaden i andelen behöriga till gymnasiet hos avgångselever i årskurs 9 me
 
 När avgångseleverna i årskurs 9 år 2018 i riket studeras så påverkas andelen behöriga med utländsk bakgrund mycket av migrationsbakgrund. Skillnaderna i andelen behöriga är betydligt mindre mellan elever med utländsk och svensk bakgrund när förutsättningarna är mer likvärdiga. Vid en jämförelse var 91 procent av eleverna med svensk bakgrund behöriga och 86 procent av elever med utländsk bakgrund födda i Sverige behöriga, medan 85 procent av eleverna som invandrat före skolstart var behöriga. Bland elever i riket som invandrat i årskurs 1–5 var andelen behöriga elever däremot märkbart lägre och var 67 procent. Allra lägst i riket var behörigheten bland nyanlända som invandrat de senaste 4 åren eller saknade svenskt personnummer, där andelen behöriga elever var 28 procent. Enligt Skolverket har nyanlända elever en brant uppförsbacke. Att på en kort tid lära sig svenska språket och samtidigt utveckla ämneskunskaper är en svår utmaning. Skolverket anser att det behövs ett genomtänkt och målmedvetet arbete på skolorna och att skolor som tagit emot många nyanlända bör ges ett bra stöd.  Den primära orsaken till att en lägre andel utrikes födda elever i Dalarna än i riket är behöriga, är sannolikt att en större andel är nyanlända och har en kort vistelsetid i Sverige.
 
-*Vistelsetid och betyg i skola*
+De avgångselever i årskurs 9 i Dalarna år 2018 som var utrikes födda var i betydligt lägre grad än inrikes födda behöriga till att påbörja gymnasiestudier. Skillnaden i kön var också störst bland utrikes födda elever, där 58 procent av flickorna och 47 procent av pojkarna var behöriga till gymnasiet. För elever födda i Sverige med en eller två utrikes födda föräldrar var andelen behöriga pojkar ungefär lika stor för som inrikes födda pojkar med två föräldrar födda i Sverige. Flickor födda i Sverige med två inrikes födda föräldrar var i högre grad behöriga till gymnasiet än inrikes födda flickor med en eller två utrikesfödda föräldrar.
 
-*studerande eller inte aktiva på arbetsmarknaden utifrån vistelsetid*
+*Vistelsetid och betyg/behörigheter i skola och till gymnasium/högskola*
+
+Det finns stora skillnader i gymnasiebehörighet mellan grupper med olika vistelsetid i Dalarna där behörigheten är större ju längre eleverna har vistats i Sverige. Precis som nationellt är det framförallt personer som har bott i landet fem år eller kortare som i betydligt lägre grad än de med svensk bakgrund som blir behöriga till att påbörja gymnasiet.
+
+En annan aspekt som är viktig att mäta är hur stor andel av avgångseleverna i gymnasiet som är behöriga till att påbörja högskolestudier. Även här är det en högre andel inrikes födda elever som är behöriga än utrikes födda. Skillnaderna är dock betydligt mindre än för avgångseleverna i årskurs 9. Något som är viktigt att beakta när detta studeras är att gymnasieskolan inte är obligatorisk, och att de som exempelvis har avbrutit gymnasiestudier eller läser in grundläggande gymnasiebehörighet inte omfattas av diagrammet. Samtliga av de utrikes födda elever i Dalarnas län som slutförde gymnasiet år 2018 hade längre än 4 års vistelsetid i Sverige.
+
+*Ev diagram 29 - behörighet till högskola*
+
+När andelen behöriga till högskolan undersöks så kan det vara av större relevans att mäta hur stor andel av 19-åringarna som ett visst år är behöriga till högskolan. Detta eftersom vi i Sverige vanligtvis är 19 år när vi erhåller gymnasieexamen. Det är viktigt att komma ihåg att detta inte ger någon heltäckande bild av alla personer eftersom det finns vissa elever som slutför gymnasiet när de är yngre eller äldre än 19 år. En ej slutförd gymnasieexamen vid 19 års ålder beror ändå i en majoritet av fallen på att eleven ligger efter i skolan eller har hoppat av gymnasiet. Av denna anledning blir denna variabel relevant när andelen högskolebehöriga efter bakgrund och kön jämförs. Det som kan konstateras är att utrikes födda i betydligt lägre grad än inrikes födda blir behöriga till högskolestudier vid 19 års ålder. Oavsett om eleven eller föräldrarna är utrikes eller inrikes födda är kvinnor i högre utsträckning behöriga till att påbörja högskolestudier än män.
 
 *Lyft in diagram 20 från Kompetensrapporten - nedan*
 
@@ -292,19 +300,78 @@ När avgångseleverna i årskurs 9 år 2018 i riket studeras så påverkas andel
 gg_utbniva_85$hogutb_andel_ar20_1985_2023
 ```
 
+*Andelar obehöriga till gymnasiet - inskrivna på IM-program utifrån bakgrund*
+
+*Utrikes födda unga som inte studerar eller inte aktiva på arbetsmarknaden utifrån vistelsetid*
+
 
 
 # Vägen till bostad
+Med nästan alla sätt att mäta boende skiljer sig grupperna svensk och utländsk bakgrund åt. Det finns flera sätt att mäta boende på, typ av boende (villa eller lägenhet), boendeyta och bostadsägande säger alla någonting om hur människor bor, något som givetvis speglar den ekonomiska situation man lever i. Det innebär, precis som på de flesta andra områden, att gruppen utrikes födda kommer att ha en stor spridning avseende etablering i samhället. Några i gruppen kommer att ha bott i Sverige i mindre än ett år och andra i flera decennier. Således finns även inom boende anledning att göra analyser uppdelat på vistelsetid i Sverige. att människor som bott längre i Sverige i högre utsträckning äger sitt eget boende, antingen genom äganderätt (småhus) eller bostadsrätt (småhus eller lägenhet).
 
-*Upplåtelseform*
-*Trångboddhet*
+*Diagram 30 - Boende per Upplåtelseform efter vistelsetid*
+
+Att en större andel personer med utländsk bakgrund bor i hyresrätt, kan förklaras med att nyanlända personer generellt ännu inte hunnit etablera sig i Sverige så pass att de har ekonomiska möjligheter att äga sitt eget boende. Intressant att notera är att de av Dalarnas invånare med utländsk bakgrund som bott i Sverige i minst tolv år i högre utsträckning äger sin bostad än de med utländsk bakgrund som är födda i Sverige. Det går även att konstatera att andelen som bor i äganderätt är väsentligt högre bland de med svensk bakgrund, oavsett vistelsetid. Detta kan visa på skillnader i möjligheterna till att köpa sin bostad mellan de med svensk och utländsk bakgrund. Dock går inte detta att fastställa baserat på nuvarande underlag utan djupare analyser med fler variabler behövs för att belysa den frågan.
+
+Ytterligare en relevant analys rörande boende är andelen trångbodda hushåll. Trångboddhet i lägenheter i flerbostadshus mäts idag oftast enligt Norm 3 vilket innebär att fler boende än en person per rum är trångbott, kök och ett rum (vardagsrum) oräknat. Sammanboende förutsätts behöva ett rum färre än ensamstående samt att ensamstående personer boende i ett rum inte bedöms vara trångbodda . Detta innebär att en ensamstående vuxen med två barn behöver en lägenhet med minst fyra rum för att inte vara trångbodda. Två sammanboende vuxna med ett barn däremot behöver endast tre rum för att inte vara trångbodda eftersom de vuxna antas kunna dela ett sovrum.
+
+Trångboddhet i småhus kan inte mätas på samma sätt eftersom att uppgifter på antal rum inte samlas in. Det går att mäta med hjälp av bostadsyta per hushållsmedlem även om det måttet blir trubbigare än det för flerbostadshus. Trångboddhet i småhushushåll anses dock inte vara ett utbrett problem och beräkningar gjorda av Region Dalarna stödjer det antagandet. Därför kommer endast trångboddhet i flerbostadshus att diskuteras här.
+
+*Diagram 31 - Trångboddhet utifrån bakgrund - 2018 och 2023*
+
+De hushåll som är trångbodda i Dalarna utgör en liten andel av det totala antalet lägenhetshushåll. Cirka 84 procent av hushållen som bor i lägenhet är inte trångbodda. En stor majoritet (91 procent) av hushållen med svensk bakgrund inte är trångbodda. Av de 16 procent av hushållen som är trångbodda har 53 procent utländsk bakgrund. Detta ska ses i förhållandet att det totala antalet hushåll med utländsk bakgrund är mycket färre än de med svensk bakgrund. Totalt är 38 procent av de hushållen med utländsk bakgrund trångbodda i jämförelse mot 9 procent av hushållen med svensk bakgrund.
+
+*Diagram 32 - trångboddhet efter vistelsetid*
+
+I en kartläggning av trångbodhet utifrån vistelsetid i Sverige så kan det konstateras att många utrikes födda är trångbodda en lång tid efter att de har invandrat. Vidare analyser (inte visade här) visar att det är först i gruppen utlandsfödda som kom till Sverige för ca 35 år sedan som nivåerna på trångboddheten har sjunkit till nivåer jämförbara med de med utländsk bakgrund som är födda i Sverige eller de med svensk bakgrund. Det är viktigt att beakta att denna data visar olika grupper som har varit i Sverige flyttat hit under olika tidsperioder. Det betyder att den demografiska sammansättningen mellan grupperna inte är densamma samt att de kan ha olika preferenser för hur stort de vill bo. Diagram 32 stödjer dock slutsatsen att det finns stora skillnader på bostadsmarknaden mellan de som är inrikes och utrikes födda, samt visar att skillnaderna kan bestå under en väldigt lång tid efter att en person har invandrat till Sverige. 
+
+När det gäller trångboddhet är det viktigt att känna till att det vanligtvis är ett lokalt fenomen. Det är fullt möjligt att många kan vara trångbodda i ett bostadsområde samtidigt som få hushåll är trångbodda i grannområdet. Därför ger det en trubbig bild att kolla på trångboddhet på regionnivå.
+
+*Diagram 33 - trångbodda per kommun och vistelsetid*
+
+Uppdelat per kommun och vistelsetid blir det påtagligt att det finns skillnader mellan kommunerna. Som förväntat är andelen trångbodda av de med utländsk bakgrund med en vistelsetid på maximalt 11 år högst av alla kategorier. I de flesta kommuner sjunker sedan andelen trångbodda till låga nivåer när vistelsetiden blir längre. Borlänge och Falun sticker här ut och har relativt höga nivåer av trångboddhet även inom gruppen med en vistelsetid över 12 år. Detta skulle kunna reflektera den relativa svårigheten att komma in på respektive bostadsmarknad som till exempel mängden lediga bostäder, nödvändig kötid för att få ett boende och andra faktorer.
+
+Det går att konstatera att varken andelen lägenheter i flerbostadshus, andelen personer med utländsk bakgrund eller andelen som har en vistelsetid under 12 år inte enskilt kan förklara andelen trångbodda i en kommun. För att fullt förstå vilka mekanismer som förklarar skillnaderna mellan olika kommuner behöver djupare analyser göras.
+
+Ett annat sätt att visa boendeförhållanden är att visa boendeytan per hushållsmedlem. Det kan visa skillnader i boendeförhållanden som beror på olika livsperioder. Exempelvis så bor både personer med svensk och utländsk bakgrund relativt litet mellan 0–14 års ålder, vilket är logiskt eftersom deras boendeyta återspeglar boendeförhållandena för barnfamiljer. Boendeytan per person i åldrarna 15–44 år ökar något vilket tyder på att de vuxna som inte har skaffat barn i genomsnitt har en större boendeyta per person än de vuxna med barn. Från åldersgruppen 45–54 år börjar boendeytan öka stadigt i både flerbostadshus och småhus. Detta reflekterar åldersgruppen då barn börjar att flytta hemifrån vilket då ökar boendeytan per person.
+
+Efter 55 år ökar boendeytan per person stadigt vilket kan förklaras med att barn flyttar hemifrån, och en ökad risk för att bli änka eller änkling. Att boendeytan per person är störst i de äldsta åldersgrupperna vsar att många bor kvar i stora bostäder, även efter att barn har flyttat ut, efter en separation eller att ens partner har avlidit.
+
+*Ev Diagram 34 - Boendeyta per person i hushållet för olika ålderskategorier?*
+
+Skillnaden i boendeyta per person för personer med svensk och utländsk bakgrund i småhus är liten över alla åldersgrupper, och är mellan två och fem kvadratmeter per person. Denna lilla skillnad tyder på att de hushållen med utländsk bakgrund som köper småhus i Dalarna har ungefär samma preferenser och ekonomiska förutsättningar som hushåll med svensk bakgrund. Det är sannolikt även en konsekvens av att de flesta småhus i Dalarna liknar varandra storleksmässigt.
+
+Skillnaden mellan de med svensk och utländsk bakgrund är betydligt större för de som bor i flerbostadshus i samtliga åldersgrupper fram till 75+ år. Anledningen till detta kan bero på flera faktorer, som exempelvis att personer med svensk bakgrund har större möjlighet att påverka storleken på sin bostad, antingen genom att köpa en större bostad, en längre kötid, eller möjlighet att byta hyreskontrakt eller liknande. En annan förklaring är att personer med utländsk bakgrund i genomsnitt är en person mer i hushållet än personer med svensk bakgrund. Förutsatt samma boendeyta, får då personer med utländsk bakgrund automatiskt mindre boendeyta per person än de med svensk bakgrund. Det kan också finns skillnader i preferenser för hur stort man vill bo mellan de här två grupperna.
 
 # Flyttmönster (hur flyttar de utrikes födda?)
+Bland inrikes födda var det 94 263 personer mellan år 2002–2018 som flyttade till Dalarnas län från övriga Sverige och 99 304 som flyttade från länet till övriga Sverige, vilket gav ett flyttnetto på -5 041 personer, eller i genomsnitt -504 per år. I gruppen utrikes födda flyttade 19 819 personer till Dalarnas län från övriga Sverige och 23 912 personer flyttade till övriga Sverige från länet, vilket gav ett flyttnetto på -4 093 personer, eller i genomsnitt -410 per år. Det kan konstateras att flyttströmmarna har varit stora både till och från länet, både för utrikes och inrikes födda. Båda grupperna flyttar dock i större utsträckning från Dalarna till övriga Sverige än till Dalarna från övriga Sverige. Utrikes födda personer har generellt sätt varit mer benägna att flytta från länet än inrikes födda varit.
 
-*Longitudinell studie*
+Innan utrikes föddas flyttningar analyseras djupare kommer här först analys om inrikes flyttning till/från Dalarna generellt, och hur den skiljer sig i två olika åldersgrupper. Förmodligen är inrikes omflyttningar den faktor som på längre sikt mer än någon annan påverkar den regionala befolkningsstrukturen. Majoriteten av de som flyttar är unga mellan 20–35 år. I regioner med inflyttningsöverskott ökar därför antalet unga medan situationen är den motsatta i regioner med utflyttningsöverskott. Regioner som har en växande befolkning genom ett positivt flyttnetto, får en yngre befolkning och därmed även ett ökat barnafödande, med regionala födelseöverskott som följd.   Som konstaterat har flyttnettot inrikes till/från Dalarna varit negativt under de senaste tio åren. Främst gäller detta yngre vuxna som är mellan 19–28 år.
 
+Mellan år 2008 – 2018 var det i genomsnitt 793 fler personer per år som flyttade från Dalarna till övriga landet än till Dalarna i åldersgruppen 19–28 år, vilket gav ett negativt flyttnetto inrikes på -793 personer per år i åldersgruppen. För Dalarnas del är det till största del storstads- och universitetsstäder som den yngre befolkningen väljer att flytta till. Enligt en studie från Jönköpings universitet beror detta på en kombination av tillgång till högre utbildning, en stark arbetsmarknad och ett livsstilspaket som finns i större städer som den yngre generation anser vara attraktiv.  Ett perspektiv som brukar lyftas fram är att många flyttar tillbaka till sin hemkommun efter studier eller arbete i ett annat län. Ofta sammanfaller hemflytten med familjebildning. Denna föreställning stämmer till viss del och mellan år 2008–2018 var det i genomsnitt 138 fler personer per år som flyttade till Dalarna från övriga landet än från Dalarna i åldersgruppen 29–44 år, detta gav ett flyttöverskott på +138 personer i åldersgruppen. Summerat innebär detta att flyttnettot inrikes totalt för åldersgruppen 19–44 år var -654 personer per år i Dalarnas län. Det är viktigt att komma ihåg att antalet flyttningar är stort både till och från länet, och att det finns många mekanismer som påverkar varför vi flyttar. Totalt flyttade 69 153 personer till Dalarnas län från övriga landet, och 75 019 flyttade från Dalarnas län till övriga landet mellan 2008–2018.
+
+När flyttnettot per år studeras kan det konstateras att det finns variationer över tid, men att den genomgående trenden är att flyttnettot mot övriga Sverige är negativt de flesta år både för inrikes och utrikes födda. Undantagen är år 2014 och 2015 när flyttnettot var positivt för utrikes födda och åren 2002, 2003, 2017 och 2018 när flyttnettot var positivt för inrikes födda.  Utflyttningen av utrikes födda till övriga Sverige har sedan ökat stort sedan år 2016. Anledningen en ökad invandring under dessa år. Ökningen har i sin tur ökat omflyttningarna för utrikes födda. Det kan konstateras att många av de som invandrat de senaste åren har valt att flytta från Dalarnas län. 
+
+I syfte att kartlägga nyanlända flyktinginvandrares flyttningar i Sverige utarbetade SCB en rapport år 2016. I rapporten finns en beskrivande redogörelse för hur och i vilken utsträckning de som invandrat av flyktingskäl har flyttat inom landet efter fem års tid. De som invandrat av flyktingskäl för åren 1990–1994 och 2006–2010 kartlades. I denna rapport studeras mer specifikt hur de som invandrade till Dalarna mellan år 2006–2010 har flyttat efter fem års tid i landet.
+
+*Exkludera delarna om kvotflyktingar och anvisat boende*
+
+*Hur ser det ut med omflyttningar generellt bland utrikes födda de senaste 10 åren? Hur länge stannar de som flyttar in?*
+
+*Longitudinell studie utifrån vistelsetid i länet*
+
+Omflyttningarna bland utrikes födda åren 2015–2018 var i störst under de två första åren som de bodde i Sverige. Antalet flyttningar minskade därefter ju längre vistelsetiden blev i landet. Eftersom personer med en kort vistelsetid i allmänhet ännu inte är särskilt etablerade på en viss plats, är det inte överraskande att de flyttar i större utsträckning. Anledningarna till flytt kan vara anvisning till annan ort av Migrationsverket, arbete, studier, närhet till släktingar, större möjlighet till bostad eller andra anledningar.
+
+De med en kortare vistelsetid i Sverige på 0–2 år var de som flyttade i störst utsträckning mellan åren 2015–2018. Under år 2015 hade denna grupp en påtaglig högre inflyttning än under övriga år. En hypotes som behöver analyseras vidare är att detta kan bero på att många nyanlända personer med giltigt uppehållstånd år 2015 blev anvisade till Dalarna. Nära hälften av de inrikes inflyttade utrikes födda detta år med 0—2 års vistelsetid var antingen födda i Syrien eller Eritrea.  Trenden sedan år 2016 har sedan varit att fler av de nyanlända väljer att flytta från Dalarna än till länet från övriga Sverige. Eftersom denna trend även gällde före år 2014, finns det anledning att tro att utflyttningen av nyanlända med kort vistelsetid även i framtiden kommer att vara större än inflyttningen. Trenden är problematisk för Dalarnas del, då redan befintlig och framtida potentiel arbetskraft i och med detta försvinner från länet.
 
 # Demokrati och tillit
+
+*Vad finns det för information att få kring demokrati och tillit?*
+
+*Valdeltagande*
+
+*SoM-institutets tillitsmätningar*
+
 Här ser vi hur man gör en länk: På nationell nivå har SCB jämfört den standardvägda lönen, dvs. lönen när hänsyn tas 
 till bland annat ålder och utbildningsnivå, för att synliggöra om det kan finnas en diskrimineringsaspekt i lönenivån. 
 Slutsatsen blev att kvinnors standardvägda lön är ungefär 95 procent av männens standardvägda lön, det vill säga det
@@ -363,3 +430,6 @@ if(uppdatera_hemsida==TRUE){
 }
 
 ```
+
+#Referenser
+
