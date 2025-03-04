@@ -78,10 +78,7 @@ Här ska vi ha en sammanfattning av rapporten. Det ska vara en punktlista med de
 <li>Fjärde punkten </li>
 
 # Introduktion {-}
-
-Här kommer en introduktion till rapporten. Det ska vara en kort text som förklarar vad rapporten handlar om och vad läsaren kan förvänta sig att hitta i rapporten.
-
-Integration är ett område som är ständigt aktuellt i samhällsdebatten. Begreppet kan ses som en process där  *individer eller grupper med olika bakgrunder och förutsättningar blir en del av ett större socialt, ekonomiskt eller kulturellt sammanhang, samtidigt som deras egen identitet och särart respekteras*.
+Integration är ett ämne som är ständigt aktuellt i samhällsdebatten. Begreppet integration kan ses som en process där  *individer eller grupper med olika bakgrunder och förutsättningar blir en del av ett större socialt, ekonomiskt eller kulturellt sammanhang, samtidigt som deras egen identitet och särart respekteras*. 
 
 Beroende på sammanhang kan integration ha olika betydelser:
 <br>
@@ -95,27 +92,23 @@ Beroende på sammanhang kan integration ha olika betydelser:
 
 <br>
 
-Delmi.se refererar till ett antal statistikområden - arbetsmarknad, demografi, demokrati, inkomst, lagar och regelverk, utbildning och samhälle.
-
-*titta på dessa områden och se om det är en struktur att bygga vidare på*
-
 Amnå och Stigendal (2021) betonar vikten av att vara tydlig vid användningen av begrepp kopplade till integration och hänvisar till Nationalencyklopedins definition - *integration är en process som leder till att skilda enheter förenas, men det kan även gälla resultatet av en sådan process* - och sociologins användning av begreppen strukturell och kulturell integration.
 
 Den strukturella integrationen handlar om skyldigheter och rättigheter via samhälleliga system, lagar och regler. Den kulturella integrationen handlar mer om hur vi upplever oss som integrerade via normer, värderingar och identiteter. En känsla av delaktighet skapar kulturell integration medan en lag skapar strukturell integration. I grunden handlar det här om alla individer som lever i ett land, även om den vardagliga diskussionen i mångt och mycket handlar om invandrare i förhållande till de som är födda och uppväxta i ett land.
 
-En viktig del att belysa i ett integrationsperspektiv är hur utrikes födda förhåller sig till inrikes födda inom ett antal samhällsområden. Det kan vara utbildning, arbetsmarknad, boende. Den här rapportens syfte är att redovisa aktuell statistik relaterat till utrikes föddas integration i samhället i Dalarna.
-
-Vilka dimensioner ska belysas och varför utrikes födda? Inrikes födda av två utrikes födda (andra generationens invandrare)? Utrikes födda inom olika kategorier?
-
-
+Även om integrationsfrågan är bredare, är det ändå viktigt att belysa hur utrikes födda förhåller sig till inrikes födda inom ett antal samhällsområden. Samhällets förmåga att intregrera utrikes födda i utbildning, arbetsmarknad eller boende är avgörande för t ex kompetensförsörjningen på kort och lång sikt. Den här rapportens syfte är att redovisa aktuell statistik relaterat till utrikes föddas integration i samhället i Dalarna.
 
 # Bakgrund
+2019 publicerade Region Dalarna rapporten "Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv". Rapporten skrevs i en period där Sverige och Dalarna några år tidigare hade haft den största volymen av asylinvandring i historien. 
 
-*Referera till rapporten från 2019*
+2024 var asylinvandringen på en nivå som är den lägsta sedan 1985, vilket är en del i ett paradigmskifte från sittande regering att öka arbetskraftsinvandringen och minska asylinvandringen (*ref till regeringens information i januari 2025 - https://www.regeringen.se/pressmeddelanden/2025/01/pressbriefing-om-migrationen-till-sverige-under-2024/*).
 
-*Var står vi nu?*
+Frågan är vad som har hänt under de sex år som gått sedan Region Dalarnas senaste rapport skrevs. Har integrationen utvecklats i en positiv riktning? 
 
-*Vad är integration och varför är det viktigt?*
+Rapporten kommer i stora drag följa 2019 års rapportdisposition, men tona ner delar som har med asylinvandringen att göra då den frågan inte längre är lika aktuell.
+
+
+
 
 ## Den utrikes födda befolkningen i Sverige och i Dalarna
 För att få en förståelse för den utrikes födda befolkningen i Dalarna och hur invandringen sett ut över tid, behöver situationen i riket som helhet analyseras. Den första större invandring som påverkat Dalarna i modern tid var den arbetskraftsinvandring som skedde efter andra världskriget. Denna epok varade i stort sett under två decennier, d.v.s. under 1950- och 1960-talet.
@@ -179,7 +172,13 @@ utgör men ser samtidigt att det finns vissa hinder, såsom validering av nyanl�
 
 En viktig aspekt för integrationen är hur stark arbetsmarknaden är vid tidpunkten för invandringen.
 
-Hämta information från SCB som asylinvandringen
+Dalarna har generellt sett haft en stark arbetsmarknad över lång tid jämfört med riket. 
+
+Kommunala variationer?
+
+Skillnad mellan grupper?
+
+Hämta information från SCB som asylinvandringens utveckling
 
 # Vägen till arbete
 
@@ -190,6 +189,7 @@ Hämta information från SCB som asylinvandringen
 *Kvinnor och män, jämfört med inrikes födda*
 *Vilka arbetar inte?*
 *Hur ser etableringen ut baserat på vistelsetid?* - Kolla i rapporten om kvinnor och män
+*Långtidsarbetslöshet för inrikes och utrikes födda*
 
 
 ```{r, echo=FALSE}
@@ -296,9 +296,9 @@ När andelen behöriga till högskolan undersöks så kan det vara av större re
 *Lyft in diagram 20 från Kompetensrapporten - nedan*
 
 <br>
-```{r, echo=FALSE, fig.height=5, fig.width=9, fig.align='center', fig.cap="."}
-gg_utbniva_85$hogutb_andel_ar20_1985_2023
-```
+#```{r, echo=FALSE, fig.height=5, fig.width=9, fig.align='center', fig.cap="."}
+#gg_utbniva_85$hogutb_andel_ar20_1985_2023
+#```
 
 *Andelar obehöriga till gymnasiet - inskrivna på IM-program utifrån bakgrund*
 
