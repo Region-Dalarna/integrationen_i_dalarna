@@ -26,7 +26,7 @@ gg_utbniva_bakgrund_alder <- diag_utb_niva_bakgr_alder(output_mapp_figur = Outpu
                                                        returnera_data = TRUE)
 
 
-
+etablering_df <- read.xlsx("G:/skript/projekt/data/kvinnor_man/etableringstid.xlsx")
 
 # ## Befolkningspyramid
 # source("G:/skript/diagram/diag_befpyramid.R")
