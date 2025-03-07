@@ -25,7 +25,7 @@ gg_utbniva_bakgrund_alder <- diag_utb_niva_bakgr_alder(output_mapp_figur = Outpu
                                                        returnera_figur = TRUE,
                                                        returnera_data = TRUE)
 
-
+#Laddade in det här för att kunna köra raderna 396 och framåt i Rmd-filen
 etablering_df <- read.xlsx("G:/skript/projekt/data/kvinnor_man/etableringstid.xlsx")
 
 # ## Befolkningspyramid
