@@ -336,9 +336,21 @@ utb_85_fig
 
 *Hämtat från rapporten om Kvinnor och män i Dalarna*
 
-Något att ta hänsyn till när man analyserar sysselsättningsgrad och arbetslöshet bland utrikes födda är hur lång tid individen har varit i Sverige. Vistelsetid i Sverige har ett starkt samband med sysselsättningsgrad och arbetslöshet och därmed kommer andelen nyligen invandrade i gruppen utrikes födda att påverka nivån på dessa variabler, se rubrik 2.3.
+Sysselsättningsgraden, det vill säga i vilken utsträckning människor i arbetsför ålder (20-64 år) arbetar, skiljer sig inte märkbart åt mellan könen bland inrikes födda som ses i det vänstra diagrammet nedan. Sverige ligger långt fram i en internationell jämförelse när det gäller att ge kvinnor och män likvärdiga möjligheter att yrkesarbeta, och det återspeglas i sysselsättningsgraden som för båda könen är ungefär lika hög, `r syssgrad_inrikes_kvinna_Sverige` procent för kvinnor och `r syssgrad_inrikes_man_Sverige` procent för män. Variationen i sysselsättningsgrad mellan länen är därför också relativt liten.
 
 Däremot skiljer sig sysselsättningsgraden åt mellan inrikes och utrikes födda. För utrikes födda (det högra diagrammet nedan) är sysselsättningsgraden lägre än sysselsättningsgraden för inrikes födda i samtliga svenska län. Det finns även skillnader mellan kvinnor och män.
+
+Utrikes födda män har en högre sysselsättningsgrad än utrikes födda kvinnor i samtliga län förutom Norrbotten. I Dalarna var sysselsättningsgraden bland utrikes födda män `r syssgrad_utrikes_man_Dalarna` procent, vilket
+är cirka `r syssgrad_utrikes_skillnad_Dalarna ` procentenheter mer än för utrikes födda kvinnor i Dalarna.
+
+Något att ta hänsyn till när man analyserar sysselsättningsgrad och arbetslöshet bland utrikes födda är hur lång tid individen har varit i Sverige. Vistelsetid i Sverige har ett starkt samband med sysselsättningsgrad och arbetslöshet och därmed kommer andelen nyligen invandrade i gruppen utrikes födda att påverka nivån på dessa variabler, se rubrik 2.3.
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_diagram_arbetsmarknadsstatus_lan$sysselsattningsgrad_senastear
+
+```
+
 
 Sysselsättningsgraden i respektive kommun i Dalarna visar ett liknande mönster som länen på nationell nivå. Gruppen inrikes födda har en högre sysselsättningsgrad i samtliga kommuner i Dalarna jämfört med utrikes födda. Även här är sysselsättningsgraden för inrikes födda kvinnor och män ungefär lika hög. För utrikes födda är det däremot stora skillnader mellan kvinnor och män, också mellan olika kommuner. I linje med den nationella bilden är sysselsättningsgraden högre för gruppen utrikes födda män i jämförelse med utrikes födda kvinnor i de allra flesta kommuner (undantagen är Orsa och Smedjebacken). Sysselsättningsgraden för utrikes födda män skiljer sig dock åt mellan kommuner där den högsta sysselsättningsgraden finns i `r syssgrad_utrikes_man_max_kommun` (`r syssgrad_utrikes_man_max_varde` procent) och den lägsta i `r syssgrad_utrikes_man_min_kommun` (`r syssgrad_utrikes_man_min_varde` procent).
 
@@ -346,20 +358,27 @@ Sysselsättningsgraden i respektive kommun i Dalarna visar ett liknande mönster
 
 Värt att notera är att en del av skillnaden i utrikes föddas sysselsättningsgrad mellan kommunerna sannolikt kan förklaras av skillnader i antalet personer som invandrade under åren runt 2015 då invandringen till Sverige var mycket stor. Exempelvis var Avesta, Ludvika och Hedemora de tre kommuner som hade högst invandring i förhållande till folkmängd under 2015, 2016 och 2017. Detta verkar i första hand gälla för utrikes födda kvinnor, då både Hedemora och Ludvika har relativt hög sysselsättningsgrad för utrikes födda män, medan den är klart lägre för utrikes födda kvinnor. I Ludvika är skillnaden mellan könen i sysselsättningsgrad ungefär `r round(arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "utrikes född",region == "Ludvika",variabel == "sysselsättningsgrad") %>% .$varde-arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född",region == "Ludvika",variabel == "sysselsättningsgrad") %>% .$varde,0)` procentenheter, vilket är den största skillnaden i länet.
 
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_diagram_arbetsmarknadsstatus_kommun$sysselsattningsgrad_senastear
+
+```
 
 
 Bilden av arbetsmarknaden kompletteras genom att titta på arbetslösheten som visar hur många av de aktivt arbetssökande som inte har ett arbete. En jämförelse av arbetslösheten bland utrikes respektive inrikes födda åskådliggör ett antal viktiga skillnader.
 
-Arbetslösheten är generellt högre för utrikes födda än för inrikes födda. Arbetslösheten för inrikes födda i Dalarna ligger något lägre än rikets, cirka `r round(arbetsmarknadsstatus_lan_df %>% filter(region == "Dalarna",kön == "kvinnor",födelseregion == "inrikes född") %>% .$arbetslöshet,0)` procent bland kvinnor och drygt `r round(arbetsmarknadsstatus_lan_df %>% filter(region == "Dalarna",kön == "män",födelseregion == "inrikes född") %>% .$arbetslöshet,0)` procent bland män (se diagrammet nedan).
+Arbetslösheten är generellt högre för utrikes födda än för inrikes födda. Arbetslösheten för inrikes födda i Dalarna ligger lägre än rikets, `r arblosthet_inrikes_kvinna_Dalarna` procent bland kvinnor och `r arblosthet_inrikes_man_Dalarna` procent bland män (se diagrammet nedan).
 
-Arbetslösheten bland utrikes födda är däremot betydligt högre i samtliga av Sveriges län. I Dalarna är skillnaden i arbetslöshet mellan utrikes och inrikes födda cirka `r round(arbetsmarknadsstatus_lan_df %>% filter(region == "Dalarna",kön == "kvinnor",födelseregion == "utrikes född") %>% .$arbetslöshet - arbetsmarknadsstatus_lan_df %>% filter(region == "Dalarna",kön == "kvinnor",födelseregion == "inrikes född") %>% .$arbetslöshet,0)` procentenheter för kvinnor och cirka `r round(arbetsmarknadsstatus_lan_df %>% filter(region == "Dalarna",kön == "män",födelseregion == "utrikes född") %>% .$arbetslöshet - arbetsmarknadsstatus_lan_df %>% filter(region == "Dalarna",kön == "män",födelseregion == "inrikes född") %>% .$arbetslöshet,0)` procentenheter för män. Vidare är arbetslösheten bland gruppen utrikes födda kvinnor klart högre än i gruppen utrikes födda män i samtliga av Sveriges län. 
+Arbetslösheten bland utrikes födda är däremot betydligt högre i samtliga av Sveriges län. I Dalarna är skillnaden i arbetslöshet mellan utrikes och inrikes födda cirka `r arblosthet_kvinnor_utrikes_inrikes_skillnad_Dalarna` procentenheter för kvinnor och cirka `r arblosthet_man_utrikes_inrikes_skillnad_Dalarna` procentenheter för män. Vidare är arbetslösheten bland gruppen utrikes födda kvinnor klart högre än i gruppen utrikes födda män i samtliga av Sveriges län. 
 
-I figuren nedan framgår också att det finns avsevärda skillnader mellan länen. `r arbetsmarknadsstatus_lan_df %>% filter(kön == "totalt",födelseregion == "utrikes född") %>% filter(arbetslöshet == min(arbetslöshet)) %>% .[1,] %>% .$region ` har den lägsta arbetslösheten för utrikes födda med
-ungefär `r round(arbetsmarknadsstatus_lan_df %>% filter(kön == "totalt",födelseregion == "utrikes född") %>% filter(arbetslöshet == min(arbetslöshet)) %>% .[1,] %>% .$arbetslöshet,0)` procent totalt (både kvinnor och män), medan arbetslösheten är cirka `r round(arbetsmarknadsstatus_lan_df %>% filter(kön == "totalt",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>% .[1,] %>% .$arbetslöshet,0)` procent i `r arbetsmarknadsstatus_lan_df %>% filter(kön == "totalt",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>% .[1,] %>% .$region `. Dalarnas län ligger något över riksgenomsnittet, men uppvisar inte extrema arbetslöshetssiffror åt något håll.
+I figuren nedan framgår också att det finns avsevärda skillnader mellan länen. `r arblosthet_utrikes_man_min_lan ` har den lägsta arbetslösheten för utrikes födda män med `r arblosthet_utrikes_man_min_varde` procent medan `r arblosthet_utrikes_kvinna_min_lan ` har den lägsta arbetslösheten för utrikes födda kvinnor med `r arblosthet_utrikes_kvinna_min_varde` procent. Högst arbetslöshet för såväl utrikes födda män som kvinnor har `r arblosthet_utrikes_man_max_lan` med `r arblosthet_utrikes_man_max_varde` procent för män och `r arblosthet_utrikes_kvinna_max_varde` procent för kvinnor. Dalarna ligger något över riksgenomsnittet, men uppvisar inte extrema arbetslöshetssiffror åt något håll.
 
-<br>
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
-arb_lan_fig
+gg_diagram_arbetsmarknadsstatus_lan$arbetslosthet_senastear
+
+```
+
 
 Precis som var fallet med sysselsättningsgrad tidigare, så uppvisar Dalarnas kommuner ett liknande mönster som på nationell nivå. Bland inrikes födda är arbetslösheten låg och något fler män än kvinnor är arbetslösa. Högst arbetslöshet bland inrikes födda (totalt) i Dalarna finns i `r arbetsmarknadsstatus_kommun_df %>% filter(kön == "totalt",födelseregion == "inrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>% .$region `, men skillnaden gentemot genomsnittet i länet är relativt liten (ungefär 1 procentenhet). Lägst arbetslöshet återfinns i `r arbetsmarknadsstatus_kommun_df %>% filter(kön == "totalt",födelseregion == "inrikes född") %>% filter(arbetslöshet == min(arbetslöshet)) %>% .$region `.
 
