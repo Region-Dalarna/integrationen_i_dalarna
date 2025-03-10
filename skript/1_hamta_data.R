@@ -18,7 +18,7 @@ spara_diagram_som_bildfiler = FALSE
 source(here("skript/","asylsokande_antal_1984_.R"))
 gg_asylsokande_antal <- diagram_asylsokande_tidsserie(output_mapp_figur = Output_mapp_figur,
                                                       spara_figur = spara_diagram_som_bildfiler,
-                                                      returnera_data= TRUE,)
+                                                      returnera_data= TRUE)
 
 
 asylsokande_max_ar = max(asylsokande_df$år)
@@ -184,6 +184,22 @@ arblosthet_inrikes_kvinna_max_kommun <- arbetsmarknadsstatus_kommun_df %>% filte
 
 arblosthet_inrikes_kvinna_max_varde <- gsub("\\.",",",arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född") %>%
                                               filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$varde)
+
+########################
+# Långtidsarbetslöshet #
+########################
+
+source(here("skript/","langtidsarbetsloshet_kon.R"))
+gg_langtidsarbetsloshet <- diagram_langtidsarbetslohet_tidsserie(output_mapp_figur = Output_mapp_figur,
+                                                                spara_figur = spara_diagram_som_bildfiler,
+                                                                returnera_data= TRUE)
+
+langtidsarbetsloshet_ar_min = långtidsarbetslöshet$ar %>% min()
+langtidsarbetsloshet_ar_max = långtidsarbetslöshet$ar %>% max()
+langtidsarbetsloshet_kvinnor_min = gsub("\\.",",",round(långtidsarbetslöshet %>% filter(kon=="kvinnor",ar==min(ar)) %>%  .$varde,1))
+langtidsarbetsloshet_kvinnor_max = gsub("\\.",",",round(långtidsarbetslöshet %>% filter(kon=="kvinnor",ar==max(ar)) %>%  .$varde,1))
+langtidsarbetsloshet_man_min = gsub("\\.",",",round(långtidsarbetslöshet %>% filter(kon=="män",ar==min(ar)) %>%  .$varde,1))
+langtidsarbetsloshet_man_max = gsub("\\.",",",round(långtidsarbetslöshet %>% filter(kon=="män",ar==max(ar)) %>%  .$varde,1))
 
 source("https://raw.githubusercontent.com/Region-Dalarna/funktioner/main/func_API.R", encoding = "utf-8", echo = FALSE)
 

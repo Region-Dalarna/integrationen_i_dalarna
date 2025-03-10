@@ -1,6 +1,4 @@
-diagram_asylsokande_tidsserie <-function(output_mapp_data = NA, # Outputmapp för data
-                                         filnamn_data = "arbetsmarknadsstatus.xlsx", # Filnamn för datafil
-                                         output_mapp_figur = "G:/Samhällsanalys/Statistik/Näringsliv/basfakta/", # Outputmapp för figur
+diagram_asylsokande_tidsserie <-function(output_mapp_figur = "G:/Samhällsanalys/Statistik/Näringsliv/basfakta/", # Outputmapp för figur
                                          spara_figur = TRUE, # Sparar figuren till output_mapp_figur
                                          returnera_figur = TRUE, # Returnerar en figur
                                          valda_farger = diagramfarger("rus_sex"),
