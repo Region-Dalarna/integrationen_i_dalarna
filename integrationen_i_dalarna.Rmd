@@ -379,8 +379,7 @@ gg_diagram_arbetsmarknadsstatus_lan$arbetslosthet_senastear
 
 ```
 
-
-Precis som var fallet med sysselsättningsgrad tidigare, så uppvisar Dalarnas kommuner ett liknande mönster som på nationell nivå. Bland inrikes födda är arbetslösheten låg och något fler män än kvinnor är arbetslösa. Högst arbetslöshet bland inrikes födda (totalt) i Dalarna finns i `r arbetsmarknadsstatus_kommun_df %>% filter(kön == "totalt",födelseregion == "inrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>% .$region `, men skillnaden gentemot genomsnittet i länet är relativt liten (ungefär 1 procentenhet). Lägst arbetslöshet återfinns i `r arbetsmarknadsstatus_kommun_df %>% filter(kön == "totalt",födelseregion == "inrikes född") %>% filter(arbetslöshet == min(arbetslöshet)) %>% .$region `.
+Precis som var fallet med sysselsättningsgrad tidigare, så uppvisar Dalarnas kommuner ett liknande mönster som på nationell nivå. Bland inrikes födda är arbetslösheten låg och något fler män än kvinnor är arbetslösa. Högst arbetslöshet för såväl inrikes födda kvinnor och män i Dalarna finns i `r arblosthet_inrikes_man_max_kommun`, men skillnaden gentemot genomsnittet i länet är relativt liten. 
 
 Bland utrikes födda är arbetslösheten avsevärt mycket högre för både kvinnor och män. Genomsnittet i Dalarnas län ligger på ungefär `r round(arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född",region == "Dalarna") %>% .$arbetslöshet,0)` procent
 bland utrikes födda kvinnor och cirka `r round(arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "utrikes född",region == "Dalarna") %>% .$arbetslöshet,0)` procent bland utrikes födda män. Den högsta arbetslösheten bland utrikes födda kvinnor återfinns i `r arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>% .$region ` där den ligger på cirka `r round(arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>% .$arbetslöshet,0)` procent. `r last(arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>% .$region)` och `r first(arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>% .$region)` redovisar den högsta arbetslöshetssiffran bland utrikes födda män med ungefär `r unique(round(arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>% .$arbetslöshet,0)) ` procent vardera.
@@ -388,7 +387,11 @@ Lägst arbetslöshet bland utrikes födda män återfinns i `r arbetsmarknadssta
 
 Det är återigen värt att notera att de skillnader i arbetslöshet som diskuterades i stycket om sysselsättningsgrad ovan, sannolikt delvis kan förklaras av skillnader i antalet personer och när i tid som de invandrat till olika kommuner.
 
-<br>
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_diagram_arbetsmarknadsstatus_kommun$arbetslosthet_senastear
+
+```
 
 Arbetslösheten i Dalarna för inrikes och utrikes födda visar på skillnader över tid. För gruppen inrikes födda syns en nedgång i andelen arbetslösa från 2010 och framåt, med ett litet avbrott i trendlinjen under pandemiåren 2020-2021. Gruppen utrikes födda har två trendlinjer i diagrammet nedan. Från 2006 till 2017 ökade arbetslösheten bland utrikes födda till relativt höga nivåer jämfört med början på tidsperioden. Arbetslösheten bland utrikes födda män i Dalarna var också konsekvent högre än för utrikes födda kvinnor och betydligt högre år 2015 och åren därefter då Sverige hade mycket stor flyktinginvandring. Från 2017 och framåt har arbetslösheten bland gruppen utrikes födda minskat från toppnivåerna och utrikes födda kvinnor är idag i något högre utsträckning arbetslösa jämfört med utrikes födda män. Värt att understryka är att en högre arbetslöshet kan förklaras med att fler aktivt söker arbete, tidigare har en större andel personer varit varken arbetssökande eller i arbete.
 
