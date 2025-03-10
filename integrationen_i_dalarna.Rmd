@@ -132,7 +132,7 @@ I mitten av 1980-talet växte ny typ av immigration fram i Sverige. Tidigare had
 
 När Jugoslavien drabbades av flera inbördeskrig under första hälften av 1990-talet ökade antalet immigranter till Sverige väsentligt. I utsatta krigszoner, inte minst från Bosnien-Hercegovina, flydde långt över 100 000 människor till Sverige. Under andra hälften av 1990-talet minskade invandringen men har sedan dess varit högre. Under 2000-talet har invandringen ökat över tid, till stor del på grund av de människor som flyr från krig och förtryck i bland annat Irak, Afghanistan, Somalia och Syrien. Idag är flyktinginvandringen ett strukturellt fenomen som inte förväntas upphöra så länge det finns förtryck och krig i världen. Att invandringen har ökat beror även på ett ökat antal arbetskraftsinvandrare från nya EU-stater och fler utländska studenter.
 
-Efter att kriget bröt ut i Syrien 2011, ökade invandringen kraftigt och nya toppnoteringar av antalet asylsökande gjordes varje år. Under 2015 var antalet asylsökande som högst, då 162 877 personer sökte asyl i Sverige. Detta var mer än dubbelt så många som under 2014 och nästan en fördubbling av den tidigare högsta noteringen från 1992 då det var krig i forna Jugoslavien.
+Efter att kriget bröt ut i Syrien 2011, ökade invandringen kraftigt och nya toppnoteringar av antalet asylsökande gjordes varje år. Under 2015 var antalet asylsökande som högst, då `r asylsokande_2015` personer sökte asyl i Sverige. Detta var mer än dubbelt så många som under 2014 och nästan en fördubbling av den tidigare högsta noteringen från 1992 då det var krig i forna Jugoslavien.
 
 Under den stora ökning av antalet asylsökande som skedde hösten 2015 hamnade migrations- och integrationsfrågorna högt upp på den politiska dagordningen och Sverige införde en mer restriktiv immigrationspolitik. I Dalarnas län slog invandringen rekord år 2016 med 4 725 personer som immigrerade under året. Därefter har antalet immigranter i länet minskat och antalet var 3 104 personer år 2017 och 2 628 personer år 2018.
 
@@ -140,7 +140,14 @@ Enligt internationell rätt har flyktingar rätt till skydd, så kallad asyl. As
 
 Efter år 2015 har antalet ansökningar om asyl i Sverige minskat. Anledningarna till detta är flera. Flyktingavtalet mellan Turkiet och EU har gjort att möjligheterna för asylsökande att ta sig över gränserna i Europa har försvårats. På svensk nivå har lagstiftningen förändrats, genom att tidsbegränsade uppehållstillstånd i regel delas
 ut istället för permanenta, samt att familjeåterförening har försvårats. De gränskontroller som infördes i södra Sverige i början av 2016 gör att personer som saknar giltig legitimation inte längre har möjlighet att ta sig in
-i landet. De nya ID-kontrollerna kombinerat med andra åtgärder i Sverige och Europa har haft en stor påverkan på antalet asylsökare. Enligt Migrationsverkets senaste prognos förväntas antalet asylsökande de närmaste åren vara fortsatt stabilt, och de räknar med 21 000 asylsökande år 2019 och 22 000 år 2020.
+i landet. De nya ID-kontrollerna kombinerat med andra åtgärder i Sverige och Europa har haft en stor påverkan på antalet asylsökare. Under `r asylsokande_max_ar` sökte `r asylsokande_senaste_ar_antal` personer asyl i Sverige, vilket är det lägsta antalet sedan 1996.
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_asylsokande_antal$asylsokande_antal
+
+```
+
 
 Ett stort antal asylsökande ett år leder ofta till att invandringen ökar året därpå. Det beror på att asylsökande räknas som invandrade först när de har fått uppehållstillstånd och folkbokfört sig i Sverige. Detta gör att antalet immigranter i hög grad påverkas av hur många beslut om uppehållstillstånd Migrationsverkets fastställer, samt hur stor andel av dessa ärenden som blir beviljade. Rekordnivån för antalet asylsökande år 2015, ledde till att invandringen slog rekord i Sverige år 2016. Även statistiken för åren 2017 och 2018 påverkades av det stora antalet asylsökande år 2015. Detta eftersom många fick vänta länge på beslut om de fick stanna i landet och för att många anhöriga till de som fick uppehållstillstånd sedan ville flytta till Sverige.
 

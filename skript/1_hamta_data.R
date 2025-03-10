@@ -14,6 +14,16 @@ vald_region = "20"
 valt_lan = "20"
 spara_diagram_som_bildfiler = FALSE
 
+source(here("skript/","asylsokande_antal_1984_.R"))
+gg_asylsokande_antal <- diagram_asylsokande_tidsserie(output_mapp_figur = Output_mapp_figur,
+                                                      spara_figur = spara_diagram_som_bildfiler,
+                                                      returnera_data= TRUE)
+
+
+asylsokande_max_ar = max(asylsokande_df$år)
+asylsokande_2015 = format(asylsokande_df %>% filter(år == 2015) %>% .$Antal,big.mark = " ")
+asylsokande_senaste_ar_antal = format(asylsokande_df %>% filter(år == max(år)) %>% .$Antal,big.mark = " ")
+
 source("https://raw.githubusercontent.com/Region-Dalarna/funktioner/main/func_API.R", encoding = "utf-8", echo = FALSE)
 
 # Utbildningsnivå (bakgrund och åldersgrupper) - hämtad från Figur 20 Kompetensförsörjningsrapporten
