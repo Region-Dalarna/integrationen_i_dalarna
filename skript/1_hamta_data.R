@@ -36,6 +36,12 @@ max_ar_utrikes_antal = max(antal_utrikes_region_df$år)
 min_antal_utrikes = format(antal_utrikes_region_df %>% filter(år == min_ar_utrikes_antal) %>%  .$Antal,big.mark = " ")
 max_antal_utrikes = antal_utrikes_region_df %>% filter(år == max_ar_utrikes_antal) %>%  .$Antal %>% format(big.mark = " ")
 
+# Största födelseland bland utrikes födda i Dalarna
+source(here("skript/","storsta_fodelseland_antal.R"))
+gg_storsta_fodelseland <- diagram_storsta_fodelseland(output_mapp_figur = Output_mapp_figur,
+                                                      spara_figur = spara_diagram_som_bildfiler,
+                                                      returnera_data= TRUE)
+
 
 ########################
 # Arbetsmarknadsstatus #

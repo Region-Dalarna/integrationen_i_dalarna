@@ -156,12 +156,6 @@ Eftersom flyktingar, efter att de har flyttat till Sverige, ofta vill förenas m
 
 Under åren 2013–2018 beviljades totalt 771 645 uppehållstillstånd i Sverige. Av dessa beviljades 9 procent för studier, 6 procent för EU-medborgare, 31 procent av asylskäl, 31 procent av anknytningsskäl och 23 procent fick uppehållstillstånd på grund av arbetsskäl. Att mindre än en tredjedel av de som beviljades uppehållstillstånd åren 2013–2018 var flyktingar med asylskäl är viktigt att komma ihåg när invandring och integration analyseras. Många av de som fått beviljade uppehållstillstånd på grund av asyl de senaste åren invandrade utan sin närmaste familj. Detta gjorde att även antalet sökta och beviljade uppehållstillstånd av anknytningsskäl var stort.
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
-
-gg_asylsokande_antal$asylsokande_antal
-
-```
-
 Mellan år `r min_ar_utrikes_antal` och år `r max_ar_utrikes_antal` har antalet utrikes födda
 personer i Dalarnas län ökat från `r min_antal_utrikes` till `r max_antal_utrikes`
 personer. Effekten av den ökade invandringen under
@@ -178,6 +172,14 @@ gg_antal_utrikes$utrikes_fodda_antal_Dalarna
 gg_antal_utrikes$befolkningsforandring_Dalarna
 
 ```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_storsta_fodelseland$storsta_fodelseland_Dalarna
+
+```
+
+
 
 *Fram till stycke om asylrätt, sid 8*
 
