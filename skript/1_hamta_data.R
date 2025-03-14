@@ -25,6 +25,18 @@ asylsokande_max_ar = max(asylsokande_df$år)
 asylsokande_2015 = format(asylsokande_df %>% filter(år == 2015) %>% .$Antal,big.mark = " ")
 asylsokande_senaste_ar_antal = format(asylsokande_df %>% filter(år == max(år)) %>% .$Antal,big.mark = " ")
 
+# Antal utrikes födda och förändring av antalet utrikes/inrikes födda i kommuner
+source(here("skript/","diag_utrikes_antal_forandring_kommun.R"))
+gg_antal_utrikes <- diagram_utrikes_fodda_tidsserie(output_mapp_figur = Output_mapp_figur,
+                                                    spara_figur = spara_diagram_som_bildfiler,
+                                                    returnera_data= TRUE)
+
+min_ar_utrikes_antal = min(antal_utrikes_region_df$år)
+max_ar_utrikes_antal = max(antal_utrikes_region_df$år)
+min_antal_utrikes = format(antal_utrikes_region_df %>% filter(år == min_ar_utrikes_antal) %>%  .$Antal,big.mark = " ")
+max_antal_utrikes = antal_utrikes_region_df %>% filter(år == max_ar_utrikes_antal) %>%  .$Antal %>% format(big.mark = " ")
+
+
 ########################
 # Arbetsmarknadsstatus #
 ########################
