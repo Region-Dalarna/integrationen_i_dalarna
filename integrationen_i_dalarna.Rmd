@@ -259,6 +259,13 @@ Skillnad mellan grupper?
 
 Hämta information från SCB som asylinvandringens utveckling
 
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_utbniva_bakgrund$utbniva_inr_utr_kon_Dalarna_ar2023
+
+```
+
+
 # Vägen till arbete
 
 *Vilka kommer i arbete?*

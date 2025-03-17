@@ -273,3 +273,13 @@ etablering_df <- read.xlsx("G:/skript/projekt/data/kvinnor_man/etableringstid.xl
 #                                                     diag_lagutb_over_tid = TRUE,
 #                                                     diag_andel_alla_utbnivaer = TRUE,
 #                                                     vald_utb_niva = "hogutb")
+
+#############################################
+#### Utbildningsnivå för inrikes/utrikes ####
+#############################################
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/main/diag_utbniva_inr_utr_fodda_lan_scb.R")
+gg_utbniva_bakgrund <- funktion_upprepa_forsok_om_fel( function() {
+  diag_utbniva_inr_utr_fodda_kon_lan(skriv_diagramfil = spara_diagram_som_bildfiler,
+                                     output_mapp = Output_mapp_figur,
+                                     returnera_df_rmarkdown = TRUE)
+})
