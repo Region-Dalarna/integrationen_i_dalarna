@@ -261,7 +261,12 @@ gg_utbniva_bakgrund_alder <- diag_utb_niva_bakgr_alder(output_mapp_figur = Outpu
                                                        returnera_data = TRUE)
 
 #Laddade in det här för att kunna köra raderna 396 och framåt i Rmd-filen
-etablering_df <- read.xlsx("G:/skript/projekt/data/kvinnor_man/etableringstid.xlsx")
+#etablering_df <- read.xlsx("G:/skript/projekt/data/kvinnor_man/etableringstid.xlsx")
+source(here("skript/","etablering_kon_utbildningsniva.R"))
+gg_etablering <- diag_etablering_utb_kon_scb(output_mapp = Output_mapp_figur,
+                                            skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                            returnera_data_rmarkdown = TRUE)
+
 
 # # Utbildningsnivå från 85 och framåt uppdelat på kön. Data hämtas i detta fall från GGplot-objektet (när data används i markdown) FEL
 # source("https://raw.githubusercontent.com/Region-Dalarna/diagram/main/diag_utbniva_flera_diagram_scb.R")
