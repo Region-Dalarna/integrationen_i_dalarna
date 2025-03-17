@@ -1,6 +1,7 @@
 if (!require("pacman")) install.packages("pacman")
 p_load(tidyverse,
-       here)
+       here,
+       scales)
 
 # OBS! Ska sättas till FALSE när skriptet går i produktion - men kan stängas av genom att sätta till TRUE för att se att alla skript fungerar som de ska
 # skriptet är till för att hantera rcurl-fel och inte vanliga fel som ju inte blir bättre av att man försöker flera gånger. =)
@@ -60,6 +61,17 @@ source("G:/skript/diagram/diag_befpyramid.R")
 gg_befpyramid <- diag_befpyramid(geo_vekt = vald_region,
                                  jmfr_linje = "utr_inr",
                                  output_mapp = Output_mapp_figur)
+
+##########################################################################################################################
+# Befolkningsgörändring över tid fördelad på komponenterna födelseöverskott, inrikes flyttnetto och invandringsöverskott #
+##########################################################################################################################
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_befutv_per_komponent_ar_scb.R")
+gg_befforandring_komponenter <- diag_befutv_per_komponent_ar(region_vekt = vald_region,
+                                                             x_axis_visa_var_xe_etikett = 4,
+                                                             output_mapp = Output_mapp_figur,
+                                                             facet_x_axis_storlek = 8,
+                                                             skriv_till_diagramfil  = spara_diagram_som_bildfiler,
+                                                             returnera_dataframe_global_environment = TRUE)
 
 ########################
 # Arbetsmarknadsstatus #

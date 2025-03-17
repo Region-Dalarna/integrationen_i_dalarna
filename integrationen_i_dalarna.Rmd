@@ -179,6 +179,11 @@ gg_storsta_fodelseland$storsta_fodelseland_Dalarna
 
 ```
 
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_befforandring_komponenter$`befolkningsforandring_per_komponent_Dalarnas län_ar2000-2024`
+
+```
 
 
 *Fram till stycke om asylrätt, sid 8*
