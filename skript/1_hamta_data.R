@@ -14,7 +14,7 @@ vald_region = "20"
 valt_lan = "20"
 spara_diagram_som_bildfiler = FALSE
 
-# Asylsökande 1984-senate obseravation
+# Asylsökande 1984-senaste obseravation
 source(here("skript/","asylsokande_antal_1984_.R"))
 gg_asylsokande_antal <- diagram_asylsokande_tidsserie(output_mapp_figur = Output_mapp_figur,
                                                       spara_figur = spara_diagram_som_bildfiler,
@@ -25,7 +25,7 @@ asylsokande_max_ar = max(asylsokande_df$år)
 asylsokande_2015 = format(asylsokande_df %>% filter(år == 2015) %>% .$Antal,big.mark = " ")
 asylsokande_senaste_ar_antal = format(asylsokande_df %>% filter(år == max(år)) %>% .$Antal,big.mark = " ")
 
-# Antal utrikes födda och förändring av antalet utrikes/inrikes födda i kommuner
+# Antal utrikes födda och förändring av antalet utrikes/inrikes födda i kommuner samt kumulativ summa på länsnivå
 source(here("skript/","diag_utrikes_antal_forandring_kommun.R"))
 gg_antal_utrikes <- diagram_utrikes_fodda_tidsserie(output_mapp_figur = Output_mapp_figur,
                                                     spara_figur = spara_diagram_som_bildfiler,
@@ -36,12 +36,30 @@ max_ar_utrikes_antal = max(antal_utrikes_region_df$år)
 min_antal_utrikes = format(antal_utrikes_region_df %>% filter(år == min_ar_utrikes_antal) %>%  .$Antal,big.mark = " ")
 max_antal_utrikes = antal_utrikes_region_df %>% filter(år == max_ar_utrikes_antal) %>%  .$Antal %>% format(big.mark = " ")
 
+min_ar_utrikes_kumulativ <- min(antal_forandring_lan_kumulativ$år)
+max_ar_utrikes_kumulativ <- max(antal_forandring_lan_kumulativ$år)
+kumulativ_summa_inrikes <- format(abs(antal_forandring_lan_kumulativ %>% filter(födelseregion == "Född i Sverige",år==max(år)) %>%  .$kumulativ_summa),big.mark = " ")
+kumulativ_summa_utrikes <- format(abs(antal_forandring_lan_kumulativ %>% filter(födelseregion == "Utrikes född",år==max(år)) %>%  .$kumulativ_summa),big.mark = " ")
+
+
 # Största födelseland bland utrikes födda i Dalarna
 source(here("skript/","storsta_fodelseland_antal.R"))
 gg_storsta_fodelseland <- diagram_storsta_fodelseland(output_mapp_figur = Output_mapp_figur,
                                                       spara_figur = spara_diagram_som_bildfiler,
                                                       returnera_data= TRUE)
 
+
+fodelseland_forsta_ar <- min(storsta_fodelseland_df$år)
+fodelseland_senaste_ar <- max(storsta_fodelseland_df$år)
+
+############################################################
+########## Befolkningspyramid för Inrikes/utrikes ##########
+############################################################
+
+source("G:/skript/diagram/diag_befpyramid.R")
+gg_befpyramid <- diag_befpyramid(geo_vekt = vald_region,
+                                 jmfr_linje = "utr_inr",
+                                 output_mapp = Output_mapp_figur)
 
 ########################
 # Arbetsmarknadsstatus #
@@ -232,15 +250,6 @@ gg_utbniva_bakgrund_alder <- diag_utb_niva_bakgr_alder(output_mapp_figur = Outpu
 
 #Laddade in det här för att kunna köra raderna 396 och framåt i Rmd-filen
 etablering_df <- read.xlsx("G:/skript/projekt/data/kvinnor_man/etableringstid.xlsx")
-
-# ## Befolkningspyramid
-# source("G:/skript/diagram/diag_befpyramid.R")
-# gg_befpyramid <- diag_befpyramid(geo_vekt = c(vald_region),
-#                                  jmfr_linje = "ar",
-#                                  jmfr_ar = "1968",
-#                                  output_mapp = Output_mapp_figur)
-
-
 
 # # Utbildningsnivå från 85 och framåt uppdelat på kön. Data hämtas i detta fall från GGplot-objektet (när data används i markdown) FEL
 # source("https://raw.githubusercontent.com/Region-Dalarna/diagram/main/diag_utbniva_flera_diagram_scb.R")

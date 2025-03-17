@@ -2,10 +2,12 @@ diagram_utrikes_fodda_tidsserie <-function(region_vekt = c("20"),# Max 1, län
                                            kon_klartext = NA, # #  NA = tas inte med i uttaget,  Finns: "män", "kvinnor"
                                            diag_antal = TRUE,
                                            diag_forandring_kommuner = TRUE,
+                                           diag_forandring_lan = TRUE,
                                            output_mapp_figur = "G:/Samhällsanalys/Statistik/Näringsliv/basfakta/", # Outputmapp för figur
                                            spara_figur = FALSE, # Sparar figuren till output_mapp_figur
                                            fodelseregion_klartext = "*", # NA = tas inte med i uttaget,  Finns: "Född i Sverige", "Utrikes född"
                                            tid_koder = "*", # Finns från 2000 och framåt
+                                           alder_grupp = c(16,65),
                                            returnera_figur = TRUE, # Returnerar en figur
                                            valda_farger = diagramfarger("rus_sex"),
                                            returnera_data = FALSE) # Skall data returneras)
@@ -25,6 +27,8 @@ diagram_utrikes_fodda_tidsserie <-function(region_vekt = c("20"),# Max 1, län
   gg_list <- list()  # skapa en tom lista att lägga flera ggplot-objekt i (om man skapar flera diagram)
   objektnamn <- c()
   region_namn <- skapa_kortnamn_lan(hamtaregion_kod_namn(region_vekt)$region)
+  # Används till diagrammet förändring län
+  region_vekt_lan = region_vekt
 
   if(diag_forandring_kommuner) region_vekt = hamtakommuner(region_vekt,tamedriket = FALSE)
 
@@ -97,6 +101,65 @@ diagram_utrikes_fodda_tidsserie <-function(region_vekt = c("20"),# Max 1, län
                                    filter((region != region_namn)),
                                  skickad_x_var = "region",
                                  skickad_y_var = "forandring",
+                                 skickad_x_grupp = "födelseregion",
+                                 manual_color = valda_farger,
+                                 geom_position_stack = TRUE,
+                                 diagram_titel = diagram_titel,
+                                 manual_x_axis_text_vjust = 1,
+                                 manual_x_axis_text_hjust = 1,
+                                 diagram_capt =  diagram_capt,
+                                 output_mapp = output_mapp_figur,
+                                 stodlinjer_avrunda_fem = TRUE,
+                                 #x_axis_visa_var_xe_etikett = 2,
+                                 manual_y_axis_title = "",
+                                 filnamn_diagram = diagramfilnamn,
+                                 skriv_till_diagramfil = spara_figur)
+
+    gg_list <- c(gg_list, list(gg_obj))
+    names(gg_list)[[length(gg_list)]] <- diagramfilnamn %>% str_remove(".png")
+  }
+
+  if(diag_forandring_lan){
+
+    antal_inrikes_utrikes_df <- hamta_bef_region_alder_kon_fodelseregion_tid_scb(region_vekt = region_vekt_lan,
+                                                                                 alder_koder = "*",
+                                                                                 kon_klartext = kon_klartext,
+                                                                                 tid_koder = tid_koder) %>%
+      mutate(region = skapa_kortnamn_lan(region),
+             alder_grupper =skapa_aldersgrupper(ålder,alder_grupp)) %>%
+        group_by(region,år,födelseregion,alder_grupper) %>%
+          summarise(Antal = sum(Antal)) %>%
+            ungroup() %>%
+          filter(alder_grupper == "16-64 år")
+
+
+    #antal_utrikes_region_df <- antal_inrikes_utrikes_df %>% filter(födelseregion == "Utrikes född",region == region_namn)
+
+    # Beräknar förändring i antal
+    antal_forandring_lan_df <- antal_inrikes_utrikes_df %>%
+      group_by(födelseregion) %>%
+        arrange(år,.by.group=TRUE) %>%
+          mutate(forandring = Antal - lag(Antal)) %>%  # Compute difference from previous year
+            ungroup()
+
+    antal_forandring_lan_kumulativ <- antal_forandring_lan_df %>%
+      filter(år>min(år)) %>%
+        group_by(födelseregion) %>%
+          arrange(år,.by.group=TRUE) %>%
+            mutate(kumulativ_summa = cumsum(forandring)) %>%
+              ungroup()
+
+    if(returnera_data == TRUE){
+      assign("antal_forandring_lan_kumulativ", antal_forandring_lan_kumulativ, envir = .GlobalEnv)
+    }
+
+    diagram_capt = "Källa: SCB:s öppna statistikdatabas\nBearbetning: Samhällsanalys, Region Dalarna\nDiagramförklaring: Kumulativ förändring, dvs förändringen summeras varje år"
+    diagram_titel = paste0("Befolkningsförändring ",unique(antal_inrikes_utrikes_df$alder_grupper), " i ",region_namn)
+    diagramfilnamn <- paste0("befolkningsforandring_lan_",region_namn,".png")
+
+    gg_obj <- SkapaStapelDiagram(skickad_df = antal_forandring_lan_kumulativ,
+                                 skickad_x_var = "år",
+                                 skickad_y_var = "kumulativ_summa",
                                  skickad_x_grupp = "födelseregion",
                                  manual_color = valda_farger,
                                  geom_position_stack = TRUE,

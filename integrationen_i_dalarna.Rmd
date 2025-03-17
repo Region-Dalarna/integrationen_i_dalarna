@@ -211,7 +211,7 @@ Finns i befolkningsrapporten
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
 # include png file
-knitr::include_graphics("Figurer/Befpyramid Dalarnas län 2023_jmfr_ar_1968.png")
+knitr::include_graphics("Figurer/Befpyramid Dalarnas län 2024_jmfr_utr_inr.png")
 
 ```
 
@@ -223,7 +223,14 @@ befolkningen har varit en kortare tid i landet är befolkningen betydligt yngre 
 
 *Diagram - historisk förskjutning mellan inrikes och utrikes födda*
 
-Mellan år 2006 och 2017 minskade antalet inrikes födda i arbetsför ålder mellan 16–64 år i Dalarnas län med 17 970 personer, samtidigt som antalet utrikes födda i samma åldersgrupp ökade med 12 512 personer. Minskningen av antalet inrikes födda berodde på att ålderskullarna som fyllde 65 år var större än de som fyllde 16 år, samt en större inrikes utflyttning än inflyttning. Den inrikes födda befolkningen i arbetsför ålder minskade allra mest
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_antal_utrikes$befolkningsforandring_lan_Dalarna
+
+```
+
+
+Mellan år `r min_ar_utrikes_kumulativ` och `r max_ar_utrikes_kumulativ` minskade antalet inrikes födda i arbetsför ålder mellan 16–64 år i Dalarnas län med `r kumulativ_summa_inrikes` personer, samtidigt som antalet utrikes födda i samma åldersgrupp ökade med `r kumulativ_summa_utrikes` personer. Minskningen av antalet inrikes födda berodde på att ålderskullarna som fyllde 65 år var större än de som fyllde 16 år, samt en större inrikes utflyttning än inflyttning. Den inrikes födda befolkningen i arbetsför ålder minskade allra mest
 åren 2010–2015, vilket berodde på att det stora antalet personer födda i slutet av 1940-talet fyllde 65 och därmed uppnådde pensionsålder.
 
 *Prognos över fortsatt förskjutning mellan inrikes och utrikes födda*
