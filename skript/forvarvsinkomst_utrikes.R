@@ -3,7 +3,6 @@ diag_inkomst_bakgrund_scb <- function(region = "20", # Enbart ett i taget.
                                         logga_sokvag = NA,                                 # sökväg till logga som ska visas i diagrammet
                                         output_mapp = "G:/Samhällsanalys/API/Fran_R/utskrift/",                                  # mapp där diagram ska sparas, NA = sparas ingen fil
                                         skriv_diagrambildfil = FALSE,                           # TRUE om diagram ska skrivas till fil, FALSE om diagram inte ska skrivas till fil
-                                        excel_mapp = NA,                                   # mapp där excelfil ska sparas, NA = sparas ingen fil
                                         returnera_data_rmarkdown = FALSE,
                                         demo = FALSE             # sätts till TRUE om man bara vill se ett exempel på diagrammet i webbläsaren och inget annat
 ) {

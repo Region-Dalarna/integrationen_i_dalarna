@@ -249,6 +249,14 @@ utgör men ser samtidigt att det finns vissa hinder, såsom validering av nyanl�
 
 # Arbetsmarknadskonjunktur och invandring - då och nu
 
+Diagram 15 i den tidigare rapporten
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_sysselsattningsgrad_tidsserie$sysselsattningsgrad_tidsserie_Dalarna
+
+```
+
 En viktig aspekt för integrationen är hur stark arbetsmarknaden är vid tidpunkten för invandringen.
 
 Dalarna har generellt sett haft en stark arbetsmarknad över lång tid jämfört med riket. 

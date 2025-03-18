@@ -77,6 +77,14 @@ gg_befforandring_komponenter <- diag_befutv_per_komponent_ar(region_vekt = vald_
 # Arbetsmarknadsstatus #
 ########################
 
+######################################
+## Sysselsättningsstatus, tidsserie ##
+######################################
+source(here("skript/","sysselsattningsgrad_tidsserie_linje.R"))
+gg_sysselsattningsgrad_tidsserie <- diag_sysselsattningsgrad_tidsserie(output_mapp = Output_mapp_figur,
+                                                                       skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                                                       returnera_data_rmarkdown= TRUE)
+
 ##########
 ## Län ##
 #########
