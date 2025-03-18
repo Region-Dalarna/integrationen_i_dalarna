@@ -299,6 +299,13 @@ Något som är viktigt att ha med sig när andelen sysselsatta analyseras är at
 
 *Diagram - Andel sysselsatta 20-64 år i Dalarnas län bland utrikes födda efter vistelsetid*
 
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_syssgrad_vistelsetid_inrikes$sysselsattningsgrad_vistelsetid_inrikes
+
+```
+
+
 När vistelsetid tas med i analysen syns samma mönster som i diagram 18, delvis att det finns en fungerande integration i bemärkelsen att de som vistats längre tid i Sverige har en högre förvärvsfrekvens. Variabeln vistelsetid tjänar som en indikator på en rad andra faktorer som påverkar möjligheterna till att få ett arbete. Efter en ökad tid i landet kan en nyanländ person lära sig svenska, validera och komplettera utbildningar, lära sig hur den svenska arbetsmarknaden fungerar samt knyta kontakter för att öka chansen till att få en sysselsättning och inkomst. Enligt detta resonemang förväntas ett initialt sysselsättningsgap mellan inrikes födda och nyanlända, som minskar succesivt när vistelsetiden i landet blir längre.
 
 Män har en högre sysselsättningsgrad både bland utrikes födda och de med svensk bakgrund. I gruppen med svensk bakgrund är skillnaderna mellan könen små, medan utrikes födda kvinnor i väsentligt lägre grad är sysselsatta än utrikes födda män. Skillnaderna mellan könen är större ju kortare vistelsetiden är i Sverige. Emma Neuman från Linnéuniversitet har undersökt hur kulturella normer bidrar till arbetsmarkandsutfall mellan utrikes födda kvinnor och män i Sverige. Hennes kartläggning visade att de som invandrat från länder där arbetsdeltagandet för kvinnor var lägre än män, också hade stora skillnader i andelen sysselsatta per kön på den svenska arbetsmarknaden. Efter en längre vistelsetid i Sverige, minskade gapet och skillnaden i sysselsättningsgrad mellan könen närmar sig nivån för inrikes födda. Slutsatsen som drogs var att den kulturella inverkan som ansågs finnas avtar med tiden.  Mönstret med en stor skillnad i sysselsättningsgrad mellan kön för utrikes födda med en kort vistelsetid går att se även i Dalarna. Skillnaden mellan könen minskar sedan ju längre vistelsetiden i landet blir, och har nästan helt försvunnit för de som bott i Sverige i 12 år eller mer. Efter en generation finns inga skillnader i sysselsättningsgrad mellan könen, och bland personer i Dalarna födda i Sverige med båda föräldrarna födda utomlands, var en något större andel kvinnor än män sysselsatta.
