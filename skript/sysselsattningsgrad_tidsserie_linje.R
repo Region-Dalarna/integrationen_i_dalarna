@@ -41,7 +41,7 @@ diag_sysselsattningsgrad_tidsserie <- function(region = "20", # Enbart ett i tag
                  readxl)
 
   # Före 2022
-  sysselsattningsgrad_tidsserie_df <- hamta_rams_bas_region_inrikesutrikes_kon_tid_scb(region_vekt = region,
+  sysselsatta <- hamta_rams_bas_region_inrikesutrikes_kon_tid_scb(region_vekt = region,
                                                                                        kon_klartext = c("kvinnor", "män"),
                                                                                        inrikesutrikes_klartext = c("inrikes födda", "utrikes födda"),
                                                                                        tid_koder = "*") %>%
@@ -49,6 +49,23 @@ diag_sysselsattningsgrad_tidsserie <- function(region = "20", # Enbart ett i tag
                      region = skapa_kortnamn_lan(region)) %>%
                 select(år,region,kombo,ålder,sysselsättningsgrad)
 
+  source("https://raw.githubusercontent.com/Region-Dalarna/hamta_data/main/hamta_data_arbetsmarknadsstatus_bas_ar_prel.R")
+  sysselsatta_bas_preliminär = hamta_arbetsmarknadsstatus_bas_ar_prel(region = region,
+                                                                      kon_klartext = c("kvinnor", "män"),
+                                                                      fodelseregion_klartext = c("inrikes född", "utrikes född"),
+                                                                      cont_klartext = "sysselsättningsgrad",
+                                                                      alder_klartext = "20-64 år") %>%
+    mutate(region = skapa_kortnamn_lan(region),
+           födelseregion = case_when(
+             födelseregion == "inrikes född" ~ "inrikes födda",
+             födelseregion == "utrikes född" ~ "utrikes födda",
+             TRUE ~ födelseregion
+           ),
+           kombo = paste0(födelseregion," ",kön)) %>%
+      select(år,region,kombo,ålder,sysselsättningsgrad)
+
+
+  sysselsattningsgrad_tidsserie_df <- rbind(sysselsatta, sysselsatta_bas_preliminär %>% filter(!(år%in%unique(sysselsatta$år))))
 
   if(returnera_data_rmarkdown == TRUE){
     assign("sysselsattningsgrad_tidsserie_df", sysselsattningsgrad_tidsserie_df, envir = .GlobalEnv)
@@ -57,7 +74,7 @@ diag_sysselsattningsgrad_tidsserie <- function(region = "20", # Enbart ett i tag
   gg_list <- list()
 
 
-  diagram_capt <- "Källa: SCB:s öppna statistikdatabas, BAS.\nBearbetning: Samhällsanalys, Region Dalarna."
+  diagram_capt <- "Källa: SCB, RAMS och BAS.\nBearbetning: Samhällsanalys, Region Dalarna.\nDiagramförklaring: Data för senaste år är preliminär."
 
   diagramtitel <- paste0("Sysselsättningsgrad ",unique(sysselsattningsgrad_tidsserie_df$ålder), " i ",unique(sysselsattningsgrad_tidsserie_df$region))
   #diagramtitel <- str_wrap(diagramtitel,60)
