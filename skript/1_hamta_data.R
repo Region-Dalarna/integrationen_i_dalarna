@@ -89,9 +89,11 @@ gg_sysselsattningsgrad_tidsserie <- diag_sysselsattningsgrad_tidsserie(output_ma
 ## Sysselsättninggrad, vistelsetid/inrikes ##
 #############################################
 source(here("skript/","syssgrad_vistelsetid_inrikes.R"))
-gg_syssgrad_vistelsetid_inrikes <- diag_sysselsattningsgrad_vistelsetid_inrikes_scb(output_mapp = Output_mapp_figur,
-                                                                                    skriv_diagrambildfil = spara_diagram_som_bildfiler,
-                                                                                    returnera_data_rmarkdown= TRUE)
+gg_syssgrad_vistelsetid_utb <- diag_sysselsattningsgrad_vistelsetid_inrikes_scb(output_mapp = Output_mapp_figur,
+                                                                                diag_vistelsetid = TRUE,
+                                                                                diag_utbniva = TRUE,
+                                                                                skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                                                                returnera_data_rmarkdown= TRUE)
 
 
 ##########

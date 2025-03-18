@@ -289,7 +289,16 @@ I Statistiska centralbyråns analys av utrikes föddas etablering på arbetsmark
 
 *Andel sysselsatta 20-64 år i Dalarnas län*
 
-När andelen sysselsatta redovisas per utbildningsnivå är det tydligt att individer med förgymnasial utbildning i lägre utsträckning är förvärvsarbetande (se diagram 17), vilket gäller även gruppen med svensk bakgrund. Andelen sysselsatta är även väsentligt lägre i gruppen med utländsk bakgrund.
+Lite osäker på åldersspannet
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_syssgrad_vistelsetid_utb$sysselsattningsgrad_inrikes_utrikes_utbniva
+
+```
+
+När andelen sysselsatta redovisas per utbildningsnivå är det tydligt att individer med förgymnasial utbildning i lägre utsträckning är förvärvsarbetande (se diagram 17), vilket gäller även gruppen med utrikes födda.
 
 En analys av andelen sysselsatta uppdelat på utrikes/inrikes födda utifrån om föräldrarna är födda inrikes eller utrikes visar att andelen sysselsatta är högre för inrikes födda med två föräldrar födda utrikes (ibland benämnd som andra generationens invandrare) än för utrikes födda, men inte fullt lika hög som inrikes födda med en eller båda föräldrarna födda i Sverige. Det går att konstatera att det i någon utsträckning finns en fungerande integration i bemärkelsen att de som är födda i Sverige med utrikes födda föräldrar i betydligt högre utsträckning än utrikes födda är sysselsatta.
 
@@ -301,7 +310,7 @@ Något som är viktigt att ha med sig när andelen sysselsatta analyseras är at
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
-gg_syssgrad_vistelsetid_inrikes$sysselsattningsgrad_vistelsetid_inrikes
+gg_syssgrad_vistelsetid_utb$sysselsattningsgrad_vistelsetid_inrikes
 
 ```
 
