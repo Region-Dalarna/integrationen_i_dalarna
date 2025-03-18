@@ -304,6 +304,12 @@ En analys av andelen sysselsatta uppdelat på utrikes/inrikes födda utifrån om
 
 *Diagram - Andel sysselsatta 20-64 år i Dalarnas län *
 
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_sysselsattningsgrad_tidsserie$sysselsattningsgrad_jmf_2017_Dalarna
+
+```
+
 Något som är viktigt att ha med sig när andelen sysselsatta analyseras är att gränsen för att definieras förvärvsarbetande är relativt låg. I Arbetskraftsundersökningarna (AKU) som genomförs av SCB och utgör den officiella arbetslöshetsstatistiken definieras en person som förvärvsarbetande om den har arbetat en timme per vecka vid tiden för undersökningens genomförande. AKU är en urvalsundersökning som genomförs genom intervjuer och är inte nedbrytbar på finare geografisk nivå än län och storstadsregioner. För att analysera sysselsättning på finare geografisk nivå än vad som finns i AKU kan registerstatistik användas, närmare bestämt Registerbaserad arbetsmarknadsstatistik (RAMS). Definitionen av sysselsatt baseras på definitionen i AKU men beräknas på ett mer komplext sätt utifrån inkomst, då uppgifter om arbetad tid per vecka inte finns i RAMS.
 
 *Diagram - Andel sysselsatta 20-64 år i Dalarnas län bland utrikes födda efter vistelsetid*

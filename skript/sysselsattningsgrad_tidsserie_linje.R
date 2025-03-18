@@ -1,9 +1,10 @@
 diag_sysselsattningsgrad_tidsserie <- function(region = "20", # Enbart ett i taget.
+                                               diag_stapel = TRUE,
+                                               diag_linje = TRUE,
                                                visa_logga_i_diagram = TRUE,                        # TRUE om logga ska visas i diagrammet, FALSE om logga inte ska visas i diagrammet
                                                logga_sokvag = NA,                                 # sökväg till logga som ska visas i diagrammet
                                                output_mapp = "G:/Samhällsanalys/API/Fran_R/utskrift/",                                  # mapp där diagram ska sparas, NA = sparas ingen fil
                                                skriv_diagrambildfil = FALSE,                           # TRUE om diagram ska skrivas till fil, FALSE om diagram inte ska skrivas till fil
-                                               excel_mapp = NA,                                   # mapp där excelfil ska sparas, NA = sparas ingen fil
                                                returnera_data_rmarkdown = FALSE,
                                                demo = FALSE             # sätts till TRUE om man bara vill se ett exempel på diagrammet i webbläsaren och inget annat
         ) {
@@ -42,65 +43,107 @@ diag_sysselsattningsgrad_tidsserie <- function(region = "20", # Enbart ett i tag
 
   # Före 2022
   sysselsatta <- hamta_rams_bas_region_inrikesutrikes_kon_tid_scb(region_vekt = region,
-                                                                                       kon_klartext = c("kvinnor", "män"),
+                                                                                       kon_klartext = c("*"),
                                                                                        inrikesutrikes_klartext = c("inrikes födda", "utrikes födda"),
                                                                                        tid_koder = "*") %>%
               mutate(kombo = paste0(födelseregion," ",kön),
                      region = skapa_kortnamn_lan(region)) %>%
-                select(år,region,kombo,ålder,sysselsättningsgrad)
+                select(år,region,kön,födelseregion,kombo,ålder,sysselsättningsgrad)
 
   source("https://raw.githubusercontent.com/Region-Dalarna/hamta_data/main/hamta_data_arbetsmarknadsstatus_bas_ar_prel.R")
   sysselsatta_bas_preliminär = hamta_arbetsmarknadsstatus_bas_ar_prel(region = region,
-                                                                      kon_klartext = c("kvinnor", "män"),
+                                                                      kon_klartext = c("*"),
                                                                       fodelseregion_klartext = c("inrikes född", "utrikes född"),
                                                                       cont_klartext = "sysselsättningsgrad",
                                                                       alder_klartext = "20-64 år") %>%
     mutate(region = skapa_kortnamn_lan(region),
+           kön = ifelse(kön == "totalt","kvinnor och män",kön),
            födelseregion = case_when(
              födelseregion == "inrikes född" ~ "inrikes födda",
              födelseregion == "utrikes född" ~ "utrikes födda",
              TRUE ~ födelseregion
            ),
            kombo = paste0(födelseregion," ",kön)) %>%
-      select(år,region,kombo,ålder,sysselsättningsgrad)
+      select(år,region,kön,födelseregion,kombo,ålder,sysselsättningsgrad)
 
 
   sysselsattningsgrad_tidsserie_df <- rbind(sysselsatta, sysselsatta_bas_preliminär %>% filter(!(år%in%unique(sysselsatta$år))))
 
-  if(returnera_data_rmarkdown == TRUE){
-    assign("sysselsattningsgrad_tidsserie_df", sysselsattningsgrad_tidsserie_df, envir = .GlobalEnv)
-  }
-
   gg_list <- list()
 
+  if(diag_stapel){
+    diagram_capt <- "Källa: SCB, RAMS och BAS.\nBearbetning: Samhällsanalys, Region Dalarna.\nDiagramförklaring: Data för senaste år är preliminär."
 
-  diagram_capt <- "Källa: SCB, RAMS och BAS.\nBearbetning: Samhällsanalys, Region Dalarna.\nDiagramförklaring: Data för senaste år är preliminär."
+    if(returnera_data_rmarkdown == TRUE){
+      assign("sysselsattningsgrad_tidsserie_jmf_2017_df", sysselsattningsgrad_tidsserie_df %>% filter(år %in% c(2017,max(år)),kön == "kvinnor och män"), envir = .GlobalEnv)
+    }
 
-  diagramtitel <- paste0("Sysselsättningsgrad ",unique(sysselsattningsgrad_tidsserie_df$ålder), " i ",unique(sysselsattningsgrad_tidsserie_df$region))
-  #diagramtitel <- str_wrap(diagramtitel,60)
-  diagramfilnamn <- paste0("sysselsattningsgrad_tidsserie_",unique(sysselsattningsgrad_tidsserie_df$region),".png")
+    diagramtitel <- paste0("Sysselsättningsgrad ",unique(sysselsattningsgrad_tidsserie_df$ålder), " i ",unique(sysselsattningsgrad_tidsserie_df$region))
+    #diagramtitel <- str_wrap(diagramtitel,60)
+    diagramfilnamn <- paste0("sysselsattningsgrad_jmf_2017_",unique(sysselsattningsgrad_tidsserie_df$region),".png")
 
-  # Skapar diagram där etableringstiden jämförs mellan män och kvinnor, oavsett utbildning
-  gg_obj <- SkapaLinjeDiagram(skickad_df =sysselsattningsgrad_tidsserie_df,
-                               skickad_x_var = "år",
-                               skickad_y_var = "sysselsättningsgrad",
-                               skickad_x_grupp = "kombo",
-                               # manual_x_axis_text_vjust=0.9,
-                               manual_color = diagramfarger("rus_sex"),
-                               diagram_titel = diagramtitel,
-                               diagram_capt =  diagram_capt,
-                               manual_y_axis_title = "procent",
-                               y_axis_100proc = TRUE,
-                               x_axis_lutning = 45,
-                               legend_kolumner = 2,
-                               output_mapp = output_mapp,
-                               filnamn_diagram = diagramfilnamn,
-                               lagg_pa_logga = visa_logga_i_diagram,
-                               skriv_till_diagramfil = skriv_diagrambildfil)
+    # Skapar diagram där etableringstiden jämförs mellan män och kvinnor, oavsett utbildning
+    gg_obj <- SkapaStapelDiagram(skickad_df =sysselsattningsgrad_tidsserie_df %>%
+                                  filter(år %in% c(2017,max(år)),
+                                         kön == "kvinnor och män"),
+                                 skickad_x_var = "år",
+                                 skickad_y_var = "sysselsättningsgrad",
+                                 skickad_x_grupp = "födelseregion",
+                                 # manual_x_axis_text_vjust=0.9,
+                                 manual_color = diagramfarger("rus_sex"),
+                                 diagram_titel = diagramtitel,
+                                 diagram_capt =  diagram_capt,
+                                 manual_y_axis_title = "procent",
+                                 manual_x_axis_text_hjust = 1,
+                                 manual_x_axis_text_vjust = 1,
+                                 y_axis_100proc = TRUE,
+                                 x_axis_lutning = 0,
+                                 #legend_kolumner = 2,
+                                 output_mapp = output_mapp,
+                                 filnamn_diagram = diagramfilnamn,
+                                 lagg_pa_logga = visa_logga_i_diagram,
+                                 skriv_till_diagramfil = skriv_diagrambildfil)
 
 
-  gg_list <- c(gg_list, list(gg_obj))
-  names(gg_list)[[length(gg_list)]] <- diagramfilnamn %>% str_remove(".png")
+    gg_list <- c(gg_list, list(gg_obj))
+    names(gg_list)[[length(gg_list)]] <- diagramfilnamn %>% str_remove(".png")
+  }
+
+
+  if(diag_linje){
+    #diagram_capt <- "Källa: SCB, RAMS och BAS.\nBearbetning: Samhällsanalys, Region Dalarna.\nDiagramförklaring: Data för senaste år är preliminär."
+
+    if(returnera_data_rmarkdown == TRUE){
+      assign("sysselsattningsgrad_tidsserie_df", sysselsattningsgrad_tidsserie_df %>% filter(kön!="kvinnor och män"), envir = .GlobalEnv)
+    }
+
+    diagramtitel <- paste0("Sysselsättningsgrad ",unique(sysselsattningsgrad_tidsserie_df$ålder), " i ",unique(sysselsattningsgrad_tidsserie_df$region))
+    #diagramtitel <- str_wrap(diagramtitel,60)
+    diagramfilnamn <- paste0("sysselsattningsgrad_tidsserie_",unique(sysselsattningsgrad_tidsserie_df$region),".png")
+
+    # Skapar diagram där etableringstiden jämförs mellan män och kvinnor, oavsett utbildning
+    gg_obj <- SkapaLinjeDiagram(skickad_df =sysselsattningsgrad_tidsserie_df %>%
+                                  filter(kön!="kvinnor och män"),
+                                skickad_x_var = "år",
+                                skickad_y_var = "sysselsättningsgrad",
+                                skickad_x_grupp = "kombo",
+                                # manual_x_axis_text_vjust=0.9,
+                                manual_color = diagramfarger("rus_sex"),
+                                diagram_titel = diagramtitel,
+                                diagram_capt =  diagram_capt,
+                                manual_y_axis_title = "procent",
+                                y_axis_100proc = TRUE,
+                                x_axis_lutning = 45,
+                                legend_kolumner = 2,
+                                output_mapp = output_mapp,
+                                filnamn_diagram = diagramfilnamn,
+                                lagg_pa_logga = visa_logga_i_diagram,
+                                skriv_till_diagramfil = skriv_diagrambildfil)
+
+
+    gg_list <- c(gg_list, list(gg_obj))
+    names(gg_list)[[length(gg_list)]] <- diagramfilnamn %>% str_remove(".png")
+  }
 
   return(gg_list)
 
