@@ -53,6 +53,8 @@ gg_storsta_fodelseland <- diagram_storsta_fodelseland(output_mapp_figur = Output
 fodelseland_forsta_ar <- min(storsta_fodelseland_df$år)
 fodelseland_senaste_ar <- max(storsta_fodelseland_df$år)
 
+storsta_fodelseland_senaste_ar <- storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$födelseregion
+
 ############################################################
 ########## Befolkningspyramid för Inrikes/utrikes ##########
 ############################################################
@@ -73,6 +75,8 @@ gg_befforandring_komponenter <- diag_befutv_per_komponent_ar(region_vekt = vald_
                                                              skriv_till_diagramfil  = spara_diagram_som_bildfiler,
                                                              returnera_dataframe_global_environment = TRUE)
 
+
+
 ########################
 # Arbetsmarknadsstatus #
 ########################
@@ -87,6 +91,9 @@ gg_sysselsattningsgrad_tidsserie <- diag_sysselsattningsgrad_tidsserie(output_ma
                                                                        skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                                                        returnera_data_rmarkdown= TRUE)
 
+syssgrad_tidsserie_forsta_ar <- min(sysselsattningsgrad_tidsserie_df$år)
+syssgrad_tidsserie_senaste_ar <- max(sysselsattningsgrad_tidsserie_df$år)
+
 #############################################
 ## Sysselsättninggrad, vistelsetid/inrikes ##
 #############################################
@@ -96,6 +103,8 @@ gg_syssgrad_vistelsetid_utb <- diag_sysselsattningsgrad_vistelsetid_inrikes_scb(
                                                                                 diag_utbniva = TRUE,
                                                                                 skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                                                                 returnera_data_rmarkdown= TRUE)
+
+syssgrad_vistelsetid_ar <- unique(syssgrad_vistelsetid_inrikes_df$år)
 
 
 ##########
@@ -281,6 +290,8 @@ gg_utbniva_bakgrund_alder <- diag_utb_niva_bakgr_alder(output_mapp_figur = Outpu
                                                        returnera_figur = TRUE,
                                                        returnera_data = TRUE)
 
+utb_niva_bakgrund_alder_ar <- unique(utb_niva_bakgrund$Ar)
+
 #Laddade in det här för att kunna köra raderna 396 och framåt i Rmd-filen
 #etablering_df <- read.xlsx("G:/skript/projekt/data/kvinnor_man/etableringstid.xlsx")
 source(here("skript/","etablering_kon_utbildningsniva.R"))
@@ -308,6 +319,11 @@ gg_forvarvsinkomst_utrikes <- diag_inkomst_bakgrund_scb(output_mapp = Output_map
                                                         skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                                         returnera_data_rmarkdown = TRUE)
 
+
+forvarvsinkomst_ar <- unique(forvarvsinkomst_df$år)
+forvarvsinkomst_inrikes_kvinnor <- gsub("\\.",",",forvarvsinkomst_df %>% filter(kön == "kvinnor",födelseregion == "födda i Sverige") %>%  .$`Medianinkomst, tkr`)
+forvarvsinkomst_inrikes_man <- gsub("\\.",",",forvarvsinkomst_df %>% filter(kön == "män",födelseregion == "födda i Sverige") %>%  .$`Medianinkomst, tkr`)
+
 #############################################
 #### Utbildningsnivå för inrikes/utrikes ####
 #############################################
@@ -317,3 +333,5 @@ gg_utbniva_bakgrund <- funktion_upprepa_forsok_om_fel( function() {
                                      output_mapp = Output_mapp_figur,
                                      returnera_df_rmarkdown = TRUE)
 })
+
+utbniva_bakgr_ar <- utbniva_bakgr_kon_df$år %>% unique()
