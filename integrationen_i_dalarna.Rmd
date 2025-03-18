@@ -578,6 +578,12 @@ Eftersom gymnasieutbildning är viktigt för möjligheten att etablera sig på a
 
 *Diagram 26 - Dalarnas gymnasiebehörighet, kvinnor och män, inrikes och utrikes födda 2018 och 2023*
 
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+ gg_gymnasiebehorighet$behorighet_gymnasiet_jmf_ar
+
+```
+
 Skillnaden i andelen behöriga till gymnasiet hos avgångselever i årskurs 9 mellan de med svensk och utländsk bakgrund var stor, både inom Dalarnas län och i riket som helhet. I Dalarna var 52 % av avgångseleverna med utländsk bakgrund och 88 % med svensk bakgrund behöriga till att påbörja gymnasiet. Siffrorna för riket var 58 % av eleverna med utländsk bakgrund och 91 % av eleverna med svensk bakgrund.
 
 När avgångseleverna i årskurs 9 år 2018 i riket studeras så påverkas andelen behöriga med utländsk bakgrund mycket av migrationsbakgrund. Skillnaderna i andelen behöriga är betydligt mindre mellan elever med utländsk och svensk bakgrund när förutsättningarna är mer likvärdiga. Vid en jämförelse var 91 procent av eleverna med svensk bakgrund behöriga och 86 procent av elever med utländsk bakgrund födda i Sverige behöriga, medan 85 procent av eleverna som invandrat före skolstart var behöriga. Bland elever i riket som invandrat i årskurs 1–5 var andelen behöriga elever däremot märkbart lägre och var 67 procent. Allra lägst i riket var behörigheten bland nyanlända som invandrat de senaste 4 åren eller saknade svenskt personnummer, där andelen behöriga elever var 28 procent. Enligt Skolverket har nyanlända elever en brant uppförsbacke. Att på en kort tid lära sig svenska språket och samtidigt utveckla ämneskunskaper är en svår utmaning. Skolverket anser att det behövs ett genomtänkt och målmedvetet arbete på skolorna och att skolor som tagit emot många nyanlända bör ges ett bra stöd.  Den primära orsaken till att en lägre andel utrikes födda elever i Dalarna än i riket är behöriga, är sannolikt att en större andel är nyanlända och har en kort vistelsetid i Sverige.
@@ -585,6 +591,13 @@ När avgångseleverna i årskurs 9 år 2018 i riket studeras så påverkas andel
 De avgångselever i årskurs 9 i Dalarna år 2018 som var utrikes födda var i betydligt lägre grad än inrikes födda behöriga till att påbörja gymnasiestudier. Skillnaden i kön var också störst bland utrikes födda elever, där 58 procent av flickorna och 47 procent av pojkarna var behöriga till gymnasiet. För elever födda i Sverige med en eller två utrikes födda föräldrar var andelen behöriga pojkar ungefär lika stor för som inrikes födda pojkar med två föräldrar födda i Sverige. Flickor födda i Sverige med två inrikes födda föräldrar var i högre grad behöriga till gymnasiet än inrikes födda flickor med en eller två utrikesfödda föräldrar.
 
 *Vistelsetid och betyg/behörigheter i skola och till gymnasium/högskola*
+Data för 0-1 år saknas (NA)
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+ gg_gymnasiebehorighet$behorighet_gymnasiet_vistelsetid
+
+```
 
 Det finns stora skillnader i gymnasiebehörighet mellan grupper med olika vistelsetid i Dalarna där behörigheten är större ju längre eleverna har vistats i Sverige. Precis som nationellt är det framförallt personer som har bott i landet fem år eller kortare som i betydligt lägre grad än de med svensk bakgrund som blir behöriga till att påbörja gymnasiet.
 
