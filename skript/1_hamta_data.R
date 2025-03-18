@@ -280,6 +280,14 @@ gg_etablering <- diag_etablering_utb_kon_scb(output_mapp = Output_mapp_figur,
 #                                                     vald_utb_niva = "hogutb")
 
 #############################################
+##### Förvärvsinkomst för inrikes/utrikes ####
+#############################################
+source(here("skript/","forvarvsinkomst_utrikes.R"))
+gg_forvarvsinkomst_utrikes <- diag_inkomst_bakgrund_scb(output_mapp = Output_mapp_figur,
+                                                        skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                                        returnera_data_rmarkdown = TRUE)
+
+#############################################
 #### Utbildningsnivå för inrikes/utrikes ####
 #############################################
 source("https://raw.githubusercontent.com/Region-Dalarna/diagram/main/diag_utbniva_inr_utr_fodda_lan_scb.R")

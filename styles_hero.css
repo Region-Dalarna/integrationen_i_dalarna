@@ -23,7 +23,7 @@ body {
   text-align: left;
   /*background-color: #fff;*/ }
 
-/* Ytan ovanför introduktion. Används enbart för att undvika att det blir en stor vit yta där*/ 
+/* Ytan ovanför introduktion. Används enbart för att undvika att det blir en stor vit yta där*/
 #header{
   background-repeat: no-repeat;
   height: 0px;
@@ -31,8 +31,8 @@ body {
   top:0;
   margin-top: 0;
   z-index:1;
-}  
- 
+}
+
 /*Segment med p - ta eventuellt bort*/
 /*p{
   font-family:'Poppins', sans-serif;
@@ -91,6 +91,10 @@ details{
   border-radius: 3px 3px 3px 3px;
   border: 0.1px dotted #000000;
   margin-bottom: 2rem;
+}
+
+.kommentar{
+  background-color: #FFFF00;
 }
 
 /* Ta bort? Oklart om detta används här*/
@@ -153,15 +157,15 @@ top: 5px;
      color: #fff
      border-color: #000000;
 }
-     
+
 /*Bannern längst upp. Är kopplad till ett htm dokument som heter here_image. Kort fungerar så att ett objekt
 i HTML läses in i Headern (i sektionen längst upp i R-markdowndokumentet). Detta heter hero_image.html. Koden Nedan
-stilsätter det i CSS*/     
+stilsätter det i CSS*/
 .hero-image{
     position: relative;
     margin-bottom: 2em;
     /* liner gradient tints the image darker for readability*/
-    background-image: url(Dalastrategin.jpg); 
+    background-image: url(Dalastrategin.jpg);
     height: 150px;
     max-width: 1200px;
     margin: 0 auto;
@@ -226,14 +230,14 @@ blockquote {
    text-shadow: rgba(34,34,34,.8) 3px 5px 5px;
    background-color: rgba(84,161,189,.8);
    padding:5px;
-   
+
 }*/
 
 /*
 .till_startsida:hover{
-  
+
    color:red;
-   
+
 }*/
 
 /* Om vi klickar på loggor (vilka är länkar) så skapas en liten tonad ruta runt objektet*/
@@ -247,7 +251,7 @@ blockquote {
 
 /* Gör vissa justeringar av dokumentet när fönstret minskar, så kallad media query*/
 @media (max-width: 970px){
- 
+
  .top-text {
     font-size: 2em;
 }
@@ -255,7 +259,7 @@ blockquote {
 .toc-content.col-xs-12.col-sm-8.col-md-9{
   padding-right: 20px;
 }
-   
+
 }
 
 @media(max-width: 700px){
@@ -265,7 +269,7 @@ blockquote {
 
  .header-logo_right {
    display:none;
-  
+
 }
 
 

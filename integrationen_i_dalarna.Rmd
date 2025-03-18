@@ -297,7 +297,16 @@ Män har en högre sysselsättningsgrad både bland utrikes födda och de med sv
 
 *Diagram - Genomsnittlig månadsinkomst förvärvsarbetande invånare 20-64 år i Dalarnas län*
 
-Utrikes födda personer i Dalarna har generellt sett lägre inkomster än personer födda i Sverige. Detta gäller framför allt de första åren efter flytten till Sverige. Skillnaderna är som kan konstateras väsentligt mindre för personer som bott i Sverige en längre tid, och är nästan helt borta efter 12 års tid. Inkomsterna skiljer sig även mellan personer som är födda i olika länder. Oavsett bakgrund har män en högre medelinkomst än kvinnor. Av de utrikes födda i Sverige hade nästan var femte en varaktigt låg ekonomisk standard år 2016, medan andelen bland de personer som är födda i Sverige var 7 procent.  Med varaktigt låg ekonomisk standard avses de personer som lever i ett hushåll som har en disponibel inkomst per konsumtionsenhet som är mindre än 60 procent av medianvärdet för samtliga personer samt under minst två av de tre föregående åren.
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_forvarvsinkomst_utrikes$medianinkomst_bakgrund
+
+```
+
+
+Utrikes födda personer i Dalarna har generellt sett lägre inkomster än personer födda i Sverige. Detta gäller framför allt de första åren efter flytten till Sverige. Skillnaderna är som kan konstateras väsentligt mindre för personer som bott i Sverige en längre tid. Inkomsterna skiljer sig även mellan personer som är födda i olika länder. Oavsett bakgrund har män en högre medianinkomst än kvinnor, något som framförallt gäller under de första åren efter flytten till Sverige.
+
+Av de utrikes födda i Sverige hade nästan var femte en varaktigt låg ekonomisk standard år 2016, medan andelen bland de personer som är födda i Sverige var 7 procent.  Med varaktigt låg ekonomisk standard avses de personer som lever i ett hushåll som har en disponibel inkomst per konsumtionsenhet som är mindre än 60 procent av medianvärdet för samtliga personer samt under minst två av de tre föregående åren. <span class = "kommentar">Oklart vad det sista stycket grundar sig på</span>
 
 Vid analyser av sysselsättning så är det av stor vikt att också analysera gruppen som inte förvärvsarbetar. Det är ur samhälleligt avseende stor skillnad på om man har sin försörjning från ekonomiskt bistånd eller studiemedel. Det senare är en form av investering som vanligtvis leder till högre inkomster för individen framöver, medan det förra är en utväg för individer som inte har kunnat lösa sin försörjning på annat sätt. Just ekonomiskt bistånd är den kategori där det finns störst skillnader mellan grupperna med svensk och utländsk bakgrund, där närmare 16 procent av de med utländsk bakgrund har sin största inkomstkälla från ekonomiskt bistånd mot drygt en procent av de med svensk bakgrund.
 
