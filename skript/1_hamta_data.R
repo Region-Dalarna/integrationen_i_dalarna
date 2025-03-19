@@ -337,11 +337,12 @@ gg_utbniva_bakgrund <- funktion_upprepa_forsok_om_fel( function() {
 utbniva_bakgr_ar <- utbniva_bakgr_kon_df$år %>% unique()
 
 #############################################
-####      Behörighet gymnasiet           ####
+####      Behörighet gymnasiet och högskola          ####
 #############################################
 source(here("skript/","gymnasiebehorighet_kon_vistelsetid.R"))
-gg_gymnasiebehorighet <- diag_gymnasiebehorighet(output_mapp = Output_mapp_figur,
-                                                 diag_kon = TRUE,
-                                                 diag_vistelsetid = TRUE,
-                                                 skriv_diagrambildfil = spara_diagram_som_bildfiler,
-                                                 returnera_data_rmarkdown = TRUE)
+gg_gym_hogskola_behorighet <- diag_gymnasiebehorighet(output_mapp = Output_mapp_figur,
+                                                       diag_kon_gym= TRUE,
+                                                       diag_kon_hogskola = TRUE,
+                                                       diag_vistelsetid_gym = TRUE,
+                                                       skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                                       returnera_data_rmarkdown = TRUE)

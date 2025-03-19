@@ -605,6 +605,12 @@ En annan aspekt som är viktig att mäta är hur stor andel av avgångseleverna 
 
 *Ev diagram 29 - behörighet till högskola*
 
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+ gg_gym_hogskola_behorighet$behorighet_högksola_jmf_ar
+
+```
+
 När andelen behöriga till högskolan undersöks så kan det vara av större relevans att mäta hur stor andel av 19-åringarna som ett visst år är behöriga till högskolan. Detta eftersom vi i Sverige vanligtvis är 19 år när vi erhåller gymnasieexamen. Det är viktigt att komma ihåg att detta inte ger någon heltäckande bild av alla personer eftersom det finns vissa elever som slutför gymnasiet när de är yngre eller äldre än 19 år. En ej slutförd gymnasieexamen vid 19 års ålder beror ändå i en majoritet av fallen på att eleven ligger efter i skolan eller har hoppat av gymnasiet. Av denna anledning blir denna variabel relevant när andelen högskolebehöriga efter bakgrund och kön jämförs. Det som kan konstateras är att utrikes födda i betydligt lägre grad än inrikes födda blir behöriga till högskolestudier vid 19 års ålder. Oavsett om eleven eller föräldrarna är utrikes eller inrikes födda är kvinnor i högre utsträckning behöriga till att påbörja högskolestudier än män.
 
 

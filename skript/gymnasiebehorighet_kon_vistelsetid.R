@@ -1,6 +1,7 @@
 diag_gymnasiebehorighet <- function(region = "20", # Enbart ett i taget.
-                                    diag_kon = TRUE,
-                                    diag_vistelsetid = TRUE,
+                                    diag_kon_gym= TRUE,
+                                    diag_kon_hogskola = TRUE,
+                                    diag_vistelsetid_gym = TRUE,
                                     jmf_ar = 2018, # År som senaste år skall jämföras med vid könsuppdelat diagram
                                     visa_logga_i_diagram = TRUE,                        # TRUE om logga ska visas i diagrammet, FALSE om logga inte ska visas i diagrammet
                                     logga_sokvag = NA,                                 # sökväg till logga som ska visas i diagrammet
@@ -13,7 +14,7 @@ diag_gymnasiebehorighet <- function(region = "20", # Enbart ett i taget.
 
   # =======================================================================================================================
   #
-  # Två diagram för behörighet till gymnasiet
+  # Två diagram för behörighet till gymnasiet och ett för behörighet till högskola
   #
   # =======================================================================================================================
 
@@ -38,11 +39,6 @@ diag_gymnasiebehorighet <- function(region = "20", # Enbart ett i taget.
   source("https://raw.githubusercontent.com/Region-Dalarna/funktioner/main/func_SkapaDiagram.R")
   source("https://raw.githubusercontent.com/Region-Dalarna/hamta_data/refs/heads/main/hamta_integration_gymn_hogsk_behorighet_region_kon_bakgrund_tid_IntGr8RikKON2_IntGr8LanKON2_scb.R")
 
-  if (!require("pacman")) install.packages("pacman")
-  pacman::p_load(tidyverse,
-                 pxweb,
-                 readxl)
-
       # Hämtar data
   behorighet_gym_df <- hamta_integration_gymn_hogsk_behorighet_region_kon_bakgrund_tid_scb  (region_vekt = c(region),
                                                                                              kon_klartext = "*",
@@ -51,14 +47,20 @@ diag_gymnasiebehorighet <- function(region = "20", # Enbart ett i taget.
                                                                                              tid_koder = "*") %>%
     mutate(region = skapa_kortnamn_lan(region),
            variabel = case_when(
-      variabel == "vistelsetid 0-1 år" ~ "0-1 år",
-      variabel == "vistelsetid 2-3 år" ~ "2-3 år",
-      variabel == "vistelsetid 4-9 år" ~ "4-9 år",
-      variabel == "vistelsetid 10- år" ~ "10- år",
-      variabel == "samtliga utrikes födda" ~ "Utrikes född",
-      variabel == "födelseregion: Sverige" ~ "Inrikes född",
-      TRUE ~ variabel
-    )) %>%
+            variabel == "vistelsetid 0-1 år" ~ "0-1 år",
+            variabel == "vistelsetid 2-3 år" ~ "2-3 år",
+            variabel == "vistelsetid 4-9 år" ~ "4-9 år",
+            variabel == "vistelsetid 10- år" ~ "10- år",
+            variabel == "samtliga utrikes födda" ~ "Utrikes född",
+            variabel == "födelseregion: Sverige" ~ "Inrikes född",
+            TRUE ~ variabel
+          ),
+          kön = case_when(
+            kön == "kvinnor" ~ "flickor",
+            kön == "män" ~ "pojkar",
+            kön == "män och kvinnor" ~ "pojkar och flickor",
+            TRUE ~ kön
+          )) %>%
       rename(Andel_behoriga = `Andel behöriga till gymnasium, procent`)
 
 
@@ -66,7 +68,7 @@ diag_gymnasiebehorighet <- function(region = "20", # Enbart ett i taget.
     assign("behorighet_gym_df", behorighet_gym_df, envir = .GlobalEnv)
   }
 
-  if(diag_kon){
+  if(diag_kon_gym){
 
     diagram_capt <- "Källa: SCB:s öppna statistikdatabas, BAS.\nBearbetning: Samhällsanalys, Region Dalarna."
 
@@ -81,7 +83,7 @@ diag_gymnasiebehorighet <- function(region = "20", # Enbart ett i taget.
 
     # Skapar diagram där etableringstiden jämförs mellan män och kvinnor, oavsett utbildning
     gg_obj <- SkapaStapelDiagram(skickad_df = behorighet_gym_df %>%
-                                   filter(kön != "män och kvinnor",
+                                   filter(kön != "pojkar och flickor",
                                           variabel %in% c("Utrikes född","Inrikes född"),
                                           år %in% c(jmf_ar,max(år))),
                                  skickad_x_var = "år",
@@ -109,7 +111,7 @@ diag_gymnasiebehorighet <- function(region = "20", # Enbart ett i taget.
     names(gg_list)[[length(gg_list)]] <- diagramfilnamn %>% str_remove(".png")
   }
 
-  if(diag_vistelsetid){
+  if(diag_vistelsetid_gym){
 
     diagram_capt <- "Källa: SCB:s öppna statistikdatabas, BAS.\nBearbetning: Samhällsanalys, Region Dalarna."
 
@@ -128,7 +130,7 @@ diag_gymnasiebehorighet <- function(region = "20", # Enbart ett i taget.
 
     # Skapar diagram där etableringstiden jämförs mellan män och kvinnor, oavsett utbildning
     gg_obj <- SkapaStapelDiagram(skickad_df = behorighet_gym_df %>%
-                                   filter(kön == "män och kvinnor",
+                                   filter(kön == "pojkar och flickor",
                                           !(is.na(Andel_behoriga)),
                                           år == max(år)),
                                  skickad_x_var = "variabel",
@@ -141,6 +143,60 @@ diag_gymnasiebehorighet <- function(region = "20", # Enbart ett i taget.
                                  manual_y_axis_title = "procent",
                                  facet_scale = "fixed",
                                  manual_x_axis_title = "Vistelsetid i Sverige",
+                                 y_axis_100proc = TRUE,
+                                 x_axis_lutning = 0,
+                                 output_mapp = output_mapp,
+                                 filnamn_diagram = diagramfilnamn,
+                                 lagg_pa_logga = visa_logga_i_diagram,
+                                 skriv_till_diagramfil = skriv_diagrambildfil)
+
+
+    gg_list <- c(gg_list, list(gg_obj))
+    names(gg_list)[[length(gg_list)]] <- diagramfilnamn %>% str_remove(".png")
+  }
+
+  if(diag_kon_hogskola){
+
+    behorighet_hogskola_df <- hamta_integration_gymn_hogsk_behorighet_region_kon_bakgrund_tid_scb  (region_vekt = c(region),
+                                                                                                     kon_klartext = c("män","kvinnor"),
+                                                                                                     bakgrund_klartext  = c("födelseregion: Sverige","samtliga utrikes födda"),
+                                                                                                     cont_klartext = "Andel behöriga till högskola, procent",
+                                                                                                     tid_koder = "*") %>%
+      mutate(region = skapa_kortnamn_lan(region),
+             variabel = case_when(variabel == "samtliga utrikes födda" ~ "Utrikes född",
+               variabel == "födelseregion: Sverige" ~ "Inrikes född",
+               TRUE ~ variabel
+             )) %>%
+      rename(Andel_behoriga = `Andel behöriga till högskola, procent`)
+
+    diagram_capt <- "Källa: SCB:s öppna statistikdatabas, BAS.\nBearbetning: Samhällsanalys, Region Dalarna."
+
+    if(returnera_data_rmarkdown == TRUE){
+      assign("behorighet_hogskola_df", behorighet_hogskola_df, envir = .GlobalEnv)
+    }
+
+    diagramtitel <- paste0("Andel behöriga till högskola i ",unique(behorighet_hogskola_df$region))
+    #diagramtitel <- str_wrap(diagramtitel,60)
+    diagramfilnamn <- "behorighet_högksola_jmf_ar.png"
+
+    # Skapar diagram där etableringstiden jämförs mellan män och kvinnor, oavsett utbildning
+    gg_obj <- SkapaStapelDiagram(skickad_df = behorighet_hogskola_df %>%
+                                   filter(kön != "män och kvinnor",
+                                          variabel %in% c("Utrikes född","Inrikes född"),
+                                          år %in% c(jmf_ar,max(år))),
+                                 skickad_x_var = "år",
+                                 skickad_y_var = "Andel_behoriga",
+                                 skickad_x_grupp = "kön",
+                                 # manual_x_axis_text_vjust=0.9,
+                                 manual_color = diagramfarger("kon"),
+                                 diagram_titel = diagramtitel,
+                                 diagram_capt =  diagram_capt,
+                                 manual_y_axis_title = "procent",
+                                 diagram_facet = TRUE,
+                                 facet_grp = "variabel",
+                                 facet_legend_bottom = TRUE,
+                                 facet_scale = "fixed",
+                                 #manual_x_axis_title = "Vistelsetid i Sverige",
                                  y_axis_100proc = TRUE,
                                  x_axis_lutning = 0,
                                  output_mapp = output_mapp,
