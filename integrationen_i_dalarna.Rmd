@@ -580,7 +580,7 @@ Eftersom gymnasieutbildning är viktigt för möjligheten att etablera sig på a
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
- gg_gymnasiebehorighet$behorighet_gymnasiet_jmf_ar
+ gg_gym_hogskola_behorighet$behorighet_gymnasiet_jmf_ar
 
 ```
 
@@ -595,7 +595,7 @@ Data för 0-1 år saknas (NA)
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
- gg_gymnasiebehorighet$behorighet_gymnasiet_vistelsetid
+ gg_gym_hogskola_behorighet$behorighet_gymnasiet_vistelsetid
 
 ```
 
