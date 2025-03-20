@@ -1,6 +1,6 @@
 ---
 title: Integrationen i Dalarna
-author: "Mats Andersson"
+author: ""
 date: ""
 output: 
   html_document:
@@ -114,7 +114,9 @@ Rapporten kommer i stora drag följa 2019 års rapportdisposition, men tona ner 
 
 
 ## Den utrikes födda befolkningen i Sverige och i Dalarna
-Kort introduktion om den utrikes befolkningen i Dalarna och hänvisning till fördjupningen.
+För att få en förståelse för den utrikes födda befolkningen i Dalarna och hur invandringen sett ut över tid, behöver situationen i riket som helhet analyseras. Arbetskraftsinvandringen tog fart efter andra världskriget och pågick fram till 1960-talets slut. I mitten av 1980-talet förändrades invandringens karaktär och fler flyktingar togs emot till följd av globala katastrofer. Från 1990-talet och framåt har krigssituationer i olika delar av världen föranlett en högre grad av flyktinginvandring med kriget i Syrien i mitten av 2010-talet som den tid då asylinvandringen nådde över 160 000 personer i Sverige. Därefter har antalet asylsökande minskat successivt och `r asylsokande_max_ar` sökte `r asylsokande_senaste_ar_antal` personer asyl i Sverige, vilket är det lägsta antalet sedan 1996.
+
+För en fördjupad beskrivning av den utrikes födda befolkningens utveckling i Sverige och Dalarna, se fördjupningsavsnittet *Fördjupning - Historisk överblick av invandringen i Dalarna*.
 
 <details>
 
@@ -122,7 +124,7 @@ Kort introduktion om den utrikes befolkningen i Dalarna och hänvisning till fö
 
 <div>
 
-För att få en förståelse för den utrikes födda befolkningen i Dalarna och hur invandringen sett ut över tid, behöver situationen i riket som helhet analyseras. Den första större invandring som påverkat Dalarna i modern tid var den arbetskraftsinvandring som skedde efter andra världskriget. Denna epok varade i stort sett under två decennier, d.v.s. under 1950- och 1960-talet.
+Den första större invandring som påverkat Dalarna i modern tid var den arbetskraftsinvandring som skedde efter andra världskriget. Denna epok varade i stort sett under två decennier, d.v.s. under 1950- och 1960-talet.
 
 Den svenska ekonomin expanderade snabbt efter kriget, vilket gjorde att efterfrågan på arbetskraft utifrån var stor. Bristen berodde även på att ålderskullarna födda på 1920- och 30-talet var små. Efter andra världskriget och fram till 1970-talet låg arbetskraftsinvandringen i hela Sverige på en förhållandevis hög nivå. Arbetskraftsinvandrarna
 kom främst från Norden, men även från övriga Europa. En överenskommelse om en gemensam nordisk arbetsmarknad år 1954, innebar att framför allt många finländare invandrade under 1960- och 70-talet då det var lågkonjunktur i Finland. I Dalarnas län bosatte sig dessa främst i kommuner där det fanns stor tillverkningsindustri som Gagnef, Borlänge, Avesta
@@ -148,7 +150,6 @@ gg_asylsokande_antal$asylsokande_antal
 
 ```
 
-
 Ett stort antal asylsökande ett år leder ofta till att invandringen ökar året därpå. Det beror på att asylsökande räknas som invandrade först när de har fått uppehållstillstånd och folkbokfört sig i Sverige. Detta gör att antalet immigranter i hög grad påverkas av hur många beslut om uppehållstillstånd Migrationsverkets fastställer, samt hur stor andel av dessa ärenden som blir beviljade. Rekordnivån för antalet asylsökande år 2015, ledde till att invandringen slog rekord i Sverige år 2016. Även statistiken för åren 2017 och 2018 påverkades av det stora antalet asylsökande år 2015. Detta eftersom många fick vänta länge på beslut om de fick stanna i landet och för att många anhöriga till de som fick uppehållstillstånd sedan ville flytta till Sverige.
 
 Anhöriginvandring, eller anknytningsinvandring, är när en person vill flytta till eller stanna i Sverige på grund av att den har en anhörig som är svensk medborgare eller har uppehållstillstånd i Sverige. I Sverige finns det möjlighet att få uppehållstillstånd som anhörig för make, maka, barn under 18 år och adoptivbarn. Den som kommer till Sverige benämns som anhöriginvandrare och den som redan bor i Sverige benämns som anknytningsperson.
@@ -159,7 +160,7 @@ Under åren 2013–2018 beviljades totalt 771 645 uppehållstillstånd i Sverige
 Mellan år `r min_ar_utrikes_antal` och år `r max_ar_utrikes_antal` har antalet utrikes födda
 personer i Dalarnas län ökat från `r min_antal_utrikes` till `r max_antal_utrikes`
 personer. Effekten av den ökade invandringen under
-2000-talet är därmed att den utrikes födda befolkningen i Dalarna har mer än fördubblats. Antalet inrikes födda minskade under samma tid från 261 228 personer till 250 028 personer. Utan ett stort invandringsöverskott under 2000-talet hade befolkningen i Dalarnas län minskat. - ej uppdaterat (den sista meningen)
+2000-talet är därmed att den utrikes födda befolkningen i Dalarna har mer än fördubblats. Antalet inrikes födda minskade under samma tid från 261 228 personer till 250 028 personer. Utan ett stort invandringsöverskott under 2000-talet hade befolkningen i Dalarnas län minskat. 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -167,17 +168,25 @@ gg_antal_utrikes$utrikes_fodda_antal_Dalarna
 
 ```
 
+När de utrikes födda personer som är bosatta i Dalarna kartläggs utifrån deras invandringsår till Sverige, framgår det med all tydlighet att en stor andel har invandrat under de senaste tio åren. Över hälften av de utrikes födda som bor i Dalarna har bott i Sverige i 8 år eller kortare. Det faktum att en stor andel av de utrikes födda i Dalarnas län har bott i Sverige en kort tid är viktigt att beakta när faktorer som utbildningsnivå, sysselsättning, medelinkomst m.m. analyseras. Antalet personer bosatta efter invandringsår i diagram 4 går att jämföra mot diagram 1, och det går som väntat att se ett samband mellan antalet immigranter och antal bosatta personer efter invandringsår. Antalet bosatta personer per invandringsår är generellt lägre än antalet immigranter per år i Dalarnas län. Detta kan förklaras med att personer som har invandrat har avlidit, flyttat till andra län, emigrerat, samt att inrikes födda som återvandrat omfattas av diagram 1. Utrikes födda har under 2000-talet varit mer benägna att flytta från Dalarnas län än till Dalarna från övriga Sverige. Mer om det går att läsa i det sista kapitlet, där inrikes flyttningar analyseras.
+
+*Här ska diagram 5 "Antal utrikes födda i Dalarnas län efter vistelsetid" placeras in - stycket ovan behöver kontrolleras*
+
+Genom att studera befolkningsutvecklingen för inrikes och utrikes födda i länet de senaste åren, blir det tydligt att befolkningen i länet som helhet hade minskat utan invandringen. Befolkningen ökade totalt sett mellan år 2000–2018 i 8 av länets kommuner, medan den minskade i 7 av dem.  Antalet utrikes födda personer har under tidsperioden ökat i Dalarnas läns samtliga kommuner, medan antalet inrikes födda personer har minskat i alla kommuner förutom Falun. Slutsatsen blir att de kommuner i länet som har växt i invånarantal med undantaget Falun har gjort det som en följd av invandring, medan de kommuner som krympt har begränsat befolkningsminskningen genom att fler har invandrat än utvandrat. Notera även att utrikes föddas barn ingår i kategorin inrikes födda. Ökningen av antalet utrikes födda var i relation till befolkningsmängd störst i Hedemora, Avesta, Ludvika, och Borlänge. 
+
+*Kontrollera stycket ovan mot diagrammet nedan*
+
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
 gg_antal_utrikes$befolkningsforandring_Dalarna
 
 ```
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+Mellan år 2000 och 2018 har antalet döda i Dalarna varit fler än antalet födda och antalet utflyttade till övriga Sverige har varit fler än antalet inflyttade från övriga Sverige. Totalt flyttade 126 632 personer till Dalarna från övriga Sverige åren 2000–2018 och 137 826 flyttade från Dalarna till övriga Sverige på totalt -11 194 personer. Det föddes 52 154 personer i Dalarnas län och det dog 61 669 personer, vilket gav ett födelseunderskott på -9 515 personer. Det immigrerade totalt 39 994 personer till Dalarna samtidigt som 12 916 personer utvandrade från länet till andra länder. Detta gav ett flyttningsöverskott mot utlandet på +27 078, vilket innebär att anledningen till att befolkningen i Dalarnas län ändå har växt under perioden är invandring.
 
-gg_storsta_fodelseland$storsta_fodelseland_Dalarna
+Även om det fortfarande dör fler än det föds i Dalarnas län har antalet barn som föds ökat och födelseunderskottet minskat de senaste åren. Den enskilt största orsaken till att det har fötts många barn i länet de senaste åren är att de stora ålderskullar som föddes runt 1990 befinner sig i barnafödande åldrar. Andra orsaker är att Sverige har en generös familje- och socialpolitik och en stor invandring. De som invandrat till Dalarna är generellt sett unga och befinner sig i en ålder när det är vanligt att föda barn. Utrikes födda kvinnor har även en hög fruktsamhet direkt efter att de invandrat till Sverige, men därefter minskar den successivt. Att fruktsamhetstalen är extra höga bland kvinnor som nyligen invandrat beror sannolikt på att många kvinnors invandring är knutet till familjebildning, och att de kommer till Sverige för att återförenas med sin familj eller för att bilda familj. Som en följd av invandringen har antalet födda barn därmed ökat i Dalarnas län och födelseunderskottet har minskat.
 
-```
+*Kontrollera stycket ovan mot diagrammet nedan*
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -185,20 +194,21 @@ gg_befforandring_komponenter$`befolkningsforandring_per_komponent_Dalarnas län_
 
 ```
 
+Förutom att antalet immigranter de senaste åren har varit fler än tidigare, har ursprungsländerna förändrats över tid, med ett större antal asylsökande från utomeuropeiska länder. 2018 kan konstateras att det skett omflyttningar av de tio största födelseländerna bland utrikes födda invånare i Sverige. Somalia, Syrien, Afghanistan och Thailand är nya länder på listan, på bekostnad av Danmark, Norge, Chile och Libanon. Detta innebär således att fler länder utanför Europa är representerade bland de tio största födelseländerna bland utrikes födda invånare i Sverige år 2018 än år 2000. Detta illustrerar väl den ökade migrationen från utomeuropeiska länder. Vidare har Finland blivit passerat av Syrien som det största födelselandet bland utrikes födda.
 
-*Fram till stycke om asylrätt, sid 8*
+*Kontrollera stycket ovan mot diagrammet nedan*
 
-Revidera siffror och titta på dagens nivå.
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
+gg_storsta_fodelseland$storsta_fodelseland_Dalarna
 
+```
+
+*Revidera alla siffror och titta på dagens nivå.*
 
 </div>
  
 </details>
-
-
-[(Regeringen, 2022)](<https://www.regeringen.se/contentassets/46945970585240a4a5bfd9a0f75ecf3d/ekonomisk-jamstalldhet.pdf>){target="_blank"}^[Regeringen, Budgetproposition 2022/23:1 bilaga 3, Ekonomisk jämställdhet.]
-
 
 ## Den demografiska situationen i Sverige
 Sverige är sedan några år inne i en demografisk fas där de stora babyboom-kullarna från slutet av 1940-
