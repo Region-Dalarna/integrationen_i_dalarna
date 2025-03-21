@@ -219,43 +219,37 @@ servicenivån, bara som en följd av den förändrade demografin. Om kostnaderna
 
 Förutom att den demografiska situationen medför färre skattebetalare som ska försörja allt fler äldre så innebär den också ett kompetensförsörjningsproblem.
 
-*Bild över befolkningens åldersfördelning, kvinnor och män samt inrikes och utrikes födda*
-
-Finns i befolkningsrapporten
-
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
 # include png file
 knitr::include_graphics("Figurer/Befpyramid Dalarnas län 2024_jmfr_utr_inr.png")
 
 ```
+*Bild över befolkningens åldersfördelning, kvinnor och män samt inrikes och utrikes födda*
 
-Vid en analys av åldersfördelningen i Dalarnas befolkning uppdelat på den inrikes- och utrikes födda befolkningen blir det tydligt att den utrikes födda befolkningen i länet är väsentligt yngre än den inrikes födda, och har en större andel personer i arbetsför ålder (se diagram 12). Detta beror på att de personer som invandrat generellt är yngre än inrikes födda. Följden blir att invandringen totalt sett har en föryngrande effekt på befolkningen. Det finns även stora variationer i medelålder mellan olika grupper av utrikes födda beroende på invandringsår och födelseland. Utrikes födda utgör
-cirka 13 procent av den totala befolkningen i Dalarnas län och är därmed betydligt färre än inrikes födda.
+Vid en analys av åldersfördelningen i Dalarnas befolkning uppdelat på den inrikes- och utrikes födda befolkningen blir det tydligt att den utrikes födda befolkningen i länet är väsentligt yngre än den inrikes födda, och har en större andel personer i arbetsför ålder (se diagram ovan). Detta beror på att de personer som invandrat generellt är yngre än inrikes födda. Följden blir att invandringen totalt sett har en föryngrande effekt på befolkningen. Det finns även stora variationer i medelålder mellan olika grupper av utrikes födda beroende på invandringsår och födelseland. Utrikes födda utgör
+*cirka 13 procent (kolla siffra)* av den totala befolkningen i Dalarnas län och är därmed betydligt färre än inrikes födda.
 
-Medelåldern i Dalarnas län var år 2018 totalt sett 43,6 år vilket är högre än i riket som helhet där medelåldern var 41,2 år. När de vanligaste födelseländerna i Dalarna studeras går det att urskilja stora skillnader mellan grupperna. För personer som är födda i Finland där de flesta varit i landet en längre tid är medelåldern 67 år. I Syrien, Somalia, Eritrea och Irak där majoriteten av
+Medelåldern i Dalarnas län var år *2018* totalt sett 43,6 år vilket är högre än i riket som helhet där medelåldern var 41,2 år. När de vanligaste födelseländerna i Dalarna studeras går det att urskilja stora skillnader mellan grupperna. För personer som är födda i Finland där de flesta varit i landet en längre tid är medelåldern 67 år. I Syrien, Somalia, Eritrea och Irak där majoriteten av
 befolkningen har varit en kortare tid i landet är befolkningen betydligt yngre och medelåldern varierar mellan 28–33 år.
-
-*Diagram - historisk förskjutning mellan inrikes och utrikes födda*
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
 gg_antal_utrikes$befolkningsforandring_lan_Dalarna
 
 ```
-
+*Diagram - historisk förskjutning mellan inrikes och utrikes födda*
 
 Mellan år `r min_ar_utrikes_kumulativ` och `r max_ar_utrikes_kumulativ` minskade antalet inrikes födda i arbetsför ålder mellan 16–64 år i Dalarnas län med `r kumulativ_summa_inrikes` personer, samtidigt som antalet utrikes födda i samma åldersgrupp ökade med `r kumulativ_summa_utrikes` personer. Minskningen av antalet inrikes födda berodde på att ålderskullarna som fyllde 65 år var större än de som fyllde 16 år, samt en större inrikes utflyttning än inflyttning. Den inrikes födda befolkningen i arbetsför ålder minskade allra mest
 åren 2010–2015, vilket berodde på att det stora antalet personer födda i slutet av 1940-talet fyllde 65 och därmed uppnådde pensionsålder.
 
-*Prognos över fortsatt förskjutning mellan inrikes och utrikes födda*
+*SCB:s prognos från 2024 över fortsatt demografisk utveckling för inrikes och utrikes födda*
 
-Enligt *SCB:s* befolkningsprognos förväntas antalet utrikes födda i Dalarnas län mellan 16–64 år att öka med 11 031 personer mellan 2018 och 2030, medan antalet inrikes födda personer i länet förväntas att minska med 10 228 personer, enligt prognosen. Hela den prognostiserade ökningen av antalet personer mellan 16–64 år på 803 personer i Dalarna fram till
-2030 beror således på fler utrikes födda, vilket innebär att det är där arbetskraftsreserven finns. 
+Enligt *SCB:s* befolkningsprognos förväntas antalet utrikes födda i Dalarnas län mellan 16–64 år att öka med 11 031 personer mellan 2018 (2023) och 2030 (2033), medan antalet inrikes födda personer i länet förväntas att minska med 10 228 personer, enligt prognosen. Hela den prognostiserade ökningen av antalet personer mellan 16–64 år på 803 personer i Dalarna fram till 2030 (2033) beror således på fler utrikes födda, vilket innebär att det är där arbetskraftsreserven finns. 
 
 Enligt *Arbetsförmedlingen* är det extra viktigt för små kommuner att ta vara på den resurs som utrikesfödda kan utgöra, annars riskerar de att få mycket svårt med arbetskraftsförsörjningen.
 Arbetsförmedlingen betonar möjligheterna med att använda den arbetskraftsreserv som de utrikes födda
-utgör men ser samtidigt att det finns vissa hinder, såsom validering av nyanländas kompetens och ovilja att anställa nyanlända. De menar att Dalarnas arbetsmarknad på sikt står... *citat i gamla rapporten*
+utgör men ser samtidigt att det finns vissa hinder, såsom validering av nyanländas kompetens och ovilja att anställa nyanlända. De menar att Dalarnas arbetsmarknad på sikt står... *citat i gamla rapporten - kolla om AF uttalat sig nyligen i frågan - annars överväg ta bort*
 
 # Arbetsmarknadskonjunktur och invandring - då och nu
 
