@@ -633,7 +633,11 @@ Med nästan alla sätt att mäta boende skiljer sig grupperna svensk och utländ
 
 *Diagram 30 - Boende per Upplåtelseform efter vistelsetid*
 
-Att en större andel personer med utländsk bakgrund bor i hyresrätt, kan förklaras med att nyanlända personer generellt ännu inte hunnit etablera sig i Sverige så pass att de har ekonomiska möjligheter att äga sitt eget boende. Intressant att notera är att de av Dalarnas invånare med utländsk bakgrund som bott i Sverige i minst tolv år i högre utsträckning äger sin bostad än de med utländsk bakgrund som är födda i Sverige. Det går även att konstatera att andelen som bor i äganderätt är väsentligt högre bland de med svensk bakgrund, oavsett vistelsetid. Detta kan visa på skillnader i möjligheterna till att köpa sin bostad mellan de med svensk och utländsk bakgrund. Dock går inte detta att fastställa baserat på nuvarande underlag utan djupare analyser med fler variabler behövs för att belysa den frågan.
+```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
+gg_boendetyp_upplatelseform$boendetyp_vistelsetid_inrikes
+```
+
+Att en större andel utrikes födda personer bor i hyresrätt, kan förklaras med att nyanlända personer generellt ännu inte hunnit etablera sig i Sverige så pass att de har ekonomiska möjligheter att äga sitt eget boende. De utrikes födda bland Dalarnas invånare som bott i Sverige länge (mer än 10 år) tenderar dock att äga sin bostad, antingen som äganderätt eller bostadsrätt, i relativt stor utsträckning, ungefär `r boendetyp_10_ar_äga` procent av de utrikes födda gör det. Det går dock att konstatera att andelen som äger sin bostad är väsentligt högre bland de som är födda i Sverige, ca `r boendetyp_inrikes_äga` procent av de inrikes födda gör det. 
 
 Ytterligare en relevant analys rörande boende är andelen trångbodda hushåll. Trångboddhet i lägenheter i flerbostadshus mäts idag oftast enligt Norm 3 vilket innebär att fler boende än en person per rum är trångbott, kök och ett rum (vardagsrum) oräknat. Sammanboende förutsätts behöva ett rum färre än ensamstående samt att ensamstående personer boende i ett rum inte bedöms vara trångbodda . Detta innebär att en ensamstående vuxen med två barn behöver en lägenhet med minst fyra rum för att inte vara trångbodda. Två sammanboende vuxna med ett barn däremot behöver endast tre rum för att inte vara trångbodda eftersom de vuxna antas kunna dela ett sovrum.
 

@@ -1,12 +1,10 @@
-diag_sysselsattningsgrad_vistelsetid_inrikes_scb <- function(region = "20", # Enbart ett i taget.
-                                                             diag_vistelsetid = TRUE,
-                                                             diag_utbniva = TRUE,
-                                                             visa_logga_i_diagram = TRUE,                        # TRUE om logga ska visas i diagrammet, FALSE om logga inte ska visas i diagrammet
-                                                             logga_sokvag = NA,                                 # sökväg till logga som ska visas i diagrammet
-                                                             output_mapp = "G:/Samhällsanalys/API/Fran_R/utskrift/",                                  # mapp där diagram ska sparas, NA = sparas ingen fil
-                                                             skriv_diagrambildfil = FALSE,                           # TRUE om diagram ska skrivas till fil, FALSE om diagram inte ska skrivas till fil
-                                                             returnera_data_rmarkdown = FALSE,
-                                                             demo = FALSE             # sätts till TRUE om man bara vill se ett exempel på diagrammet i webbläsaren och inget annat
+diag_boendytyp_vistelsetid_inrikes_scb <- function(region = "20", # Enbart ett i taget.
+                                                   visa_logga_i_diagram = TRUE,                        # TRUE om logga ska visas i diagrammet, FALSE om logga inte ska visas i diagrammet
+                                                   logga_sokvag = NA,                                 # sökväg till logga som ska visas i diagrammet
+                                                   output_mapp = "G:/Samhällsanalys/API/Fran_R/utskrift/",                                  # mapp där diagram ska sparas, NA = sparas ingen fil
+                                                   skriv_diagrambildfil = FALSE,                           # TRUE om diagram ska skrivas till fil, FALSE om diagram inte ska skrivas till fil
+                                                   returnera_data_rmarkdown = FALSE,
+                                                   demo = FALSE             # sätts till TRUE om man bara vill se ett exempel på diagrammet i webbläsaren och inget annat
 ) {
 
 
@@ -43,9 +41,9 @@ diag_sysselsattningsgrad_vistelsetid_inrikes_scb <- function(region = "20", # En
                  pxweb,
                  readxl)
 
-  if(diag_vistelsetid){
 
-    tid_koder = "9999"
+
+    #tid_koder = "9999"
     # Av oklar anledning saknas mycket data för senaste år. Jag gör därför ett enklare uttag för senaste år och om det saknas data väljs året innan
     boende_test <- hamta_integration_region_kon_bakgrund_tid_scb (region_vekt = region,
                                                                 kon_klartext = "män och kvinnor",
@@ -72,7 +70,14 @@ diag_sysselsattningsgrad_vistelsetid_inrikes_scb <- function(region = "20", # En
         variabel == "vistelsetid 10- år" ~ "10- år",
         variabel == "födelseregion: Sverige" ~ "Inrikes född",
         TRUE ~ variabel
-      )) %>%
+      ),
+      bakgrund = case_when(
+        bakgrund == "Andel boende i egna hem, procent" ~ "Äganderätt",
+        bakgrund == "Andel boende i hyresrätt, procent" ~ "Hyresrätt",
+        bakgrund == "Andel boende i bostadsrätt, procent" ~ "Bostadsrätt",
+        TRUE ~ bakgrund
+      )
+      ) %>%
       mutate(region = skapa_kortnamn_lan(region))
 
 
@@ -88,6 +93,8 @@ diag_sysselsattningsgrad_vistelsetid_inrikes_scb <- function(region = "20", # En
     boende_df$variabel <- factor(boende_df$variabel, levels = c("0-1 år","2-3 år",
                                                                                       "4-9 år","10- år",
                                                                                       "Inrikes född"))
+
+    boende_df$bakgrund <- factor(boende_df$bakgrund, levels = c("Hyresrätt","Bostadsrätt","Äganderätt"))
 
     diagramtitel <- paste0("Boende per upplåtelseform i ",unique(boende_df$region)," ",max(boende_df$år)," efter vistelsetid")
     #diagramtitel <- str_wrap(diagramtitel,60)
@@ -106,6 +113,7 @@ diag_sysselsattningsgrad_vistelsetid_inrikes_scb <- function(region = "20", # En
                                  manual_y_axis_title = "procent",
                                  manual_x_axis_title = "Vistelsetid i Sverige",
                                  geom_position_stack = TRUE,
+                                 legend_vand_ordning = TRUE,
                                  y_axis_100proc = TRUE,
                                  x_axis_lutning = 0,
                                  output_mapp = output_mapp,
@@ -116,62 +124,6 @@ diag_sysselsattningsgrad_vistelsetid_inrikes_scb <- function(region = "20", # En
 
     gg_list <- c(gg_list, list(gg_obj))
     names(gg_list)[[length(gg_list)]] <- diagramfilnamn %>% str_remove(".png")
-  }
-
-  if(diag_utbniva){
-
-    # Hämtar data. Av någon oklar anledning får man dubbletter för utrikes födda, varför distinct används på slutet
-    syssgrad_df <- hamta_etableringstid_mm_region_kon_utbniv_bakgrvar_tid_scb_ny (region_vekt = region,
-                                                                                  kon_klartext = c("män och kvinnor"),
-                                                                                  utbniv_klartext =  c("utbildningsnivå: förgymnasial utbildning", "utbildningsnivå: gymnasial utbildning", "utbildningsnivå: eftergymnasial utbildning"),
-                                                                                  bakgrvar_klartext = c("födelseregion: Sverige","samtliga utrikes födda invandrare"),
-                                                                                  cont_klartext = "Andel sysselsatta",
-                                                                                  tid_koder = "9999") %>%
-      mutate(utbildningsnivå = sub("utbildningsnivå: ", "", utbildningsnivå),
-             utbildningsnivå = str_to_sentence(utbildningsnivå),
-             bakgrundsvariabel = case_when(
-               bakgrundsvariabel == "födelseregion: Sverige" ~ "Inrikes född",
-               bakgrundsvariabel == "samtliga utrikes födda invandrare" ~ "Utrikes född",
-               TRUE ~ bakgrundsvariabel
-             )) %>% distinct()
-
-
-    if(returnera_data_rmarkdown == TRUE){
-      assign("syssgrad_utrikes_inrikes_utbniva_df", syssgrad_df, envir = .GlobalEnv)
-    }
-
-    diagram_capt <- "Källa: SCB:s öppna statistikdatabas, BAS.\nBearbetning: Samhällsanalys, Region Dalarna."
-
-    # Skapar en faktorvariabel för att få tid sedan etablering i "rätt" ordning i figuren
-    syssgrad_df$utbildningsnivå <- factor(syssgrad_df$utbildningsnivå, levels = c("Förgymnasial utbildning",
-                                                                                  "Gymnasial utbildning",
-                                                                                  "Eftergymnasial utbildning"))
-
-    diagramtitel <- paste0("Sysselsättningsgrad i Dalarna"," ",max(syssgrad_df$år)," efter utbildningsnivå")
-    #diagramtitel <- str_wrap(diagramtitel,60)
-    diagramfilnamn <- paste0("sysselsattningsgrad_inrikes_utrikes_utbniva.png")
-
-    # Skapar diagram där etableringstiden jämförs mellan män och kvinnor, oavsett utbildning
-    gg_obj <- SkapaStapelDiagram(skickad_df =syssgrad_df ,
-                                 skickad_x_var = "utbildningsnivå",
-                                 skickad_y_var = "Andel sysselsatta",
-                                 skickad_x_grupp = "bakgrundsvariabel",
-                                 # manual_x_axis_text_vjust=0.9,
-                                 manual_color = diagramfarger("rus_sex"),
-                                 diagram_titel = diagramtitel,
-                                 diagram_capt =  diagram_capt,
-                                 manual_y_axis_title = "procent",
-                                 y_axis_100proc = TRUE,
-                                 x_axis_lutning = 0,
-                                 output_mapp = output_mapp,
-                                 filnamn_diagram = diagramfilnamn,
-                                 lagg_pa_logga = visa_logga_i_diagram,
-                                 skriv_till_diagramfil = skriv_diagrambildfil)
-
-
-    gg_list <- c(gg_list, list(gg_obj))
-    names(gg_list)[[length(gg_list)]] <- diagramfilnamn %>% str_remove(".png")
-  }
 
   return(gg_list)
 

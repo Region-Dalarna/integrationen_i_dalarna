@@ -347,3 +347,17 @@ gg_gym_hogskola_behorighet <- diag_gymnasiebehorighet(output_mapp = Output_mapp_
                                                        diag_vistelsetid_gym = TRUE,
                                                        skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                                        returnera_data_rmarkdown = TRUE)
+
+############################################
+#### Boende per upplåtelseform      ########
+############################################
+source(here("skript/","boendetyp_vistelsetid.R"))
+gg_boendetyp_upplatelseform <- diag_boendytyp_vistelsetid_inrikes_scb(output_mapp = Output_mapp_figur,
+                                                                      skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                                                      returnera_data_rmarkdown = TRUE)
+
+boendetyp_ar <- max(boendtyp_df$år)
+boendetyp_inrikes_äga <- gsub("\\.",",",round(sum(boendtyp_df %>% filter(variabel == "Inrikes född",bakgrund %in% c("Bostadsrätt","Äganderätt"))%>%  .$varde),0))
+boendetyp_10_ar_äga <- gsub("\\.",",",round(sum(boendtyp_df %>% filter(variabel == "10- år",bakgrund %in% c("Bostadsrätt","Äganderätt"))%>%  .$varde),0))
+
+
