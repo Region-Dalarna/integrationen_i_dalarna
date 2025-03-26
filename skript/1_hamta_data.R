@@ -44,7 +44,7 @@ kumulativ_summa_utrikes <- format(abs(antal_forandring_lan_kumulativ %>% filter(
 
 
 # Största födelseland bland utrikes födda i Dalarna
-source(here("skript/","storsta_fodelseland_antal.R"))
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_storsta_fodelseland.R")
 gg_storsta_fodelseland <- diagram_storsta_fodelseland(output_mapp_figur = Output_mapp_figur,
                                                       spara_figur = spara_diagram_som_bildfiler,
                                                       returnera_data= TRUE)

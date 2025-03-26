@@ -1,16 +1,17 @@
-diagram_storsta_fodelseland <-function(region_vekt = c("20"),# Max 1, län
-                                       kon_klartext = NA, # #  NA = tas inte med i uttaget,  Finns: "män", "kvinnor"
+diagram_storsta_fodelseland <-function(region_vekt = "20",# Max 1, län
                                        output_mapp_figur = "G:/Samhällsanalys/Statistik/Näringsliv/basfakta/", # Outputmapp för figur
                                        spara_figur = FALSE, # Sparar figuren till output_mapp_figur
-                                       fodelseregion_klartext = "*", # NA = tas inte med i uttaget,  Finns: "Född i Sverige", "Utrikes född"
                                        tid_koder = "*", # Finns från 2000 och framåt
                                        returnera_figur = TRUE, # Returnerar en figur
+                                       jmf_ar = 2010, # Första och sista år i tid_koder jämförs med detta år
+                                       antal_lander = 10, # Antal länder som skall visas i diagrammet
                                        valda_farger = diagramfarger("rus_sex"),
                                        returnera_data = FALSE) # Skall data returneras)
 {
 
   ## =================================================================================================================
-  # Funktion som skapar två diagram, ett för antal utrikes födda i valt län, ett för förändring i utrikes födda mellan första och sista år i länets kommuner
+  # Ett diagram för största födelseland bland utrikes födda i regionen. Går att jämföra tre år (första, sista och jämförelseår)
+  # eller bara titta på sista år
   # =================================================================================================================
   if (!require("pacman")) install.packages("pacman")
   p_load(openxlsx,
@@ -26,7 +27,7 @@ diagram_storsta_fodelseland <-function(region_vekt = c("20"),# Max 1, län
 
   # Hämta data
   antal_fodelseland_df <- hamta_bef_fodelseland_region_fodelseregion_kon_tid_scb(region_vekt = region_vekt,
-                                                                               kon_klartext = kon_klartext,
+                                                                               kon_klartext = NA,
                                                                                tid_koder = tid_koder) %>%
     mutate(region = skapa_kortnamn_lan(region))
 
@@ -38,20 +39,28 @@ diagram_storsta_fodelseland <-function(region_vekt = c("20"),# Max 1, län
 
   top_10_fordelseland_sistaar <- antal_fodelseland_df %>%
     filter(år == max(år),!(födelseregion %in% c("Samtliga födelseländer","Sverige"))) %>%
-    arrange(desc(Antal)) %>%
-    head(10) %>%.$födelseregion
+      arrange(desc(Antal)) %>%
+        head(antal_lander) %>%.$födelseregion
 
   storsta_fodelseland_df <- antal_fodelseland_df %>%
     filter(födelseregion %in% top_10_fordelseland_sistaar,
-           år %in% c(min(år),2010,max(år)))
+           år %in% c(min(år),jmf_ar,max(år)))
 
   if(returnera_data == TRUE){
     assign("storsta_fodelseland_df", storsta_fodelseland_df, envir = .GlobalEnv)
   }
 
   diagram_capt = "Källa: SCB:s öppna statistikdatabas\nBearbetning: Samhällsanalys, Region Dalarna"
-  diagram_titel = paste0("Största födelseland bland utrikes födda i ",region_namn)
-  diagramfilnamn <- paste0("storsta_fodelseland_",region_namn,".png")
+
+  if(length(unique(storsta_fodelseland_df$år)) == 1){
+    diagram_titel = paste0("Största födelseland bland utrikes födda i ",region_namn, " år ",unique(storsta_fodelseland_df$år))
+    diagramfilnamn <- paste0("storsta_fodelseland_",region_namn,"_",unique(storsta_fodelseland_df$år),".png")
+  } else {
+    diagram_titel = paste0("Största födelseland bland utrikes födda i ",region_namn)
+    diagramfilnamn <- paste0("storsta_fodelseland_",region_namn,".png")
+  }
+
+
 
   gg_obj <- SkapaStapelDiagram(skickad_df = storsta_fodelseland_df,
                                skickad_x_var = "födelseregion",
@@ -64,6 +73,7 @@ diagram_storsta_fodelseland <-function(region_vekt = c("20"),# Max 1, län
                                x_axis_sort_value = TRUE,
                                vand_sortering = TRUE,
                                x_axis_sort_grp = 3,
+                               legend_tabort = ifelse(length(unique(storsta_fodelseland_df$år)) == 1,TRUE,FALSE),
                                diagram_capt =  diagram_capt,
                                output_mapp = output_mapp_figur,
                                stodlinjer_avrunda_fem = TRUE,
