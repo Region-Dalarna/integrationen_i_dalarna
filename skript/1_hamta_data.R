@@ -360,4 +360,15 @@ boendetyp_ar <- max(boendtyp_df$år)
 boendetyp_inrikes_äga <- gsub("\\.",",",round(sum(boendtyp_df %>% filter(variabel == "Inrikes född",bakgrund %in% c("Bostadsrätt","Äganderätt"))%>%  .$varde),0))
 boendetyp_10_ar_äga <- gsub("\\.",",",round(sum(boendtyp_df %>% filter(variabel == "10- år",bakgrund %in% c("Bostadsrätt","Äganderätt"))%>%  .$varde),0))
 
+############################################
+#### Valdeltagande vistelsetid      ########
+############################################
+source(here("skript/","valdeltagande_vistelsetid.R"))
+gg_valdeltagande_vistelsetid <- diag_valdeltagande_vistelsetid_inrikes_scb(output_mapp = Output_mapp_figur,
+                                                                           typ_av_val = c("Valdeltagande i val till riksdag","Valdeltagande i val till region", "Valdeltagande i val till kommun"),
+                                                                           skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                                                           returnera_data_rmarkdown = TRUE)
+
+
+
 
