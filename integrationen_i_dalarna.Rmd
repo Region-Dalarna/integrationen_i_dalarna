@@ -692,6 +692,8 @@ De med en kortare vistelsetid i Sverige på 0–2 år var de som flyttade i stö
 
 *Kolla SCBs Integrations-del i statistikdatabasen*
 
+Det finns ett hämta_data-skript som bland annat har data för valdeltagande uppdelat på vistelsetid (över under 10 år) och utrikes/inrikes födda. /Jon 
+
 *Valdeltagande*
 
 *SoM-institutets tillitsmätningar*
