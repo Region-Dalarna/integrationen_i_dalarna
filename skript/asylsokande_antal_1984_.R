@@ -6,7 +6,7 @@ diagram_asylsokande_tidsserie <-function(output_mapp_figur = "G:/Samhällsanalys
   {
 
   ## =================================================================================================================
-
+  # En tidsserie för antal asylsökande i Sverige
   # =================================================================================================================
   if (!require("pacman")) install.packages("pacman")
   p_load(openxlsx,
