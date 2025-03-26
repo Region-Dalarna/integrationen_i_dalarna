@@ -54,6 +54,7 @@ fodelseland_forsta_ar <- min(storsta_fodelseland_df$år)
 fodelseland_senaste_ar <- max(storsta_fodelseland_df$år)
 
 storsta_fodelseland_senaste_ar <- storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$födelseregion
+storsta_fodelseland_senaste_ar_antal <- format(storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$Antal,big.mark = " ")
 
 ############################################################
 ########## Befolkningspyramid för Inrikes/utrikes ##########
