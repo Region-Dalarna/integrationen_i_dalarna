@@ -643,9 +643,11 @@ Ytterligare en relevant analys rörande boende är andelen trångbodda hushåll.
 
 Trångboddhet i småhus kan inte mätas på samma sätt eftersom att uppgifter på antal rum inte samlas in. Det går att mäta med hjälp av bostadsyta per hushållsmedlem även om det måttet blir trubbigare än det för flerbostadshus. Trångboddhet i småhushushåll anses dock inte vara ett utbrett problem och beräkningar gjorda av Region Dalarna stödjer det antagandet. Därför kommer endast trångboddhet i flerbostadshus att diskuteras här.
 
-*Diagram 31 - Trångboddhet utifrån bakgrund - 2018 och 2023*
+```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
+gg_trangboddhet$trangboddhet_antal_Dalarna
+```
 
-De hushåll som är trångbodda i Dalarna utgör en liten andel av det totala antalet lägenhetshushåll. Cirka 84 procent av hushållen som bor i lägenhet är inte trångbodda. En stor majoritet (91 procent) av hushållen med svensk bakgrund inte är trångbodda. Av de 16 procent av hushållen som är trångbodda har 53 procent utländsk bakgrund. Detta ska ses i förhållandet att det totala antalet hushåll med utländsk bakgrund är mycket färre än de med svensk bakgrund. Totalt är 38 procent av de hushållen med utländsk bakgrund trångbodda i jämförelse mot 9 procent av hushållen med svensk bakgrund.
+De hushåll som är trångbodda i Dalarna utgör en liten andel av det totala antalet lägenhetshushåll, vilket framförallt beror på att få hushåll med inrikes födda är trångbodda (bara ungefär `r trangboddhet_sista_ar_inrikes_andel` procent år `r  trangboddhet_max_ar`). Bland hushåll med utrikes födda är en klart större andel trångbodda (ungefär `r trangboddhet_sista_ar_utrikes_andel` procent år `r trangboddhet_max_ar`). Sedan `r trangboddhet_min_ar` har antalet hushåll som är trångbodda minskat något för såväl inrikes som utrikes födda.
 
 *Diagram 32 - trångboddhet efter vistelsetid*
 

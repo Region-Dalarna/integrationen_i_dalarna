@@ -43,7 +43,7 @@ diag_boendytyp_vistelsetid_inrikes_scb <- function(region = "20", # Enbart ett i
 
 
 
-    #tid_koder = "9999"
+    tid_koder = "9999"
     # Av oklar anledning saknas mycket data för senaste år. Jag gör därför ett enklare uttag för senaste år och om det saknas data väljs året innan
     boende_test <- hamta_integration_region_kon_bakgrund_tid_scb (region_vekt = region,
                                                                 kon_klartext = "män och kvinnor",
@@ -80,6 +80,11 @@ diag_boendytyp_vistelsetid_inrikes_scb <- function(region = "20", # Enbart ett i
       ) %>%
       mutate(region = skapa_kortnamn_lan(region))
 
+    boende_df <- pivot_wider(boende_df, names_from=bakgrund, values_from=varde) %>%
+         mutate(Okänd = 100 - Äganderätt - Hyresrätt - Bostadsrätt) %>%
+          pivot_longer(cols=6:9,names_to = "bakgrund",values_to = "varde")
+
+
 
     if(returnera_data_rmarkdown == TRUE){
       assign("boendtyp_df", boende_df, envir = .GlobalEnv)
@@ -94,7 +99,7 @@ diag_boendytyp_vistelsetid_inrikes_scb <- function(region = "20", # Enbart ett i
                                                                                       "4-9 år","10- år",
                                                                                       "Inrikes född"))
 
-    boende_df$bakgrund <- factor(boende_df$bakgrund, levels = c("Hyresrätt","Bostadsrätt","Äganderätt"))
+    boende_df$bakgrund <- factor(boende_df$bakgrund, levels = c("Okänd","Hyresrätt","Bostadsrätt","Äganderätt"))
 
     diagramtitel <- paste0("Boende per upplåtelseform i ",unique(boende_df$region)," ",max(boende_df$år)," efter vistelsetid")
     #diagramtitel <- str_wrap(diagramtitel,60)

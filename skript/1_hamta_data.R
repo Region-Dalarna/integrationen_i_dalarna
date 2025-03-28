@@ -361,6 +361,31 @@ boendetyp_inrikes_äga <- gsub("\\.",",",round(sum(boendtyp_df %>% filter(variab
 boendetyp_10_ar_äga <- gsub("\\.",",",round(sum(boendtyp_df %>% filter(variabel == "10- år",bakgrund %in% c("Bostadsrätt","Äganderätt"))%>%  .$varde),0))
 
 ############################################
+#######        Trångboddhet         ########
+############################################
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_trangboddhet_inrikes_utrikes_integration.R")
+gg_trangboddhet <- diag_trangboddhet_inrikes_utrikes(output_mapp = Output_mapp_figur,
+                                                     skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                                     diag_antal = TRUE, # Antal
+                                                     diag_andel = FALSE, # Andel, summerar till 100 procent
+                                                     returnera_data_rmarkdown = TRUE)
+
+trangboddhet_min_ar <- min(trangboddhet_df$år)
+trangboddhet_max_ar <- max(trangboddhet_df$år)
+
+trangboddhet_forsta_ar_inrikes_antal <- format(trangboddhet_df %>% filter(år == trangboddhet_min_ar,födelseregion == "Inrikes född",trångboddhet == "Trångbodda") %>%  .$varde,big.mark = " ")
+trangboddhet_sista_ar_inrikes_antal <- format(trangboddhet_df %>% filter(år == trangboddhet_max_ar,födelseregion == "Inrikes född",trångboddhet == "Trångbodda") %>%  .$varde,big.mark = " ")
+
+trangboddhet_forsta_ar_inrikes_andel <- round(trangboddhet_df %>% filter(år == trangboddhet_min_ar,födelseregion == "Inrikes född",trångboddhet == "Trångbodda") %>%  .$andel,0)
+trangboddhet_sista_ar_inrikes_andel <- round(trangboddhet_df %>% filter(år == trangboddhet_max_ar,födelseregion == "Inrikes född",trångboddhet == "Trångbodda") %>%  .$andel,0)
+
+trangboddhet_forsta_ar_utrikes_antal <- format(trangboddhet_df %>% filter(år == trangboddhet_min_ar,födelseregion == "Utrikes född",trångboddhet == "Trångbodda") %>%  .$varde,big.mark = " ")
+trangboddhet_sista_ar_utrikes_antal <- format(trangboddhet_df %>% filter(år == trangboddhet_max_ar,födelseregion == "Utrikes född",trångboddhet == "Trångbodda") %>%  .$varde,big.mark = " ")
+
+trangboddhet_forsta_ar_utrikes_andel <- round(trangboddhet_df %>% filter(år == trangboddhet_min_ar,födelseregion == "Utrikes född",trångboddhet == "Trångbodda") %>%  .$andel,0)
+trangboddhet_sista_ar_utrikes_andel <- round(trangboddhet_df %>% filter(år == trangboddhet_max_ar,födelseregion == "Utrikes född",trångboddhet == "Trångbodda") %>%  .$andel,0)
+
+############################################
 #### Valdeltagande vistelsetid      ########
 ############################################
 source(here("skript/","valdeltagande_vistelsetid.R"))
