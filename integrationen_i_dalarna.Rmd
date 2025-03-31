@@ -244,8 +244,13 @@ Mellan år `r min_ar_utrikes_kumulativ` och `r max_ar_utrikes_kumulativ` minskad
 åren 2010–2015, vilket berodde på att det stora antalet personer födda i slutet av 1940-talet fyllde 65 och därmed uppnådde pensionsålder.
 
 *SCB:s prognos från 2024 över fortsatt demografisk utveckling för inrikes och utrikes födda*
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
-Enligt *SCB:s* befolkningsprognos förväntas antalet utrikes födda i Dalarnas län mellan 16–64 år att öka med 11 031 personer mellan 2018 (2023) och 2030 (2033), medan antalet inrikes födda personer i länet förväntas att minska med 10 228 personer, enligt prognosen. Hela den prognostiserade ökningen av antalet personer mellan 16–64 år på 803 personer i Dalarna fram till 2030 (2033) beror således på fler utrikes födda, vilket innebär att det är där arbetskraftsreserven finns. 
+gg_antal_utrikes$befolkningsprognos_lan_Dalarna
+
+```
+
+Enligt *SCB:s* befolkningsprognos förväntas antalet utrikes födda i Dalarnas län mellan 16–64 år att öka med `r kumulativ_summa_utrikes_max_prognos` personer mellan `r min_ar_utrikes_kumulativ_prognos` och `r max_ar_utrikes_kumulativ_prognos`, medan antalet inrikes födda personer i länet förväntas att minska med `r kumulativ_summa_inrikes_max_prognos` personer, enligt prognosen. Antalet personer mellan 16 och 64 år kommer således att minska i Dalarna fram till `r max_ar_utrikes_kumulativ_prognos` , vilket kan bli problematiskt för länets kompetensförsörjning.
 
 Enligt *Arbetsförmedlingen* är det extra viktigt för små kommuner att ta vara på den resurs som utrikesfödda kan utgöra, annars riskerar de att få mycket svårt med arbetskraftsförsörjningen.
 Arbetsförmedlingen betonar möjligheterna med att använda den arbetskraftsreserv som de utrikes födda
