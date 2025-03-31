@@ -38,6 +38,26 @@ max_ar_utrikes_antal = max(antal_utrikes_region_df$år)
 min_antal_utrikes = format(antal_utrikes_region_df %>% filter(år == min_ar_utrikes_antal) %>%  .$Antal,big.mark = " ")
 max_antal_utrikes = antal_utrikes_region_df %>% filter(år == max_ar_utrikes_antal) %>%  .$Antal %>% format(big.mark = " ")
 
+
+
+
+
+# Antal inrikes. Enbart för att få data
+source("https://raw.githubusercontent.com/Region-Dalarna/hamta_data/refs/heads/main/hamta_bef_region_alder_kon_fodelseregion_tid_InrUtrFoddaRegAlKon_scb.R")
+antal_inrikes_df <- hamta_bef_region_alder_kon_fodelseregion_tid_scb(region_vekt = "20",
+                                                                             alder_koder = NA,
+                                                                             kon_klartext =  NA,
+                                                                             tid_koder = c("2000","9999")) %>%
+  mutate(region = skapa_kortnamn_lan(region))  %>% filter(födelseregion == "Född i Sverige",region == "Dalarna")
+
+min_ar_inrikes_antal = min(antal_inrikes_df$år)
+max_ar_inrikes_antal = max(antal_inrikes_df$år)
+min_antal_inrikes = format(antal_inrikes_df %>% filter(år == min_ar_inrikes_antal) %>%  .$Antal,big.mark = " ")
+max_antal_inrikes = antal_inrikes_df %>% filter(år == max_ar_inrikes_antal) %>%  .$Antal %>% format(big.mark = " ")
+
+andel_utrikes <- round((antal_utrikes_region_df %>% filter(år == max_ar_utrikes_antal) %>%  .$Antal)/(antal_utrikes_region_df %>% filter(år == max_ar_utrikes_antal) %>%  .$Antal+antal_inrikes_df %>% filter(år == max_ar_inrikes_antal) %>%  .$Antal)*100,0)
+
+
 min_ar_utrikes_kumulativ <- min(antal_forandring_lan_kumulativ$år)
 max_ar_utrikes_kumulativ <- max(antal_forandring_lan_kumulativ$år)
 kumulativ_summa_inrikes <- format(abs(antal_forandring_lan_kumulativ %>% filter(födelseregion == "Född i Sverige",år==max(år)) %>%  .$kumulativ_summa),big.mark = " ")
@@ -63,7 +83,8 @@ fodelseland_senaste_ar <- max(storsta_fodelseland_df$år)
 
 storsta_fodelseland_senaste_ar <- storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$födelseregion
 storsta_fodelseland_senaste_ar_antal <- format(storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$Antal,big.mark = " ")
-
+andra_fodelseland_senaste_ar <- storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar,födelseregion != storsta_fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$födelseregion
+andra_fodelseland_senaste_ar_antal <- format(storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar,födelseregion != storsta_fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$Antal,big.mark = " ")
 ############################################################
 ########## Befolkningspyramid för Inrikes/utrikes ##########
 ############################################################
@@ -84,7 +105,12 @@ gg_befforandring_komponenter <- diag_befutv_per_komponent_ar(region_vekt = vald_
                                                              skriv_till_diagramfil  = spara_diagram_som_bildfiler,
                                                              returnera_dataframe_global_environment = TRUE)
 
+befforandring_komponent_min_ar <- min(befutv_per_komponent_ar_scb_df$år)
+befforandring_komponent_max_ar <- max(befutv_per_komponent_ar_scb_df$år)
 
+fodelseunderskott_netto <- format(abs(sum(befutv_per_komponent_ar_scb_df %>% filter(förändringar == "Födelseöverskott") %>%  .$personer)),big.mark = " ")
+inrikes_flyttningsoverskott_netto <- format(abs(sum(befutv_per_komponent_ar_scb_df %>% filter(förändringar == "Inrikes flyttnetto") %>%  .$personer)),big.mark = " ")
+invandringsoverskott_netto <- format(sum(befutv_per_komponent_ar_scb_df %>% filter(förändringar == "Invandringsöverskott") %>%  .$personer),big.mark = " ")
 
 ########################
 # Arbetsmarknadsstatus #
@@ -100,9 +126,12 @@ gg_sysselsattningsgrad_tidsserie <- diag_sysselsattningsgrad_tidsserie(output_ma
                                                                        skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                                                        returnera_data_rmarkdown= TRUE)
 
-syssgrad_tidsserie_forsta_ar <- min(sysselsattningsgrad_tidsserie_df$år)
-syssgrad_tidsserie_senaste_ar <- max(sysselsattningsgrad_tidsserie_df$år)
-
+syssgrad_tidsserie_forsta_ar <- min(sysselsattningsgrad_tidsserie_jmf_2017_df$år)
+syssgrad_tidsserie_senaste_ar <- max(sysselsattningsgrad_tidsserie_jmf_2017_df$år)
+syssgrad_tidsserie_utrikes_min_ar <- gsub("\\.",",",sysselsattningsgrad_tidsserie_jmf_2017_df %>% filter(födelseregion == "utrikes födda",år == min(år)) %>%  .$sysselsättningsgrad)
+syssgrad_tidsserie_utrikes_max_ar <- gsub("\\.",",",sysselsattningsgrad_tidsserie_jmf_2017_df %>% filter(födelseregion == "utrikes födda",år == max(år)) %>%  .$sysselsättningsgrad)
+syssgrad_tidsserie_inrikes_min_ar <- gsub("\\.",",",sysselsattningsgrad_tidsserie_jmf_2017_df %>% filter(födelseregion == "inrikes födda",år == min(år)) %>%  .$sysselsättningsgrad)
+syssgrad_tidsserie_inrikes_max_ar <- gsub("\\.",",",sysselsattningsgrad_tidsserie_jmf_2017_df %>% filter(födelseregion == "inrikes födda",år == max(år)) %>%  .$sysselsättningsgrad)
 #############################################
 ## Sysselsättninggrad, vistelsetid/inrikes ##
 #############################################
