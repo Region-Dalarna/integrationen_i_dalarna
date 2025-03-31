@@ -30,7 +30,8 @@ asylsokande_senaste_ar_antal = format(asylsokande_df %>% filter(år == max(år))
 source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_bef_inrikes_utrikes_antal_forandring_prognos.R")
 gg_antal_utrikes <- diagram_utrikes_fodda_tidsserie(output_mapp_figur = Output_mapp_figur,
                                                     spara_figur = spara_diagram_som_bildfiler,
-                                                    returnera_data= TRUE)
+                                                    returnera_data= TRUE,
+                                                    prognos_ar = 2040)
 
 min_ar_utrikes_antal = min(antal_utrikes_region_df$år)
 max_ar_utrikes_antal = max(antal_utrikes_region_df$år)
@@ -42,11 +43,13 @@ max_ar_utrikes_kumulativ <- max(antal_forandring_lan_kumulativ$år)
 kumulativ_summa_inrikes <- format(abs(antal_forandring_lan_kumulativ %>% filter(födelseregion == "Född i Sverige",år==max(år)) %>%  .$kumulativ_summa),big.mark = " ")
 kumulativ_summa_utrikes <- format(abs(antal_forandring_lan_kumulativ %>% filter(födelseregion == "Utrikes född",år==max(år)) %>%  .$kumulativ_summa),big.mark = " ")
 
-prognos_ar <- 2034
+prognos_ar <- 2040
 min_ar_utrikes_kumulativ_prognos <- min(antal_forandring_prognos_kumulativ$år)
 max_ar_utrikes_kumulativ_prognos <- max(antal_forandring_prognos_kumulativ %>% filter(år<= prognos_ar) %>% .$år)
-kumulativ_summa_inrikes_max_prognos <- format(abs(round(antal_forandring_prognos_kumulativ %>% filter(födelseregion == "inrikes födda",år==max_ar_utrikes_kumulativ_prognos) %>%  .$kumulativ_summa,0)),big.mark = " ")
-kumulativ_summa_utrikes_max_prognos <- format(abs(round(antal_forandring_prognos_kumulativ %>% filter(födelseregion == "utrikes födda",år==max_ar_utrikes_kumulativ_prognos) %>%  .$kumulativ_summa,0)),big.mark = " ")
+kumulativ_summa_inrikes_max_prognos <- format(round(antal_forandring_prognos_kumulativ %>% filter(födelseregion == "inrikes födda",år==max_ar_utrikes_kumulativ_prognos) %>%  .$kumulativ_summa,0),big.mark = " ")
+kumulativ_summa_inrikes_max_prognos_abs <- format(abs(round(antal_forandring_prognos_kumulativ %>% filter(födelseregion == "inrikes födda",år==max_ar_utrikes_kumulativ_prognos) %>%  .$kumulativ_summa,0)),big.mark = " ")
+kumulativ_summa_utrikes_max_prognos <- format(round(antal_forandring_prognos_kumulativ %>% filter(födelseregion == "utrikes födda",år==max_ar_utrikes_kumulativ_prognos) %>%  .$kumulativ_summa,0),big.mark = " ")
+kumulativ_summa_utrikes_max_prognos_abs <- format(abs(round(antal_forandring_prognos_kumulativ %>% filter(födelseregion == "utrikes födda",år==max_ar_utrikes_kumulativ_prognos) %>%  .$kumulativ_summa,0)),big.mark = " ")
 
 # Största födelseland bland utrikes födda i Dalarna
 source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_storsta_fodelseland.R")
