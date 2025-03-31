@@ -333,6 +333,20 @@ forvarvsinkomst_ar <- unique(forvarvsinkomst_df$år)
 forvarvsinkomst_inrikes_kvinnor <- gsub("\\.",",",forvarvsinkomst_df %>% filter(kön == "kvinnor",födelseregion == "födda i Sverige") %>%  .$`Medianinkomst, tkr`)
 forvarvsinkomst_inrikes_man <- gsub("\\.",",",forvarvsinkomst_df %>% filter(kön == "män",födelseregion == "födda i Sverige") %>%  .$`Medianinkomst, tkr`)
 
+#############################
+##### Ekonomisk standard ####
+#############################
+source(here("skript/","ekonomisk_standard_bakgrund.R"))
+gg_ek_standard <- diagram_ekonomisk_standard(output_mapp = Output_mapp_figur,
+                                             skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                             returnera_dataframe_global_environment = TRUE)
+
+ek_standard_min_ar <- min(lag_ek_standard_bakgrund_df$år)
+ek_standard_max_ar <- max(lag_ek_standard_bakgrund_df$år)
+ek_standard_utrikes_andel_max_ar_samtliga <- round(lag_ek_standard_bakgrund_df %>% filter(år == ek_standard_max_ar,sysselsättning == "Samtliga personer",bakgrund == "utrikes födda") %>%  .$`Inkomst < 60 procent`,0)
+ek_standadard_forandring_utrikes <- abs(round(lag_ek_standard_bakgrund_df %>% filter(år == ek_standard_max_ar,sysselsättning == "Samtliga personer",bakgrund == "utrikes födda") %>%  .$`Inkomst < 60 procent`-lag_ek_standard_bakgrund_df %>% filter(år == ek_standard_min_ar,sysselsättning == "Samtliga personer",bakgrund == "utrikes födda") %>%  .$`Inkomst < 60 procent`,0))
+ek_standard_inrikes_andel_max_ar_samtliga <- round(lag_ek_standard_bakgrund_df %>% filter(år == ek_standard_max_ar,sysselsättning == "Samtliga personer",bakgrund == "inrikes födda") %>%  .$`Inkomst < 60 procent`,0)
+
 #############################################
 #### Utbildningsnivå för inrikes/utrikes ####
 #############################################
