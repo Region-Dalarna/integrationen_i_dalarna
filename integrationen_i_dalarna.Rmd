@@ -186,11 +186,9 @@ gg_antal_utrikes$befolkningsforandring_Dalarna
 
 Mellan år `r befforandring_komponent_min_ar` och `r befforandring_komponent_max_ar` har antalet döda i Dalarna varit fler än antalet födda och antalet utflyttade till övriga Sverige har varit fler än antalet inflyttade från övriga Sverige. Totalt flyttade `r inrikes_flyttningsoverskott_netto` personer netto från Dalarna till andra delar av Sverige under perioden, medan  det dog `r fodelseunderskott_netto` fler personer än det föddes. Under samma period var invandringsöverskottet `r invandringsoverskott_netto` personer. Att Dalarnas befolkning har växt under 2000-talet beror således på att invandringen har varit relativt stor.
 
-(<span class = "kommentar">Kollat hit 20250403</span>)
+Födelseunderskottet minskade successivt från år 2000 och fram till 2019, för att därefter öka kraftigt fram till 2024. Utvecklingen till 2019 beror i stor grad på att de stora ålderskullar som föddes runt 1990 befann sig i barnafödande åldrar, samt en generös familje- och socialpolitik och en stor invandring. De som invandrade till Dalarna i mitten av 2010-talet var generellt sett unga och i en ålder när det är vanligt att skaffa barn. Utrikes födda kvinnor har även en hög fruktsamhet direkt efter att de invandrat till Sverige, men därefter minskar den successivt. Att fruktsamhetstalen är extra höga bland kvinnor som nyligen invandrat beror sannolikt på att många kvinnors invandring är knutet till familjebildning, och att de kommer till Sverige för att återförenas med sin familj eller för att bilda familj. 
 
-Efter att ha blivit mindre under flera  om det fortfarande dör fler än det föds i Dalarnas län har antalet barn som föds ökat och födelseunderskottet minskat de senaste åren. Den enskilt största orsaken till att det har fötts många barn i länet de senaste åren är att de stora ålderskullar som föddes runt 1990 befinner sig i barnafödande åldrar. Andra orsaker är att Sverige har en generös familje- och socialpolitik och en stor invandring. De som invandrat till Dalarna är generellt sett unga och befinner sig i en ålder när det är vanligt att föda barn. Utrikes födda kvinnor har även en hög fruktsamhet direkt efter att de invandrat till Sverige, men därefter minskar den successivt. Att fruktsamhetstalen är extra höga bland kvinnor som nyligen invandrat beror sannolikt på att många kvinnors invandring är knutet till familjebildning, och att de kommer till Sverige för att återförenas med sin familj eller för att bilda familj. Som en följd av invandringen har antalet födda barn därmed ökat i Dalarnas län och födelseunderskottet har minskat (<span class = "kommentar">Oklart hur mycket av detta stycke som skall behållas</span>)
-
-*Kontrollera stycket ovan mot diagrammet nedan*
+De senaste årens markanta minskning av födelsetalen är en fråga som förvånar demografer. Det är inte längre en lika tydlig koppling mellan makroekonomiska upp- och nedgångar, välfärdssystemets utformning och födslar. Nedgången är mer knuten till oro inför framtiden och påverkar framför allt sannolikheten att skaffa sitt första barn. För en fördjupad genomgång av förändringar i födelsetal, se avsnitt 2.1 i [*Befolkningsutvecklingen i Dalarna.*](https://region-dalarna.github.io/befolkningsutvecklingen_i_Dalarna/){target="_blank"}^[Befolkningsutvecklingen i Dalarna, Samhällsanalys, Region Dalarna (2025-03-25).]
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -208,20 +206,15 @@ gg_storsta_fodelseland$storsta_fodelseland_Dalarna
 
 ```
 
-*Revidera alla siffror och titta på dagens nivå.*
-
 </div>
  
 </details>
 
 ## Den demografiska situationen i Sverige
 Sverige är sedan några år inne i en demografisk fas där de stora babyboom-kullarna från slutet av 1940-
-och början av 1950-talet uppnår pensionsålder. Många svenska kommuner har en alltmer ålderstigen befolkning, en effekt av den urbaniseringsvåg som pågått under hela 1900-och 2000-talet då många unga lämnat landsbygden och mindre tätorter för residens- och universitetsstäder.
+och början av 1950-talet uppnår pensionsålder. Många svenska kommuner har en alltmer ålderstigen befolkning, en effekt av den urbaniseringsvåg som pågått under hela 1900-och 2000-talet då många unga lämnat landsbygden och mindre tätorter till förmån för residens- och universitetsstäder.
 
-En stor andel äldre i befolkningen medför ekonomiska påfrestningar för dessa kommuner då allt färre i arbetsför ålder ska försörja allt fler äldre och barn. I Långtidsutredningen år 2015 gjordes beräkningar på hur mycket kommunalskatten skulle behöva höjas i kommunerna för att upprätthålla samma servicenivå år 2040 som vi har idag, som en följd av den förändrade demografiska strukturen med en allt större andel äldre i befolkningen. Enligt dessa beräkningar behöver kommunalskatten höjas med en krona i storstadskommuner och sex kronor i glesbefolkade kommuner för att upprätthålla
-servicenivån, bara som en följd av den förändrade demografin. Om kostnaderna för den offentliga servicen ökar i ungefär samma takt som den har gjort historiskt behövs istället en höjning av kommunalskatten med åtta kronor i storstadskommuner och arton kronor i glesbefolkade kommuner. Det rör sig med andra ord om orimliga skattehöjningar, där beräkningarna snarare ska ses som en signal om att något måste göras åt situationen än en rekommendation till kommunerna om hur mycket skatten måste höjas. 
-
-Förutom att den demografiska situationen medför färre skattebetalare som ska försörja allt fler äldre så innebär den också ett kompetensförsörjningsproblem.
+En stor andel äldre i befolkningen medför ekonomiska påfrestningar för dessa kommuner då allt färre i arbetsför ålder ska försörja allt fler äldre och barn. Redan i *Långtidsutredningen år 2015* gjordes beräkningar på hur mycket kommunalskatten skulle behöva höjas i kommunerna för att upprätthålla samma servicenivå år 2040 som då, som en följd av den förändrade demografiska strukturen. Beräkningarna visade på orimliga skattehöjningar, cirka 50-procentiga ökningar, vilket kan ses som en signal på hur allvarlig situationen var redan för tio år sedan. Förutom att den demografiska situationen medför färre skattebetalare som ska försörja allt fler äldre så innebär den också ett stort kompetensförsörjningsproblem.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -229,19 +222,16 @@ Förutom att den demografiska situationen medför färre skattebetalare som ska 
 knitr::include_graphics("Figurer/Befpyramid Dalarnas län 2024_jmfr_utr_inr.png")
 
 ```
-*Bild över befolkningens åldersfördelning, kvinnor och män samt inrikes och utrikes födda*
 
-Vid en analys av åldersfördelningen i Dalarnas befolkning uppdelat på den inrikes- och utrikes födda befolkningen blir det tydligt att den utrikes födda befolkningen i länet är väsentligt yngre än den inrikes födda, och har en större andel personer i arbetsför ålder (se de svarta linjerna i diagrammet ovan). Detta beror på att de personer som invandrat generellt är yngre än inrikes födda. Följden blir att invandringen totalt sett har en föryngrande effekt på befolkningen. Det finns även stora variationer i medelålder mellan olika grupper av utrikes födda beroende på invandringsår och födelseland. Utrikes födda utgör ungefär `r andel_utrikes` procent av den totala befolkningen i Dalarnas län och är därmed betydligt färre än inrikes födda.
+Vid en analys av åldersfördelningen i Dalarnas befolkning uppdelat på den inrikes- och utrikes födda befolkningen blir det tydligt att den utrikes födda befolkningen i länet är väsentligt yngre än den inrikes födda, och har en större andel personer i arbetsför ålder (se de svarta linjerna i diagrammet ovan). Detta beror på att de personer som invandrat generellt är yngre än den inrikes födda befolkningen. Följden blir att invandringen totalt sett har en föryngrande effekt på befolkningen. Det finns även stora variationer i medelålder mellan olika grupper av utrikes födda beroende på invandringsår och födelseland. Utrikes födda utgör ungefär `r andel_utrikes` procent av den totala befolkningen i Dalarnas län och är därmed betydligt färre än inrikes födda.
 
-Medelåldern i Dalarnas län var år *2018* totalt sett 43,6 år vilket är högre än i riket som helhet där medelåldern var 41,2 år. När de vanligaste födelseländerna i Dalarna studeras går det att urskilja stora skillnader mellan grupperna. För personer som är födda i Finland där de flesta varit i landet en längre tid är medelåldern 67 år. I Syrien, Somalia, Eritrea och Irak där majoriteten av
-befolkningen har varit en kortare tid i landet är befolkningen betydligt yngre och medelåldern varierar mellan 28–33 år.<span class = "kommentar">Stycke ej uppdaterat</span>
+Medelåldern i Dalarnas län var år *2018* totalt sett 43,6 år vilket är högre än i riket som helhet där medelåldern var 41,2 år. När de vanligaste födelseländerna i Dalarna studeras går det att urskilja stora skillnader mellan grupperna. För personer som är födda i Finland där de flesta varit i landet en längre tid är medelåldern 67 år. I Syrien, Somalia, Eritrea och Irak där majoriteten av befolkningen har varit en kortare tid i landet är befolkningen betydligt yngre och medelåldern varierar mellan 28–33 år. <span class = "kommentar">Stycke ej uppdaterat till 2024 års situation</span>
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
 gg_antal_utrikes$befolkningsforandring_lan_Dalarna
 
 ```
-*Diagram - historisk förskjutning mellan inrikes och utrikes födda*
 
 Mellan år `r min_ar_utrikes_kumulativ` och `r max_ar_utrikes_kumulativ` minskade antalet inrikes födda i arbetsför ålder mellan 16–64 år i Dalarnas län med `r kumulativ_summa_inrikes` personer, samtidigt som antalet utrikes födda i samma åldersgrupp ökade med `r kumulativ_summa_utrikes` personer. Minskningen av antalet inrikes födda berodde på att ålderskullarna som fyllde 65 år var större än de som fyllde 16 år, samt en större inrikes utflyttning än inflyttning. Den inrikes födda befolkningen i arbetsför ålder minskade allra mest
 åren 2010–2015, vilket berodde på att det stora antalet personer födda i slutet av 1940-talet fyllde 65 och därmed uppnådde pensionsålder.
@@ -252,13 +242,15 @@ gg_antal_utrikes$befolkningsprognos_lan_Dalarna
 
 ```
 
-Enligt *SCB:s* befolkningsprognos från juni 2024 förväntas antalet utrikes födda i Dalarnas län mellan 16–64 år att `r ifelse(kumulativ_summa_utrikes_max_prognos>0,"öka","minska")` med `r kumulativ_summa_utrikes_max_prognos_abs` personer mellan `r min_ar_utrikes_kumulativ_prognos` och `r max_ar_utrikes_kumulativ_prognos`, medan antalet inrikes födda personer i länet förväntas att `r ifelse(kumulativ_summa_inrikes_max_prognos>0,"öka","minska")` med `r kumulativ_summa_inrikes_max_prognos_abs` personer. Enligt prognosen kommer antalet personer mellan 16 och 64 år således att minska tydligt i Dalarna fram till `r max_ar_utrikes_kumulativ_prognos` , vilket kan bli problematiskt för bland annat länets kompetensförsörjning.
+Enligt SCB:s befolkningsprognos från juni 2024 förväntas antalet utrikes födda i Dalarnas län mellan 16–64 år att `r ifelse(kumulativ_summa_utrikes_max_prognos>0,"öka","minska")` med `r kumulativ_summa_utrikes_max_prognos_abs` personer mellan `r min_ar_utrikes_kumulativ_prognos` och `r max_ar_utrikes_kumulativ_prognos`, medan antalet inrikes födda personer i länet förväntas att `r ifelse(kumulativ_summa_inrikes_max_prognos>0,"öka","minska")` med `r kumulativ_summa_inrikes_max_prognos_abs` personer. Enligt prognosen kommer antalet personer mellan 16-64 år således att minska tydligt i Dalarna fram till `r max_ar_utrikes_kumulativ_prognos`, vilket förstärker länets utmaning med kompetensförsörjning.
 
 Enligt *Arbetsförmedlingen* är det extra viktigt för små kommuner att ta vara på den resurs som utrikesfödda kan utgöra, annars riskerar de att få mycket svårt med arbetskraftsförsörjningen.
 Arbetsförmedlingen betonar möjligheterna med att använda den arbetskraftsreserv som de utrikes födda
 utgör men ser samtidigt att det finns vissa hinder, såsom validering av nyanländas kompetens och ovilja att anställa nyanlända. De menar att Dalarnas arbetsmarknad på sikt står... <span class = "kommentar">citat i gamla rapporten - kolla om AF uttalat sig nyligen i frågan - annars överväg ta bort</span>
 
 # Arbetsmarknadskonjunktur och invandring - då och nu
+
+(<span class = "kommentar">Kollat hit 20250404</span>)
 
 Diagram 15 i den tidigare rapporten
 
@@ -275,14 +267,6 @@ Dalarna har generellt sett haft en stark arbetsmarknad över lång tid jämfört
 Kommunala variationer?
 
 Skillnad mellan grupper?
-
-Hämta information från SCB som asylinvandringens utveckling
-
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
-
-gg_utbniva_bakgrund$utbniva_inr_utr_kon_Dalarna_ar2023
-
-```
 
 
 # Vägen till arbete
@@ -581,6 +565,13 @@ gg_etablering$etablering_tid
 En fullgjord gymnasieutbildning är en av de viktigaste faktorerna för ett gott liv avseende en rad olika aspekter, såsom exempelvis hälsa, inkomst, medellivslängd och möjligheten till arbete. De med en längre utbildning lever i allmänhet längre, har en genomsnittlig högre inkomst och mår i allmänhet bättre än de med kortare utbildning. Utbildningsnivån hos utrikes födda har därför en stor påverkan för möjligheterna att etablera sig i samhället, särskilt bland de unga som anländer till Sverige under skolåren och har många år kvar i livet.
 
 Att gruppen utrikes födda är en heterogen grupp blir tydligt när utbildningsnivån studeras. Den stora skillnaden jämfört mot inrikes födda är att en större andel av de utrikes födda innehar enbart förgymnasial utbildning och en mindre andel innehar gymnasial utbildning. Andelen personer som har eftergymnasial utbildning är ungefär densamma för inrikes och utrikes födda. Arbetskraftsinvandrare är generellt sett mer högutbildade än flyktinginvandrare, och skillnaderna i utbildningsnivå är även stora mellan olika ursprungsländer.
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_utbniva_bakgrund$utbniva_inr_utr_kon_Dalarna_ar2023
+
+```
 
 *Diagram - utbildningsnivå i Dalarna efter vistelsetid i Sverige*
 
