@@ -126,6 +126,20 @@ gg_sysselsattningsgrad_tidsserie <- diag_sysselsattningsgrad_tidsserie(output_ma
                                                                        skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                                                        returnera_data_rmarkdown= TRUE)
 
+# Data som relaterar till diagram från 1993.
+syssgrad_93_forsta_ar <- min(sysselsattningsgrad_tidsserie_df$år)
+syssgrad_93_senaste_ar <- max(sysselsattningsgrad_tidsserie_df$år)
+
+syssgrad_93_kvinnor_inrikes_forsta_ar_procent <- gsub("\\.",",",sysselsattningsgrad_tidsserie_df %>% filter(kön == "kvinnor",födelseregion == "inrikes födda",år == min(år)) %>%  .$sysselsättningsgrad)
+syssgrad_93_kvinnor_inrikes_max_ar_procent <- gsub("\\.",",",sysselsattningsgrad_tidsserie_df %>% filter(kön == "kvinnor",födelseregion == "inrikes födda",år == max(år)) %>%  .$sysselsättningsgrad)
+syssgrad_93_kvinnor_utrikes_forsta_ar_procent <- gsub("\\.",",",sysselsattningsgrad_tidsserie_df %>% filter(kön == "kvinnor",födelseregion == "utrikes födda",år == min(år)) %>%  .$sysselsättningsgrad)
+syssgrad_93_kvinnor_utrikes_max_ar_procent <- gsub("\\.",",",sysselsattningsgrad_tidsserie_df %>% filter(kön == "kvinnor",födelseregion == "utrikes födda",år == max(år)) %>%  .$sysselsättningsgrad)
+
+syssgrad_93_män_inrikes_forsta_ar_procent <- gsub("\\.",",",sysselsattningsgrad_tidsserie_df %>% filter(kön == "män",födelseregion == "inrikes födda",år == min(år)) %>%  .$sysselsättningsgrad)
+syssgrad_93_män_inrikes_max_ar_procent <- gsub("\\.",",",sysselsattningsgrad_tidsserie_df %>% filter(kön == "män",födelseregion == "inrikes födda",år == max(år)) %>%  .$sysselsättningsgrad)
+syssgrad_93_män_utrikes_forsta_ar_procent <- gsub("\\.",",",sysselsattningsgrad_tidsserie_df %>% filter(kön == "män",födelseregion == "utrikes födda",år == min(år)) %>%  .$sysselsättningsgrad)
+syssgrad_93_män_utrikes_max_ar_procent <- gsub("\\.",",",sysselsattningsgrad_tidsserie_df %>% filter(kön == "män",födelseregion == "utrikes födda",år == max(år)) %>%  .$sysselsättningsgrad)
+
 syssgrad_tidsserie_forsta_ar <- min(sysselsattningsgrad_tidsserie_jmf_2017_df$år)
 syssgrad_tidsserie_senaste_ar <- max(sysselsattningsgrad_tidsserie_jmf_2017_df$år)
 syssgrad_tidsserie_utrikes_min_ar <- gsub("\\.",",",sysselsattningsgrad_tidsserie_jmf_2017_df %>% filter(födelseregion == "utrikes födda",år == min(år)) %>%  .$sysselsättningsgrad)
