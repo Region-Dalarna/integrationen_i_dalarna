@@ -38,9 +38,12 @@ max_ar_utrikes_antal = max(antal_utrikes_region_df$år)
 min_antal_utrikes = format(antal_utrikes_region_df %>% filter(år == min_ar_utrikes_antal) %>%  .$Antal,big.mark = " ")
 max_antal_utrikes = antal_utrikes_region_df %>% filter(år == max_ar_utrikes_antal) %>%  .$Antal %>% format(big.mark = " ")
 
+# Antal kommuner där befolkningen ökat totalt
+forandring_totalt_antal = antal_forandring_df %>% group_by(region) %>% summarize(netto = sum(forandring))
+antal_okning_kommun_total <- forandring_totalt_antal %>% filter(region!= "Dalarna",netto > 0) %>% nrow() # Antal kommuner som ökat i befolkning
 
-
-
+# Vilka kommuner har en ökande befolning inrikes
+kommuner_okning_inrikes <- str_c(rev(antal_forandring_df %>% filter(region!= "Dalarna",födelseregion == "Född i Sverige",forandring > 0) %>% .$region), collapse = " och ") # Antal kommuner som ökat i befolkning och är utrikes födda
 
 # Antal inrikes. Enbart för att få data
 source("https://raw.githubusercontent.com/Region-Dalarna/hamta_data/refs/heads/main/hamta_bef_region_alder_kon_fodelseregion_tid_InrUtrFoddaRegAlKon_scb.R")
