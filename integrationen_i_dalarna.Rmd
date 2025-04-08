@@ -286,6 +286,7 @@ arbetskraft och arbetskraftsreserven bestående av utrikes födda riskerar att l
 
 # Vägen till arbete
 
+(<span class = "kommentar">Försöka besvara frågorna:
 *Vilka kommer i arbete?*
 *När kommer de i arbete?*
 *Vilka är de yrken som de arbetar i?*
@@ -293,7 +294,7 @@ arbetskraft och arbetskraftsreserven bestående av utrikes födda riskerar att l
 *Kvinnor och män, jämfört med inrikes födda*
 *Vilka arbetar inte?*
 *Hur ser etableringen ut baserat på vistelsetid?* - Kolla i rapporten om kvinnor och män
-*Långtidsarbetslöshet för inrikes och utrikes födda*
+*Långtidsarbetslöshet för inrikes och utrikes födda*</span>)
 
 I Statistiska centralbyråns analys av utrikes föddas etablering på arbetsmarknaden identifierar de några aspekter som särskilt viktiga för sysselsättningen bland utrikes födda. Enligt de svenska arbetsmarknadsundersökningarna, framtagna av Statistiska centralbyrån, är en person sysselsatt om den under mätveckan har arbetat minst en timme, eller varit tillfälligt frånvarande från ett arbete (semester, tjänstledighet, sjukdom, osv). Även personer som deltar i vissa arbetsmarknadspolitiska program räknas som sysselsatta (lönebidrag, start av näringsverksamhet osv). Forskning visar att utbildningsnivå, språkkunskaper, tillgång till sociala nätverk och förekomsten av diskriminering är avgörande för utrikes föddas möjligheter att etablera sig på arbetsmarknaden. Den grupp av utrikes födda som ligger närmast nivåerna för inrikes födda är födda i Norden. Andelen arbetslösa är väsentligt högre bland personer födda i Asien och Afrika, vilka är två världsdelar där flyktinginvandringen varit stor under de senaste åren.
 
