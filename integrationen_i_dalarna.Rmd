@@ -250,11 +250,12 @@ utgör men ser samtidigt att det finns vissa hinder, såsom validering av nyanl�
 
 # Arbetsmarknadskonjunktur och invandring - då och nu
 
-(<span class = "kommentar">Kollat hit 20250404</span>)
+En viktig aspekt för integrationen är hur stark arbetsmarknaden är vid tidpunkten för invandringen. När
+Sverige under 1990-talet tog emot ett stort antal asylsökande från Balkan hade vi den djupaste ekonomiska
+krisen i Sverige i modern tid. Mellan 1990 och 1994 gick sysselsättningen ned med drygt 16 procent och
+nära 600 000 personer blev arbetslösa.
 
-Diagram 15 i den tidigare rapporten
-
-Sysselsättningsgraden i åldersgruppen 20-64 år har ökat för såväl inrikes som utrikes födda i Dalarna sedan det tidiga 1990 talet. År  `r syssgrad_93_forsta_ar` var sysselsättningsgraden för inrikes födda i kvinnor i Dalarna `r syssgrad_93_kvinnor_inrikes_forsta_ar_procent` procent, vilket var något högre än för männen (`r syssgrad_93_män_inrikes_forsta_ar_procent` procent). Att de inrikes födda kvinnornas sysselsättningsgrad var högre än männens beror sannolikt på 90-talskrisen, när branscher med stor dominans av män bland de anställda (industri exempelvis) drabbades hårt. För utrikes födda var sysselsättningsgraden ungefär lika stor för kvinnor och män, men klart lägre än för inrikes födda (`r syssgrad_93_kvinnor_utrikes_forsta_ar_procent` procent för kvinnor och `r syssgrad_93_män_utrikes_forsta_ar_procent` procent för män).
+Sysselsättningsgraden i åldersgruppen 20-64 år har ökat för såväl inrikes som utrikes födda i Dalarna sedan det tidiga 1990-talet. År  `r syssgrad_93_forsta_ar` var sysselsättningsgraden för inrikes födda i kvinnor i Dalarna `r syssgrad_93_kvinnor_inrikes_forsta_ar_procent` procent, vilket var något högre än för männen (`r syssgrad_93_män_inrikes_forsta_ar_procent` procent). Att de inrikes födda kvinnornas sysselsättningsgrad var högre än männens beror sannolikt på 90-talskrisen, när branscher med stor dominans av män bland de anställda (industri exempelvis) drabbades hårt. För utrikes födda var sysselsättningsgraden ungefär lika stor för kvinnor och män, men klart lägre än för inrikes födda (`r syssgrad_93_kvinnor_utrikes_forsta_ar_procent` procent för kvinnor och `r syssgrad_93_män_utrikes_forsta_ar_procent` procent för män).
 
 År `r syssgrad_93_senaste_ar` hade sysselsättningsgraden ökat till `r syssgrad_93_kvinnor_inrikes_max_ar_procent` procent för inrikes födda kvinnor och 
 `r syssgrad_93_män_inrikes_max_ar_procent` procent för inrikes födda män. Inrikes födda kvinnor har således fortfarande något högre sysselsättningsgrad än inrikes födda män. Även för utrikes födda har sysselsättningsgraden ökat tydligt för båda könen, men de utrikes födda männen har idag en klart högre sysselsättningsgrad än de utrikes födda kvinnorna (`r syssgrad_93_män_utrikes_max_ar_procent` procent jämfört med `r syssgrad_93_kvinnor_utrikes_max_ar_procent` procent).    
@@ -265,14 +266,23 @@ gg_sysselsattningsgrad_tidsserie$sysselsattningsgrad_tidsserie_Dalarna
 
 ```
 
-En viktig aspekt för integrationen är hur stark arbetsmarknaden är vid tidpunkten för invandringen.
+<span class = "kommentar">Diagram ovan motsvarar Diagram 15 i den tidigare rapporten, men med män/kvinnor och utrikes/inrikes födda.</span>
 
-Dalarna har generellt sett haft en stark arbetsmarknad över lång tid jämfört med riket. 
+Dalarna har generellt sett haft en stark arbetsmarknad över lång tid jämfört med riket.
 
-Kommunala variationer?
+<span class = "kommentar">Skapa diagram över arbetslöshetens utveckling 2008-2024 för Dalarna respektive riket. Mats har använt i olika sammanhang, se bild 18 i presentation för Hedemora Kommunfullmäktige 28 jan.</span>
 
-Skillnad mellan grupper?
+Det finns dock en stor variation mellan länets kommuner.
 
+<span class = "kommentar">Skapa diagram över Andel arbetslösa 20-64 år i Dalarna i januari 2025 per kommun, uppdelat på inrikes och utrikes födda. Se Diagram 12 i den automatgenererade ppt:n. Går det att lägga in även uppdelat på kvinnor och män?</span>
+
+Matchningen mellan de som är arbetssökande och de arbeten som är lediga skulle kunna fungera betydligt bättre än idag.
+Konsekvensen av detta kan bli att företag och organisationer kan flytta från länet på grund av att de inte hittar
+arbetskraft och arbetskraftsreserven bestående av utrikes födda riskerar att lämna länet om de inte får jobb.
+
+<span class = "kommentar">Skapa diagram över Matchning utifrån utbildningsnivå i Dalarna (se Diagram 25 i NMS-analysen), uppdelat på inrikes och utrikes födda och kvinnor och män.</span>
+
+(<span class = "kommentar">Kollat hit 20250408</span>)
 
 # Vägen till arbete
 
