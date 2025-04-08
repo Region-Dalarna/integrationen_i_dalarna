@@ -60,7 +60,6 @@ max_antal_inrikes = antal_inrikes_df %>% filter(år == max_ar_inrikes_antal) %>%
 
 andel_utrikes <- round((antal_utrikes_region_df %>% filter(år == max_ar_utrikes_antal) %>%  .$Antal)/(antal_utrikes_region_df %>% filter(år == max_ar_utrikes_antal) %>%  .$Antal+antal_inrikes_df %>% filter(år == max_ar_inrikes_antal) %>%  .$Antal)*100,0)
 
-
 min_ar_utrikes_kumulativ <- min(antal_forandring_lan_kumulativ$år)
 max_ar_utrikes_kumulativ <- max(antal_forandring_lan_kumulativ$år)
 kumulativ_summa_inrikes <- format(abs(antal_forandring_lan_kumulativ %>% filter(födelseregion == "Född i Sverige",år==max(år)) %>%  .$kumulativ_summa),big.mark = " ")
@@ -73,6 +72,26 @@ kumulativ_summa_inrikes_max_prognos <- format(round(antal_forandring_prognos_kum
 kumulativ_summa_inrikes_max_prognos_abs <- format(abs(round(antal_forandring_prognos_kumulativ %>% filter(födelseregion == "inrikes födda",år==max_ar_utrikes_kumulativ_prognos) %>%  .$kumulativ_summa,0)),big.mark = " ")
 kumulativ_summa_utrikes_max_prognos <- format(round(antal_forandring_prognos_kumulativ %>% filter(födelseregion == "utrikes födda",år==max_ar_utrikes_kumulativ_prognos) %>%  .$kumulativ_summa,0),big.mark = " ")
 kumulativ_summa_utrikes_max_prognos_abs <- format(abs(round(antal_forandring_prognos_kumulativ %>% filter(födelseregion == "utrikes födda",år==max_ar_utrikes_kumulativ_prognos) %>%  .$kumulativ_summa,0)),big.mark = " ")
+
+# Andel utrikes födda (diagram)
+
+source(here("skript/","andel_utrikes.R"))
+gg_andel_utrikes <- diag_andel_utrikes_scb(output_mapp = Output_mapp_figur,
+                                           skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                           start_ar = "2000",
+                                           returnera_data_rmarkdown= TRUE)
+
+andel_utrikes_forsta_ar <- min(andel_utrikes_df$år)
+andel_utrikes_senaste_ar <- max(andel_utrikes_df$år)
+
+andel_utrikes_Sverige_sista_ar <- round(andel_utrikes_df %>% filter(år == andel_utrikes_senaste_ar,region == "Sverige") %>%  .$andel_utrikes,0)
+andel_utrikes_kommun_hogst_sista_ar <- andel_utrikes_df %>%filter(!(region%in%c("Sverige","Dalarna"))) %>% filter(år == andel_utrikes_senaste_ar ,andel_utrikes==max(andel_utrikes)) %>%  .$region
+andel_utrikes_kommun_hogst_sista_ar_varde <- round(andel_utrikes_df %>% filter(år == andel_utrikes_senaste_ar,region == andel_utrikes_kommun_hogst_sista_ar) %>%  .$andel_utrikes,0)
+andel_utrikes_kommun_hogst_forsta_ar_varde <- round(andel_utrikes_df %>% filter(år == min(år),region == andel_utrikes_kommun_hogst_sista_ar) %>%  .$andel_utrikes,0)
+
+andel_utrikes_kommun_lagst_sista_ar <- andel_utrikes_df %>%filter(!(region%in%c("Sverige","Dalarna")),år == andel_utrikes_senaste_ar) %>% filter(andel_utrikes==min(andel_utrikes)) %>%  .$region
+andel_utrikes_kommun_hogst_sista_ar_varde <- round(andel_utrikes_df %>% filter(år == andel_utrikes_senaste_ar,region == andel_utrikes_kommun_lagst_sista_ar) %>%  .$andel_utrikes,0)
+andel_utrikes_kommun_hogst_forsta_ar_varde <- round(andel_utrikes_df %>% filter(år == min(år),region == andel_utrikes_kommun_lagst_sista_ar) %>%  .$andel_utrikes,0)
 
 # Största födelseland bland utrikes födda i Dalarna
 source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_storsta_fodelseland.R")
