@@ -99,25 +99,26 @@ Den strukturella integrationen handlar om skyldigheter och rättigheter via samh
 
 Begreppet integration kan således ses som *en process där individer eller grupper med olika bakgrunder och förutsättningar blir en del av ett större socialt, ekonomiskt eller kulturellt sammanhang, samtidigt som deras egen identitet och särart respekteras*.
 
-Även om integrationsfrågan är bred, präglas samhällsdebatten av integration av utrikes födda i det svenska samhället. Det gör att det är viktigt att belysa hur utrikes födda förhåller sig till inrikes födda inom ett antal samhällsområden. Samhällets förmåga att intregrera utrikes födda i utbildning, arbetsmarknad eller boende är avgörande för t ex kompetensförsörjningen på kort och lång sikt. Andelen utrikes födda i arbetsför ålder har ökat successivt över de senaste 20 åren och är i dag en förutsättning för att kompetensförsörja arbetsmarknaden.
+Även om integrationsfrågan är bredare, präglas samhällsdebatten av integration av utrikes födda i det svenska samhället. Det gör att det är viktigt att belysa hur utrikes födda förhåller sig till inrikes födda inom ett antal samhällsområden. Samhällets förmåga att intregrera utrikes födda i utbildning, arbetsmarknad eller boende är avgörande för t ex kompetensförsörjningen på kort och lång sikt. Andelen utrikes födda i arbetsför ålder har ökat successivt över de senaste 20 åren och är i dag en förutsättning för att kompetensförsörja arbetsmarknaden.
 
-*Lägg in Diagram 2 från Kompetensförsörjningsrapporten - andelar inrikes/utrikes födda i arbetsför ålder*
+<span class = "kommentar">*Lägg in Diagram 2 från Kompetensförsörjningsrapporten - andelar inrikes/utrikes födda i arbetsför ålder*</span>
 
-2019 publicerade Region Dalarna rapporten [*Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv*](https://www.regiondalarna.se/contentassets/d845727dbc9f49c3b7b09a2c60456497/integrationsanalys.pdf){target="_blank"}^[Region Dalarna. Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv. Regionala utvecklingsförvaltningens rapportserie #1, 2019.]. Rapporten skrevs i en period där Sverige och Dalarna några år tidigare hade haft den största volymen av asylinvandring i historien. Därefter har asylinvandringen minskat och 2024 var den på en nivå som är den lägsta sedan 1985, vilket är en del i ett paradigmskifte från sittande regering att öka arbetskraftsinvandringen och minska asylinvandringen [Regeringen, 2025](https://www.regeringen.se/pressmeddelanden/2025/01/pressbriefing-om-migrationen-till-sverige-under-2024/){target="_blank"}^[Regeringen. Pressbriefing om migrationen till Sverige under 2024. 2025-01-10.]
+2019 publicerade Region Dalarna rapporten [*Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv*](https://www.regiondalarna.se/contentassets/d845727dbc9f49c3b7b09a2c60456497/integrationsanalys.pdf){target="_blank"}.^[Region Dalarna. Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv. Regionala utvecklingsförvaltningens rapportserie #1, 2019.] Rapporten skrevs i en period där Sverige och Dalarna några år tidigare hade haft den största volymen av asylinvandring i historien. Därefter har asylinvandringen minskat och 2024 var den på en nivå som är den lägsta sedan 1985, vilket är en del i ett paradigmskifte från sittande regering att öka arbetskraftsinvandringen och minska asylinvandringen [(Regeringen, 2025)](https://www.regeringen.se/pressmeddelanden/2025/01/pressbriefing-om-migrationen-till-sverige-under-2024/){target="_blank"}.^[Regeringen. Pressbriefing om migrationen till Sverige under 2024. 2025-01-10.]
 
 Frågan är vad som har hänt under de sex år som gått sedan Region Dalarnas senaste rapport skrevs. Har integrationen utvecklats i en positiv riktning? 
 
-Den här rapportens syfte är att redovisa aktuell statistik relaterat till utrikes föddas integration i samhället i Dalarna och visa på utvecklingen över tid. Rapporten kommer i stora drag följa 2019 års rapportdisposition, men tona ner delar som har med asylinvandringen att göra då den frågan inte längre är lika aktuell.
+Den här rapportens syfte är att redovisa aktuell statistik relaterat till utrikes föddas integration i samhället i Dalarna och visa på utvecklingen över tid. Rapporten kommer i stora drag följa 2019 års rapportdisposition, men tona ner delar som har med asylinvandringen att göra då den frågan inte längre är lika aktuell. 
 
+I rapporten från 2019 konstaterades även att det var en tydlig skiljelinje mellan utrikes födda och vad som ibland benämns som andra generationens invandrare respektive inrikes födda. Andra generationens invandrare hade såväl skolresultat som sysselsättningsgrad nära nivån för inrikes födda. Av den anledningen görs ingen uppdelning av inrikes födda i denna rapport. Det finns en fungerande integration i bemärkelsen att de som är födda i Sverige med utrikes födda föräldrar i betydligt högre utsträckning än utrikes födda är sysselsatta.<span class = "kommentar">Förklara detta tydligare.</span>
 
 # Bakgrund
 
-*Vad behövs här för att introducera en utvidgad beskrivning av invandringen över tid?*
+<span class = "kommentar">*Vad behövs här för att introducera en bakgrundsbeskrivning av invandringen över tid?*</span>
 
 ## Den utrikes födda befolkningen i Sverige och i Dalarna
 För att få en förståelse för den utrikes födda befolkningen i Dalarna och hur invandringen sett ut över tid, behöver situationen i riket som helhet analyseras. Arbetskraftsinvandringen, främst från Norden, tog fart efter andra världskriget och pågick fram till 1960-talets slut. I mitten av 1980-talet förändrades invandringens karaktär och fler flyktingar togs emot till följd av globala katastrofer. Från 1990-talet och framåt har krigssituationer i olika delar av världen föranlett en högre grad av flyktinginvandring med kriget i Syrien i mitten av 2010-talet som den tid då asylinvandringen nådde över 160 000 personer i Sverige. Därefter har antalet asylsökande minskat successivt och `r asylsokande_max_ar` sökte `r asylsokande_senaste_ar_antal` personer asyl i Sverige, vilket är det lägsta antalet sedan 1996.
 
-För en fördjupad beskrivning av den utrikes födda befolkningens utveckling i Sverige och Dalarna, se fördjupningsavsnittet *Fördjupning - Historisk överblick av invandringen i Dalarna*.
+För en fördjupad beskrivning av den utrikes födda befolkningens utveckling i Sverige och Dalarna, se fördjupningsavsnittet *Historisk överblick av invandringen i Dalarna*.
 
 <details>
 
@@ -156,9 +157,13 @@ Ett stort antal asylsökande ett år leder ofta till att invandringen ökar åre
 Anhöriginvandring, eller anknytningsinvandring, är när en person vill flytta till eller stanna i Sverige på grund av att den har en anhörig som är svensk medborgare eller har uppehållstillstånd i Sverige. I Sverige finns det möjlighet att få uppehållstillstånd som anhörig för make, maka, barn under 18 år och adoptivbarn. Den som kommer till Sverige benämns som anhöriginvandrare och den som redan bor i Sverige benämns som anknytningsperson.
 Eftersom flyktingar, efter att de har flyttat till Sverige, ofta vill förenas med någon anhörig, följer anhöriginvandringen i viss mån asylinvandringen.
 
-Under åren *2013–2018* beviljades totalt 771 645 uppehållstillstånd i Sverige. Av dessa beviljades 9 procent för studier, 6 procent för EU-medborgare, 31 procent av asylskäl, 31 procent av anknytningsskäl och 23 procent fick uppehållstillstånd på grund av arbetsskäl. Att mindre än en tredjedel av de som beviljades uppehållstillstånd åren *2013–2018* var flyktingar med asylskäl är viktigt att komma ihåg när invandring och integration analyseras. Många av de som fått beviljade uppehållstillstånd på grund av asyl de senaste åren invandrade utan sin närmaste familj. Detta gjorde att även antalet sökta och beviljade uppehållstillstånd av anknytningsskäl var stort. *Utvidga tidsspannet för antal beviljade uppehållstillstånd och titta på perioden 2019-2024 separat.*
+Under åren *2013–2018* beviljades totalt 771 645 uppehållstillstånd i Sverige. Av dessa beviljades 9 procent för studier, 6 procent för EU-medborgare, 31 procent av asylskäl, 31 procent av anknytningsskäl och 23 procent fick uppehållstillstånd på grund av arbetsskäl. Att mindre än en tredjedel av de som beviljades uppehållstillstånd åren *2013–2018* var flyktingar med asylskäl är viktigt att komma ihåg när invandring och integration analyseras. Många av de som fått beviljade uppehållstillstånd på grund av asyl de senaste åren invandrade utan sin närmaste familj. Detta gjorde att även antalet sökta och beviljade uppehållstillstånd av anknytningsskäl var stort. 
 
-*Stänga fördjupningsavsnittet här och låta nedanstående avsnitt vara en del av huvudrapporten?*
+<span class = "kommentar">*Utvidga tidsspannet för antal beviljade uppehållstillstånd och titta på perioden 2019-2024 separat.*</span>
+
+</div>
+ 
+</details>
 
 Mellan `r min_ar_utrikes_antal` och `r max_ar_utrikes_antal` ökade antalet utrikes födda
 personer i Dalarnas län ökat från `r min_antal_utrikes` till `r max_antal_utrikes`
@@ -174,7 +179,7 @@ gg_antal_utrikes$utrikes_fodda_antal_Dalarna
 
 När de utrikes födda personer som är bosatta i Dalarna kartläggs utifrån deras invandringsår till Sverige, framgår det med all tydlighet att en stor andel har invandrat under de senaste tio åren. Över hälften av de utrikes födda som bor i Dalarna har bott i Sverige i *8 år eller kortare*. Det faktum att en stor andel av de utrikes födda i Dalarnas län har bott i Sverige en kort tid är viktigt att beakta när faktorer som utbildningsnivå, sysselsättning, medelinkomst m.m. analyseras. Antalet personer bosatta efter invandringsår i diagram 4 går att jämföra mot diagram 1, och det går som väntat att se ett samband mellan antalet immigranter och antal bosatta personer efter invandringsår. Antalet bosatta personer per invandringsår är generellt lägre än antalet immigranter per år i Dalarnas län. Detta kan förklaras med att personer som har invandrat har avlidit, flyttat till andra län, emigrerat, samt att inrikes födda som återvandrat omfattas av diagram 1. Utrikes födda har under 2000-talet varit mer benägna att flytta från Dalarnas län än till Dalarna från övriga Sverige. Mer om det går att läsa i det sista kapitlet, där inrikes flyttningar analyseras.
 
-*Här ska diagram 5 "Antal utrikes födda i Dalarnas län efter vistelsetid" placeras in - stycket ovan behöver kontrolleras*
+<span class = "kommentar">*Här ska diagram 5 "Antal utrikes födda i Dalarnas län efter vistelsetid" placeras in - stycket ovan behöver kontrolleras.*</span>
 
 Genom att studera befolkningsutvecklingen för inrikes och utrikes födda i länet de senaste åren, blir det tydligt att befolkningen i länet som helhet hade minskat utan invandringen. Befolkningen ökade totalt sett mellan år 2000–2024 i 8 av länets kommuner, medan den minskade i 7 av dem.  Antalet utrikes födda personer har under tidsperioden ökat i Dalarnas läns samtliga kommuner, medan antalet inrikes födda personer har minskat i alla kommuner förutom Falun och Gagnef. Slutsatsen blir att de kommuner i länet som har växt i invånarantal med undantagen Falun och Gagnef har gjort det som en följd av invandring, medan de kommuner som krympt har begränsat befolkningsminskningen genom att fler har invandrat än utvandrat. Notera även att utrikes föddas barn ingår i kategorin inrikes födda. Ökningen av antalet utrikes födda var i relation till befolkningsmängd störst i Hedemora, Avesta, Ludvika, och Borlänge. 
 
@@ -188,7 +193,7 @@ Mellan år `r befforandring_komponent_min_ar` och `r befforandring_komponent_max
 
 Födelseunderskottet minskade successivt från år 2000 och fram till 2019, för att därefter öka kraftigt fram till 2024. Utvecklingen till 2019 beror i stor grad på att de stora ålderskullar som föddes runt 1990 befann sig i barnafödande åldrar, samt en generös familje- och socialpolitik och en stor invandring. De som invandrade till Dalarna i mitten av 2010-talet var generellt sett unga och i en ålder när det är vanligt att skaffa barn. Utrikes födda kvinnor har även en hög fruktsamhet direkt efter att de invandrat till Sverige, men därefter minskar den successivt. Att fruktsamhetstalen är extra höga bland kvinnor som nyligen invandrat beror sannolikt på att många kvinnors invandring är knutet till familjebildning, och att de kommer till Sverige för att återförenas med sin familj eller för att bilda familj. 
 
-De senaste årens markanta minskning av födelsetalen är en fråga som förvånar demografer. Det är inte längre en lika tydlig koppling mellan makroekonomiska upp- och nedgångar, välfärdssystemets utformning och födslar. Nedgången är mer knuten till oro inför framtiden och påverkar framför allt sannolikheten att skaffa sitt första barn. För en fördjupad genomgång av förändringar i födelsetal, se avsnitt 2.1 i [*Befolkningsutvecklingen i Dalarna.*](https://region-dalarna.github.io/befolkningsutvecklingen_i_Dalarna/){target="_blank"}^[Befolkningsutvecklingen i Dalarna, Samhällsanalys, Region Dalarna (2025-03-25).]
+De senaste årens markanta minskning av födelsetalen är en fråga som förvånar demografer. Det är inte längre en lika tydlig koppling mellan makroekonomiska upp- och nedgångar, välfärdssystemets utformning och födslar. Nedgången är mer knuten till oro inför framtiden och påverkar framför allt sannolikheten att skaffa sitt första barn. För en fördjupad genomgång av förändringar i födelsetal, se avsnitt 2.1 i [*Befolkningsutvecklingen i Dalarna*](https://region-dalarna.github.io/befolkningsutvecklingen_i_Dalarna/){target="_blank"}.^[Befolkningsutvecklingen i Dalarna, Samhällsanalys, Region Dalarna (2025-03-25).]
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -206,15 +211,12 @@ gg_storsta_fodelseland$storsta_fodelseland_Dalarna
 
 ```
 
-</div>
- 
-</details>
 
 ## Den demografiska situationen i Sverige
 Sverige är sedan några år inne i en demografisk fas där de stora babyboom-kullarna från slutet av 1940-
 och början av 1950-talet uppnår pensionsålder. Många svenska kommuner har en alltmer ålderstigen befolkning, en effekt av den urbaniseringsvåg som pågått under hela 1900-och 2000-talet då många unga lämnat landsbygden och mindre tätorter till förmån för residens- och universitetsstäder.
 
-En stor andel äldre i befolkningen medför ekonomiska påfrestningar för dessa kommuner då allt färre i arbetsför ålder ska försörja allt fler äldre och barn. Redan i *Långtidsutredningen år 2015* gjordes beräkningar på hur mycket kommunalskatten skulle behöva höjas i kommunerna för att upprätthålla samma servicenivå år 2040 som då, som en följd av den förändrade demografiska strukturen. Beräkningarna visade på orimliga skattehöjningar, cirka 50-procentiga ökningar, vilket kan ses som en signal på hur allvarlig situationen var redan för tio år sedan. Förutom att den demografiska situationen medför färre skattebetalare som ska försörja allt fler äldre så innebär den också ett stort kompetensförsörjningsproblem.
+En stor andel äldre i befolkningen medför ekonomiska påfrestningar för dessa kommuner då allt färre i arbetsför ålder ska försörja allt fler äldre och barn. Redan i <span class = "kommentar">*Långtidsutredningen år 2015*</span> gjordes beräkningar på hur mycket kommunalskatten skulle behöva höjas i kommunerna för att upprätthålla samma servicenivå år 2040 som då, som en följd av den förändrade demografiska strukturen. Beräkningarna visade på orimliga skattehöjningar, cirka 50-procentiga ökningar, vilket kan ses som en signal på hur allvarlig situationen var redan för tio år sedan. Förutom att den demografiska situationen medför färre skattebetalare som ska försörja allt fler äldre så innebär den också ett stort kompetensförsörjningsproblem.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -294,26 +296,45 @@ arbetskraft och arbetskraftsreserven bestående av utrikes födda riskerar att l
 
 <span class = "kommentar">Skapa diagram över Matchning utifrån utbildningsnivå i Dalarna (se Diagram 25 i NMS-analysen), uppdelat på inrikes och utrikes födda och kvinnor och män.</span>
 
-(<span class = "kommentar">Kollat hit 20250408</span>)
-
 # Vägen till arbete
 
-(<span class = "kommentar">Försöka besvara frågorna:
+<span class = "kommentar">Försöka besvara frågorna:
+<br>
 *Vilka kommer i arbete?*
+<br>
 *När kommer de i arbete?*
+<br>
 *Vilka är de yrken som de arbetar i?*
+<br>
 *Hur är matchningen mot utbildning?*
+<br>
 *Kvinnor och män, jämfört med inrikes födda*
+<br>
 *Vilka arbetar inte?*
+<br>
 *Hur ser etableringen ut baserat på vistelsetid?* - Kolla i rapporten om kvinnor och män
-*Långtidsarbetslöshet för inrikes och utrikes födda*</span>)
+<br>
+*Långtidsarbetslöshet för inrikes och utrikes födda*</span>
 
-I Statistiska centralbyråns analys av utrikes föddas etablering på arbetsmarknaden identifierar de några aspekter som särskilt viktiga för sysselsättningen bland utrikes födda. Enligt de svenska arbetsmarknadsundersökningarna, framtagna av Statistiska centralbyrån, är en person sysselsatt om den under mätveckan har arbetat minst en timme, eller varit tillfälligt frånvarande från ett arbete (semester, tjänstledighet, sjukdom, osv). Även personer som deltar i vissa arbetsmarknadspolitiska program räknas som sysselsatta (lönebidrag, start av näringsverksamhet osv). Forskning visar att utbildningsnivå, språkkunskaper, tillgång till sociala nätverk och förekomsten av diskriminering är avgörande för utrikes föddas möjligheter att etablera sig på arbetsmarknaden. Den grupp av utrikes födda som ligger närmast nivåerna för inrikes födda är födda i Norden. Andelen arbetslösa är väsentligt högre bland personer födda i Asien och Afrika, vilka är två världsdelar där flyktinginvandringen varit stor under de senaste åren.
 
-*Andel sysselsatta 20-64 år i Dalarnas län*
 
-Lite osäker på åldersspannet
+I Statistiska centralbyråns analys av utrikes föddas etablering på arbetsmarknaden identifierar de några aspekter som särskilt viktiga för sysselsättningen bland utrikes födda. Forskning visar att utbildningsnivå, språkkunskaper, tillgång till sociala nätverk och förekomsten av diskriminering är avgörande för utrikes föddas möjligheter att etablera sig på arbetsmarknaden. Den grupp av utrikes födda som ligger närmast nivåerna för inrikes födda är födda i Norden. Andelen arbetslösa är väsentligt högre bland personer födda i Asien och Afrika, vilka är två världsdelar där flyktinginvandringen varit stor under de senaste åren.
 
+För mer information om den statistik som rapporten bygger på, klicka nedan:
+<br>
+
+<details>
+
+  <summary>Mer information om statistiken</summary>
+
+<div>
+Enligt de svenska arbetsmarknadsundersökningarna, framtagna av Statistiska centralbyrån, är en person sysselsatt om den under mätveckan har arbetat minst en timme, eller varit tillfälligt frånvarande från ett arbete (semester, tjänstledighet, sjukdom, osv). Även personer som deltar i vissa arbetsmarknadspolitiska program räknas som sysselsatta (lönebidrag, start av näringsverksamhet osv). 
+
+</div>
+ 
+</details>
+
+När andelen sysselsatta redovisas per utbildningsnivå är det tydligt att individer med förgymnasial utbildning i lägre utsträckning är förvärvsarbetande (se diagram nedan), vilket gäller även gruppen med utrikes födda. <span class = "kommentar">Lägg till något om procentandelarna och den relativa skillnaden mellan inrikes och utrikes födda. Effekten av en gymnasial utbildning (jämfört med förgymnasial) ser högre ut för utrikes födda, men inte så mycket mer för en eftergymnasial.</span>
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -321,17 +342,18 @@ gg_syssgrad_vistelsetid_utb$sysselsattningsgrad_inrikes_utrikes_utbniva
 
 ```
 
-När andelen sysselsatta redovisas per utbildningsnivå är det tydligt att individer med förgymnasial utbildning i lägre utsträckning är förvärvsarbetande (se diagram 17), vilket gäller även gruppen med utrikes födda.
-
 Diagrammet nedan visar att sysselsättningsgraden för såväl inrikes som utrikes födda har ökat mellan `r syssgrad_tidsserie_forsta_ar` och `r syssgrad_tidsserie_senaste_ar`, men ökningen har varit klart störst för utrikes födda, från `r syssgrad_tidsserie_utrikes_min_ar` procent till `r syssgrad_tidsserie_utrikes_max_ar` procent. För inrikes födda har sysselsättningsgraden ökat från `r syssgrad_tidsserie_inrikes_min_ar` procent till `r syssgrad_tidsserie_inrikes_max_ar` procent under samma tidsperiod. Utrikes födda kommer således i arbete i mycket större utsträckning `r syssgrad_tidsserie_senaste_ar`, än de gjorde `r syssgrad_tidsserie_forsta_ar`.
 
-En analys av andelen sysselsatta uppdelat på utrikes/inrikes födda utifrån om föräldrarna är födda inrikes eller utrikes visar att andelen sysselsatta är högre för inrikes födda med två föräldrar födda utrikes (ibland benämnd som andra generationens invandrare) än för utrikes födda, men inte fullt lika hög som inrikes födda med en eller båda föräldrarna födda i Sverige. Det går att konstatera att det i någon utsträckning finns en fungerande integration i bemärkelsen att de som är födda i Sverige med utrikes födda föräldrar i betydligt högre utsträckning än utrikes födda är sysselsatta.<span class = "kommentar">Sista stycke från tidigare rapport, bort?</span>
+<span class = "kommentar">Kollat hit 20250409</span>
+
+
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
 gg_sysselsattningsgrad_tidsserie$sysselsattningsgrad_jmf_2017_Dalarna
 
 ```
+*Andel sysselsatta 20-64 år i Dalarnas län*
 
 Något som är viktigt att ha med sig när andelen sysselsatta analyseras är att gränsen för att definieras förvärvsarbetande är relativt låg. I Arbetskraftsundersökningarna (AKU) som genomförs av SCB och utgör den officiella arbetslöshetsstatistiken definieras en person som förvärvsarbetande om den har arbetat en timme per vecka vid tiden för undersökningens genomförande. AKU är en urvalsundersökning som genomförs genom intervjuer och är inte nedbrytbar på finare geografisk nivå än län och storstadsregioner. För att analysera sysselsättning på finare geografisk nivå än vad som finns i AKU kan registerstatistik användas, närmare bestämt Registerbaserad arbetsmarknadsstatistik (RAMS). Definitionen av sysselsatt baseras på definitionen i AKU men beräknas på ett mer komplext sätt utifrån inkomst, då uppgifter om arbetad tid per vecka inte finns i RAMS.<span class = "kommentar">Är bas numer, stycke behöver uppdateras (informationsruta i början av avsnittet?)</span>
 
@@ -340,6 +362,7 @@ Något som är viktigt att ha med sig när andelen sysselsatta analyseras är at
 gg_syssgrad_vistelsetid_utb$sysselsattningsgrad_vistelsetid_inrikes
 
 ```
+
 
 
 När vistelsetid tas med i analysen syns samma mönster som i diagram 18, delvis att det finns en fungerande integration i bemärkelsen att de som vistats längre tid i Sverige har en högre förvärvsfrekvens. Variabeln vistelsetid tjänar som en indikator på en rad andra faktorer som påverkar möjligheterna till att få ett arbete. Efter en ökad tid i landet kan en nyanländ person lära sig svenska, validera och komplettera utbildningar, lära sig hur den svenska arbetsmarknaden fungerar samt knyta kontakter för att öka chansen till att få en sysselsättning och inkomst. Enligt detta resonemang förväntas ett initialt sysselsättningsgap mellan inrikes födda och nyanlända, som minskar succesivt när vistelsetiden i landet blir längre.
