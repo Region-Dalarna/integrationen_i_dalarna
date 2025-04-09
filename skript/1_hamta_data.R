@@ -89,9 +89,18 @@ andel_utrikes_kommun_hogst_sista_ar <- andel_utrikes_df %>%filter(!(region%in%c(
 andel_utrikes_kommun_hogst_sista_ar_varde <- round(andel_utrikes_df %>% filter(år == andel_utrikes_senaste_ar,region == andel_utrikes_kommun_hogst_sista_ar) %>%  .$andel_utrikes,0)
 andel_utrikes_kommun_hogst_forsta_ar_varde <- round(andel_utrikes_df %>% filter(år == min(år),region == andel_utrikes_kommun_hogst_sista_ar) %>%  .$andel_utrikes,0)
 
+andel_utrikes_kommun_hogst_forandring_varde <- round(andel_utrikes_df %>% filter(år == andel_utrikes_senaste_ar,region == andel_utrikes_kommun_hogst_sista_ar) %>%  .$andel_utrikes-andel_utrikes_df %>% filter(år == min(år),region == andel_utrikes_kommun_hogst_sista_ar) %>%  .$andel_utrikes,0)
+
+andel_utrikes_smedjebacken_forandring_varde <- round(andel_utrikes_df %>% filter(år == andel_utrikes_senaste_ar,region == "Smedjebacken") %>%  .$andel_utrikes-andel_utrikes_df %>% filter(år == min(år),region == "Smedjebacken") %>%  .$andel_utrikes,0)
+
+andel_utrikes_Gagnef_forandring_varde <- round(andel_utrikes_df %>% filter(år == andel_utrikes_senaste_ar,region == "Gagnef") %>%  .$andel_utrikes-andel_utrikes_df %>% filter(år == min(år),region == "Gagnef") %>%  .$andel_utrikes,0)
+
+andel_utrikes_Borlänge_sista_ar <- round(andel_utrikes_df %>% filter(år == andel_utrikes_senaste_ar,region == "Borlänge") %>%  .$andel_utrikes,0)
+andel_utrikes_Avesta_sista_ar <- round(andel_utrikes_df %>% filter(år == andel_utrikes_senaste_ar,region == "Avesta") %>%  .$andel_utrikes,0)
+
 andel_utrikes_kommun_lagst_sista_ar <- andel_utrikes_df %>%filter(!(region%in%c("Sverige","Dalarna")),år == andel_utrikes_senaste_ar) %>% filter(andel_utrikes==min(andel_utrikes)) %>%  .$region
-andel_utrikes_kommun_hogst_sista_ar_varde <- round(andel_utrikes_df %>% filter(år == andel_utrikes_senaste_ar,region == andel_utrikes_kommun_lagst_sista_ar) %>%  .$andel_utrikes,0)
-andel_utrikes_kommun_hogst_forsta_ar_varde <- round(andel_utrikes_df %>% filter(år == min(år),region == andel_utrikes_kommun_lagst_sista_ar) %>%  .$andel_utrikes,0)
+andel_utrikes_kommun_lagst_sista_ar_varde <- round(andel_utrikes_df %>% filter(år == andel_utrikes_senaste_ar,region == andel_utrikes_kommun_lagst_sista_ar) %>%  .$andel_utrikes,0)
+andel_utrikes_kommun_lagst_forsta_ar_varde <- round(andel_utrikes_df %>% filter(år == min(år),region == andel_utrikes_kommun_lagst_sista_ar) %>%  .$andel_utrikes,0)
 
 # Största födelseland bland utrikes födda i Dalarna
 source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_storsta_fodelseland.R")
