@@ -263,7 +263,6 @@ gg_andel_utrikes$utrikes_fodda_andel_Dalarna
 
 
 # Arbetsmarknadskonjunktur och invandring - då och nu
-
 En viktig aspekt för integrationen är hur stark arbetsmarknaden är vid tidpunkten för invandringen. När
 Sverige under 1990-talet tog emot ett stort antal asylsökande från Balkan hade vi den djupaste ekonomiska
 krisen i Sverige i modern tid. Mellan 1990 och 1994 gick sysselsättningen ned med drygt 16 procent och
@@ -297,26 +296,27 @@ arbetskraft och arbetskraftsreserven bestående av utrikes födda riskerar att l
 <span class = "kommentar">Skapa diagram över Matchning utifrån utbildningsnivå i Dalarna (se Diagram 25 i NMS-analysen), uppdelat på inrikes och utrikes födda och kvinnor och män.</span>
 
 # Vägen till arbete
+Att arbeta (eller studera) är en viktig komponent i integrationen i samhället. Sysselsättningen bland utrikes födda är generellt lägre än bland svenskfödda personer och arbetslösheten, inklusive långtidsarbetslösheten, är högre. Utrikes födda har generellt en svagare ställning på arbetsmarknaden. Arbetslöshets- och sysselsättningsnivåerna bland utrikes födda varierar dock stort mellan olika grupper. Kön, födelseland och utbildningsnivå är alla faktorer som har stor betydelse. I detta avsnitt ska förhoppningsvis nedanstående frågor kring utrikes födda besvaras:
 
-<span class = "kommentar">Försöka besvara frågorna:
-<br>
-*Vilka kommer i arbete?*
-<br>
-*När kommer de i arbete?*
-<br>
-*Vilka är de yrken som de arbetar i?*
-<br>
-*Hur är matchningen mot utbildning?*
-<br>
-*Kvinnor och män, jämfört med inrikes födda*
-<br>
-*Vilka arbetar inte?*
-<br>
-*Hur ser etableringen ut baserat på vistelsetid?* - Kolla i rapporten om kvinnor och män
-<br>
-*Långtidsarbetslöshet för inrikes och utrikes födda*</span>
+<ul>
 
+<li>*Vilka kommer i arbete?*</li>
 
+<li>*När kommer de i arbete?*</li>
+    
+<li>*Vilka yrken arbetar de i?*</li>
+
+<li>*Hur ser etableringen ut baserat på vistelsetid?*</li>
+
+<li>*Hur är matchningen mellan arbete och utbildning?*</li>
+
+<li>*Vilka arbetar inte? Vilken utbildning har de?*</li>
+
+<li>*Hur ser långtidsarbetslösheten ut? för inrikes och utrikes födda*</li>
+
+</ul>
+
+<span class = "kommentar"> Titta på utrikes födda kvinnor och män, jämför med inrikes födda</span>
 
 I Statistiska centralbyråns analys av utrikes föddas etablering på arbetsmarknaden identifierar de några aspekter som särskilt viktiga för sysselsättningen bland utrikes födda. Forskning visar att utbildningsnivå, språkkunskaper, tillgång till sociala nätverk och förekomsten av diskriminering är avgörande för utrikes föddas möjligheter att etablera sig på arbetsmarknaden. Den grupp av utrikes födda som ligger närmast nivåerna för inrikes födda är födda i Norden. Andelen arbetslösa är väsentligt högre bland personer födda i Asien och Afrika, vilka är två världsdelar där flyktinginvandringen varit stor under de senaste åren.
 
@@ -355,7 +355,9 @@ gg_sysselsattningsgrad_tidsserie$sysselsattningsgrad_jmf_2017_Dalarna
 ```
 *Andel sysselsatta 20-64 år i Dalarnas län*
 
-Något som är viktigt att ha med sig när andelen sysselsatta analyseras är att gränsen för att definieras förvärvsarbetande är relativt låg. I Arbetskraftsundersökningarna (AKU) som genomförs av SCB och utgör den officiella arbetslöshetsstatistiken definieras en person som förvärvsarbetande om den har arbetat en timme per vecka vid tiden för undersökningens genomförande. AKU är en urvalsundersökning som genomförs genom intervjuer och är inte nedbrytbar på finare geografisk nivå än län och storstadsregioner. För att analysera sysselsättning på finare geografisk nivå än vad som finns i AKU kan registerstatistik användas, närmare bestämt Registerbaserad arbetsmarknadsstatistik (RAMS). Definitionen av sysselsatt baseras på definitionen i AKU men beräknas på ett mer komplext sätt utifrån inkomst, då uppgifter om arbetad tid per vecka inte finns i RAMS.<span class = "kommentar">Är bas numer, stycke behöver uppdateras (informationsruta i början av avsnittet?)</span>
+Något som är viktigt att ha med sig när andelen sysselsatta analyseras är att gränsen för att definieras förvärvsarbetande är relativt låg. I Arbetskraftsundersökningarna (AKU) som genomförs av SCB och utgör den officiella arbetslöshetsstatistiken definieras en person som förvärvsarbetande om den har arbetat en timme per vecka vid tiden för undersökningens genomförande. AKU är en urvalsundersökning som genomförs genom intervjuer och är inte nedbrytbar på finare geografisk nivå än län och storstadsregioner. För att analysera sysselsättning på finare geografisk nivå än vad som finns i AKU kan registerstatistik användas, närmare bestämt Registerbaserad arbetsmarknadsstatistik (RAMS). Definitionen av sysselsatt baseras på definitionen i AKU men beräknas på ett mer komplext sätt utifrån inkomst, då uppgifter om arbetad tid per vecka inte finns i RAMS.
+<br>
+<span class = "kommentar">Är bas numer, stycke behöver uppdateras (informationsruta i början av avsnittet?)</span>
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -363,13 +365,11 @@ gg_syssgrad_vistelsetid_utb$sysselsattningsgrad_vistelsetid_inrikes
 
 ```
 
-
-
-När vistelsetid tas med i analysen syns samma mönster som i diagram 18, delvis att det finns en fungerande integration i bemärkelsen att de som vistats längre tid i Sverige har en högre förvärvsfrekvens. Variabeln vistelsetid tjänar som en indikator på en rad andra faktorer som påverkar möjligheterna till att få ett arbete. Efter en ökad tid i landet kan en nyanländ person lära sig svenska, validera och komplettera utbildningar, lära sig hur den svenska arbetsmarknaden fungerar samt knyta kontakter för att öka chansen till att få en sysselsättning och inkomst. Enligt detta resonemang förväntas ett initialt sysselsättningsgap mellan inrikes födda och nyanlända, som minskar succesivt när vistelsetiden i landet blir längre.
+När vistelsetid tas med i analysen syns samma mönster som i <span class = "kommentar"> diagram 18 (ovan)</span>, delvis att det finns en fungerande integration i bemärkelsen att de som vistats längre tid i Sverige har en högre förvärvsfrekvens. Variabeln vistelsetid tjänar som en indikator på en rad andra faktorer som påverkar möjligheterna till att få ett arbete. Efter en ökad tid i landet kan en nyanländ person lära sig svenska, validera och komplettera utbildningar, lära sig hur den svenska arbetsmarknaden fungerar samt knyta kontakter för att öka chansen till att få en sysselsättning och inkomst. Enligt detta resonemang förväntas ett initialt sysselsättningsgap mellan inrikes födda och nyanlända, som minskar succesivt när vistelsetiden i landet blir längre. <span class = "kommentar"> kan vi säga något om hur många som finns i respektive åldersgrupp? </span>
 
 Bland utrikes födda har män en högre sysselsättningsgrad än kvinnor när vistelsetiden är lägre än 10 år, innan kvinnorna får en något högre sysselsättningsgrad än männen. Bland inrikes födda är sysselsättningsgraden något högre för män än för kvinnor.
 
-Skillnaderna mellan könen växer som synes med vistelsetiden i Sverige. Emma Neuman från Linnéuniversitet har undersökt hur kulturella normer bidrar till arbetsmarkandsutfall mellan utrikes födda kvinnor och män i Sverige. Hennes kartläggning visade att de som invandrat från länder där arbetsdeltagandet för kvinnor var lägre än män, också hade stora skillnader i andelen sysselsatta per kön på den svenska arbetsmarknaden. Efter en längre vistelsetid i Sverige, minskade gapet och skillnaden i sysselsättningsgrad mellan könen närmar sig nivån för inrikes födda. Slutsatsen som drogs var att den kulturella inverkan som ansågs finnas avtar med tiden.  Mönstret med en stor skillnad i sysselsättningsgrad mellan kön för utrikes födda med en kort vistelsetid går att se även i Dalarna. Skillnaden mellan könen minskar sedan ju längre vistelsetiden i landet blir, och har nästan helt försvunnit för de som bott i Sverige i 12 år eller mer. Efter en generation finns inga skillnader i sysselsättningsgrad mellan könen, och bland personer i Dalarna födda i Sverige med båda föräldrarna födda utomlands, var en något större andel kvinnor än män sysselsatta.<span class="kommentar">källa?</span>
+Skillnaderna mellan könen minskar som synes med vistelsetiden i Sverige. Emma Neuman (2015) har undersökt hur kulturella normer bidrar till arbetsmarknadsutfall mellan utrikes födda kvinnor och män i Sverige. Hennes kartläggning visade att de som invandrat från länder där arbetsdeltagandet för kvinnor var lägre än män, också hade stora skillnader i andelen sysselsatta per kön på den svenska arbetsmarknaden. Efter en längre vistelsetid i Sverige, minskade gapet och skillnaden i sysselsättningsgrad mellan könen närmar sig nivån för inrikes födda. Slutsatsen som drogs var att den kulturella inverkan som ansågs finnas avtar med tiden. Mönstret med en stor skillnad i sysselsättningsgrad mellan kön för utrikes födda med en kort vistelsetid går att se även i Dalarna. Skillnaden mellan könen minskar ju längre vistelsetiden i landet blir, och har helt försvunnit för de som bott i Sverige i 10 år eller mer. <span class="kommentar">Nyare källa? Neuman Emma (2015) Essays on Segregation, Gender Economics, and Self-employment. Avhandling. Växjö: Linnéuniversitetet</span>
 
 *Diagram - Genomsnittlig månadsinkomst förvärvsarbetande invånare 20-64 år i Dalarnas län*
 
