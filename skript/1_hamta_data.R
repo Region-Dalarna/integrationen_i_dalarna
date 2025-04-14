@@ -229,7 +229,17 @@ gg_syssgrad_vistelsetid_utb <- diag_sysselsattningsgrad_vistelsetid_inrikes_scb(
                                                                                 returnera_data_rmarkdown= TRUE)
 
 syssgrad_vistelsetid_ar <- unique(syssgrad_vistelsetid_inrikes_df$år)
+syssgrad_forgym_utrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Förgymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$`Andel sysselsatta`)
+syssgrad_forgym_inrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Förgymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$`Andel sysselsatta`)
+syssgrad_forgym_skillnad <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Förgymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$`Andel sysselsatta`-syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Förgymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$`Andel sysselsatta`)
 
+syssgrad_gym_utrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Gymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$`Andel sysselsatta`)
+syssgrad_gym_inrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Gymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$`Andel sysselsatta`)
+syssgrad_gym_skillnad <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Gymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$`Andel sysselsatta`-syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Gymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$`Andel sysselsatta`)
+
+syssgrad_eftergym_utrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Eftergymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$`Andel sysselsatta`)
+syssgrad_eftergym_inrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Eftergymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$`Andel sysselsatta`)
+syssgrad_eftergym_skillnad <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Eftergymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$`Andel sysselsatta`-syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Eftergymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$`Andel sysselsatta`)
 
 ##########
 ## Län ##

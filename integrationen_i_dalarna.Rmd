@@ -353,7 +353,15 @@ Enligt de svenska arbetsmarknadsundersökningarna, framtagna av Statistiska cent
  
 </details>
 
-När andelen sysselsatta redovisas per utbildningsnivå är det tydligt att individer med förgymnasial utbildning i lägre utsträckning är förvärvsarbetande (se diagram nedan), vilket gäller även gruppen med utrikes födda. <span class = "kommentar">Lägg till något om procentandelarna och den relativa skillnaden mellan inrikes och utrikes födda. Effekten av en gymnasial utbildning (jämfört med förgymnasial) ser högre ut för utrikes födda, men inte så mycket mer för en eftergymnasial.</span>
+När andelen sysselsatta redovisas per utbildningsnivå är det tydligt att individer med förgymnasial utbildning i lägre utsträckning är förvärvsarbetande (se diagram nedan), vilket gäller även gruppen med utrikes födda. För personer med förgymnasial utbildning är sysselsättningsgraden bland utrikes födda i Dalarna blott `r syssgrad_forgym_utrikes` procent medan den är `r syssgrad_forgym_inrikes` procent för motsvarande grupp inrikes födda, en skillnad på `r syssgrad_forgym_skillnad` procentenheter mellan inrikes och utrikes födda. 
+
+För såväl utrikes som inrikes födda ökar sysselsättningsgraden tydligt om personerna istället har en gymnasial utbildning, då sysselsättningsgraden bland utrikes födda är `r syssgrad_gym_utrikes` procent medan den för inrikes födda är `r syssgrad_gym_inrikes` procent, en skillnad på `r syssgrad_gym_skillnad` procentenheter mellan inrikes och utrikes födda. 
+
+Bland personer med eftergymnasial utbildning är sysselsättningsgraden för utrikes födda `r syssgrad_eftergym_utrikes` procent, vilket bara är något högre än för gymnasialt utbildade i samma grupp. För inrikes födda med en eftergymnasial utbildning är sysselsättningsgraden hela `r syssgrad_eftergym_inrikes` procent, vilket är `r syssgrad_eftergym_skillnad` högre än för utrikes födda med samma utbildningsnivå.
+
+Skillnaden i sysselsättningsgrad mellan utrikes och inrikes födda är således som störst bland de med lägst utbildningsnivå (förgymnasial), men sjunker tydligt för personer med gymnasial utbildning (från `r syssgrad_forgym_skillnad` procentenheter till `r syssgrad_gym_skillnad` procentenheter). För de personer som har högst utbildning (eftergymnasial) ökar skillnaden återigen i sysselsättningsgrad mellan inrikes och utrikes födda, till `r syssgrad_eftergym_skillnad` procentenheter.
+
+<span class = "kommentar">Lägg till något om procentandelarna och den relativa skillnaden mellan inrikes och utrikes födda. Effekten av en gymnasial utbildning (jämfört med förgymnasial) ser högre ut för utrikes födda, men inte så mycket mer för en eftergymnasial.</span>
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
