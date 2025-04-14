@@ -175,7 +175,7 @@ Under åren *2013–2018* beviljades totalt 771 645 uppehållstillstånd i Sveri
 </details>
 
 Mellan `r min_ar_utrikes_antal` och `r max_ar_utrikes_antal` ökade antalet utrikes födda
-personer i Dalarnas län ökat från `r min_antal_utrikes` till `r max_antal_utrikes`
+personer i Dalarnas län från `r min_antal_utrikes` till `r max_antal_utrikes`
 personer. Effekten av den ökade invandringen under 2000-talet är därmed att den utrikes födda befolkningen i Dalarna har mer än fördubblats. Ökningen skedde dock fram till 2019, därefter har den utrikes födda befolkningen i Dalarna minskat något. 
 
 Antalet inrikes födda minskade under samma tid från `r min_antal_inrikes` personer till `r max_antal_inrikes` personer. Utan ett stort invandringsöverskott under 2000-talet hade befolkningen i Dalarnas län således minskat. 
@@ -362,7 +362,7 @@ Enligt de svenska arbetsmarknadsundersökningarna, framtagna av Statistiska cent
  
 </details>
 
-När andelen sysselsatta redovisas per utbildningsnivå är det tydligt att individer med förgymnasial utbildning i lägre utsträckning är förvärvsarbetande (se diagram nedan), vilket gäller även gruppen med utrikes födda. För personer med förgymnasial utbildning är sysselsättningsgraden bland utrikes födda i Dalarna blott `r syssgrad_forgym_utrikes` procent medan den är `r syssgrad_forgym_inrikes` procent för motsvarande grupp inrikes födda, en skillnad på `r syssgrad_forgym_skillnad` procentenheter mellan inrikes och utrikes födda. 
+När andelen sysselsatta redovisas per utbildningsnivå är det tydligt att individer med förgymnasial utbildning i lägre utsträckning är förvärvsarbetande (se diagram nedan), vilket även gäller gruppen med utrikes födda. För personer med förgymnasial utbildning är sysselsättningsgraden bland utrikes födda i Dalarna blott `r syssgrad_forgym_utrikes` procent medan den är `r syssgrad_forgym_inrikes` procent för inrikes födda med motsvarande utbildning, en skillnad på `r syssgrad_forgym_skillnad` procentenheter mellan inrikes och utrikes födda. 
 
 För såväl utrikes som inrikes födda ökar sysselsättningsgraden tydligt om personerna istället har en gymnasial utbildning, då sysselsättningsgraden bland utrikes födda är `r syssgrad_gym_utrikes` procent medan den för inrikes födda är `r syssgrad_gym_inrikes` procent, en skillnad på `r syssgrad_gym_skillnad` procentenheter mellan inrikes och utrikes födda. 
 
