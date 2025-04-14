@@ -1,0 +1,86 @@
+diag_bef_inr_utr_tid <- function(region = "20", # Enbart ett län i taget.
+                                 visa_logga_i_diagram = TRUE,                        # TRUE om logga ska visas i diagrammet, FALSE om logga inte ska visas i diagrammet
+                                 logga_sokvag = NA,                                 # sökväg till logga som ska visas i diagrammet
+                                 output_mapp = "G:/Samhällsanalys/API/Fran_R/utskrift/",                                  # mapp där diagram ska sparas, NA = sparas ingen fil
+                                 skriv_diagrambildfil = FALSE,                           # TRUE om diagram ska skrivas till fil, FALSE om diagram inte ska skrivas till fil
+                                 returnera_data_rmarkdown = FALSE,
+                                 demo = FALSE             # sätts till TRUE om man bara vill se ett exempel på diagrammet i webbläsaren och inget annat
+) {
+
+
+  # =======================================================================================================================
+  # Diagram för antalet inrikes/utrikes födda i arbetsför ålder
+  # =======================================================================================================================
+
+  # om parametern demo är satt till TRUE så öppnas en flik i webbläsaren med ett exempel på hur diagrammet ser ut och därefter avslutas funktionen
+  # demofilen måste läggas upp på webben för att kunna öppnas, vi lägger den på Region Dalarnas github-repo som heter utskrivna_diagram
+  if (demo){
+    demo_url <-
+      c("https://region-dalarna.github.io/utskrivna_diagram/medellivslangd_aterstaende_vid_30 år_alder_Dalarna_ar2012-2016_2019-2023.png")
+    walk(demo_url, ~browseURL(.x))
+    if (length(demo_url) > 1) cat(paste0(length(demo_url), " diagram har öppnats i webbläsaren."))
+    stop_tyst()
+  }
+
+  if (!require("pacman")) install.packages("pacman")
+  p_load(tidyverse)
+
+  source("https://raw.githubusercontent.com/Region-Dalarna/funktioner/main/func_API.R")
+  source("https://raw.githubusercontent.com/Region-Dalarna/funktioner/main/func_SkapaDiagram.R")
+  source("https://raw.githubusercontent.com/Region-Dalarna/hamta_data/refs/heads/main/hamta_bef_region_alder_kon_fodelseregion_tid_InrUtrFoddaRegAlKon_scb.R")
+
+
+  bef_bakgr <- hamta_bef_region_alder_kon_fodelseregion_tid_scb(region_vekt = region,
+                                                                alder_koder  = "*",
+                                                                kon_klartext = NA,
+                                                                fodelseregion_klartext = c("Född i Sverige", "Utrikes född"),
+                                                                tid_koder = "*") %>%
+    mutate(alder_grupp = skapa_aldersgrupper(ålder,c(20,65))) %>%
+      group_by(år,region,födelseregion,alder_grupp) %>%
+        summarise(Antal = sum(Antal, na.rm = TRUE)) %>%
+          ungroup() %>%
+                mutate(födelseregion = ifelse(födelseregion == "Född i Sverige", "Inrikes född", "Utrikes född")) %>%
+            filter(alder_grupp == unique(alder_grupp)[2] )
+
+
+
+  if(returnera_data_rmarkdown == TRUE){
+    assign("bef_bakgr_df", bef_bakgr, envir = .GlobalEnv)
+  }
+
+  gg_list <- list()
+
+
+  diagram_capt <- "Källa: Befolkningsregistret i SCB:s öppna statistikdatabas.\nBearbetning: Samhällsanalys, Region Dalarna."
+
+  bef_bakgr$födelseregion <- factor(bef_bakgr$födelseregion, levels = c("Utrikes född","Inrikes född"))
+
+  diagramtitel <- paste0("Befolkning i arbetsför ålder (",unique(bef_bakgr$alder_grupp), ") i ",skapa_kortnamn_lan(unique(bef_bakgr$region)))
+  diagramfilnamn <- paste0("befolkning_utr_inr_",skapa_kortnamn_lan(unique(bef_bakgr$region)),".png")
+
+  gg_obj <- SkapaStapelDiagram(skickad_df = bef_bakgr,
+                                    skickad_x_var = "år",
+                                    skickad_y_var = "Antal",
+                                    skickad_x_grupp = "födelseregion",
+                                    manual_color = diagramfarger("rus_sex"),
+                                    diagram_titel = diagramtitel,
+                                    diagram_capt = diagram_capt,
+                                    x_axis_lutning = 45,
+                                    legend_vand_ordning = TRUE,
+                                    diagram_liggande = FALSE,
+                                    manual_x_axis_text_hjust = 1,
+                                    manual_x_axis_text_vjust = 1,
+                                    geom_position_stack = TRUE,
+                                    stodlinjer_avrunda_fem = TRUE,
+                                    output_mapp = output_mapp,
+                                    filnamn_diagram = diagramfilnamn,
+                                    skriv_till_diagramfil = skriv_diagrambildfil)
+
+
+
+  gg_list <- c(gg_list, list(gg_obj))
+  names(gg_list)[[length(gg_list)]] <- diagramfilnamn %>% str_remove(".png")
+
+  return(gg_list)
+
+}

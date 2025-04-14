@@ -15,6 +15,22 @@ vald_region = "20"
 valt_lan = "20"
 spara_diagram_som_bildfiler = FALSE
 
+# Antal utrikes/inrikes födda i arbetsför ålder över tid
+source(here("skript/","antal_utrikes_inrikes_tidsserie.R"))
+gg_antal_utrikes_inrikes <- diag_bef_inr_utr_tid(output_mapp = Output_mapp_figur,
+                                                 skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                                 returnera_data_rmarkdown= TRUE)
+
+antal_utrikes_inrikes_min_ar <- min(bef_bakgr_df$år)
+antal_utrikes_inrikes_max_ar <- max(bef_bakgr_df$år)
+antal_utrikes_forsta_ar <- format(bef_bakgr_df %>% filter(år == antal_utrikes_inrikes_min_ar) %>% filter(födelseregion == "Utrikes född") %>%  .$Antal,big.mark = " ")
+antal_utrikes_max_ar <- format(bef_bakgr_df %>% filter(år == antal_utrikes_inrikes_max_ar) %>% filter(födelseregion == "Utrikes född") %>%  .$Antal,big.mark = " ")
+antal_utrikes_skillnad <- format(bef_bakgr_df %>% filter(år == antal_utrikes_inrikes_max_ar) %>% filter(födelseregion == "Utrikes född") %>%  .$Antal - bef_bakgr_df %>% filter(år == antal_utrikes_inrikes_min_ar) %>% filter(födelseregion == "Utrikes född") %>%  .$Antal,big.mark = " ")
+
+antal_inrikes_forsta_ar <- format(bef_bakgr_df %>% filter(år == antal_utrikes_inrikes_min_ar) %>% filter(födelseregion == "Inrikes född") %>%  .$Antal,big.mark = " ")
+antal_inrikes_max_ar <- format(bef_bakgr_df %>% filter(år == antal_utrikes_inrikes_max_ar) %>% filter(födelseregion == "Inrikes född") %>%  .$Antal,big.mark = " ")
+antal_inrikes_skillnad <- format(abs(bef_bakgr_df %>% filter(år == antal_utrikes_inrikes_max_ar) %>% filter(födelseregion == "Inrikes född") %>%  .$Antal - bef_bakgr_df %>% filter(år == antal_utrikes_inrikes_min_ar) %>% filter(födelseregion == "Inrikes född") %>%  .$Antal),big.mark = " ")
+
 # Asylsökande 1984-senaste obseravation
 source(here("skript/","asylsokande_antal_1984_.R"))
 gg_asylsokande_antal <- diagram_asylsokande_tidsserie(output_mapp_figur = Output_mapp_figur,
