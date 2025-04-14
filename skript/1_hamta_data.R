@@ -167,8 +167,19 @@ gg_arb_bakgr <- diag_arbetsloshet_kommun(output_mapp = Output_mapp_figur,
                                          returnera_data_rmarkdown= TRUE)
 
 arb_bakgr_manad_ar <- unique(arblosa_bakgr_df$månad_år)
+arb_bakgr_utrikes_kvinnor_max <- arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$region
+arb_bakgr_utrikes_kvinnor_max_varde <- gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$arbetslöshet)
+arb_bakgr_inrikes_kvinnor_max_varde <-  gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född",region == arb_bakgr_utrikes_kvinnor_max) %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$arbetslöshet)
+arb_bakgr_utrikes_män_max <- arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$region
+arb_bakgr_utrikes_män_max_varde <- gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$arbetslöshet)
+arb_bakgr_inrikes_män_max_varde <-  gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "inrikes född",region == arb_bakgr_utrikes_män_max) %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$arbetslöshet)
 
-
+arb_bakgr_utrikes_kvinnor_min <- arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$region
+arb_bakgr_utrikes_kvinnor_min_varde <- gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$arbetslöshet)
+arb_bakgr_inrikes_kvinnor_min_varde <-  gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född",region == arb_bakgr_utrikes_kvinnor_min) %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$arbetslöshet)
+arb_bakgr_utrikes_män_min <- arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$region
+arb_bakgr_utrikes_män_min_varde <- gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$arbetslöshet)
+arb_bakgr_inrikes_män_min_varde <-  gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "inrikes född",region == arb_bakgr_utrikes_män_min) %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$arbetslöshet)
 
 # Utbildningsnivå kopplat till matchning
 # source("https://raw.githubusercontent.com/Region-Dalarna/socioekonomisk_analys_nms/refs/heads/main/skript/socioek_matchning_bakgr_utbniva.R")

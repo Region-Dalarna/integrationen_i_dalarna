@@ -299,6 +299,10 @@ Det finns dock en stor variation mellan länets kommuner.
 
 <span class = "kommentar">Skapa diagram över Andel arbetslösa 20-64 år i Dalarna i januari 2025 per kommun, uppdelat på inrikes och utrikes födda. Se Diagram 12 i den automatgenererade ppt:n. Går det att lägga in även uppdelat på kvinnor och män?</span>
 
+Arbetslösheten varierar tydligt mellan såväl länets kommuner, som mellan inrikes och utrikes födda. Bland inrikes födda är arbetslösheten något högre för män än för kvinnor, men generellt låg i samtliga Dalarnas kommuner. För utrikes födda är bilden annorlunda. I de flesta kommuner är arbetslösheten högre för utrikes födda kvinnor än för utrikes födda män. Arbetslösheten är dessutom klart högre för utrikes födda jämfört med inrikes födda, oavsett kön. Arbetslösheten för utrikes födda kvinnor i Dalarna är högst i `r arb_bakgr_utrikes_kvinnor_max`, där arbetslösheten i gruppen är hela `r arb_bakgr_utrikes_kvinnor_max_varde` procent. För inrikes födda kvinnor är motsvarande siffra blott `r arb_bakgr_inrikes_kvinnor_max_varde` procent. Arbetslösheten för utrikes födda män i Dalarna är högst i `r arb_bakgr_utrikes_män_max`, med en arbetslöshet i gruppen på `r arb_bakgr_utrikes_män_max_varde` procent. För inrikes födda män är motsvarande siffra `r arb_bakgr_inrikes_män_max_varde` procent.
+
+Lägst arbetslöshet bland utrikes födda kvinnor har `r arb_bakgr_utrikes_kvinnor_min` med `r arb_bakgr_utrikes_kvinnor_min_varde` procent, medan arbetslösheten bland utrikes födda män är lägst i `r arb_bakgr_utrikes_män_min ` med `r arb_bakgr_utrikes_män_min_varde` procent.
+
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
 gg_arb_bakgr$andel_arbetslosa_kommun
