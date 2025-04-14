@@ -285,9 +285,24 @@ Dalarna har generellt sett haft en stark arbetsmarknad över lång tid jämfört
 
 <span class = "kommentar">Skapa diagram över arbetslöshetens utveckling 2008-2024 för Dalarna respektive riket. Mats har använt i olika sammanhang, se bild 18 i presentation för Hedemora Kommunfullmäktige 28 jan.</span>
 
+Data för ovanstående uppdateras inte längre, nedan är ett alternativ från Sårbarhetsanalysen
+
+Arbetslösheten har varierat relativt kraftigt över tid. Under finans-och fastighetskrisen i början av 1990-talet (hädanefter 90-talskrisen), den djupaste ekonomiska krisen i Sverige i modern tid, ökade arbetslösheten markant i såväl Dalarna som Sverige. I början av 1990-talet, innan krisen, var arbetslösheten generellt väldigt låg, strax under 2 procent, men mångdubblades på bara ett par år i samband med 90-talskrisen. Arbetslösheten i Dalarna ökade mer än arbetslösheten i Sverige i samband med krisen, vilket potentiellt kan bero på att Dalarna under 1990-talet var ett län med en stor tillverkningsindustri. Därefter minskade arbetslösheten tydligt under inledningen av 2000-talet innan den återigen ökade och nådde en topp i samband med finanskrisen 2008. På senare år har arbetslösheten varierat en del mellan åren, men legat på en relativt jämn nivå i Dalarna. Under `r arbloshet_76_senaste_ar` minskade arbetslöshten i Dalarna, men ökade i riket.
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_arb_76$arbetsloshet_region
+```
+
+
 Det finns dock en stor variation mellan länets kommuner.
 
 <span class = "kommentar">Skapa diagram över Andel arbetslösa 20-64 år i Dalarna i januari 2025 per kommun, uppdelat på inrikes och utrikes födda. Se Diagram 12 i den automatgenererade ppt:n. Går det att lägga in även uppdelat på kvinnor och män?</span>
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_arb_bakgr$andel_arbetslosa_kommun
+```
 
 Matchningen mellan de som är arbetssökande och de arbeten som är lediga skulle kunna fungera betydligt bättre än idag.
 Konsekvensen av detta kan bli att företag och organisationer kan flytta från länet på grund av att de inte hittar

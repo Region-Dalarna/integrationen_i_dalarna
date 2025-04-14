@@ -116,6 +116,7 @@ storsta_fodelseland_senaste_ar <- storsta_fodelseland_df %>% filter(år == fodel
 storsta_fodelseland_senaste_ar_antal <- format(storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$Antal,big.mark = " ")
 andra_fodelseland_senaste_ar <- storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar,födelseregion != storsta_fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$födelseregion
 andra_fodelseland_senaste_ar_antal <- format(storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar,födelseregion != storsta_fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$Antal,big.mark = " ")
+
 ############################################################
 ########## Befolkningspyramid för Inrikes/utrikes ##########
 ############################################################
@@ -146,6 +147,33 @@ invandringsoverskott_netto <- format(sum(befutv_per_komponent_ar_scb_df %>% filt
 ########################
 # Arbetsmarknadsstatus #
 ########################
+
+# Arbetslöshet från 1976 och framåt
+source("https://raw.githubusercontent.com/Region-Dalarna/sarbarhetsanalys/refs/heads/main/Skript/diagram_arbetsloshet_76.R")
+gg_arb_76 <- diagram_data_arbetsloshet_76(region_vekt =c("00","20"),
+                                          output_mapp_figur = Output_mapp_figur,
+                                          vald_farg = diagramfarger("rus_sex"),
+                                          spara_figur = FALSE,
+                                          returnera_figur = TRUE,
+                                          returnera_data = TRUE)
+
+arbloshet_76_senaste_ar <- max(arbetsloshet_76$år)
+
+
+# Arbetslöshet uppdelat på kön, bakgrund och kommun
+source(here("skript/","arbetsloshet_kommun_bakgr.R"))
+gg_arb_bakgr <- diag_arbetsloshet_kommun(output_mapp = Output_mapp_figur,
+                                         skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                         returnera_data_rmarkdown= TRUE)
+
+
+
+# Utbildningsnivå kopplat till matchning
+# source("https://raw.githubusercontent.com/Region-Dalarna/socioekonomisk_analys_nms/refs/heads/main/skript/socioek_matchning_bakgr_utbniva.R")
+# gg_matchning_bakgr <- skapa_matcning_utbniva_bakgrund_diagram(returnera_dataframe_global_environment = TRUE,
+#                                                               output_mapp = NA)
+
+
 
 ######################################
 ## Sysselsättningsstatus, tidsserie ##
