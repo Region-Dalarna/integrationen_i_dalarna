@@ -42,10 +42,18 @@ diag_bef_inr_utr_tid <- function(region = "20", # Enbart ett län i taget.
                 mutate(födelseregion = ifelse(födelseregion == "Född i Sverige", "Inrikes född", "Utrikes född")) %>%
             filter(alder_grupp == unique(alder_grupp)[2] )
 
+  andel_utrikes_bakgr_df <- bef_bakgr %>%
+    pivot_wider(names_from = "födelseregion", values_from = "Antal") %>%
+      mutate(`Utrikes födda` = round(`Utrikes född` / (`Inrikes född` + `Utrikes född`) * 100,1),
+             `Inrikes födda` = round(`Inrikes född` / (`Inrikes född` + `Utrikes född`) * 100,1)) %>%
+        pivot_longer(cols = c(`Utrikes födda`, `Inrikes födda`),
+                     names_to = "födelseregion",
+                     values_to = "andel")
+
 
 
   if(returnera_data_rmarkdown == TRUE){
-    assign("bef_bakgr_df", bef_bakgr, envir = .GlobalEnv)
+    assign("andel_utrikes_inrikes_bakgr_df", andel_utrikes_bakgr_df, envir = .GlobalEnv)
   }
 
   gg_list <- list()
@@ -53,24 +61,26 @@ diag_bef_inr_utr_tid <- function(region = "20", # Enbart ett län i taget.
 
   diagram_capt <- "Källa: Befolkningsregistret i SCB:s öppna statistikdatabas.\nBearbetning: Samhällsanalys, Region Dalarna."
 
-  bef_bakgr$födelseregion <- factor(bef_bakgr$födelseregion, levels = c("Utrikes född","Inrikes född"))
+  andel_utrikes_bakgr_df$födelseregion <- factor(andel_utrikes_bakgr_df$födelseregion, levels = c("Utrikes födda","Inrikes födda"))
 
-  diagramtitel <- paste0("Befolkning i arbetsför ålder (",unique(bef_bakgr$alder_grupp), ") i ",skapa_kortnamn_lan(unique(bef_bakgr$region)))
-  diagramfilnamn <- paste0("befolkning_utr_inr_",skapa_kortnamn_lan(unique(bef_bakgr$region)),".png")
+  diagramtitel <- paste0("Andel i arbetsför ålder (",unique(bef_bakgr$alder_grupp), ") som är inrikes/utrikes födda i ",skapa_kortnamn_lan(unique(bef_bakgr$region)))
+  diagramfilnamn <- paste0("befolkning_utr_inr_andel_",skapa_kortnamn_lan(unique(bef_bakgr$region)),".png")
 
-  gg_obj <- SkapaStapelDiagram(skickad_df = bef_bakgr,
+  gg_obj <- SkapaStapelDiagram(skickad_df = andel_utrikes_bakgr_df,
                                     skickad_x_var = "år",
-                                    skickad_y_var = "Antal",
+                                    skickad_y_var = "andel",
                                     skickad_x_grupp = "födelseregion",
                                     manual_color = diagramfarger("rus_sex"),
                                     diagram_titel = diagramtitel,
                                     diagram_capt = diagram_capt,
                                     x_axis_lutning = 45,
+                                    procent_0_100_10intervaller = TRUE,
+                                    geom_position_stack = TRUE,
                                     legend_vand_ordning = TRUE,
                                     diagram_liggande = FALSE,
                                     manual_x_axis_text_hjust = 1,
                                     manual_x_axis_text_vjust = 1,
-                                    geom_position_stack = TRUE,
+                                    manual_y_axis_title = "procent",
                                     stodlinjer_avrunda_fem = TRUE,
                                     output_mapp = output_mapp,
                                     filnamn_diagram = diagramfilnamn,
