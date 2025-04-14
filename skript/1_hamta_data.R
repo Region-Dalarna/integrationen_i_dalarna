@@ -166,6 +166,8 @@ gg_arb_bakgr <- diag_arbetsloshet_kommun(output_mapp = Output_mapp_figur,
                                          skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                          returnera_data_rmarkdown= TRUE)
 
+arb_bakgr_manad_ar <- unique(arblosa_bakgr_df$månad_år)
+
 
 
 # Utbildningsnivå kopplat till matchning
