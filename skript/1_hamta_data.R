@@ -469,7 +469,7 @@ gg_etablering <- diag_etablering_utb_kon_scb(output_mapp = Output_mapp_figur,
 #############################################
 ##### Förvärvsinkomst för inrikes/utrikes ####
 #############################################
-source(here("skript/","forvarvsinkomst_utrikes.R"))
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_forvarvsinkomst_bakgrund_vistelsetid_IntRap.R")
 gg_forvarvsinkomst_utrikes <- diag_inkomst_bakgrund_scb(output_mapp = Output_mapp_figur,
                                                         skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                                         returnera_data_rmarkdown = TRUE)
