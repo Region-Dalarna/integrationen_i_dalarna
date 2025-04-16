@@ -12,7 +12,9 @@ diag_sysselsattningsgrad_tidsserie <- function(region = "20", # Enbart ett i tag
 
   # =======================================================================================================================
   #
-  # Ett diagram för sysselsättningsgrad som linjediagram över tid
+  # Två diagram:
+  #  - sysselsättningsgrad som ett linjediagram över tid och ett stapeldiagram där sysselsättningsgrad
+  #  - Stapeldiagram där man kan jämföra sysselsättningsgraden för senaste år med ett valfritt år
   #
   #
   #

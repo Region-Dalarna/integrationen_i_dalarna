@@ -37,7 +37,7 @@ andel_utrikes_max_ar <- gsub("\\.",",",andel_utrikes_inrikes_bakgr_df %>% filter
 # antal_inrikes_skillnad <- format(abs(bef_bakgr_df %>% filter(år == antal_utrikes_inrikes_max_ar) %>% filter(födelseregion == "Inrikes född") %>%  .$Antal - bef_bakgr_df %>% filter(år == antal_utrikes_inrikes_min_ar) %>% filter(födelseregion == "Inrikes född") %>%  .$Antal),big.mark = " ")
 
 # Asylsökande 1984-senaste obseravation
-source(here("skript/","asylsokande_antal_1984_.R"))
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_antal_asylsokande_1984_SCB.R")
 gg_asylsokande_antal <- diagram_asylsokande_tidsserie(output_mapp_figur = Output_mapp_figur,
                                                       spara_figur = spara_diagram_som_bildfiler,
                                                       returnera_data= TRUE)
