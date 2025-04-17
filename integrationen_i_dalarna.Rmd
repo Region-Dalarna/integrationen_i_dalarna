@@ -101,7 +101,7 @@ Begreppet integration kan således ses som *en process där individer eller grup
 
 Även om integrationsfrågan är bredare, präglas samhällsdebatten av integration av utrikes födda i det svenska samhället. Det gör att det är viktigt att belysa hur utrikes födda förhåller sig till inrikes födda inom ett antal samhällsområden. Samhällets förmåga att intregrera utrikes födda i utbildning, arbetsmarknad eller boende är avgörande för t ex kompetensförsörjningen på kort och lång sikt. 
 
-Andelen utrikes födda som är i arbetsför ålder (20-64 år) i Dalarna har ökat successivt över de senaste 20 åren, från `r andel_utrikes_forsta_ar` procent år `r antal_utrikes_inrikes_min_ar` till `r andel_utrikes_max_ar` procent år `r andel_utrikes_inrikes_max_ar`. Ökningen var särskilt tydlig under några år på mitten av 2010-talet, när många invandrade till Sverige och Dalarna. Utrikes födda är därför en förutsättning för att kunna kompetensförsörja arbetsmarknaden. 
+Andelen utrikes födda som är i arbetsför ålder (20-64 år) i Dalarna har ökat successivt över de senaste 20 åren, från `r andel_utrikes_forsta_ar` procent år `r andel_utrikes_inrikes_min_ar` till `r andel_utrikes_max_ar` procent år `r andel_utrikes_inrikes_max_ar`. Ökningen var särskilt tydlig under några år på mitten av 2010-talet, när många invandrade till Sverige och Dalarna. Utrikes födda är därför en förutsättning för att kunna kompetensförsörja arbetsmarknaden. 
 
 <span class = "kommentar">*Lägg in Diagram 2 från Kompetensförsörjningsrapporten - andelar inrikes/utrikes födda i arbetsför ålder*</span>
 
@@ -272,15 +272,17 @@ gg_andel_utrikes$utrikes_fodda_andel_Dalarna
 
 
 # Arbetsmarknadskonjunktur och invandring - då och nu
+<span class = "kommentar"> Överväg att slå ihop avsnitt 2 och 3 till ett arbetsmarknadsavsnitt</span>
+
 En viktig aspekt för integrationen är hur stark arbetsmarknaden är vid tidpunkten för invandringen. När
 Sverige under 1990-talet tog emot ett stort antal asylsökande från Balkan hade vi den djupaste ekonomiska
 krisen i Sverige i modern tid. Mellan 1990 och 1994 gick sysselsättningen ned med drygt 16 procent och
 nära 600 000 personer blev arbetslösa.
 
-Sysselsättningsgraden i åldersgruppen 20-64 år har ökat för såväl inrikes som utrikes födda i Dalarna sedan det tidiga 1990-talet. År  `r syssgrad_93_forsta_ar` var sysselsättningsgraden för inrikes födda i kvinnor i Dalarna `r syssgrad_93_kvinnor_inrikes_forsta_ar_procent` procent, vilket var något högre än för männen (`r syssgrad_93_män_inrikes_forsta_ar_procent` procent). Att de inrikes födda kvinnornas sysselsättningsgrad var högre än männens beror sannolikt på 90-talskrisen, när branscher med stor dominans av män bland de anställda (industri exempelvis) drabbades hårt. För utrikes födda var sysselsättningsgraden ungefär lika stor för kvinnor och män, men klart lägre än för inrikes födda (`r syssgrad_93_kvinnor_utrikes_forsta_ar_procent` procent för kvinnor och `r syssgrad_93_män_utrikes_forsta_ar_procent` procent för män).
+Sysselsättningsgraden i åldersgruppen 20-64 år har ökat för såväl inrikes som utrikes födda i Dalarna sedan det tidiga 1990-talet. År  `r syssgrad_93_forsta_ar` var sysselsättningsgraden för inrikes födda i kvinnor i Dalarna `r syssgrad_93_kvinnor_inrikes_forsta_ar_procent` procent, vilket var något högre än för männen, `r syssgrad_93_män_inrikes_forsta_ar_procent` procent. Att de inrikes födda kvinnornas sysselsättningsgrad var högre än männens beror sannolikt på 90-talskrisen, när branscher med stor dominans av män bland de anställda (industri exempelvis) drabbades hårt. För utrikes födda var sysselsättningsgraden ungefär lika stor för kvinnor och män, men klart lägre än för inrikes födda (`r syssgrad_93_kvinnor_utrikes_forsta_ar_procent` procent för kvinnor och `r syssgrad_93_män_utrikes_forsta_ar_procent` procent för män). Den här utvecklingen innebär att skillnaden i sysselsättningsgrad mellan utrikes och inrikes födda män har minskat de senaste 30 åren. Det är särskilt sedan mitten på 2010-talet som utvecklingen varit särskilt stark för utrikes födda män. Däremot kvarstår nästan hela den relativa skillnaden mellan utrikes och inrikes födda kvinnor över tid.
 
 År `r syssgrad_93_senaste_ar` hade sysselsättningsgraden ökat till `r syssgrad_93_kvinnor_inrikes_max_ar_procent` procent för inrikes födda kvinnor och 
-`r syssgrad_93_män_inrikes_max_ar_procent` procent för inrikes födda män. Inrikes födda kvinnor har således fortfarande något högre sysselsättningsgrad än inrikes födda män. Även för utrikes födda har sysselsättningsgraden ökat tydligt för båda könen, men de utrikes födda männen har idag en klart högre sysselsättningsgrad än de utrikes födda kvinnorna (`r syssgrad_93_män_utrikes_max_ar_procent` procent jämfört med `r syssgrad_93_kvinnor_utrikes_max_ar_procent` procent).    
+`r syssgrad_93_män_inrikes_max_ar_procent` procent för inrikes födda män. Inrikes födda kvinnor har således fortfarande något högre sysselsättningsgrad än inrikes födda män. Även för utrikes födda har sysselsättningsgraden ökat tydligt för båda könen, men med `r syssgrad_93_män_utrikes_max_ar_procent` procent har de utrikes födda männen idag en klart högre sysselsättningsgrad än de utrikes födda kvinnorna, `r syssgrad_93_kvinnor_utrikes_max_ar_procent` procent.    
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -288,27 +290,14 @@ gg_sysselsattningsgrad_tidsserie$sysselsattningsgrad_tidsserie_Dalarna
 
 ```
 
-<span class = "kommentar">Diagram ovan motsvarar Diagram 15 i den tidigare rapporten, men med män/kvinnor och utrikes/inrikes födda.</span>
-
-Dalarna har generellt sett haft en stark arbetsmarknad över lång tid jämfört med riket.
-
-<span class = "kommentar">Skapa diagram över arbetslöshetens utveckling 2008-2024 för Dalarna respektive riket. Mats har använt i olika sammanhang, se bild 18 i presentation för Hedemora Kommunfullmäktige 28 jan.</span>
-
-Data för ovanstående uppdateras inte längre, nedan är ett alternativ från Sårbarhetsanalysen
-
-Arbetslösheten har varierat relativt kraftigt över tid. Under finans-och fastighetskrisen i början av 1990-talet (hädanefter 90-talskrisen), den djupaste ekonomiska krisen i Sverige i modern tid, ökade arbetslösheten markant i såväl Dalarna som Sverige. I början av 1990-talet, innan krisen, var arbetslösheten generellt väldigt låg, strax under 2 procent, men mångdubblades på bara ett par år i samband med 90-talskrisen. Arbetslösheten i Dalarna ökade mer än arbetslösheten i Sverige i samband med krisen, vilket potentiellt kan bero på att Dalarna under 1990-talet var ett län med en stor tillverkningsindustri. Därefter minskade arbetslösheten tydligt under inledningen av 2000-talet innan den återigen ökade och nådde en topp i samband med finanskrisen 2008. På senare år har arbetslösheten varierat en del mellan åren, men legat på en relativt jämn nivå i Dalarna. Under `r arbloshet_76_senaste_ar` minskade arbetslöshten i Dalarna, men ökade i riket.
+Dalarna har generellt sett haft en stark arbetsmarknad över lång tid jämfört med riket, men arbetslösheten har varierat relativt kraftigt över tid. Under finans- och fastighetskrisen i början av 1990-talet (hädanefter 90-talskrisen), den djupaste ekonomiska krisen i Sverige i modern tid, ökade arbetslösheten markant i såväl Dalarna som Sverige. I början av 1990-talet, innan krisen, var arbetslösheten generellt väldigt låg, strax under 2 procent, men mångdubblades på bara ett par år i samband med 90-talskrisen. Arbetslösheten i Dalarna ökade mer än arbetslösheten i Sverige i samband med krisen, vilket potentiellt kan bero på att Dalarna under 1990-talet var ett län med en stor tillverkningsindustri. Därefter minskade arbetslösheten tydligt under inledningen av 2000-talet innan den återigen ökade och nådde en topp i samband med finanskrisen 2008. På senare år har arbetslösheten varierat en del mellan åren, men legat på en relativt jämn nivå i Dalarna. Under `r arbloshet_76_senaste_ar` minskade arbetslösheten i Dalarna, men ökade i riket.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
 gg_arb_76$arbetsloshet_region
 ```
 
-
-Det finns dock en stor variation mellan länets kommuner.
-
-<span class = "kommentar">Skapa diagram över Andel arbetslösa 20-64 år i Dalarna i januari 2025 per kommun, uppdelat på inrikes och utrikes födda. Se Diagram 12 i den automatgenererade ppt:n. Går det att lägga in även uppdelat på kvinnor och män?</span>
-
-Arbetslösheten varierar tydligt mellan såväl länets kommuner, som mellan inrikes och utrikes födda. Bland inrikes födda är arbetslösheten något högre för män än för kvinnor, men generellt låg i samtliga Dalarnas kommuner. För utrikes födda är bilden annorlunda. I de flesta kommuner är arbetslösheten högre för utrikes födda kvinnor än för utrikes födda män. Arbetslösheten är dessutom klart högre för utrikes födda jämfört med inrikes födda, oavsett kön. Arbetslösheten för utrikes födda kvinnor i Dalarna är högst i `r arb_bakgr_utrikes_kvinnor_max`, där arbetslösheten i gruppen är hela `r arb_bakgr_utrikes_kvinnor_max_varde` procent. För inrikes födda kvinnor är motsvarande siffra blott `r arb_bakgr_inrikes_kvinnor_max_varde` procent. Arbetslösheten för utrikes födda män i Dalarna är högst i `r arb_bakgr_utrikes_män_max`, med en arbetslöshet i gruppen på `r arb_bakgr_utrikes_män_max_varde` procent. För inrikes födda män är motsvarande siffra `r arb_bakgr_inrikes_män_max_varde` procent.
+Det finns en stor variation i arbetslösheten mellan länets kommuner, men också mellan inrikes och utrikes födda, och mellan kvinnor och män. Bland inrikes födda är arbetslösheten något högre för män än för kvinnor, men generellt låg i samtliga Dalarnas kommuner. För utrikes födda är bilden annorlunda. I de flesta kommuner är arbetslösheten högre för utrikes födda kvinnor än för utrikes födda män. Arbetslösheten är dessutom klart högre för utrikes födda jämfört med inrikes födda, oavsett kön. Arbetslösheten för utrikes födda kvinnor i Dalarna är högst i `r arb_bakgr_utrikes_kvinnor_max`, där arbetslösheten i gruppen är hela `r arb_bakgr_utrikes_kvinnor_max_varde` procent. För inrikes födda kvinnor är motsvarande siffra blott `r arb_bakgr_inrikes_kvinnor_max_varde` procent. Arbetslösheten för utrikes födda män i Dalarna är högst i `r arb_bakgr_utrikes_män_max`, med en arbetslöshet i gruppen på `r arb_bakgr_utrikes_män_max_varde` procent. För inrikes födda män är motsvarande siffra `r arb_bakgr_inrikes_män_max_varde` procent.
 
 Lägst arbetslöshet bland utrikes födda kvinnor har `r arb_bakgr_utrikes_kvinnor_min` med `r arb_bakgr_utrikes_kvinnor_min_varde` procent, medan arbetslösheten bland utrikes födda män är lägst i `r arb_bakgr_utrikes_män_min ` med `r arb_bakgr_utrikes_män_min_varde` procent.
 
@@ -324,7 +313,7 @@ arbetskraft och arbetskraftsreserven bestående av utrikes födda riskerar att l
 <span class = "kommentar">Skapa diagram över Matchning utifrån utbildningsnivå i Dalarna (se Diagram 25 i NMS-analysen), uppdelat på inrikes och utrikes födda och kvinnor och män.</span>
 
 # Vägen till arbete
-Att arbeta (eller studera) är en viktig komponent i integrationen i samhället. Sysselsättningen bland utrikes födda är generellt lägre än bland svenskfödda personer och arbetslösheten, inklusive långtidsarbetslösheten, är högre. Utrikes födda har generellt en svagare ställning på arbetsmarknaden. Arbetslöshets- och sysselsättningsnivåerna bland utrikes födda varierar dock stort mellan olika grupper. Kön, födelseland och utbildningsnivå är alla faktorer som har stor betydelse. I detta avsnitt ska förhoppningsvis nedanstående frågor kring utrikes födda besvaras:
+Att arbeta (eller studera) är en viktig komponent i integrationen i samhället. Sysselsättningen bland utrikes födda är generellt lägre än bland inrikes födda personer och arbetslösheten, inklusive långtidsarbetslösheten, är högre. Utrikes födda har generellt en svagare ställning på arbetsmarknaden. Arbetslöshets- och sysselsättningsnivåerna bland utrikes födda varierar dock stort mellan olika grupper. Kön, födelseland och utbildningsnivå är alla faktorer som har stor betydelse. I detta avsnitt ska förhoppningsvis nedanstående frågor kring utrikes födda besvaras:
 
 <ul>
 
@@ -346,9 +335,11 @@ Att arbeta (eller studera) är en viktig komponent i integrationen i samhället.
 
 <span class = "kommentar"> Titta på utrikes födda kvinnor och män, jämför med inrikes födda</span>
 
-I Statistiska centralbyråns analys av utrikes föddas etablering på arbetsmarknaden identifierar de några aspekter som särskilt viktiga för sysselsättningen bland utrikes födda. Forskning visar att utbildningsnivå, språkkunskaper, tillgång till sociala nätverk och förekomsten av diskriminering är avgörande för utrikes föddas möjligheter att etablera sig på arbetsmarknaden. Den grupp av utrikes födda som ligger närmast nivåerna för inrikes födda är födda i Norden. Andelen arbetslösa är väsentligt högre bland personer födda i Asien och Afrika, vilka är två världsdelar där flyktinginvandringen varit stor under de senaste åren.
+Forskning visar att bland annat härkomst, ålder, utbildningsnivå, konjunkturläge, språkkunskaper och kontaktnät är avgörande för utrikes föddas möjligheter att etablera sig på arbetsmarknaden [(IFAU, 2022)](https://www.ifau.se/Press/Forskningssammanfattningar/Utrikes-foddas-eta-pa-arbetsmarknaden-/){target="_blank"}.^[IFAU, Utrikes föddas etablering på arbetsmarknaden (2022-11-19).]
 
-För mer information om den statistik som rapporten bygger på, klicka nedan:
+Den grupp av utrikes födda som ligger närmast nivåerna för inrikes födda är födda i Norden. Andelen arbetslösa är väsentligt högre bland personer födda i Asien och Afrika, vilka är två världsdelar från vilka flyktinginvandringen varit stor under det senaste decenniet (<span class = "kommentar"> Behöver vi visualisera detta?</span>).
+
+För mer information om arbetsmarknadsstatistiken, klicka nedan:
 <br>
 
 <details>
@@ -380,7 +371,7 @@ gg_syssgrad_vistelsetid_utb$sysselsattningsgrad_inrikes_utrikes_utbniva
 
 Diagrammet nedan visar att sysselsättningsgraden för såväl inrikes som utrikes födda har ökat mellan `r syssgrad_tidsserie_forsta_ar` och `r syssgrad_tidsserie_senaste_ar`, men ökningen har varit klart störst för utrikes födda, från `r syssgrad_tidsserie_utrikes_min_ar` procent till `r syssgrad_tidsserie_utrikes_max_ar` procent. För inrikes födda har sysselsättningsgraden ökat från `r syssgrad_tidsserie_inrikes_min_ar` procent till `r syssgrad_tidsserie_inrikes_max_ar` procent under samma tidsperiod. Utrikes födda kommer således i arbete i mycket större utsträckning `r syssgrad_tidsserie_senaste_ar`, än de gjorde `r syssgrad_tidsserie_forsta_ar`.
 
-<span class = "kommentar">Kollat hit 20250409</span>
+
 
 
 
@@ -393,13 +384,15 @@ gg_sysselsattningsgrad_tidsserie$sysselsattningsgrad_jmf_2017_Dalarna
 
 Något som är viktigt att ha med sig när andelen sysselsatta analyseras är att gränsen för att definieras förvärvsarbetande är relativt låg. I Arbetskraftsundersökningarna (AKU) som genomförs av SCB och utgör den officiella arbetslöshetsstatistiken definieras en person som förvärvsarbetande om den har arbetat en timme per vecka vid tiden för undersökningens genomförande. AKU är en urvalsundersökning som genomförs genom intervjuer och är inte nedbrytbar på finare geografisk nivå än län och storstadsregioner. För att analysera sysselsättning på finare geografisk nivå än vad som finns i AKU kan registerstatistik användas, närmare bestämt Registerbaserad arbetsmarknadsstatistik (RAMS). Definitionen av sysselsatt baseras på definitionen i AKU men beräknas på ett mer komplext sätt utifrån inkomst, då uppgifter om arbetad tid per vecka inte finns i RAMS.
 <br>
-<span class = "kommentar">Är bas numer, stycke behöver uppdateras (informationsruta i början av avsnittet?)</span>
+<span class = "kommentar">Är BAS numera, stycke behöver uppdateras (komplettera i informationsruta i början av avsnittet)</span>
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
 gg_syssgrad_vistelsetid_utb$sysselsattningsgrad_vistelsetid_inrikes
 
 ```
+
+<span class = "kommentar">Kollat hit 20250417. Behöver göra ett rejält omtag av hela avsnitt 2 och 3.</span>
 
 När vistelsetid tas med i analysen syns samma mönster som i <span class = "kommentar"> diagram 18 (ovan)</span>, delvis att det finns en fungerande integration i bemärkelsen att de som vistats längre tid i Sverige har en högre förvärvsfrekvens. Variabeln vistelsetid tjänar som en indikator på en rad andra faktorer som påverkar möjligheterna till att få ett arbete. Efter en ökad tid i landet kan en nyanländ person lära sig svenska, validera och komplettera utbildningar, lära sig hur den svenska arbetsmarknaden fungerar samt knyta kontakter för att öka chansen till att få en sysselsättning och inkomst. Enligt detta resonemang förväntas ett initialt sysselsättningsgap mellan inrikes födda och nyanlända, som minskar succesivt när vistelsetiden i landet blir längre. <span class = "kommentar"> kan vi säga något om hur många som finns i respektive åldersgrupp? </span>
 
@@ -495,7 +488,8 @@ utbildning_85_utskrift<-utbildning_85_df %>%
 utbildning_fig
 ```
 
-Lite mer text. Och sedan ett till diagram.
+Lite mer text. Och sedan ett till.
+<span class = "kommentar">De här diagrammen med tillhörande kod i markdown ska tas bort.)</span>
 <br>
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align="center"}
 utb_85_fig
