@@ -21,8 +21,8 @@ gg_andel_utrikes_inrikes <- diag_bef_inr_utr_tid(output_mapp = Output_mapp_figur
                                                  skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                                  returnera_data_rmarkdown= TRUE)
 
-andel_utrikes_inrikes_min_ar <- min(bef_bakgr_df$år)
-andel_utrikes_inrikes_max_ar <- max(bef_bakgr_df$år)
+andel_utrikes_inrikes_min_ar <- min(andel_utrikes_inrikes_bakgr_df$år)
+andel_utrikes_inrikes_max_ar <- max(andel_utrikes_inrikes_bakgr_df$år)
 andel_utrikes_forsta_ar <- gsub("\\.",",",andel_utrikes_inrikes_bakgr_df %>% filter(år == andel_utrikes_inrikes_min_ar) %>% filter(födelseregion == "Utrikes födda") %>%  .$andel)
 andel_utrikes_max_ar <- gsub("\\.",",",andel_utrikes_inrikes_bakgr_df %>% filter(år == andel_utrikes_inrikes_max_ar) %>% filter(födelseregion == "Utrikes födda") %>%  .$andel)
 
