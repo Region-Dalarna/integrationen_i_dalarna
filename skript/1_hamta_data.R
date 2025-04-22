@@ -482,10 +482,12 @@ forvarvsinkomst_inrikes_man <- gsub("\\.",",",forvarvsinkomst_df %>% filter(kön
 #############################
 ##### Ekonomisk standard ####
 #############################
-source(here("skript/","ekonomisk_standard_bakgrund.R"))
-gg_ek_standard <- diagram_ekonomisk_standard(output_mapp = Output_mapp_figur,
-                                             skriv_diagrambildfil = spara_diagram_som_bildfiler,
-                                             returnera_dataframe_global_environment = TRUE)
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_ek_standard_boende_valdeltagande_vistelsetid_IntRap.R")
+gg_ek_standard <- diagram_diverse_vistelsetid(diag_boendetyp = FALSE,
+                                              diag_valdeltagande = FALSE,
+                                              output_mapp = Output_mapp_figur,
+                                              skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                              returnera_dataframe_global_environment = TRUE)
 
 ek_standard_min_ar <- min(lag_ek_standard_bakgrund_df$år)
 ek_standard_max_ar <- max(lag_ek_standard_bakgrund_df$år)
@@ -519,10 +521,13 @@ gg_gym_hogskola_behorighet <- diag_gymnasiebehorighet(output_mapp = Output_mapp_
 ############################################
 #### Boende per upplåtelseform      ########
 ############################################
-source(here("skript/","boendetyp_vistelsetid.R"))
-gg_boendetyp_upplatelseform <- diag_boendytyp_vistelsetid_inrikes_scb(output_mapp = Output_mapp_figur,
-                                                                      skriv_diagrambildfil = spara_diagram_som_bildfiler,
-                                                                      returnera_data_rmarkdown = TRUE)
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_ek_standard_boende_valdeltagande_vistelsetid_IntRap.R")
+#source(here("skript/","boendetyp_vistelsetid.R"))
+gg_boendetyp_upplatelseform <- diagram_diverse_vistelsetid (output_mapp = Output_mapp_figur,
+                                                            diag_ek_standard = FALSE,
+                                                            diag_valdeltagande = FALSE,
+                                                            skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                                            returnera_dataframe_global_environment = TRUE)
 
 boendetyp_ar <- max(boendtyp_df$år)
 boendetyp_inrikes_äga <- gsub("\\.",",",round(sum(boendtyp_df %>% filter(variabel == "Inrikes född",bakgrund %in% c("Bostadsrätt","Äganderätt"))%>%  .$varde),0))
@@ -556,11 +561,14 @@ trangboddhet_sista_ar_utrikes_andel <- round(trangboddhet_df %>% filter(år == t
 ############################################
 #### Valdeltagande vistelsetid      ########
 ############################################
-source(here("skript/","valdeltagande_vistelsetid.R"))
-gg_valdeltagande_vistelsetid <- diag_valdeltagande_vistelsetid_inrikes_scb(output_mapp = Output_mapp_figur,
-                                                                           typ_av_val = c("Valdeltagande i val till riksdag","Valdeltagande i val till region", "Valdeltagande i val till kommun"),
-                                                                           skriv_diagrambildfil = spara_diagram_som_bildfiler,
-                                                                           returnera_data_rmarkdown = TRUE)
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_ek_standard_boende_valdeltagande_vistelsetid_IntRap.R")
+#source(here("skript/","valdeltagande_vistelsetid.R"))
+gg_valdeltagande_vistelsetid <- diagram_diverse_vistelsetid(output_mapp = Output_mapp_figur,
+                                                            diag_ek_standard = FALSE,
+                                                            diag_boendetyp = FALSE,
+                                                            typ_av_val = c("Valdeltagande i val till riksdag","Valdeltagande i val till region", "Valdeltagande i val till kommun"),
+                                                            skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                                            returnera_dataframe_global_environment  = TRUE)
 
 
 
