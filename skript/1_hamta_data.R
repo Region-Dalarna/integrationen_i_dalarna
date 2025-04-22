@@ -422,7 +422,8 @@ arblosthet_inrikes_kvinna_max_varde <- gsub("\\.",",",arbetsmarknadsstatus_kommu
 # Långtidsarbetslöshet #
 ########################
 
-source(here("skript/","langtidsarbetsloshet_kon.R"))
+#source(here("skript/","langtidsarbetsloshet_kon.R"))
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_langtidsarbetsloshet_kolada_kon.R")
 gg_langtidsarbetsloshet <- diagram_langtidsarbetslohet_tidsserie(output_mapp_figur = Output_mapp_figur,
                                                                 spara_figur = spara_diagram_som_bildfiler,
                                                                 returnera_data= TRUE)
