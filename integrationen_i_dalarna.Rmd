@@ -101,7 +101,7 @@ Begreppet integration kan således ses som *en process där individer eller grup
 
 Även om integrationsfrågan är bredare, präglas samhällsdebatten av integration av utrikes födda i det svenska samhället. Det gör att det är viktigt att belysa hur utrikes födda förhåller sig till inrikes födda inom ett antal samhällsområden. Samhällets förmåga att intregrera utrikes födda i utbildning, arbetsmarknad eller boende är avgörande för t ex kompetensförsörjningen på kort och lång sikt. 
 
-Andelen utrikes födda som är i arbetsför ålder (20-64 år) i Dalarna har ökat successivt över de senaste 20 åren, från `r andel_utrikes_forsta_ar` procent år `r andel_utrikes_inrikes_min_ar` till `r andel_utrikes_max_ar` procent år `r andel_utrikes_inrikes_max_ar`. Ökningen var särskilt tydlig under några år på mitten av 2010-talet, när många invandrade till Sverige och Dalarna. Utrikes födda är därför en förutsättning för att kunna kompetensförsörja arbetsmarknaden. 
+Andelen utrikes födda som är i arbetsför ålder (20-64 år) i Dalarna har ökat successivt över de senaste 20 åren, från `r andel_utrikes_min_ar` procent år `r andel_utrikes_inrikes_min_ar` till `r andel_utrikes_max_ar` procent år `r andel_utrikes_inrikes_max_ar`. Ökningen var särskilt tydlig under några år på mitten av 2010-talet, när många invandrade till Sverige och Dalarna. Utrikes födda är därför en förutsättning för att kunna kompetensförsörja arbetsmarknaden. 
 
 <span class = "kommentar">*Lägg in Diagram 2 från Kompetensförsörjningsrapporten - andelar inrikes/utrikes födda i arbetsför ålder*</span>
 
