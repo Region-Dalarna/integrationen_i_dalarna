@@ -782,6 +782,19 @@ De med en kortare vistelsetid i Sverige på 0–2 år var de som flyttade i stö
 *Vad finns det för information att få kring demokrati och tillit?*
 *SoM-institutets tillitsmätningar - något att referera till?*
 
+Mellanmänsklig tillit undersöks av SOM-Institutet i den nationella SOM-undersökningen. 2024 hade 56 procent hög tillit till människor i allmänhet. 32 respektive 12 procent hade medelhög eller låg tillit. Sedan 1996 har resultaten inte påverkats nämnvärt, utan har varit relativt konstanta över en 30-årsperiod.
+
+Förtroendet för samhällsinstitutioner... - ökat över tid för Polisen, Domstolarna och Försvaret. Minskning för riksdag och regering, men stora variationer över tid. 
+
+Utvecklingen av organiserad brottslighet är den fråga som flest, 72 procent, är mycket oroade över under 2024. Lag och ordning är det samhällsproblem som högst andel, 42 procent, är viktigast.
+
+Sedan 2015 har andelen svarande som tycker att ta emot färre flyktingar är ett bra förslag ökat från cirka 40 till 56 procent. 2015 var andelarna som tyckte att det var ett bra respektive dåligt förslag i stort sett lika stora. Idag tycker endast 19 procent att det är ett dåligt förslag. SKillnaden år 2024 är 37 procentenheter.
+
+I SOM-institutets forskningsantologi 81, Du sköra nya värld, behandlar Sören Holmberg och Bo Rothstein den svenska tilliten ([Holmberg, S. och Rothstein, B., 2022](<https://www.gu.se/sites/default/files/2022-06/061-072%20Holmberg%20o%20Rothstein.pdf>){target="_blank"}).^[Holmberg, S. och Rothstein, B., 2022. Den svenska tilliten fortsatt hög - men sjunker i utsatta grupper. I Andersson, U. et al. (red) Du sköra nya värld. SOM-rapport nr. 81. SOM-Institutet, Göteborgs Universitet.] Den mellanmänskliga tilliten är fortsatt hög, men faller i utsatta grupper som arbetslösa, personer med dålig hälsa, personer med sjuk- och aktivitetsersättning, lågutbildade och bland unga.
+
+Utrikes födda utmärker sig inte i undersökningen med fallande tillit över tid, men det finns däremot en lägre tillit generellt bland utrikes födda än personer uppväxta i Sverige. Den skillnaden har varit relativt konstant mellan 1996 och 2021.
+
+I 2020 års SOM-undersökning studerades även frågan om mångkulturens påverkan på tilliten ([Holmberg, S. och Rothstein, B., 2020](<https://www.gu.se/sites/default/files/migrated/1772921_f--rhandspublicering-m--ngkultur-och-tillit----holmberg-o-rothstein.pdf>){target="_blank"}).^[Holmberg, S. och Rothstein, B., 2020. Minskar mångkulturella samhällen den sociala tilliten?. I Andersson, U. et al. (red) Regntunga skyar. SOM-antologi nr. 76. SOM-Institutet, Göteborgs Universitet.]. Resultatet visade att "invandrartäta kommuner har lika stor andel höglitare som kommuner med låg andel utrikes födda. Det finns inget statistiskt samband mellan andelen utrikes födda och social tillit." Flyktingmottagandet från 2015 och framåt hade m a o ingen påverkan på den sociala tilliten.
 
 ## Valdeltagande
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
