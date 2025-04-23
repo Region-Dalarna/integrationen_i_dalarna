@@ -37,7 +37,7 @@ andel_utrikes_max_ar <- gsub("\\.",",",andel_utrikes_inrikes_bakgr_df %>% filter
 # antal_inrikes_skillnad <- format(abs(bef_bakgr_df %>% filter(år == antal_utrikes_inrikes_max_ar) %>% filter(födelseregion == "Inrikes född") %>%  .$Antal - bef_bakgr_df %>% filter(år == antal_utrikes_inrikes_min_ar) %>% filter(födelseregion == "Inrikes född") %>%  .$Antal),big.mark = " ")
 
 # Asylsökande 1984-senaste obseravation
-source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_antal_asylsokande_1984_SCB.R")
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_antal_asylsokande_1984_IntRap.R")
 gg_asylsokande_antal <- diagram_asylsokande_tidsserie(output_mapp_figur = Output_mapp_figur,
                                                       spara_figur = spara_diagram_som_bildfiler,
                                                       returnera_data= TRUE)
@@ -48,7 +48,7 @@ asylsokande_2015 = format(asylsokande_df %>% filter(år == 2015) %>% .$Antal,big
 asylsokande_senaste_ar_antal = format(asylsokande_df %>% filter(år == max(år)) %>% .$Antal,big.mark = " ")
 
 # Antal utrikes födda och förändring av antalet utrikes/inrikes födda i kommuner samt kumulativ summa på länsnivå och prognos (4)
-source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_bef_inrikes_utrikes_antal_forandring_prognos.R")
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_bef_inrikes_utrikes_antal_forandring_prognos_IntRap.R")
 gg_antal_utrikes <- diagram_utrikes_fodda_tidsserie(output_mapp_figur = Output_mapp_figur,
                                                     spara_figur = spara_diagram_som_bildfiler,
                                                     returnera_data= TRUE,
