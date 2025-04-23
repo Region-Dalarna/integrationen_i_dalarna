@@ -37,7 +37,7 @@ andel_utrikes_max_ar <- gsub("\\.",",",andel_utrikes_inrikes_bakgr_df %>% filter
 # antal_inrikes_skillnad <- format(abs(bef_bakgr_df %>% filter(år == antal_utrikes_inrikes_max_ar) %>% filter(födelseregion == "Inrikes född") %>%  .$Antal - bef_bakgr_df %>% filter(år == antal_utrikes_inrikes_min_ar) %>% filter(födelseregion == "Inrikes född") %>%  .$Antal),big.mark = " ")
 
 # Asylsökande 1984-senaste obseravation
-source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_antal_asylsokande_1984_SCB.R")
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_antal_asylsokande_1984_IntRap.R")
 gg_asylsokande_antal <- diagram_asylsokande_tidsserie(output_mapp_figur = Output_mapp_figur,
                                                       spara_figur = spara_diagram_som_bildfiler,
                                                       returnera_data= TRUE)
@@ -48,7 +48,7 @@ asylsokande_2015 = format(asylsokande_df %>% filter(år == 2015) %>% .$Antal,big
 asylsokande_senaste_ar_antal = format(asylsokande_df %>% filter(år == max(år)) %>% .$Antal,big.mark = " ")
 
 # Antal utrikes födda och förändring av antalet utrikes/inrikes födda i kommuner samt kumulativ summa på länsnivå och prognos (4)
-source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_bef_inrikes_utrikes_antal_forandring_prognos.R")
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_bef_inrikes_utrikes_antal_forandring_prognos_IntRap.R")
 gg_antal_utrikes <- diagram_utrikes_fodda_tidsserie(output_mapp_figur = Output_mapp_figur,
                                                     spara_figur = spara_diagram_som_bildfiler,
                                                     returnera_data= TRUE,
@@ -124,7 +124,7 @@ andel_utrikes_kommun_lagst_sista_ar_varde <- round(andel_utrikes_df %>% filter(�
 andel_utrikes_kommun_lagst_forsta_ar_varde <- round(andel_utrikes_df %>% filter(år == min(år),region == andel_utrikes_kommun_lagst_sista_ar) %>%  .$andel_utrikes,0)
 
 # Största födelseland bland utrikes födda i Dalarna
-source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_storsta_fodelseland.R")
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_storsta_fodelseland_IntRap.R")
 gg_storsta_fodelseland <- diagram_storsta_fodelseland(output_mapp_figur = Output_mapp_figur,
                                                       spara_figur = spara_diagram_som_bildfiler,
                                                       returnera_data= TRUE)
@@ -450,7 +450,8 @@ utb_niva_bakgrund_alder_ar <- unique(utb_niva_bakgrund$Ar)
 
 #Laddade in det här för att kunna köra raderna 396 och framåt i Rmd-filen
 #etablering_df <- read.xlsx("G:/skript/projekt/data/kvinnor_man/etableringstid.xlsx")
-source(here("skript/","etablering_kon_utbildningsniva.R"))
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_etableringstid_kon_lan_tidsserie_KvMa_IntRap.R")
+#source(here("skript/","etablering_kon_utbildningsniva.R"))
 gg_etablering <- diag_etablering_utb_kon_scb(output_mapp = Output_mapp_figur,
                                             skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                             returnera_data_rmarkdown = TRUE)
@@ -511,13 +512,14 @@ utbniva_bakgr_ar <- utbniva_bakgr_kon_df$år %>% unique()
 #############################################
 ####      Behörighet gymnasiet och högskola          ####
 #############################################
-source(here("skript/","gymnasiebehorighet_kon_vistelsetid.R"))
-gg_gym_hogskola_behorighet <- diag_gymnasiebehorighet(output_mapp = Output_mapp_figur,
-                                                       diag_kon_gym= TRUE,
-                                                       diag_kon_hogskola = TRUE,
-                                                       diag_vistelsetid_gym = TRUE,
-                                                       skriv_diagrambildfil = spara_diagram_som_bildfiler,
-                                                       returnera_data_rmarkdown = TRUE)
+#source(here("skript/","gymnasiebehorighet_kon_vistelsetid.R"))
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_gym_hogskola_behorighet_vistelsetid_IntRap.R")
+gg_gym_hogskola_behorighet <- diag_gymnasiebehorighet_mm (output_mapp = Output_mapp_figur,
+                                                          diag_kon_gym= TRUE,
+                                                          diag_kon_hogskola = TRUE,
+                                                          diag_vistelsetid_gym = TRUE,
+                                                          skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                                          returnera_data_rmarkdown = TRUE)
 
 ############################################
 #### Boende per upplåtelseform      ########
@@ -537,7 +539,7 @@ boendetyp_10_ar_äga <- gsub("\\.",",",round(sum(boendtyp_df %>% filter(variabel
 ############################################
 #######        Trångboddhet         ########
 ############################################
-source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_trangboddhet_inrikes_utrikes_integration.R")
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_trangboddhet_inrikes_utrikes_IntRap.R")
 gg_trangboddhet <- diag_trangboddhet_inrikes_utrikes(output_mapp = Output_mapp_figur,
                                                      skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                                      diag_antal = TRUE, # Antal
