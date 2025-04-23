@@ -124,7 +124,7 @@ andel_utrikes_kommun_lagst_sista_ar_varde <- round(andel_utrikes_df %>% filter(�
 andel_utrikes_kommun_lagst_forsta_ar_varde <- round(andel_utrikes_df %>% filter(år == min(år),region == andel_utrikes_kommun_lagst_sista_ar) %>%  .$andel_utrikes,0)
 
 # Största födelseland bland utrikes födda i Dalarna
-source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_storsta_fodelseland.R")
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_storsta_fodelseland_IntRap.R")
 gg_storsta_fodelseland <- diagram_storsta_fodelseland(output_mapp_figur = Output_mapp_figur,
                                                       spara_figur = spara_diagram_som_bildfiler,
                                                       returnera_data= TRUE)
