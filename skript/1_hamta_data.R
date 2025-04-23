@@ -539,7 +539,7 @@ boendetyp_10_ar_äga <- gsub("\\.",",",round(sum(boendtyp_df %>% filter(variabel
 ############################################
 #######        Trångboddhet         ########
 ############################################
-source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_trangboddhet_inrikes_utrikes_integration.R")
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_trangboddhet_inrikes_utrikes_IntRap.R")
 gg_trangboddhet <- diag_trangboddhet_inrikes_utrikes(output_mapp = Output_mapp_figur,
                                                      skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                                      diag_antal = TRUE, # Antal
