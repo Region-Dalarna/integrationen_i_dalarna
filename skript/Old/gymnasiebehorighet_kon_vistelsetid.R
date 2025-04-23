@@ -1,10 +1,8 @@
-diag_gymnasiebehorighet <- function(region = "20", # Enbart ett i taget.
+diag_gymnasiebehorighet_mm <- function(region = "20", # Enbart ett i taget.
                                     diag_kon_gym= TRUE,
                                     diag_kon_hogskola = TRUE,
                                     diag_vistelsetid_gym = TRUE,
-                                    jmf_ar = 2018, # År som senaste år skall jämföras med vid könsuppdelat diagram
-                                    visa_logga_i_diagram = TRUE,                        # TRUE om logga ska visas i diagrammet, FALSE om logga inte ska visas i diagrammet
-                                    logga_sokvag = NA,                                 # sökväg till logga som ska visas i diagrammet
+                                    jmf_ar = 2018, # År som senaste år skall jämföras med vid könsuppdelat diagram                              # sökväg till logga som ska visas i diagrammet
                                     output_mapp = "G:/Samhällsanalys/API/Fran_R/utskrift/",                                  # mapp där diagram ska sparas, NA = sparas ingen fil
                                     skriv_diagrambildfil = FALSE,                           # TRUE om diagram ska skrivas till fil, FALSE om diagram inte ska skrivas till fil
                                     returnera_data_rmarkdown = FALSE,
@@ -103,7 +101,6 @@ diag_gymnasiebehorighet <- function(region = "20", # Enbart ett i taget.
                                  x_axis_lutning = 0,
                                  output_mapp = output_mapp,
                                  filnamn_diagram = diagramfilnamn,
-                                 lagg_pa_logga = visa_logga_i_diagram,
                                  skriv_till_diagramfil = skriv_diagrambildfil)
 
 
@@ -147,7 +144,6 @@ diag_gymnasiebehorighet <- function(region = "20", # Enbart ett i taget.
                                  x_axis_lutning = 0,
                                  output_mapp = output_mapp,
                                  filnamn_diagram = diagramfilnamn,
-                                 lagg_pa_logga = visa_logga_i_diagram,
                                  skriv_till_diagramfil = skriv_diagrambildfil)
 
 
@@ -201,7 +197,6 @@ diag_gymnasiebehorighet <- function(region = "20", # Enbart ett i taget.
                                  x_axis_lutning = 0,
                                  output_mapp = output_mapp,
                                  filnamn_diagram = diagramfilnamn,
-                                 lagg_pa_logga = visa_logga_i_diagram,
                                  skriv_till_diagramfil = skriv_diagrambildfil)
 
 

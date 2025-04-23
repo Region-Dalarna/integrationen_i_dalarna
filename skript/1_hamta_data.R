@@ -450,7 +450,8 @@ utb_niva_bakgrund_alder_ar <- unique(utb_niva_bakgrund$Ar)
 
 #Laddade in det här för att kunna köra raderna 396 och framåt i Rmd-filen
 #etablering_df <- read.xlsx("G:/skript/projekt/data/kvinnor_man/etableringstid.xlsx")
-source(here("skript/","etablering_kon_utbildningsniva.R"))
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_etableringstid_kon_lan_tidsserie_KvMa_IntRap.R")
+#source(here("skript/","etablering_kon_utbildningsniva.R"))
 gg_etablering <- diag_etablering_utb_kon_scb(output_mapp = Output_mapp_figur,
                                             skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                             returnera_data_rmarkdown = TRUE)
@@ -511,13 +512,14 @@ utbniva_bakgr_ar <- utbniva_bakgr_kon_df$år %>% unique()
 #############################################
 ####      Behörighet gymnasiet och högskola          ####
 #############################################
-source(here("skript/","gymnasiebehorighet_kon_vistelsetid.R"))
-gg_gym_hogskola_behorighet <- diag_gymnasiebehorighet(output_mapp = Output_mapp_figur,
-                                                       diag_kon_gym= TRUE,
-                                                       diag_kon_hogskola = TRUE,
-                                                       diag_vistelsetid_gym = TRUE,
-                                                       skriv_diagrambildfil = spara_diagram_som_bildfiler,
-                                                       returnera_data_rmarkdown = TRUE)
+#source(here("skript/","gymnasiebehorighet_kon_vistelsetid.R"))
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_gym_hogskola_behorighet_vistelsetid_IntRap.R")
+gg_gym_hogskola_behorighet <- diag_gymnasiebehorighet_mm (output_mapp = Output_mapp_figur,
+                                                          diag_kon_gym= TRUE,
+                                                          diag_kon_hogskola = TRUE,
+                                                          diag_vistelsetid_gym = TRUE,
+                                                          skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                                          returnera_data_rmarkdown = TRUE)
 
 ############################################
 #### Boende per upplåtelseform      ########
