@@ -52,6 +52,7 @@ source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main
 gg_antal_utrikes <- diagram_utrikes_fodda_tidsserie(output_mapp_figur = Output_mapp_figur,
                                                     spara_figur = spara_diagram_som_bildfiler,
                                                     returnera_data= TRUE,
+                                                    alder_grupp = c(20,65),
                                                     prognos_ar = 2040)
 
 min_ar_utrikes_antal = min(antal_utrikes_region_df$år)

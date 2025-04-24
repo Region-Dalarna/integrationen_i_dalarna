@@ -45,3 +45,10 @@ gg_obj <- SkapaStapelDiagram(skickad_df = arblosa_bakgr,
                              filnamn_diagram = "diagramfil")
 
 
+# Länkar till potentiellt intressant data - andel som studerar och inte gör det kopplat till ålder och vistelsetid
+#https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__AA__AA0003__AA0003H/IntGr8LanKON1N/
+
+# Hur fort man blir klar med SFI kopplat till utbildning
+#https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__AA__AA0003__AA0003H/IntGr8LanKON3/table/tableViewLayout1/
+
+
