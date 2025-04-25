@@ -82,13 +82,14 @@ Här ska vi ha en sammanfattning av rapporten. Det ska vara en punktlista med de
 # Inledning {-}
 
 
-I år är det 10 år sedan Sverige registrerade det högsta antalet asylsökande genom tiderna. 2015 sökte närmare 163 000 personer asyl i Sverige och för Dalarnas del blev 2016 det år då invandringen var som störst efter att de asylsökande fått uppehållstillstånd och folkbokförts i länet. [Riksrevisionen (2017)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/riksrevisionens-granskningsrapport/lardomar-av-flyktingsituationen-hosten-2015-_h5b54/){target="_blank"}^[Riksrevisionen, 2017. Granskningsrapport 2017:4, Lärdomar av flyktingsituationen hösten 2015 - beredskap och hantering.] granskade de centrala offentliga aktörernas beredskap och noterar att det brast i vissa avseenden, men att huvuduppdraget kunde genomföras. I november 2015 uttryckte även regeringen att trycket var stort på det svenska samhället och att Sverige behövde "ett andrum för svenskt flyktingmottagande". I och med det skärptes migrationspolitiken, men att det stora mottagandet skulle "vara en stolthet för oss när historien skrivs" [Sveriges Radio, 2015](https://www.sverigesradio.se/artikel/6310364){target="_blank"}^[Sveriges Radio, 2015. Regeringens besked om skärpt flyktingpolitik, 2015-11-25.]. 
+I år är det 10 år sedan Sverige registrerade det högsta antalet asylsökande genom tiderna. 2015 sökte närmare 163 000 personer asyl i Sverige och för Dalarnas del blev 2016 det år då invandringen var som störst efter att de asylsökande fått uppehållstillstånd och folkbokförts i länet. I november 2015 uttryckte även regeringen att trycket var stort på det svenska samhället och att Sverige behövde "ett andrum för svenskt flyktingmottagande". I och med det skärptes migrationspolitiken, men att det stora mottagandet skulle "vara en stolthet för oss när historien skrivs" [(Sveriges Radio, 2015)](https://www.sverigesradio.se/artikel/6310364){target="_blank"}^[Sveriges Radio, 2015. Regeringens besked om skärpt flyktingpolitik, 2015-11-25.]. [Riksrevisionen (2017)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/riksrevisionens-granskningsrapport/lardomar-av-flyktingsituationen-hosten-2015-_h5b54/){target="_blank"}^[Riksrevisionen, 2017. Granskningsrapport 2017:4, Lärdomar av flyktingsituationen hösten 2015 - beredskap och hantering.] granskade de centrala offentliga aktörernas beredskap och noterar att det brast i vissa avseenden, men att huvuduppdraget ändå kunde genomföras. 
 
-Frågan är vad som har hänt under det senaste decenniet? Hur har integrationen av de som invandrat till Sverige och Dalarna utvecklats?
+2019 publicerade Region Dalarna rapporten [*Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv*](https://www.regiondalarna.se/contentassets/d845727dbc9f49c3b7b09a2c60456497/integrationsanalys.pdf){target="_blank"}.^[Region Dalarna. Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv. Regionala utvecklingsförvaltningens rapportserie #1, 2019.] Rapporten skrevs i anslutning till och med anledning av den höga asylinvandringen till Sverige och Dalarna. Därefter har asylinvandringen minskat och 2024 var den på en nivå som är den lägsta sedan 1985, vilket är en del i ett paradigmskifte från sittande regering att öka arbetskraftsinvandringen och minska asylinvandringen [(Regeringen, 2025)](https://www.regeringen.se/pressmeddelanden/2025/01/pressbriefing-om-migrationen-till-sverige-under-2024/){target="_blank"}.^[Regeringen. Pressbriefing om migrationen till Sverige under 2024. 2025-01-10.]
 
-Integration är ett ämne som är ständigt aktuellt i samhällsdebatten. 
+Frågan är vad som har hänt under det senaste decenniet? Integrationen av de som invandrat till Sverige är ett ämne som varit ständigt aktuellt i samhällsdebatten. Hur har integrationen av de som invandrat till Sverige och Dalarna utvecklats? 
 
 Beroende på sammanhang kan integration ha olika betydelser:
+<br>
 <ul>
 
 <li>**Samhällelig integration**: När människor med olika bakgrunder deltar i och bidrar till samhället på lika villkor, exempelvis genom arbete, utbildning och social interaktion. </li>
@@ -107,8 +108,7 @@ Begreppet integration kan således ses som *en process där individer eller grup
 
 Även om integrationsfrågan är bredare, präglas samhällsdebatten av integration av utrikes födda i det svenska samhället. Det gör att det är viktigt att belysa hur utrikes födda förhåller sig till inrikes födda inom ett antal samhällsområden. Samhällets förmåga att intregrera utrikes födda i utbildning, arbetsmarknad eller boende är avgörande för t ex kompetensförsörjningen på kort och lång sikt. 
 
-Andelen utrikes födda som är i arbetsför ålder (20-64 år) i Dalarna har ökat successivt över de senaste 20 åren, från `r andel_utrikes_min_ar` procent år `r andel_utrikes_inrikes_min_ar` till `r andel_utrikes_max_ar` procent år `r andel_utrikes_inrikes_max_ar`. Ökningen var särskilt tydlig under några år på mitten av 2010-talet, när många invandrade till Sverige och Dalarna. Utrikes födda är därför en förutsättning för att kunna kompetensförsörja arbetsmarknaden. 
-
+Andelen utrikes födda som är i arbetsför ålder (20-64 år) i Dalarna har ökat successivt över de senaste 20 åren, från `r andel_utrikes_min_ar` procent år `r andel_utrikes_inrikes_min_ar` till `r andel_utrikes_max_ar` procent år `r andel_utrikes_inrikes_max_ar`. Ökningen var särskilt tydlig under några år på mitten av 2010-talet, i samband med den stora flyktingströmmen och invandringen till Sverige och Dalarna. Utrikes födda är därför en förutsättning för att kunna kompetensförsörja arbetsmarknaden. 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -116,12 +116,9 @@ gg_andel_utrikes_inrikes$befolkning_utr_inr_andel_Dalarna
 
 ```
 
+Den här rapportens syfte är att redovisa aktuell statistik relaterat till utrikes föddas integration i samhället i Dalarna och visa på utvecklingen över tid. Rapporten tar sin utgångspunkt i 2019 års rapport, men anpassas till  kommer i stora drag följa 2019 års rapportdisposition. 
 
-2019 publicerade Region Dalarna rapporten [*Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv*](https://www.regiondalarna.se/contentassets/d845727dbc9f49c3b7b09a2c60456497/integrationsanalys.pdf){target="_blank"}.^[Region Dalarna. Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv. Regionala utvecklingsförvaltningens rapportserie #1, 2019.] Rapporten skrevs i en period där Sverige och Dalarna några år tidigare hade haft den största volymen av asylinvandring i historien. Därefter har asylinvandringen minskat och 2024 var den på en nivå som är den lägsta sedan 1985, vilket är en del i ett paradigmskifte från sittande regering att öka arbetskraftsinvandringen och minska asylinvandringen [(Regeringen, 2025)](https://www.regeringen.se/pressmeddelanden/2025/01/pressbriefing-om-migrationen-till-sverige-under-2024/){target="_blank"}.^[Regeringen. Pressbriefing om migrationen till Sverige under 2024. 2025-01-10.]
-
-Frågan är hur integrationen har utvecklats under de sex år som gått sedan Region Dalarnas senaste rapport skrevs. Den här rapportens syfte är att redovisa aktuell statistik relaterat till utrikes föddas integration i samhället i Dalarna och visa på utvecklingen över tid. Rapporten kommer i stora drag följa 2019 års rapportdisposition. 
-
-I rapporten från 2019 konstaterades bl a att det var en tydlig skiljelinje i integrationen mellan utrikes födda å ena sidan och vad som ibland benämns som andra generationens invandrare respektive inrikes födda. Andra generationens invandrare, födda i Sverige med utrikes födda föräldrar, hade såväl skolresultat som sysselsättningsgrad nära nivån för inrikes födda. Distinktionen i denna rapport är därför mellan utrikes födda och inrikes födda, där gruppen andra generationens invandrare ingår.
+I rapporten från 2019 konstaterades bl a att det var en tydlig skiljelinje i integrationen mellan utrikes födda å ena sidan och inrikes födda med utrikes födda föräldrar respektive inrikes födda med inrikes födda föräldrar å andra sidan. Skillnaden mellan de inrikes födda, oavsett om de hade inrikes eller utrikes födda föräldrar, var relativt liten när det gäller t ex skolresultat och sysselsättningsgrad. Distinktionen i denna rapport är därför mellan utrikes födda och inrikes födda, men även kvinnor och män i de delar det är relevant samt vistelsetid i landet för de som är utrikes födda. 
 
 # Bakgrund
 
