@@ -54,7 +54,7 @@ diag_fohm <- function(region = "20", # Enbart ett län i taget.
 
   diagram_capt <- "Källa: Folkhälsomyndighetens öppna statistikdatabas.\nBearbetning: Samhällsanalys, Region Dalarna."
 
-  sociala_relationer_df$Födelseland<- factor(andel_utrikes_bakgr_df$födelseregion, levels = c("Sverige","Övriga Europa","Övriga Norden","Övriga Världen"))
+  sociala_relationer_df$Födelseland<- factor(andel_utrikes_bakgr_df$födelseregion, levels = c("Sverige","Övriga Norden","Övriga Europa","Övriga Världen"))
 
   diagramtitel <- paste0(sociala_relationer_klartext," i Sverige år ", max(sociala_relationer_df$År))
 
