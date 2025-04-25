@@ -80,6 +80,12 @@ Här ska vi ha en sammanfattning av rapporten. Det ska vara en punktlista med de
 </ul>
 
 # Inledning {-}
+
+
+I år är det 10 år sedan Sverige registrerade det högsta antalet asylsökande genom tiderna. 2015 sökte närmare 163 000 personer asyl i Sverige och för Dalarnas del blev 2016 det år då invandringen var som störst efter att de asylsökande fått uppehållstillstånd och folkbokförts i länet. [Riksrevisionen (2017)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/riksrevisionens-granskningsrapport/lardomar-av-flyktingsituationen-hosten-2015-_h5b54/){target="_blank"}^[Riksrevisionen, 2017. Granskningsrapport 2017:4, Lärdomar av flyktingsituationen hösten 2015 - beredskap och hantering.] granskade de centrala offentliga aktörernas beredskap och noterar att det brast i vissa avseenden, men att huvuduppdraget kunde genomföras. I november 2015 uttryckte även regeringen att trycket var stort på det svenska samhället och att Sverige behövde "ett andrum för svenskt flyktingmottagande". I och med det skärptes migrationspolitiken, men att det stora mottagandet skulle "vara en stolthet för oss när historien skrivs" [Sveriges Radio, 2015](https://www.sverigesradio.se/artikel/6310364){target="_blank"}^[Sveriges Radio, 2015. Regeringens besked om skärpt flyktingpolitik, 2015-11-25.]. 
+
+Frågan är vad som har hänt under det senaste decenniet? Hur har integrationen av de som invandrat till Sverige och Dalarna utvecklats?
+
 Integration är ett ämne som är ständigt aktuellt i samhällsdebatten. 
 
 Beroende på sammanhang kan integration ha olika betydelser:
@@ -93,7 +99,7 @@ Beroende på sammanhang kan integration ha olika betydelser:
 
 </ul>
 
-[Amnå och Stigendal (2021)](https://mau.diva-portal.org/smash/get/diva2:1599404/FULLTEXT01.pdf){target="_blank"}^[Amnå, Erik och Stigendal, Mikael. Samhällsorientering : för en hållbar integration. Komlitt AB, Helsingborg. 2021.] betonar vikten av att vara tydlig vid användningen av begrepp kopplade till integration och hänvisar till Nationalencyklopedins definition - *integration är en process som leder till att skilda enheter förenas, men det kan även gälla resultatet av en sådan process* - och sociologins användning av begreppen strukturell och kulturell integration.
+[Amnå och Stigendal (2021)](https://mau.diva-portal.org/smash/get/diva2:1599404/FULLTEXT01.pdf){target="_blank"}^[Amnå, E. och Stigendal, M., 2021. Samhällsorientering : för en hållbar integration. Komlitt AB, Helsingborg.] betonar vikten av att vara tydlig vid användningen av begrepp kopplade till integration och hänvisar till Nationalencyklopedins definition - *integration är en process som leder till att skilda enheter förenas, men det kan även gälla resultatet av en sådan process* - och sociologins användning av begreppen strukturell och kulturell integration.
 
 Den strukturella integrationen handlar om skyldigheter och rättigheter via samhälleliga system, lagar och regler. Den kulturella integrationen handlar mer om hur vi upplever oss som integrerade via normer, värderingar och identiteter. En känsla av delaktighet skapar kulturell integration medan en lag skapar strukturell integration. I grunden handlar det här om alla individer som lever i ett land, även om den vardagliga diskussionen i mångt och mycket handlar om invandrare i förhållande till de som är födda och uppväxta i ett land.
 
