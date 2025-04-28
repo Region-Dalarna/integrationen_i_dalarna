@@ -781,6 +781,25 @@ De med en kortare vistelsetid i Sverige på 0–2 år var de som flyttade i stö
 *Vad finns det för information att få kring demokrati och tillit?*
 *SoM-institutets tillitsmätningar - något att referera till?*
 
+Fyra figurer kopplade till tillit (finns bara för senaste år) och självskattad hälsa
+
+```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
+gg_fohm$lag_tillit_till_samhallets_institutioner
+```
+
+```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
+gg_fohm_alt_tillit$svart_att_lita_pa_andra
+```
+
+```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
+gg_fohm$bra_eller_mycket_bra_halsa
+```
+
+```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
+gg_fohm$bra_eller_mycket_bra_halsa_kon
+```
+
+
 Mellanmänsklig tillit undersöks av SOM-Institutet i den nationella SOM-undersökningen. 2024 hade 56 procent hög tillit till människor i allmänhet. 32 respektive 12 procent hade medelhög eller låg tillit. Sedan 1996 har resultaten inte påverkats nämnvärt, utan har varit relativt konstanta över en 30-årsperiod.
 
 Förtroendet för samhällsinstitutioner... - ökat över tid för Polisen, Domstolarna och Försvaret. Minskning för riksdag och regering, men stora variationer över tid. 

@@ -562,6 +562,24 @@ trangboddhet_sista_ar_utrikes_antal <- format(trangboddhet_df %>% filter(år == 
 trangboddhet_forsta_ar_utrikes_andel <- round(trangboddhet_df %>% filter(år == trangboddhet_min_ar,födelseregion == "Utrikes född",trångboddhet == "Trångbodda") %>%  .$andel,0)
 trangboddhet_sista_ar_utrikes_andel <- round(trangboddhet_df %>% filter(år == trangboddhet_max_ar,födelseregion == "Utrikes född",trångboddhet == "Trångbodda") %>%  .$andel,0)
 
+#############################################################
+#### Sociala relationer mm Folkhälsomyndigheten      ########
+#############################################################
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_sociala_rel_sjalvskattad_halsa_inrikes_utrikes_int_rap.R")
+gg_fohm <- diag_fohm (output_mapp = Output_mapp_figur,
+                      skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                      returnera_data_rmarkdown = TRUE)
+
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_sociala_rel_sjalvskattad_halsa_inrikes_utrikes_int_rap.R")
+gg_fohm_alt_tillit <- diag_fohm (output_mapp = Output_mapp_figur,
+                                 diag_sjalvskattad_halsa_tid = FALSE,
+                                 diag_sjalvskattad_halsa_kon = FALSE,
+                                 sociala_relationer_klartext = "Svårt att lita på andra",
+                                 skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                 returnera_data_rmarkdown = TRUE)
+
+
+
 ############################################
 #### Valdeltagande vistelsetid      ########
 ############################################
