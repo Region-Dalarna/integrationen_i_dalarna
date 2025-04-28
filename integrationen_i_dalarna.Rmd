@@ -781,8 +781,6 @@ De med en kortare vistelsetid i Sverige på 0–2 år var de som flyttade i stö
 *Vad finns det för information att få kring demokrati och tillit?*
 *SoM-institutets tillitsmätningar - något att referera till?*
 
-Fyra figurer kopplade till tillit (finns bara för senaste år) och självskattad hälsa
-
 Enligt Folkhälsomyndighetens undersökningar om hälsa och levnadsvanor ("Hälsa på lika villkor") från år `r tillit_andra_ar` har gruppen som är födda i `r tillit_andra_max_kvinnor_grupp` lägst tillit till andra människor, såväl om kvinnorna som männen i Sverige tillfrågas. I den första gruppen uppger ca `r tillit_andra_max_kvinnor_varde` procent att de har svårt att lita på andra, medan motsvarande siffra bland männen är ungefär `r tillit_andra_max_man_varde` procent. Högst tilltro till andra har personer födda i `r tillit_andra_min_man_grupp`, såväl bland kvinnorna som männen i Sverige. Bland kvinnorna uppgav `r tillit_andra_min_kvinnor_varde` procent att de hade låg tilltro till andra, medan motsvarande siffra bland männen var ca `r tillit_andra_min_man_varde` procent. Även personer födda i Sverige har relativt stor tilltro till andra.
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
@@ -795,6 +793,7 @@ Om frågan istället fokuserar på tillit till samhällets institutioner är det
 gg_fohm$lag_tillit_till_samhallets_institutioner
 ```
 
+Två frågor kopplade till självskattad hälsa som möjligtvis kan vara med i rapporten.
 
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
@@ -821,6 +820,9 @@ Utrikes födda utmärker sig inte i undersökningen med fallande tillit över ti
 I 2020 års SOM-undersökning studerades även frågan om mångkulturens påverkan på tilliten ([Holmberg, S. och Rothstein, B., 2020](<https://www.gu.se/sites/default/files/migrated/1772921_f--rhandspublicering-m--ngkultur-och-tillit----holmberg-o-rothstein.pdf>){target="_blank"}).^[Holmberg, S. och Rothstein, B., 2020. Minskar mångkulturella samhällen den sociala tilliten?. I Andersson, U. et al. (red) Regntunga skyar. SOM-antologi nr. 76. SOM-Institutet, Göteborgs Universitet.]. Resultatet visade att "invandrartäta kommuner har lika stor andel höglitare som kommuner med låg andel utrikes födda. Det finns inget statistiskt samband mellan andelen utrikes födda och social tillit." Flyktingmottagandet från 2015 och framåt hade m a o ingen påverkan på den sociala tilliten.
 
 ## Valdeltagande
+
+Bland inrikes födda är valdeltagandet i val till Riksdagen relativt högt (närmare 90 procent) och har inte förändrats nämnvärt mellan de senaste valen. Utrikes födda har generellt ett lägre valdeltagande och i den gruppen har också valdeltagande minskat på senare år. 
+
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_valdeltagande_vistelsetid$Valdeltagande_i_val_till_riksdag
 ```
