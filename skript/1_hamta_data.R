@@ -578,7 +578,23 @@ gg_fohm_alt_tillit <- diag_fohm (output_mapp = Output_mapp_figur,
                                  skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                  returnera_data_rmarkdown = TRUE)
 
+# Tillit till andra
+tillit_andra_ar <- unique(svart_att_lita_pa_andra_df$År)
+tillit_andra_min_kvinnor_grupp <- svart_att_lita_pa_andra_df %>% filter(Kön == "Kvinnor",År == min(År)) %>% filter(`Sociala relationer efter födelseland, kön och år` == min(`Sociala relationer efter födelseland, kön och år`)) %>%  .$Födelseland
+tillit_andra_min_kvinnor_grupp <- paste0(tolower(substr(tillit_andra_min_kvinnor_grupp, 1, 1)), substr(tillit_andra_min_kvinnor_grupp, 2, nchar(tillit_andra_min_kvinnor_grupp)))
+tillit_andra_min_kvinnor_varde <- round(svart_att_lita_pa_andra_df %>% filter(Kön == "Kvinnor",År == min(År)) %>%  .$`Sociala relationer efter födelseland, kön och år` %>% min(),0)
 
+tillit_andra_min_man_grupp <- svart_att_lita_pa_andra_df %>% filter(Kön == "Män",År == min(År)) %>% filter(`Sociala relationer efter födelseland, kön och år` == min(`Sociala relationer efter födelseland, kön och år`)) %>%  .$Födelseland
+tillit_andra_min_man_grupp <- paste0(tolower(substr(tillit_andra_min_man_grupp, 1, 1)), substr(tillit_andra_min_man_grupp, 2, nchar(tillit_andra_min_man_grupp)))
+tillit_andra_min_man_varde <- round(svart_att_lita_pa_andra_df %>% filter(Kön == "Män",År == min(År)) %>%  .$`Sociala relationer efter födelseland, kön och år` %>% min(),0)
+
+tillit_andra_max_kvinnor_grupp <- svart_att_lita_pa_andra_df %>% filter(Kön == "Kvinnor",År == max(År) %>% filter(`Sociala relationer efter födelseland, kön och år` == max(`Sociala relationer efter födelseland, kön och år`))) %>%  .$Födelseland
+tillit_andra_max_kvinnor_grupp <- paste0(tolower(substr(tillit_andra_max_kvinnor_grupp, 1, 1)), substr(tillit_andra_max_kvinnor_grupp, 2, nchar(tillit_andra_max_kvinnor_grupp)))
+tillit_andra_max_kvinnor_varde <- round(svart_att_lita_pa_andra_df %>% filter(Kön == "Kvinnor",År == max(År)) %>%  .$`Sociala relationer efter födelseland, kön och år` %>% max(),0)
+
+tillit_andra_max_man_grupp <- svart_att_lita_pa_andra_df %>% filter(Kön == "Män",År == max(År)) %>% filter(`Sociala relationer efter födelseland, kön och år` == max(`Sociala relationer efter födelseland, kön och år`)) %>%  .$Födelseland
+tillit_andra_max_man_grupp <- paste0(tolower(substr(tillit_andra_max_man_grupp, 1, 1)), substr(tillit_andra_max_man_grupp, 2, nchar(tillit_andra_max_man_grupp)))
+tillit_andra_max_man_varde <- round(svart_att_lita_pa_andra_df %>% filter(Kön == "Män",År == max(År)) %>%  .$`Sociala relationer efter födelseland, kön och år` %>% max(),0)
 
 ############################################
 #### Valdeltagande vistelsetid      ########
