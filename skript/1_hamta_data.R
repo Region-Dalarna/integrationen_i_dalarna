@@ -588,7 +588,7 @@ tillit_andra_min_man_grupp <- svart_att_lita_pa_andra_df %>% filter(Kön == "Mä
 tillit_andra_min_man_grupp <- paste0(tolower(substr(tillit_andra_min_man_grupp, 1, 1)), substr(tillit_andra_min_man_grupp, 2, nchar(tillit_andra_min_man_grupp)))
 tillit_andra_min_man_varde <- round(svart_att_lita_pa_andra_df %>% filter(Kön == "Män",År == min(År)) %>%  .$`Sociala relationer efter födelseland, kön och år` %>% min(),0)
 
-tillit_andra_max_kvinnor_grupp <- svart_att_lita_pa_andra_df %>% filter(Kön == "Kvinnor",År == max(År) %>% filter(`Sociala relationer efter födelseland, kön och år` == max(`Sociala relationer efter födelseland, kön och år`))) %>%  .$Födelseland
+tillit_andra_max_kvinnor_grupp <- svart_att_lita_pa_andra_df %>% filter(Kön == "Kvinnor",År == max(År)) %>% filter(`Sociala relationer efter födelseland, kön och år` == max(`Sociala relationer efter födelseland, kön och år`)) %>%  .$Födelseland
 tillit_andra_max_kvinnor_grupp <- paste0(tolower(substr(tillit_andra_max_kvinnor_grupp, 1, 1)), substr(tillit_andra_max_kvinnor_grupp, 2, nchar(tillit_andra_max_kvinnor_grupp)))
 tillit_andra_max_kvinnor_varde <- round(svart_att_lita_pa_andra_df %>% filter(Kön == "Kvinnor",År == max(År)) %>%  .$`Sociala relationer efter födelseland, kön och år` %>% max(),0)
 
@@ -608,6 +608,20 @@ gg_valdeltagande_vistelsetid <- diagram_diverse_vistelsetid(output_mapp = Output
                                                             skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                                             returnera_dataframe_global_environment  = TRUE)
 
+##### Riksdag
+valdeltagande_riksdag_senaste_ar <- max(valdeltagande_df %>% filter(val == "Valdeltagande i val till riksdag") %>% .$år)
+valdeltagande_riksdag_forsta_ar <- min(valdeltagande_df %>% filter(val == "Valdeltagande i val till riksdag") %>% .$år)
 
+valdeltagande_riksdag_inrikes_senaste_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till riksdag",variabel == "Inrikes född",kön == "män och kvinnor") %>% filter(år == valdeltagande_riksdag_senaste_ar) %>% .$varde,0)
+valdeltagande_riksdag_utrikes_senaste_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till riksdag",variabel == "samtliga utrikes födda",kön == "män och kvinnor") %>% filter(år == valdeltagande_riksdag_senaste_ar) %>% .$varde,0)
 
+valdeltagande_riksdag_under_10_senaste_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till riksdag",variabel == "< 10 år",kön == "män och kvinnor") %>% filter(år == valdeltagande_riksdag_senaste_ar) %>% .$varde,0)
+valdeltagande_riksdag_over_10_senaste_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till riksdag",variabel == "10- år",kön == "män och kvinnor") %>% filter(år == valdeltagande_riksdag_senaste_ar) %>% .$varde,0)
 
+valdeltagande_riksdag_inrikes_forsta_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till riksdag",variabel == "Inrikes född",kön == "män och kvinnor") %>% filter(år == valdeltagande_riksdag_forsta_ar) %>% .$varde,0)
+valdeltagande_riksdag_utrikes_forsta_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till riksdag",variabel == "samtliga utrikes födda",kön == "män och kvinnor") %>% filter(år == valdeltagande_riksdag_forsta_ar) %>% .$varde,0)
+
+valdeltagande_riksdag_under_10_forsta_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till riksdag",variabel == "< 10 år",kön == "män och kvinnor") %>% filter(år == valdeltagande_riksdag_forsta_ar) %>% .$varde,0)
+valdeltagande_riksdag_over_10_forsta_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till riksdag",variabel == "10- år",kön == "män och kvinnor") %>% filter(år == valdeltagande_riksdag_forsta_ar) %>% .$varde,0)
+
+# Region/kommun - typ samma värden så gör ingen skillnad
