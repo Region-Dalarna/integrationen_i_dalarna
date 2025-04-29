@@ -821,11 +821,13 @@ I 2020 års SOM-undersökning studerades även frågan om mångkulturens påverk
 
 ## Valdeltagande
 
-Bland inrikes födda är valdeltagandet i val till Riksdagen relativt högt (närmare 90 procent) och har inte förändrats nämnvärt mellan de senaste valen. Utrikes födda har generellt ett lägre valdeltagande och i den gruppen har också valdeltagande minskat på senare år. 
+Bland inrikes födda är valdeltagandet i val till Riksdagen i Dalarna relativt högt (närmare 90 procent) och har inte förändrats nämnvärt mellan valen `r valdeltagande_riksdag_forsta_ar` och `r valdeltagande_riksdag_senaste_ar`. Utrikes födda har generellt ett lägre valdeltagande och i den gruppen har också valdeltagande minskat på senare år. Valdeltagandet bland utrikes födda varierar dessutom baserat på hur länge personerna har bott i Sverige. För de som varit i Sverige mindre än 10 år var valdeltagandet i val till Riksdagen i Dalarna år `r valdeltagande_riksdag_senaste_ar` `r valdeltagande_riksdag_under_10_senaste_varde` procent, att jämföra med `r valdeltagande_riksdag_over_10_senaste_varde` procent för de som varit i Sverige längre än 10 år. 
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_valdeltagande_vistelsetid$Valdeltagande_i_val_till_riksdag
 ```
+
+När det gäller val till region- och kommunfullmäktige är valdeltagandet bland inrikes födda något lägre än valdeltagandet till Riksdagsvalet, men skillnaderna är små. För utrikes födda är skillnaderna däremot relativt stora. För de personer som bott i Sverige mindre än 10 år är valdeltagandet i val till dalarnas regionfullmäktige (det första diagrammet nedan) blott `r valdeltagande_region_under_10_senaste_varde` procent år `r valdeltagande_region_senaste_ar`, vilket är hela `r valdeltagande_skillnad_under10` procentenheter lägre än valdeltagandet i val till Riksdagen. För de som bott i Sverige längre än 10 år var valdeltagandet år `r valdeltagande_region_senaste_ar` i samma val `r valdeltagande_region_over_10_senaste_varde` procent, vilket är `r valdeltagande_skillnad_over10` procentenheter lägre än valdeltagandet i val till Riksdagen. Det verkar således som att utrikes föddas som varit relativt kort period i Sverige i första hand visar ett intresse för politiken på riksnivå, men att intresset för den regionala och lokala politiken ökar med tiden. Värt att notera är även att det är små skillnader mellan valdeltagande på regional och kommunal nivå. Röstar man i det ena valet så tenderar man även att rösta i det andra (se det tredje diagrammet nedan).
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_valdeltagande_vistelsetid$Valdeltagande_i_val_till_region
