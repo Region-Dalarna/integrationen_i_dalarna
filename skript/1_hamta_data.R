@@ -522,6 +522,63 @@ gg_gym_hogskola_behorighet <- diag_gymnasiebehorighet_mm (output_mapp = Output_m
                                                           skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                                           returnera_data_rmarkdown = TRUE)
 
+############################
+####      UVAS      ########
+############################
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_uvas_vistelsetid_kon_tid_IntRap.R")
+gg_uvas <- diag_UVAS_bakgrund_vistelsetid  (output_mapp = Output_mapp_figur,
+                                            skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                            returnera_data_rmarkdown = TRUE)
+
+uvas_forsta_ar <- min(UVAS_df$år)
+uvas_senaste_ar <- max(UVAS_df$år)
+
+# Ändrar så att sysselsättnings-variabeln enbart är 16-19 år eller 20-25 år
+UVAS_df <- UVAS_df %>%
+  mutate(sysselsattning = str_extract(sysselsattning, "\\d{2}-\\d{2} år"))
+
+# Diagram kön (bara senaste år)
+uvas_16_19_kvinnor_0_1 <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "0-1 år",kön == "kvinnor",sysselsattning == "16-19 år" ) %>%  .$varde,0)
+uvas_16_19_kvinnor_2_3 <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "2-3 år",kön == "kvinnor",sysselsattning == "16-19 år" ) %>%  .$varde,0)
+uvas_16_19_kvinnor_4_9 <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "4-9 år",kön == "kvinnor",sysselsattning == "16-19 år" ) %>%  .$varde,0)
+uvas_16_19_kvinnor_10_ <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "10- år",kön == "kvinnor",sysselsattning == "16-19 år" ) %>%  .$varde,0)
+uvas_16_19_kvinnor_inrikes <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "Inrikes född",kön == "kvinnor",sysselsattning == "16-19 år" ) %>%  .$varde,0)
+
+uvas_20_25_kvinnor_0_1 <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "0-1 år",kön == "kvinnor",sysselsattning == "20-25 år" ) %>%  .$varde,0)
+uvas_20_25_kvinnor_2_3 <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "2-3 år",kön == "kvinnor",sysselsattning == "20-25 år" ) %>%  .$varde,0)
+uvas_20_25_kvinnor_4_9 <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "4-9 år",kön == "kvinnor",sysselsattning == "20-25 år" ) %>%  .$varde,0)
+uvas_20_25_kvinnor_10_ <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "10- år",kön == "kvinnor",sysselsattning == "20-25 år" ) %>%  .$varde,0)
+uvas_20_25_kvinnor_inrikes <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "Inrikes född",kön == "kvinnor",sysselsattning == "20-25 år" ) %>%  .$varde,0)
+
+uvas_16_19_man_0_1 <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "0-1 år",kön == "män",sysselsattning == "16-19 år" ) %>%  .$varde,0)
+uvas_16_19_man_2_3 <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "2-3 år",kön == "män",sysselsattning == "16-19 år" ) %>%  .$varde,0)
+uvas_16_19_man_4_9 <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "4-9 år",kön == "män",sysselsattning == "16-19 år" ) %>%  .$varde,0)
+uvas_16_19_man_10_ <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "10- år",kön == "män",sysselsattning == "16-19 år" ) %>%  .$varde,0)
+uvas_16_19_man_inrikes <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "Inrikes född",kön == "män",sysselsattning == "16-19 år" ) %>%  .$varde,0)
+
+uvas_20_25_man_0_1 <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "0-1 år",kön == "män",sysselsattning == "20-25 år" ) %>%  .$varde,0)
+uvas_20_25_man_2_3 <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "2-3 år",kön == "män",sysselsattning == "20-25 år" ) %>%  .$varde,0)
+uvas_20_25_man_4_9 <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "4-9 år",kön == "män",sysselsattning == "20-25 år" ) %>%  .$varde,0)
+uvas_20_25_man_10_ <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "10- år",kön == "män",sysselsattning == "20-25 år" ) %>%  .$varde,0)
+uvas_20_25_man_inrikes <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "Inrikes född",kön == "män",sysselsattning == "20-25 år" ) %>%  .$varde,0)
+
+
+# Diagram tidsserie
+uvas_16_19_forsta_ar_0_1 <- UVAS_df %>% filter(år == uvas_forsta_ar,variabel == "0-1 år",kön == "män och kvinnor",sysselsattning == "16-19 år" ) %>%  .$varde
+uvas_20_25_forsta_ar_0_1 <- UVAS_df %>% filter(år == uvas_forsta_ar,variabel == "0-1 år",kön == "män och kvinnor",sysselsattning == "20-25 år" ) %>%  .$varde
+
+uvas_16_19_senaste_ar_0_1 <- UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "0-1 år",kön == "män och kvinnor",sysselsattning == "16-19 år" ) %>%  .$varde
+uvas_20_25_senaste_ar_0_1 <- UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "0-1 år",kön == "män och kvinnor",sysselsattning == "20-25 år" ) %>%  .$varde
+
+uvas_16_19_forsta_ar_4_9 <- UVAS_df %>% filter(år == uvas_forsta_ar,variabel == "4-9 år",kön == "män och kvinnor",sysselsattning == "16-19 år" ) %>%  .$varde
+uvas_20_25_forsta_ar_4_9 <- UVAS_df %>% filter(år == uvas_forsta_ar,variabel == "4-9 år",kön == "män och kvinnor",sysselsattning == "20-25 år" ) %>%  .$varde
+
+uvas_16_19_senaste_ar_4_9 <- UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "4-9 år",kön == "män och kvinnor",sysselsattning == "16-19 år" ) %>%  .$varde
+uvas_20_25_senaste_ar_4_9 <- UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "4-9 år",kön == "män och kvinnor",sysselsattning == "20-25 år" ) %>%  .$varde
+
+
+
+
 ############################################
 #### Boende per upplåtelseform      ########
 ############################################
