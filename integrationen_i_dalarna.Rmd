@@ -120,7 +120,7 @@ Den här rapportens syfte är att redovisa aktuell statistik relaterat till utri
 
 I rapporten från 2019 konstaterades bl a att det var en tydlig skiljelinje i integrationen mellan utrikes födda å ena sidan och inrikes födda med utrikes födda föräldrar respektive inrikes födda med inrikes födda föräldrar å andra sidan. Skillnaden mellan de inrikes födda, oavsett om de hade inrikes eller utrikes födda föräldrar, var relativt liten när det gäller t ex skolresultat och sysselsättningsgrad. Distinktionen i denna rapport är därför mellan utrikes födda och inrikes födda, men även kvinnor och män i de delar det är relevant samt vistelsetid i landet för de som är utrikes födda. 
 
-# Bakgrund
+# Demografi och invandring
 
 <span class = "kommentar">*Vad behövs här för att introducera en bakgrundsbeskrivning av invandringen över tid? Eller ska vi dela på bakgrundsavsnittet helt och ha ett första avsnitt som beskriver invandringen över tid följt av ett som beskriver den demografiska utvecklingen?*</span>
 
@@ -221,11 +221,13 @@ gg_storsta_fodelseland$storsta_fodelseland_Dalarna
 ```
 
 
-## Den demografiska situationen i Sverige
+## Sveriges och Dalarnas demografi
 Sverige är sedan några år inne i en demografisk fas där de stora babyboom-kullarna från slutet av 1940-
 och början av 1950-talet uppnår pensionsålder. Många svenska kommuner har en alltmer ålderstigen befolkning, en effekt av den urbaniseringsvåg som pågått under hela 1900-och 2000-talet då många unga lämnat landsbygden och mindre tätorter till förmån för residens- och universitetsstäder.
 
-En stor andel äldre i befolkningen medför ekonomiska påfrestningar för dessa kommuner då allt färre i arbetsför ålder ska försörja allt fler äldre och barn. Redan i <span class = "kommentar">*Långtidsutredningen år 2015*</span> gjordes beräkningar på hur mycket kommunalskatten skulle behöva höjas i kommunerna för att upprätthålla samma servicenivå år 2040 som då, som en följd av den förändrade demografiska strukturen. Beräkningarna visade på orimliga skattehöjningar, cirka 50-procentiga ökningar, vilket kan ses som en signal på hur allvarlig situationen var redan för tio år sedan. Förutom att den demografiska situationen medför färre skattebetalare som ska försörja allt fler äldre så innebär den också ett stort kompetensförsörjningsproblem.
+En stor andel äldre i befolkningen medför ekonomiska påfrestningar för dessa kommuner då allt färre i arbetsför ålder ska försörja allt fler äldre och barn. Redan i <span class = "kommentar">*Långtidsutredningen 2015 (ref)*</span> gjordes beräkningar på hur mycket kommunalskatten skulle behöva höjas i kommunerna för att upprätthålla samma servicenivå år 2040 som då, som en följd av den förändrade demografiska strukturen. Beräkningarna visade på orimliga skattehöjningar, cirka 50-procentiga ökningar, vilket kan ses som en signal på hur allvarlig situationen var redan för tio år sedan. Förutom att den demografiska situationen medför färre skattebetalare som ska försörja allt fler äldre så innebär den också ett stort kompetensförsörjningsproblem. 
+
+I <span class = "kommentar">*Långtidsutredningen 2019 (ref)*</span> beräknas statsbidragen till kommunsektorn, vid oförändrade kommunalskatter, behöva nästan dubbleras fram till 2035 för att möta den demografiskt betingade efterfrågan på kommunala tjänster. Utmaningen ligger dock inte främst i finansieringen, utan i att hitta arbetskraften. De största personalbristerna förväntas i landsbygdsregioner, med risk för ojämlikhet i levnadsförhållanden och utvecklingsmöjligheter. 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -267,7 +269,7 @@ gg_andel_utrikes$utrikes_fodda_andel_Dalarna
 ```
 
 
-# Arbetsmarknadskonjunktur och invandring - då och nu
+# Utbildning och arbetsmarknad
 <span class = "kommentar"> Överväg att slå ihop avsnitt 2 och 3 till ett arbetsmarknadsavsnitt</span>
 
 En viktig aspekt för integrationen är hur stark arbetsmarknaden är vid tidpunkten för invandringen. När
@@ -308,7 +310,7 @@ arbetskraft och arbetskraftsreserven bestående av utrikes födda riskerar att l
 
 <span class = "kommentar">Skapa diagram över Matchning utifrån utbildningsnivå i Dalarna (se Diagram 25 i NMS-analysen), uppdelat på inrikes och utrikes födda och kvinnor och män.</span>
 
-# Vägen till arbete
+
 Att arbeta (eller studera) är en viktig komponent i integrationen i samhället. Sysselsättningen bland utrikes födda är generellt lägre än bland inrikes födda personer och arbetslösheten, inklusive långtidsarbetslösheten, är högre. Utrikes födda har generellt en svagare ställning på arbetsmarknaden. Arbetslöshets- och sysselsättningsnivåerna bland utrikes födda varierar dock stort mellan olika grupper. Kön, födelseland och utbildningsnivå är alla faktorer som har stor betydelse. I detta avsnitt ska förhoppningsvis nedanstående frågor kring utrikes födda besvaras:
 
 <ul>
@@ -550,8 +552,6 @@ gg_diagram_arbetsmarknadsstatus_kommun$arbetslosthet_senastear
 
 Arbetslösheten i Dalarna för inrikes och utrikes födda visar på skillnader över tid. För gruppen inrikes födda syns en nedgång i andelen arbetslösa från 2010 och framåt, med ett litet avbrott i trendlinjen under pandemiåren 2020-2021. Gruppen utrikes födda har två trendlinjer i diagrammet nedan. Från 2006 till 2017 ökade arbetslösheten bland utrikes födda till relativt höga nivåer jämfört med början på tidsperioden. Arbetslösheten bland utrikes födda män i Dalarna var också konsekvent högre än för utrikes födda kvinnor och betydligt högre år 2015 och åren därefter då Sverige hade mycket stor flyktinginvandring. Från 2017 och framåt har arbetslösheten bland gruppen utrikes födda minskat från toppnivåerna och utrikes födda kvinnor är idag i något högre utsträckning arbetslösa jämfört med utrikes födda män. Värt att understryka är att en högre arbetslöshet kan förklaras med att fler aktivt söker arbete, tidigare har en större andel personer varit varken arbetssökande eller i arbete.
 
-arbetsloshet_08_fig
-
 Hur långt ifrån arbetsmarknaden som en individ befinner sig beror delvis på hur länge personen har varit utan anställning. En person som har varit arbetslös länge har ofta svårare att ta sig tillbaka in på arbetsmarknaden. Som långtidsarbetslös räknas den som har varit öppet arbetslös eller i program med aktivitetsstöd i minst sex månader. År `r langtidsarbetsloshet_ar_min` noterades `r langtidsarbetsloshet_kvinnor_min` procent av länets kvinnor i åldern 25-64 år som långtidsarbetslösa, medan motsvarande siffra för männen var `r langtidsarbetsloshet_man_min` procent. Under 2010-talet gick långtidsarbetslösheten såväl upp som ned, innan den nådde sin topp i samband med pandemin 2020-2021. På senare år har långtidsarbetslösheten minskat tydligt och var år `r langtidsarbetsloshet_ar_max` i Dalarna något högre för män, men något lägre för kvinnor jämfört med 2011. Långtidsarbetslösheten i Sverige är högre än i Dalarna för båda könen. En generell orsak till långtidsarbetslöshet är strukturarbetslöshet som innebär att de arbetssökande saknar rätt kompetens för de arbeten som finns tillgängliga.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
@@ -633,10 +633,6 @@ gg_etablering$etablering_tid
 ```
 
 
-
-
-# Vägen till (språk) och utbildning
-
 <span class = "kommentar">Den förra rapporten innehöll ingenting som handlade om språkutveckling eller språkutbildning. Kan vi hitta någon officiell information på den punkten? Annars bör avsnittet bara heta "Vägen till utbildning"</span>
 
 En fullgjord gymnasieutbildning är en av de viktigaste faktorerna för ett gott liv avseende en rad olika aspekter, såsom exempelvis hälsa, inkomst, medellivslängd och möjligheten till arbete. De med en längre utbildning lever i allmänhet längre, har en genomsnittlig högre inkomst och mår i allmänhet bättre än de med kortare utbildning. Utbildningsnivån hos utrikes födda har därför en stor påverkan på möjligheterna att etablera sig i samhället, särskilt bland de unga som anländer till Sverige under skolåren och har många år kvar i livet.
@@ -713,7 +709,7 @@ gg_utbniva_bakgrund_alder$utb_niva_bakgrund
 <span class = "kommentar">Diagram över 1: Andelar obehöriga till gymnasiet - inskrivna på IM-program utifrån bakgrund och 2:Utrikes födda unga som inte studerar eller inte aktiva på arbetsmarknaden utifrån vistelsetid</span>
 
 
-# Vägen till bostad
+# Boende och flyttmönster
 Med nästan alla sätt att mäta boende skiljer sig grupperna svensk och utländsk bakgrund åt. Det finns flera sätt att mäta boende på, typ av boende (villa eller lägenhet), boendeyta och bostadsägande säger alla någonting om hur människor bor, något som givetvis speglar den ekonomiska situation man lever i. Det innebär, precis som på de flesta andra områden, att gruppen utrikes födda kommer att ha en stor spridning avseende etablering i samhället. Några i gruppen kommer att ha bott i Sverige i mindre än ett år och andra i flera decennier. Således finns även inom boende anledning att göra analyser uppdelat på vistelsetid i Sverige. att människor som bott längre i Sverige i högre utsträckning äger sitt eget boende, antingen genom äganderätt (småhus) eller bostadsrätt (småhus eller lägenhet).
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
@@ -756,7 +752,7 @@ Skillnaden i boendeyta per person för personer med svensk och utländsk bakgrun
 
 Skillnaden mellan de med svensk och utländsk bakgrund är betydligt större för de som bor i flerbostadshus i samtliga åldersgrupper fram till 75+ år. Anledningen till detta kan bero på flera faktorer, som exempelvis att personer med svensk bakgrund har större möjlighet att påverka storleken på sin bostad, antingen genom att köpa en större bostad, en längre kötid, eller möjlighet att byta hyreskontrakt eller liknande. En annan förklaring är att personer med utländsk bakgrund i genomsnitt är en person mer i hushållet än personer med svensk bakgrund. Förutsatt samma boendeyta, får då personer med utländsk bakgrund automatiskt mindre boendeyta per person än de med svensk bakgrund. Det kan också finns skillnader i preferenser för hur stort man vill bo mellan de här två grupperna.
 
-# Flyttmönster (hur flyttar de utrikes födda?) - ej bearbetat
+
 Bland inrikes födda var det 94 263 personer mellan år 2002–2018 som flyttade till Dalarnas län från övriga Sverige och 99 304 som flyttade från länet till övriga Sverige, vilket gav ett flyttnetto på -5 041 personer, eller i genomsnitt -504 per år. I gruppen utrikes födda flyttade 19 819 personer till Dalarnas län från övriga Sverige och 23 912 personer flyttade till övriga Sverige från länet, vilket gav ett flyttnetto på -4 093 personer, eller i genomsnitt -410 per år. Det kan konstateras att flyttströmmarna har varit stora både till och från länet, både för utrikes och inrikes födda. Båda grupperna flyttar dock i större utsträckning från Dalarna till övriga Sverige än till Dalarna från övriga Sverige. Utrikes födda personer har generellt sätt varit mer benägna att flytta från länet än inrikes födda varit.
 
 Innan utrikes föddas flyttningar analyseras djupare kommer här först analys om inrikes flyttning till/från Dalarna generellt, och hur den skiljer sig i två olika åldersgrupper. Förmodligen är inrikes omflyttningar den faktor som på längre sikt mer än någon annan påverkar den regionala befolkningsstrukturen. Majoriteten av de som flyttar är unga mellan 20–35 år. I regioner med inflyttningsöverskott ökar därför antalet unga medan situationen är den motsatta i regioner med utflyttningsöverskott. Regioner som har en växande befolkning genom ett positivt flyttnetto, får en yngre befolkning och därmed även ett ökat barnafödande, med regionala födelseöverskott som följd.   Som konstaterat har flyttnettot inrikes till/från Dalarna varit negativt under de senaste tio åren. Främst gäller detta yngre vuxna som är mellan 19–28 år.
@@ -775,12 +771,21 @@ Omflyttningarna bland utrikes födda åren 2015–2018 var i störst under de tv
 
 De med en kortare vistelsetid i Sverige på 0–2 år var de som flyttade i störst utsträckning mellan åren 2015–2018. Under år 2015 hade denna grupp en påtaglig högre inflyttning än under övriga år. En hypotes som behöver analyseras vidare är att detta kan bero på att många nyanlända personer med giltigt uppehållstånd år 2015 blev anvisade till Dalarna. Nära hälften av de inrikes inflyttade utrikes födda detta år med 0—2 års vistelsetid var antingen födda i Syrien eller Eritrea.  Trenden sedan år 2016 har sedan varit att fler av de nyanlända väljer att flytta från Dalarna än till länet från övriga Sverige. Eftersom denna trend även gällde före år 2014, finns det anledning att tro att utflyttningen av nyanlända med kort vistelsetid även i framtiden kommer att vara större än inflyttningen. Trenden är problematisk för Dalarnas del, då redan befintlig och framtida potentiel arbetskraft i och med detta försvinner från länet.
 
-# Demokrati och tillit (ska skrivas)
+# Hälsa, tillit och demokrati
+
+## Hälsa
+Två diagram från Hälsa på lika villkor som är kopplade till självskattad hälsa som möjligtvis kan vara med i rapporten.
+
+```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
+gg_fohm$bra_eller_mycket_bra_halsa
+```
+
+```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
+gg_fohm$bra_eller_mycket_bra_halsa_kon
+```
+
 
 ## Tillit
-*Vad finns det för information att få kring demokrati och tillit?*
-*SoM-institutets tillitsmätningar - något att referera till?*
-
 Enligt Folkhälsomyndighetens undersökningar om hälsa och levnadsvanor ("Hälsa på lika villkor") från år `r tillit_andra_ar` har gruppen som är födda i `r tillit_andra_max_kvinnor_grupp` lägst tillit till andra människor, såväl om kvinnorna som männen i Sverige tillfrågas. I den första gruppen uppger ca `r tillit_andra_max_kvinnor_varde` procent att de har svårt att lita på andra, medan motsvarande siffra bland männen är ungefär `r tillit_andra_max_man_varde` procent. Högst tilltro till andra har personer födda i `r tillit_andra_min_man_grupp`, såväl bland kvinnorna som männen i Sverige. Bland kvinnorna uppgav `r tillit_andra_min_kvinnor_varde` procent att de hade låg tilltro till andra, medan motsvarande siffra bland männen var ca `r tillit_andra_min_man_varde` procent. Även personer födda i Sverige har relativt stor tilltro till andra.
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
@@ -791,17 +796,6 @@ Om frågan istället fokuserar på tillit till samhällets institutioner är det
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_fohm$lag_tillit_till_samhallets_institutioner
-```
-
-Två frågor kopplade till självskattad hälsa som möjligtvis kan vara med i rapporten.
-
-
-```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
-gg_fohm$bra_eller_mycket_bra_halsa
-```
-
-```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
-gg_fohm$bra_eller_mycket_bra_halsa_kon
 ```
 
 
@@ -819,7 +813,7 @@ Utrikes födda utmärker sig inte i undersökningen med fallande tillit över ti
 
 I 2020 års SOM-undersökning studerades även frågan om mångkulturens påverkan på tilliten ([Holmberg, S. och Rothstein, B., 2020](<https://www.gu.se/sites/default/files/migrated/1772921_f--rhandspublicering-m--ngkultur-och-tillit----holmberg-o-rothstein.pdf>){target="_blank"}).^[Holmberg, S. och Rothstein, B., 2020. Minskar mångkulturella samhällen den sociala tilliten?. I Andersson, U. et al. (red) Regntunga skyar. SOM-antologi nr. 76. SOM-Institutet, Göteborgs Universitet.]. Resultatet visade att "invandrartäta kommuner har lika stor andel höglitare som kommuner med låg andel utrikes födda. Det finns inget statistiskt samband mellan andelen utrikes födda och social tillit." Flyktingmottagandet från 2015 och framåt hade m a o ingen påverkan på den sociala tilliten.
 
-## Valdeltagande
+## Demokrati
 
 Bland inrikes födda är valdeltagandet i val till Riksdagen i Dalarna relativt högt (närmare 90 procent) och har inte förändrats nämnvärt mellan valen `r valdeltagande_riksdag_forsta_ar` och `r valdeltagande_riksdag_senaste_ar`. Utrikes födda har generellt ett lägre valdeltagande och i den gruppen har också valdeltagande minskat på senare år. Valdeltagandet bland utrikes födda varierar dessutom baserat på hur länge personerna har bott i Sverige. För de som varit i Sverige mindre än 10 år var valdeltagandet i val till Riksdagen i Dalarna år `r valdeltagande_riksdag_senaste_ar` `r valdeltagande_riksdag_under_10_senaste_varde` procent, att jämföra med `r valdeltagande_riksdag_over_10_senaste_varde` procent för de som varit i Sverige längre än 10 år. 
 
