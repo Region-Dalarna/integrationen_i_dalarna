@@ -120,7 +120,7 @@ Den här rapportens syfte är att redovisa aktuell statistik relaterat till utri
 
 I rapporten från 2019 konstaterades bl a att det var en tydlig skiljelinje i integrationen mellan utrikes födda å ena sidan och inrikes födda med utrikes födda föräldrar respektive inrikes födda med inrikes födda föräldrar å andra sidan. Skillnaden mellan de inrikes födda, oavsett om de hade inrikes eller utrikes födda föräldrar, var relativt liten när det gäller t ex skolresultat och sysselsättningsgrad. Distinktionen i denna rapport är därför mellan utrikes födda och inrikes födda, men även kvinnor och män i de delar det är relevant samt vistelsetid i landet för de som är utrikes födda. 
 
-# Bakgrund
+# Demografi och invandringshistorik
 
 <span class = "kommentar">*Vad behövs här för att introducera en bakgrundsbeskrivning av invandringen över tid? Eller ska vi dela på bakgrundsavsnittet helt och ha ett första avsnitt som beskriver invandringen över tid följt av ett som beskriver den demografiska utvecklingen?*</span>
 
@@ -225,7 +225,7 @@ gg_storsta_fodelseland$storsta_fodelseland_Dalarna
 Sverige är sedan några år inne i en demografisk fas där de stora babyboom-kullarna från slutet av 1940-
 och början av 1950-talet uppnår pensionsålder. Många svenska kommuner har en alltmer ålderstigen befolkning, en effekt av den urbaniseringsvåg som pågått under hela 1900-och 2000-talet då många unga lämnat landsbygden och mindre tätorter till förmån för residens- och universitetsstäder.
 
-En stor andel äldre i befolkningen medför ekonomiska påfrestningar för dessa kommuner då allt färre i arbetsför ålder ska försörja allt fler äldre och barn. Redan i <span class = "kommentar">*Långtidsutredningen år 2015*</span> gjordes beräkningar på hur mycket kommunalskatten skulle behöva höjas i kommunerna för att upprätthålla samma servicenivå år 2040 som då, som en följd av den förändrade demografiska strukturen. Beräkningarna visade på orimliga skattehöjningar, cirka 50-procentiga ökningar, vilket kan ses som en signal på hur allvarlig situationen var redan för tio år sedan. Förutom att den demografiska situationen medför färre skattebetalare som ska försörja allt fler äldre så innebär den också ett stort kompetensförsörjningsproblem.
+En stor andel äldre i befolkningen medför ekonomiska påfrestningar för dessa kommuner då allt färre i arbetsför ålder ska försörja allt fler äldre och barn. Redan i <span class = "kommentar">*Långtidsutredningen 2015 (ref)*</span> gjordes beräkningar på hur mycket kommunalskatten skulle behöva höjas i kommunerna för att upprätthålla samma servicenivå år 2040 som då, som en följd av den förändrade demografiska strukturen. Beräkningarna visade på orimliga skattehöjningar, cirka 50-procentiga ökningar, vilket kan ses som en signal på hur allvarlig situationen var redan för tio år sedan. Förutom att den demografiska situationen medför färre skattebetalare som ska försörja allt fler äldre så innebär den också ett stort kompetensförsörjningsproblem. I <span class = "kommentar">*Långtidsutredningen 2019 (ref)*</span> beräknas statsbidragen till kommunsektorn, vid oförändrade kommunalskatter, behöva nästan dubbleras fram till 2035 för att möta den demografiskt betingade efterfrågan på kommunala tjänster. Utmaningen ligger dock inte främst i finansieringen, utan i att hitta arbetskraften. De största personalbristerna förväntas i landsbygdsregioner, med risk för ojämlikhet i levnadsförhållanden och utvecklingsmöjligheter. 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
