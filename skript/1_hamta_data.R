@@ -625,3 +625,18 @@ valdeltagande_riksdag_under_10_forsta_varde <- round(valdeltagande_df %>% filter
 valdeltagande_riksdag_over_10_forsta_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till riksdag",variabel == "10- år",kön == "män och kvinnor") %>% filter(år == valdeltagande_riksdag_forsta_ar) %>% .$varde,0)
 
 # Region/kommun - typ samma värden så gör ingen skillnad
+valdeltagande_region_senaste_ar <- max(valdeltagande_df %>% filter(val == "Valdeltagande i val till region") %>% .$år)
+valdeltagande_region_forsta_ar <- min(valdeltagande_df %>% filter(val == "Valdeltagande i val till region") %>% .$år)
+
+valdeltagande_region_inrikes_senaste_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till region",variabel == "Inrikes född",kön == "män och kvinnor") %>% filter(år == valdeltagande_region_senaste_ar) %>% .$varde,0)
+valdeltagande_region_utrikes_senaste_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till region",variabel == "samtliga utrikes födda",kön == "män och kvinnor") %>% filter(år == valdeltagande_region_senaste_ar) %>% .$varde,0)
+
+valdeltagande_region_under_10_senaste_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till region",variabel == "< 10 år",kön == "män och kvinnor") %>% filter(år == valdeltagande_region_senaste_ar) %>% .$varde,0)
+valdeltagande_region_over_10_senaste_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till region",variabel == "10- år",kön == "män och kvinnor") %>% filter(år == valdeltagande_region_senaste_ar) %>% .$varde,0)
+
+valdeltagande_region_inrikes_forsta_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till region",variabel == "Inrikes född",kön == "män och kvinnor") %>% filter(år == valdeltagande_region_forsta_ar) %>% .$varde,0)
+valdeltagande_region_utrikes_forsta_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till region",variabel == "samtliga utrikes födda",kön == "män och kvinnor") %>% filter(år == valdeltagande_region_forsta_ar) %>% .$varde,0)
+
+valdeltagande_region_under_10_forsta_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till region",variabel == "< 10 år",kön == "män och kvinnor") %>% filter(år == valdeltagande_region_forsta_ar) %>% .$varde,0)
+valdeltagande_region_over_10_forsta_varde <- round(valdeltagande_df %>% filter(val == "Valdeltagande i val till region",variabel == "10- år",kön == "män och kvinnor") %>% filter(år == valdeltagande_region_forsta_ar) %>% .$varde,0)
+
