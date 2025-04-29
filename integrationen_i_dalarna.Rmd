@@ -784,6 +784,7 @@ gg_fohm$bra_eller_mycket_bra_halsa
 gg_fohm$bra_eller_mycket_bra_halsa_kon
 ```
 
+<span class = "kommentar">Det finns en del underlag från hälso- och sjukvårdsbarometern kring hälso- och vårdupplevelser där utrikes födda är mindre nöjda. Titta på underlag från Xuefei. Inte tillgång till vård som behövs. Väntetider för långa, men samtidigt lika stort förtroende och fler upplever att vården ges på lika villkor. Tyvärr ett litet urval av utrikes födda. </span> 
 
 ## Tillit
 Enligt Folkhälsomyndighetens undersökningar om hälsa och levnadsvanor ("Hälsa på lika villkor") från år `r tillit_andra_ar` har gruppen som är födda i `r tillit_andra_max_kvinnor_grupp` lägst tillit till andra människor, såväl om kvinnorna som männen i Sverige tillfrågas. I den första gruppen uppger ca `r tillit_andra_max_kvinnor_varde` procent att de har svårt att lita på andra, medan motsvarande siffra bland männen är ungefär `r tillit_andra_max_man_varde` procent. Högst tilltro till andra har personer födda i `r tillit_andra_min_man_grupp`, såväl bland kvinnorna som männen i Sverige. Bland kvinnorna uppgav `r tillit_andra_min_kvinnor_varde` procent att de hade låg tilltro till andra, medan motsvarande siffra bland männen var ca `r tillit_andra_min_man_varde` procent. Även personer födda i Sverige har relativt stor tilltro till andra.
