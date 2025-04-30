@@ -708,6 +708,28 @@ gg_utbniva_bakgrund_alder$utb_niva_bakgrund
 
 <span class = "kommentar">Diagram över 1: Andelar obehöriga till gymnasiet - inskrivna på IM-program utifrån bakgrund och 2:Utrikes födda unga som inte studerar eller inte aktiva på arbetsmarknaden utifrån vistelsetid</span>
 
+Bland personer mellan 16 och 19 år (det vänstra diagrammet nedan) är andelen som varken arbetar eller studerar (UVAS) högre för kvinnor än för män, oavsett om personen är inrikes eller utrikes född. Andelen är dessutom som högst för personer som vistats i Sverige en kort tid, och sjunker med vistelsetid. För utrikes födda kvinnor sjunker andelen som varken arbetar eller studerar bland 16-19 åringar från `r uvas_16_19_kvinnor_0_1` procent för de som varit i Sverige i max 2 år till `r uvas_16_19_kvinnor_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel för inrikes födda kvinnor är `r uvas_16_19_kvinnor_inrikes` procent.
+
+För utrikes födda män sjunker motsvarande andel bland 16-19 åringar från ca `r uvas_16_19_man_0_1` procent för de som varit i Sverige i max 2 år till ungefär `r uvas_16_19_man_10_` procent för de som varit i landet i minst 10 år. Noterbart är dock att andelen är högre för män som varit i Sverige i mer än 10 år, än fö de som varit i landet mellan 2 och 10 år. Bland inrikes födda varken arbetar eller studerar `r uvas_16_19_man_inrikes` procent av männen mellan 16 och 19 år.
+
+Om de unga mellan 20-25 år istället undersöks framträder en delvis annorlunda bild (se det högra diagrammet nedan). Bland kvinnor är andelen som varken arbetar eller studerar högre i denna åldersgrupp än den var bland 16-19 åringar, oavsett om personern är inrikes eller utrikes född. För utrikes födda kvinnor sjunker andelen som varken arbetar eller studerar bland 20-25 åringar från `r uvas_20_25_kvinnor_0_1` procent för de som varit i Sverige i max 2 år till `r uvas_20_25_kvinnor_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel för inrikes födda kvinnor är `r uvas_20_25_kvinnor_inrikes` procent.
+
+För utrikes födda män är trenden omvänd, där andelen som varken arbetar eller studerar bland 20-25 åringar istället ökar med vistelsetiden,  från ca `r uvas_20_25_man_0_1` procent för de som varit i Sverige i max 2 år till ungefär `r uvas_20_25_man_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel bland inrikes födda män i samma ålder är `r uvas_20_25_man_inrikes` procent. 
+
+Utrikes födda män mellan 20 och 25 år verkar således hamna i någon form av sysselsättning snabbare än män i åldersgruppen 16-19 år, men därefter ökar andelen som varken arbetar eller studerar bland 20-25 åringarna, medan den minskar för de mellan 16-19 år. Bland utrikes födda kvinnor är andelen som varken arbetar eller studerar högre bland 20-25 åringar än bland 16-19 åringar, oavsett vistelsetid, ett mönster som även gäller för inrikes födda kvinnor och män.
+
+```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
+gg_uvas$UVAS_vistelsetid_inrikes_senastear_Dalarna
+```
+
+Andelen utrikes födda som varken arbetar eller studerar har förändrats relativt mycket över tid. I slutet på 1990-talet varken arbetade eller studerade runt 60 procent av de utrikes födda mellan 16 och 19 år som varit i Sverige i max 2 år, att jämföra med `r uvas_16_19_senaste_ar_0_1` procent idag. Den största minskningen skedde i början på 2000-talet och därefter har andelen varierat en del över tid. En liknande trend går att utläsa bland utrikes födda 16-19 åringar som varit i landet längre, men bland dessa är andelen som varken arbetar eller studerar tydligt lägre.
+
+Även bland utrikes födda mellan 20 och 25 år har motsvarande andel förändrats mycket över tid. I slutet på 1990-talet varken arbetade eller studerade runt 70 procent av de utrikes födda mellan 20 och 25 år som varit i Sverige i max 2 år, att jämföra med `r uvas_20_25_senaste_ar_0_1` procent idag. En stor del av minskningen skedde i mitten på 00-talet och därefter har andelen gått såväl upp som ner. En liknande utveckling syns även bland utrikes födda 20-25 åringar som varit i landet längre.
+
+```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
+gg_uvas$UVAS_vistelsetid_inrikes_tid_Dalarna
+```
+
 
 # Boende och flyttmönster
 Med nästan alla sätt att mäta boende skiljer sig grupperna svensk och utländsk bakgrund åt. Det finns flera sätt att mäta boende på, typ av boende (villa eller lägenhet), boendeyta och bostadsägande säger alla någonting om hur människor bor, något som givetvis speglar den ekonomiska situation man lever i. Det innebär, precis som på de flesta andra områden, att gruppen utrikes födda kommer att ha en stor spridning avseende etablering i samhället. Några i gruppen kommer att ha bott i Sverige i mindre än ett år och andra i flera decennier. Således finns även inom boende anledning att göra analyser uppdelat på vistelsetid i Sverige. att människor som bott längre i Sverige i högre utsträckning äger sitt eget boende, antingen genom äganderätt (småhus) eller bostadsrätt (småhus eller lägenhet).
