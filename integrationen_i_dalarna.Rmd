@@ -272,6 +272,17 @@ gg_andel_utrikes$utrikes_fodda_andel_Dalarna
 # Utbildning och arbetsmarknad
 <span class = "kommentar"> Överväg att slå ihop avsnitt 2 och 3 till ett arbetsmarknadsavsnitt</span>
 
+
+<span class = "kommentar"> Två diagram kopplade till godkända i SFI</span>
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+gg_SFI$sfi_vistelsetid_tidsserie_Dalarna
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+gg_SFI$sfi_vistelsetid_senastear_Dalarna
+```
+
+
 En viktig aspekt för integrationen är hur stark arbetsmarknaden är vid tidpunkten för invandringen. När
 Sverige under 1990-talet tog emot ett stort antal asylsökande från Balkan hade vi den djupaste ekonomiska
 krisen i Sverige i modern tid. Mellan 1990 och 1994 gick sysselsättningen ned med drygt 16 procent och

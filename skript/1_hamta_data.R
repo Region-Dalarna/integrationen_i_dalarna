@@ -166,6 +166,14 @@ fodelseunderskott_netto <- format(abs(sum(befutv_per_komponent_ar_scb_df %>% fil
 inrikes_flyttningsoverskott_netto <- format(abs(sum(befutv_per_komponent_ar_scb_df %>% filter(förändringar == "Inrikes flyttnetto") %>%  .$personer)),big.mark = " ")
 invandringsoverskott_netto <- format(sum(befutv_per_komponent_ar_scb_df %>% filter(förändringar == "Invandringsöverskott") %>%  .$personer),big.mark = " ")
 
+####################################
+### SFI kopplat till vistelsetid ###
+####################################
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_SFI_godk%C3%A4nd_vistelsetid_kon_tid_IntRap.R")
+gg_SFI <- diag_SFI_bakgrund(output_mapp  = Output_mapp_figur,
+                            skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                            returnera_data_rmarkdown = TRUE)
+
 ########################
 # Arbetsmarknadsstatus #
 ########################
