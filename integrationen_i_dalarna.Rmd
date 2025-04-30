@@ -274,14 +274,18 @@ gg_andel_utrikes$utrikes_fodda_andel_Dalarna
 
 
 <span class = "kommentar"> Två diagram kopplade till godkända i SFI</span>
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
-gg_SFI$sfi_vistelsetid_tidsserie_Dalarna
-```
+
+Hur lång tid det tar att slutföra "Svenska för invandrare", hädanefter SFI, påverkas, för framförallt kvinnor, av vilken utbildningsnivå personen har. Kvinnor med förgymnasial utbildning som blev godkända i SFI hade  år `r sfi_max_ar` varit i Sverige i `r sfi_kvinnor_forgymnasial` dagar (medianvärde), att jämföra med `r sfi_kvinnor_gymnasial` dagar för kvinnor med gymnasial utbildning. För kvinnor med högst utbildning (eftergymnasial) tog det `r sfi_kvinnor_eftergymnasial` dagar, vilket alltså är något längre tid än bland de med gymnasial utbildning.
+
+Män med förgymnasial utbildning...
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_SFI$sfi_vistelsetid_senastear_Dalarna
 ```
 
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+gg_SFI$sfi_vistelsetid_tidsserie_Dalarna
+```
 
 En viktig aspekt för integrationen är hur stark arbetsmarknaden är vid tidpunkten för invandringen. När
 Sverige under 1990-talet tog emot ett stort antal asylsökande från Balkan hade vi den djupaste ekonomiska
