@@ -174,6 +174,28 @@ gg_SFI <- diag_SFI_bakgrund(output_mapp  = Output_mapp_figur,
                             skriv_diagrambildfil = spara_diagram_som_bildfiler,
                             returnera_data_rmarkdown = TRUE)
 
+sfi_min_ar <- min(SFI_df$år)
+sfi_max_ar <- max(SFI_df$år)
+
+# Könsuppdelat
+sfi_kvinnor_forgymnasial <- SFI_df %>% filter(kön == "kvinnor",variabel == "Förgymnasial utbildning") %>% filter(år == max(år)) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
+sfi_kvinnor_gymnasial <- SFI_df %>% filter(kön == "kvinnor",variabel == "Gymnasial utbildning") %>% filter(år == max(år)) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
+sfi_kvinnor_eftergymnasial <- SFI_df %>% filter(kön == "kvinnor",variabel == "Eftergymnasial utbildning") %>% filter(år == max(år)) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
+
+sfi_man_forgymnasial <- SFI_df %>% filter(kön == "män",variabel == "Förgymnasial utbildning") %>% filter(år == max(år)) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
+sfi_man_gymnasial <- SFI_df %>% filter(kön == "män",variabel == "Gymnasial utbildning") %>% filter(år == max(år)) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
+sfi_man_eftergymnasial <- SFI_df %>% filter(kön == "män",variabel == "Eftergymnasial utbildning") %>% filter(år == max(år)) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
+
+# Tidsserie
+sfi_forstaar_varde_forgymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Förgymnasial utbildning") %>% filter(år == sfi_min_ar) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
+sfi_forstaar_varde_gymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Gymnasial utbildning") %>% filter(år == sfi_min_ar) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
+sfi_forstaar_varde_eftergymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Eftergymnasial utbildning") %>% filter(år == sfi_min_ar) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
+
+sfi_sistaar_varde_forgymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Förgymnasial utbildning") %>% filter(år == sfi_max_ar) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
+sfi_sistaar_varde_gymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Gymnasial utbildning") %>% filter(år == sfi_max_ar) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
+sfi_sistaar_varde_eftergymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Eftergymnasial utbildning") %>% filter(år == sfi_max_ar) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
+
+
 ########################
 # Arbetsmarknadsstatus #
 ########################
