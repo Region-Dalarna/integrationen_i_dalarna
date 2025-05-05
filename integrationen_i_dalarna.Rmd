@@ -275,13 +275,18 @@ gg_andel_utrikes$utrikes_fodda_andel_Dalarna
 
 <span class = "kommentar"> Två diagram kopplade till godkända i SFI</span>
 
-Hur lång tid det tar att slutföra "Svenska för invandrare", hädanefter SFI, påverkas, för framförallt kvinnor, av vilken utbildningsnivå personen har. Kvinnor med förgymnasial utbildning som blev godkända i SFI hade  år `r sfi_max_ar` varit i Sverige i `r sfi_kvinnor_forgymnasial` dagar (medianvärde), att jämföra med `r sfi_kvinnor_gymnasial` dagar för kvinnor med gymnasial utbildning. För kvinnor med högst utbildning (eftergymnasial) tog det `r sfi_kvinnor_eftergymnasial` dagar, vilket alltså är något längre tid än bland de med gymnasial utbildning.
+Hur lång tid det tar att slutföra "Svenska för invandrare", hädanefter SFI, från när man invandrade till Sverige (vistelsetid) påverkas, för framförallt kvinnor, av vilken utbildningsnivå personen har. Kvinnor med förgymnasial utbildning som blev godkända i SFI hade  år `r sfi_max_ar` varit i Sverige i `r sfi_kvinnor_forgymnasial` dagar (medianvärde), att jämföra med `r sfi_kvinnor_gymnasial` dagar för kvinnor med gymnasial utbildning. För kvinnor med högst utbildning (eftergymnasial) tog det `r sfi_kvinnor_eftergymnasial` dagar, vilket alltså är något längre tid än för de med gymnasial utbildning.
 
-Män med förgymnasial utbildning...
+Män med förgymnasial utbildning som blev godkända i SFI under år `r sfi_max_ar` hade varit i Sverige betydligt kortare tid än kvinnorna med motsvarande utbildning, `r sfi_man_forgymnasial` dagar (medianvärde). Till skillnad från kvinnorna, har dock de män med gymnasial utbildning som blivit godkända under år `r sfi_max_ar` varit i Sverige längre än motsvarande personer med förgymnasial utbildning, hela `r sfi_man_gymnasial` dagar, vilket även är klart längre än kvinnorna med gymnasial utbildning. De män med längst utbildning (eftergymnasial) hade varit i Sverige i `r sfi_man_eftergymnasial` dagar när de blev godkända i SFI, vilket är något kortare tid än kvinnorna med motsvarande utbildning.
+
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_SFI$sfi_vistelsetid_senastear_Dalarna
 ```
+
+Vistelsetiden för de personer boende i Dalarna som blivit godkända i SFI har förändrats relativt mycket över tid, men oavsett utbildningsnivå har vistelsetiden ökat över tid. Under några år i slutet på 1990-talet hade de män och kvinnor med förgymnasial utbildning som blivit godkända i SFI varit i Sverige ungefär 1300-1400 dagar (medianvärde). Därefter såväl ökade som minskade vistelsetiden fram till mitten av 2010-talet, innan den ökade tydligt fram till åren runt pandemin (2020-2021). År `r sfi_max_ar` hade de män och kvinnor som blev godkända i SFI i Dalarna varit i Sverige i `r sfi_sistaar_varde_forgymnasial` dagar, vilket är ungefär lika länge som de som blev godkända åren innan. För personer med längre utbildningar (gymnasial eller eftergymnasial) är trenden liknande, men vistelsetiden generellt kortare. 
+
+En orsak till att vistelsetiden ökade stadigt för de som blev godkända från mitten av 2010-talet, oavsett utbildningsbakgrund, kan vara att många då invandrade till Sverige. Det, i kombination med en pandemi som sannolikt försvårade möjligheterna till undervisning, kan ha gjort att det tog längre tid att slutföra SFI.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_SFI$sfi_vistelsetid_tidsserie_Dalarna
