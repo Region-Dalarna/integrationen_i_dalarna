@@ -275,6 +275,10 @@ gg_andel_utrikes$utrikes_fodda_andel_Dalarna
 
 <span class = "kommentar"> Två diagram kopplade till godkända i SFI</span>
 
+## Vägen till språk?
+
+Ett viktigt steg för att integreras i ett samhälle är naturligtvis att lära sig språket. I Sverige är det svenska språket det officiella språket och det är viktigt för att kunna delta i samhället, både socialt och ekonomiskt. För att underlätta integrationen av nyanlända har Sverige ett system för svenskundervisning för invandrare, SFI. SFI är en utbildning som erbjuds till personer som är bosatta i Sverige och saknar sådana grundläggande kunskaper i svenska språket som utbildningen syftar till att ge. Från andra kalenderhalvåret det år hen fyller 16 år har personen rätt till SFI ([Skolverket](https://www.skolverket.se/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-sfi){target="_blank"}).
+
 Hur lång tid det tar att slutföra "Svenska för invandrare", hädanefter SFI, från när man invandrade till Sverige (vistelsetid) påverkas, för framförallt kvinnor, av vilken utbildningsnivå personen har. Kvinnor med förgymnasial utbildning som blev godkända i SFI hade  år `r sfi_max_ar` varit i Sverige i `r sfi_kvinnor_forgymnasial` dagar (medianvärde), att jämföra med `r sfi_kvinnor_gymnasial` dagar för kvinnor med gymnasial utbildning. För kvinnor med högst utbildning (eftergymnasial) tog det `r sfi_kvinnor_eftergymnasial` dagar, vilket alltså är något längre tid än för de med gymnasial utbildning.
 
 Män med förgymnasial utbildning som blev godkända i SFI under år `r sfi_max_ar` hade varit i Sverige betydligt kortare tid än kvinnorna med motsvarande utbildning, `r sfi_man_forgymnasial` dagar (medianvärde). Till skillnad från kvinnorna, har dock de män med gymnasial utbildning som blivit godkända under år `r sfi_max_ar` varit i Sverige längre än motsvarande personer med förgymnasial utbildning, hela `r sfi_man_gymnasial` dagar, vilket även är klart längre än kvinnorna med gymnasial utbildning. De män med längst utbildning (eftergymnasial) hade varit i Sverige i `r sfi_man_eftergymnasial` dagar när de blev godkända i SFI, vilket är något kortare tid än kvinnorna med motsvarande utbildning.
@@ -291,6 +295,10 @@ En orsak till att vistelsetiden ökade stadigt för de som blev godkända från 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_SFI$sfi_vistelsetid_tidsserie_Dalarna
 ```
+
+## Utbildning?
+
+## Arbetsmarknad och sysselsättning?
 
 En viktig aspekt för integrationen är hur stark arbetsmarknaden är vid tidpunkten för invandringen. När
 Sverige under 1990-talet tog emot ett stort antal asylsökande från Balkan hade vi den djupaste ekonomiska

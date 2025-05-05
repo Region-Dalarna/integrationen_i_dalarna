@@ -50,7 +50,7 @@ gg_obj <- SkapaStapelDiagram(skickad_df = arblosa_bakgr,
 #https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__AA__AA0003__AA0003H/IntGr8LanKON1N/
 
 # Hur fort man blir klar med SFI kopplat till utbildning
-# Har lagt till diagrammen men inte skrivit text ännu
+# Har lagt till diagram och skrivit text
 #https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__AA__AA0003__AA0003H/IntGr8LanKON3/table/tableViewLayout1/
 
 
