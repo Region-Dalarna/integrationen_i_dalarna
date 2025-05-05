@@ -190,6 +190,8 @@ När de utrikes födda personer som är bosatta i Dalarna kartläggs utifrån de
 
 <span class = "kommentar">*Här ska diagram 5 "Antal utrikes födda i Dalarnas län efter vistelsetid" placeras in - stycket ovan behöver kontrolleras.*</span>
 
+<span class = "kommentar">Det här avsnittet borde eventuellt flyttas upp ett steg, så att det följer direkt på diskussionen runt befolkningsutveckling</span>
+
 Genom att studera befolkningsutvecklingen för inrikes och utrikes födda i länet de senaste åren, blir det tydligt att befolkningen i länet som helhet hade minskat utan invandringen. Befolkningen ökade totalt sett mellan år 2000–2024 i 8 av länets kommuner, medan den minskade i 7 av dem.  Antalet utrikes födda personer har under tidsperioden ökat i Dalarnas läns samtliga kommuner, medan antalet inrikes födda personer har minskat i alla kommuner förutom Falun och Gagnef. Slutsatsen blir att de kommuner i länet som har växt i invånarantal med undantagen Falun och Gagnef har gjort det som en följd av invandring, medan de kommuner som krympt har begränsat befolkningsminskningen genom att fler har invandrat än utvandrat. Notera även att utrikes föddas barn ingår i kategorin inrikes födda. Ökningen av antalet utrikes födda var i relation till befolkningsmängd störst i Hedemora, Avesta, Ludvika, och Borlänge. 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
@@ -197,6 +199,8 @@ Genom att studera befolkningsutvecklingen för inrikes och utrikes födda i län
 gg_antal_utrikes$befolkningsforandring_Dalarna
 
 ```
+
+För att förstå befolkningsutvecklingen i Dalarna är det även viktigt att undersöka de andra komponenter, vid sidan om invandringen, som påverkar den, födelseöverskottet och den inrikes flyttningen.
 
 Mellan år `r befforandring_komponent_min_ar` och `r befforandring_komponent_max_ar` har antalet döda i Dalarna varit fler än antalet födda och antalet utflyttade till övriga Sverige har varit fler än antalet inflyttade från övriga Sverige. Totalt flyttade `r inrikes_flyttningsoverskott_netto` personer netto från Dalarna till andra delar av Sverige under perioden, medan  det dog `r fodelseunderskott_netto` fler personer än det föddes. Under samma period var invandringsöverskottet `r invandringsoverskott_netto` personer. Att Dalarnas befolkning har växt under 2000-talet beror således på att invandringen har varit relativt stor.
 
@@ -256,6 +260,8 @@ gg_antal_utrikes$befolkningsprognos_lan_Dalarna
 ```
 
 Enligt SCB:s befolkningsprognos från juni 2024 förväntas antalet utrikes födda i Dalarnas län mellan 16–64 år att `r ifelse(kumulativ_summa_utrikes_max_prognos>0,"öka","minska")` med `r kumulativ_summa_utrikes_max_prognos_abs` personer mellan `r min_ar_utrikes_kumulativ_prognos` och `r max_ar_utrikes_kumulativ_prognos`, medan antalet inrikes födda personer i länet förväntas att `r ifelse(kumulativ_summa_inrikes_max_prognos>0,"öka","minska")` med `r kumulativ_summa_inrikes_max_prognos_abs` personer. Enligt prognosen kommer antalet personer mellan 16-64 år således att minska tydligt i Dalarna fram till `r max_ar_utrikes_kumulativ_prognos`, vilket förstärker länets utmaning med kompetensförsörjning. Det blir då extra viktigt att ta vara på den resurs som utrikesfödda kan utgöra, annars riskerar såväl näringsliv som offentlig sektor att få mycket svårt med arbetskraftsförsörjningen.
+
+<span class = "kommentar">Stycke och figur nedan borde eventuellt flyttas så att det hamnar direkt efter det andra diagrammet på kommunnivå ovan.</span>
 
 Andelen av befolkningen som är födda utrikes är lägre i samtliga Dalarnas kommuner jämfört med riket, där ungefär `r andel_utrikes_Sverige_sista_ar` procent av invånarna var födda i ett annat land än Sverige år `r andel_utrikes_senaste_ar`. Högst andel utrikes födda i Dalarna återfinns i `r andel_utrikes_kommun_hogst_sista_ar` där ungefär `r andel_utrikes_kommun_hogst_sista_ar_varde` procent av befolkningen är utrikes födda. Även Borlänge och Avesta har en relativt stor andel utrikes födda (`r andel_utrikes_Borlänge_sista_ar` respektive `r andel_utrikes_Avesta_sista_ar` procent). Lägst andel utrikes födda finns i `r andel_utrikes_kommun_lagst_sista_ar`, där endast `r andel_utrikes_kommun_lagst_sista_ar_varde` procent av befolkningen är utrikes födda. 
 
