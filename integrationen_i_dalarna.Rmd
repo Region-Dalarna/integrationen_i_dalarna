@@ -275,7 +275,7 @@ gg_andel_utrikes$utrikes_fodda_andel_Dalarna
 
 <span class = "kommentar"> Två diagram kopplade till godkända i SFI</span>
 
-## Vägen till språk?
+## Språk?
 
 Ett viktigt steg för att integreras i ett samhälle är naturligtvis att lära sig språket. Att ha grundläggande kunskaper i det officiella språket är viktigt för att kunna delta i samhället, både socialt och ekonomiskt. För att underlätta integrationen av nyanlända har Sverige ett system för svenskundervisning för invandrare, hädanefter SFI. SFI är en utbildning som erbjuds till personer som är bosatta i Sverige och saknar sådana grundläggande kunskaper i svenska språket som utbildningen syftar till att ge. Från andra kalenderhalvåret det år hen fyller 16 år har personen rätt till SFI ([Skolverket](https://www.skolverket.se/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-sfi){target="_blank"}).
 
@@ -297,6 +297,9 @@ gg_SFI$sfi_vistelsetid_tidsserie_Dalarna
 ```
 
 ## Utbildning?
+
+<span class = "kommentar"> Flytta figurer kopplade till utbildning hit? Just nu ligger många av dessa efter arbetsmarknadsavsnittet</span>
+
 
 ## Arbetsmarknad och sysselsättning?
 
