@@ -122,9 +122,15 @@ I rapporten från 2019 konstaterades bl a att det var en tydlig skiljelinje i in
 
 # Demografi och invandring
 
-<span class = "kommentar">*Vad behövs här för att introducera en bakgrundsbeskrivning av invandringen över tid? Eller ska vi dela på bakgrundsavsnittet helt och ha ett första avsnitt som beskriver invandringen över tid följt av ett som beskriver den demografiska utvecklingen?*</span>
+<span class = "kommentar">*Slå ihop hela avsnittet - inledning med demografin som helhet i länet (nu först i 1.2), sen övergång till den att beskriva den utrikes födda befolkningen (1.1), sist prognos för framtiden (sist i 1.2)*</span>
 
-## Den utrikes födda befolkningen i Sverige och i Dalarna
+Sverige är sedan några år inne i en demografisk fas där de stora babyboom-kullarna från slutet av 1940-
+och början av 1950-talet uppnåt pensionsålder. Många svenska kommuner har en alltmer ålderstigen befolkning, en effekt av den urbaniseringsvåg som pågått under hela 1900-och 2000-talet då många unga lämnat landsbygden och mindre tätorter till förmån för residens- och universitetsstäder.
+
+En stor andel äldre i befolkningen medför ekonomiska påfrestningar för dessa kommuner då allt färre i arbetsför ålder ska försörja allt fler äldre och barn. Redan i <span class = "kommentar">*Långtidsutredningen 2015 (ref)*</span> gjordes beräkningar på hur mycket kommunalskatten skulle behöva höjas i kommunerna för att upprätthålla samma servicenivå år 2040 som då, som en följd av den förändrade demografiska strukturen. Beräkningarna visade på orimliga skattehöjningar, cirka 50-procentiga ökningar, vilket kan ses som en signal på hur allvarlig situationen var redan för tio år sedan. Förutom att den demografiska situationen medför färre skattebetalare som ska försörja allt fler äldre så innebär den också ett stort kompetensförsörjningsproblem. 
+
+I <span class = "kommentar">*Långtidsutredningen 2019 (ref)*</span> beräknas statsbidragen till kommunsektorn, vid oförändrade kommunalskatter, behöva nästan dubbleras fram till 2035 för att möta den demografiskt betingade efterfrågan på kommunala tjänster. Utmaningen ligger dock inte främst i finansieringen, utan i att hitta arbetskraften. De största personalbristerna förväntas i landsbygdsregioner, med risk för ojämlikhet i levnadsförhållanden och utvecklingsmöjligheter.
+
 För att få en förståelse för den utrikes födda befolkningen i Dalarna och hur invandringen sett ut över tid, behöver situationen i riket som helhet analyseras. Arbetskraftsinvandringen, främst från Norden, tog fart efter andra världskriget och pågick fram till 1960-talets slut. I mitten av 1980-talet förändrades invandringens karaktär och fler flyktingar togs emot till följd av globala katastrofer. Från 1990-talet och framåt har krigssituationer i olika delar av världen föranlett en högre grad av flyktinginvandring med kriget i Syrien i mitten av 2010-talet som den tid då asylinvandringen nådde över 160 000 personer i Sverige. Därefter har antalet asylsökande minskat successivt och `r asylsokande_max_ar` sökte `r asylsokande_senaste_ar_antal` personer asyl i Sverige, vilket är det lägsta antalet sedan 1996.
 
 <span class = "kommentar">*Säg något mer om de senaste 10 åren, efter kriget i Syrien*</span>
@@ -237,13 +243,7 @@ När de utrikes födda personer som är bosatta i Dalarna kartläggs utifrån de
 
 <span class = "kommentar">*Här ska diagram 5 "Antal utrikes födda i Dalarnas län efter vistelsetid" placeras in - stycket ovan behöver kontrolleras.*</span>
 
-## Sveriges och Dalarnas demografi
-Sverige är sedan några år inne i en demografisk fas där de stora babyboom-kullarna från slutet av 1940-
-och början av 1950-talet uppnår pensionsålder. Många svenska kommuner har en alltmer ålderstigen befolkning, en effekt av den urbaniseringsvåg som pågått under hela 1900-och 2000-talet då många unga lämnat landsbygden och mindre tätorter till förmån för residens- och universitetsstäder.
-
-En stor andel äldre i befolkningen medför ekonomiska påfrestningar för dessa kommuner då allt färre i arbetsför ålder ska försörja allt fler äldre och barn. Redan i <span class = "kommentar">*Långtidsutredningen 2015 (ref)*</span> gjordes beräkningar på hur mycket kommunalskatten skulle behöva höjas i kommunerna för att upprätthålla samma servicenivå år 2040 som då, som en följd av den förändrade demografiska strukturen. Beräkningarna visade på orimliga skattehöjningar, cirka 50-procentiga ökningar, vilket kan ses som en signal på hur allvarlig situationen var redan för tio år sedan. Förutom att den demografiska situationen medför färre skattebetalare som ska försörja allt fler äldre så innebär den också ett stort kompetensförsörjningsproblem. 
-
-I <span class = "kommentar">*Långtidsutredningen 2019 (ref)*</span> beräknas statsbidragen till kommunsektorn, vid oförändrade kommunalskatter, behöva nästan dubbleras fram till 2035 för att möta den demografiskt betingade efterfrågan på kommunala tjänster. Utmaningen ligger dock inte främst i finansieringen, utan i att hitta arbetskraften. De största personalbristerna förväntas i landsbygdsregioner, med risk för ojämlikhet i levnadsförhållanden och utvecklingsmöjligheter. 
+Vid en analys av åldersfördelningen i Dalarnas befolkning uppdelat på den inrikes- och utrikes födda befolkningen blir det tydligt att den utrikes födda befolkningen i länet är väsentligt yngre än den inrikes födda, och har en större andel personer i arbetsför ålder (se de svarta linjerna i diagrammet nedan). Detta beror på att de personer som invandrat generellt är yngre än den inrikes födda befolkningen. Följden blir att invandringen totalt sett har en föryngrande effekt på befolkningen. Det finns även stora variationer i medelålder mellan olika grupper av utrikes födda beroende på invandringsår och födelseland. Utrikes födda utgör ungefär `r andel_utrikes` procent av den totala befolkningen i Dalarnas län och är därmed betydligt färre än inrikes födda.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -251,8 +251,7 @@ I <span class = "kommentar">*Långtidsutredningen 2019 (ref)*</span> beräknas s
 knitr::include_graphics("Figurer/Befpyramid Dalarnas län 2024_jmfr_utr_inr.png")
 
 ```
-
-Vid en analys av åldersfördelningen i Dalarnas befolkning uppdelat på den inrikes- och utrikes födda befolkningen blir det tydligt att den utrikes födda befolkningen i länet är väsentligt yngre än den inrikes födda, och har en större andel personer i arbetsför ålder (se de svarta linjerna i diagrammet ovan). Detta beror på att de personer som invandrat generellt är yngre än den inrikes födda befolkningen. Följden blir att invandringen totalt sett har en föryngrande effekt på befolkningen. Det finns även stora variationer i medelålder mellan olika grupper av utrikes födda beroende på invandringsår och födelseland. Utrikes födda utgör ungefär `r andel_utrikes` procent av den totala befolkningen i Dalarnas län och är därmed betydligt färre än inrikes födda.
+<br>
 
 Mellan år `r min_ar_utrikes_kumulativ` och `r max_ar_utrikes_kumulativ` minskade antalet inrikes födda i arbetsför ålder (`r unique(antal_forandring_lan_kumulativ$alder_grupper)`) i Dalarnas län med `r kumulativ_summa_inrikes` personer, samtidigt som antalet utrikes födda i samma åldersgrupp ökade med `r kumulativ_summa_utrikes` personer. Minskningen av antalet inrikes födda berodde på att ålderskullarna som fyllde 65 år var större än de som fyllde 20 år, samt en större inrikes utflyttning än inflyttning. Den inrikes födda befolkningen i arbetsför ålder minskade allra mest åren 2010–2015, vilket berodde på att det stora antalet personer födda i slutet av 1940-talet fyllde 65 och därmed uppnådde pensionsålder.
 
@@ -261,6 +260,7 @@ Mellan år `r min_ar_utrikes_kumulativ` och `r max_ar_utrikes_kumulativ` minskad
 gg_antal_utrikes$befolkningsforandring_lan_Dalarna
 
 ```
+<br>
 
 Enligt SCB:s befolkningsprognos från juni 2024 förväntas antalet utrikes födda i Dalarnas län mellan `r unique(antal_forandring_prognos_kumulativ$alder_grupper)` att `r ifelse(kumulativ_summa_utrikes_max_prognos>0,"öka","minska")` med `r kumulativ_summa_utrikes_max_prognos_abs` personer mellan `r min_ar_utrikes_kumulativ_prognos` och `r max_ar_utrikes_kumulativ_prognos`, medan antalet inrikes födda personer i länet förväntas att `r ifelse(kumulativ_summa_inrikes_max_prognos>0,"öka","minska")` med `r kumulativ_summa_inrikes_max_prognos_abs` personer. Enligt prognosen kommer antalet personer mellan `r unique(antal_forandring_prognos_kumulativ$alder_grupper)` således att minska tydligt i Dalarna fram till `r max_ar_utrikes_kumulativ_prognos`, vilket förstärker länets utmaning med kompetensförsörjning. Det blir då extra viktigt att ta vara på den resurs som utrikesfödda kan utgöra, annars riskerar såväl näringsliv som offentlig sektor att få mycket svårt med arbetskraftsförsörjningen.
 
@@ -269,9 +269,12 @@ Enligt SCB:s befolkningsprognos från juni 2024 förväntas antalet utrikes föd
 gg_antal_utrikes$befolkningsprognos_lan_Dalarna
 
 ```
+<br>
+
+<span class = "kommentar"> Någon kort text som bryggar över till avsnitt 2</span>
 
 # Utbildning och arbetsmarknad
-<span class = "kommentar"> Överväg att slå ihop avsnitt 2 och 3 till ett arbetsmarknadsavsnitt</span>
+<span class = "kommentar"> Sammanslagning av språkutbildning, utbildning i stor och arbetsmarknad</span>
 
 
 <span class = "kommentar"> Två diagram kopplade till godkända i SFI</span>
