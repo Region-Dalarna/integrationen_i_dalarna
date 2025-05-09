@@ -300,9 +300,9 @@ gg_SFI$sfi_vistelsetid_tidsserie_Dalarna
 Från 1 januari 2025 har kraven på att delta i SFI skärpts. Deltagande är bl a begränsat till tre år och en individuell studieplan ska upprättas i samband med antagning. Om genomströmningstiderna som rådde under 2023 inte förkortas skulle det kunna innebära att många elever inte skulle nå godkänt inom utsatt tid. Särskilt utmanande är tidsfristen för gruppen med förgymnasial utbildning som under perioden 2021-2023 i genomsnitt tog nästan dubbelt så lång tid på sig som de nya reglerna kräver.
 
 ## Utbildning
-En fullgjord gymnasieutbildning är en av de viktigaste faktorerna för ett gott liv på många sätt, såsom hälsa, inkomst, medellivslängd och möjligheten till arbete. De med en längre utbildning lever i allmänhet längre, har en genomsnittligt högre inkomst och mår i allmänhet bättre än de med kortare utbildning. Utbildningsnivån hos utrikes födda har därför en stor påverkan på möjligheterna att etablera sig i samhället, särskilt bland de unga som anländer till Sverige under skolåren och har många år kvar i livet.
+En fullgjord gymnasieutbildning är en av de viktigaste faktorerna för ett gott liv på många sätt, såsom hälsa, inkomst, medellivslängd och möjligheten till arbete. De med en högre utbildning lever i allmänhet längre, har en genomsnittligt högre inkomst och mår i allmänhet bättre än de med lägre utbildning. Utbildningsnivån hos utrikes födda har därför en stor påverkan på möjligheterna att etablera sig i samhället, särskilt bland de unga som anländer till Sverige under skolåren och har hela arbetslivet framför sig.
 
-Att gruppen utrikes födda är en heterogen grupp blir tydligt när utbildningsnivån studeras (se diagram nedan). Den stora skillnaden jämfört mot inrikes födda är att en större andel av de utrikes födda har en förgymnasial utbildning och en mindre andel gymnasial utbildning. Andelen personer som har eftergymnasial utbildning är ungefär densamma för inrikes och utrikes födda. Det är en lite högre andel kvinnor födda i Sverige med eftergymnasial utbildning än utrikes födda, men bland män är förhållandet det omvända.  Arbetskraftsinvandrare är generellt sett mer högutbildade än flyktinginvandrare, och skillnaderna i utbildningsnivå är även stora mellan olika ursprungsländer.
+Att gruppen utrikes födda är en heterogen grupp blir tydligt när utbildningsnivån studeras (se diagram nedan). Den stora skillnaden mellan utrikes och inrikes födda är att en större andel av de utrikes födda har en förgymnasial utbildning, och en mindre andel gymnasial utbildning. Andelen personer som har eftergymnasial utbildning är ungefär densamma för inrikes och utrikes födda. Det är en lite högre andel kvinnor födda i Sverige med eftergymnasial utbildning än utrikes födda, men bland män är förhållandet det omvända.  Arbetskraftsinvandrare är generellt sett mer högutbildade än flyktinginvandrare, och skillnaderna i utbildningsnivå är även stora mellan olika ursprungsländer.
 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
@@ -313,7 +313,13 @@ gg_utbniva_bakgrund$utbniva_inr_utr_kon_Dalarna_ar2023
 <span class = "kommentar">Justera diagramförklaring ovan till inrikes och utrikes födda?</span>
 <br>
 
-<span class = "kommentar">Komplettera nedan med diagram och kontrollera text</span>
+```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
+gg_utbniva_bakgrund_alder$utb_niva_bakgrund
+```
+<span class = "kommentar">Diagrammet ovan kan tas bort - i princip dublett av det som ligger innan.</span>
+<br>
+
+<span class = "kommentar">Komplettera nedanstående med diagram och kontrollera texten</span>
 
 Eftersom det finns stora skillnader i utbildningsbakgrund bland utrikes födda, är det svårt att tala om dem som en samlad grupp. Personer med låg- och hög utbildning stöter på olika typer av utmaningar på arbetsmarknaden. En aspekt som är viktig att beakta är att <span class = "kommentar">över 30 % av de som invandrat de senaste 11 åren har grundskolekompetens (förgymnasial) eller lägre utbildning</span>. Samtidigt saknas det uppgifter om utbildningsnivå för en stor andel av de utrikes födda, speciellt för de som varit en kortare tid i landet. 
 
@@ -346,6 +352,7 @@ Eftersom en gymnasieutbildning förbättrar möjligheten att etablera sig på ar
  gg_gym_hogskola_behorighet$behorighet_gymnasiet_jmf_ar
 
 ```
+<span class = "kommentar">Fler mätpunkter, före 2018</span>
 <br>
 
 Skillnaden i andelen behöriga till gymnasiet hos avgångselever i årskurs 9 mellan inrikes och utrikes födda är fortsatt stor i Dalarna. 2018 låg andelarna för såväl inrikes födda pojkar och flickor omkring 85-90 procent. De har förändrats marginellt fram till 2023. För utrikes födda flickor var andelen behöriga knappt 60 procent 2018 och har ökat till cirka 66 procent 2023. Utrikes födda pojkar har den mest positiva utvecklingen mellan åren, från knappt 48 procent till 68 procent. Det innebär att utrikes födda pojkar har en högre andel behöriga till gymnasiet än utrikes födda flickor år 2023.
@@ -366,7 +373,7 @@ Det finns stora skillnader i gymnasiebehörighet mellan grupper med olika vistel
 
 [Mörtlund (2020)](https://www.ifau.se/Forskning/Publikationer/Rapporter/2020/arbetet-med-nyanlanda-elever-i-grundskolan/){target="_blank"}^[Mörtlund, Tove (2020). Arbetet med nyanlända elever i grundskolan. IFAU Rapport 2020:2.] noterade stora utmaningar i grundskolan att kvalitetssäkra undervisningen, trots instatser kring språk- och kunskapsutvecklande arbetssätt. Att på en kort tid lära sig svenska språket och samtidigt utveckla ämneskunskaper är en svår utmaning.
 
-En annan aspekt som är viktig att mäta är hur stor andel av avgångseleverna i gymnasiet som är behöriga till att påbörja högskolestudier. Diagrammet nedan visar att 2018 var det en högre andel inrikes födda än utrikes födda elever som var behöriga. Skillnaderna var dock betydligt mindre än för avgångseleverna i årskurs 9. 2023 har förhållandet förändrats och andelen behöriga kvinnor är i princip densamma, medan för män är det en högre andel utrikes födda män som är behöriga. Den här utvecklingen stärker vistelsetidens betydelse för integrationen. Något som är viktigt att beakta när detta studeras är att gymnasieskolan inte är obligatorisk, och att de som exempelvis har avbrutit gymnasiestudier eller läser in grundläggande gymnasiebehörighet inte omfattas av diagrammet.
+En annan aspekt som är viktig att mäta är hur stor andel av avgångseleverna i gymnasiet som är behöriga till att påbörja högskolestudier. Diagrammet nedan visar att 2018 var det en högre andel inrikes födda än utrikes födda elever som var behöriga. Skillnaderna var dock betydligt mindre än för avgångseleverna i årskurs 9. 2023 har förhållandet förändrats och andelen behöriga kvinnor är i princip densamma, medan för män är det en högre andel utrikes födda män som är behöriga. Den här utvecklingen stärker vistelsetidens betydelse för integrationen. Oavsett om eleven eller föräldrarna är utrikes eller inrikes födda är kvinnor i högre utsträckning behöriga till att påbörja högskolestudier än män. Något som är viktigt att beakta när detta studeras är att gymnasieskolan inte är obligatorisk, och att de som exempelvis har avbrutit gymnasiestudier eller läser in grundläggande gymnasiebehörighet inte omfattas av diagrammet.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -375,41 +382,36 @@ En annan aspekt som är viktig att mäta är hur stor andel av avgångseleverna 
 ```
 <br>
 
-<span class = "kommentar">Hit 2025-05-08</span>
+När andelen behöriga till högskolan undersöks så kan det vara av större relevans att mäta hur stor andel av 19-åringarna som ett visst år är behöriga till högskolan. Detta eftersom vi i Sverige vanligtvis är 19 år när vi erhåller gymnasieexamen. Det är viktigt att komma ihåg att detta inte ger någon heltäckande bild av alla personer eftersom det finns vissa elever som slutför gymnasiet när de är yngre eller äldre än 19 år. En ej slutförd gymnasieexamen vid 19 års ålder beror ändå i en majoritet av fallen på att eleven ligger efter i skolan eller har hoppat av gymnasiet. Av denna anledning blir denna variabel relevant när andelen högskolebehöriga efter bakgrund och kön jämförs. Det som kan konstateras är att utrikes födda i betydligt lägre grad än inrikes födda blir behöriga till högskolestudier vid 19 års ålder. 
 
-När andelen behöriga till högskolan undersöks så kan det vara av större relevans att mäta hur stor andel av 19-åringarna som ett visst år är behöriga till högskolan. Detta eftersom vi i Sverige vanligtvis är 19 år när vi erhåller gymnasieexamen. Det är viktigt att komma ihåg att detta inte ger någon heltäckande bild av alla personer eftersom det finns vissa elever som slutför gymnasiet när de är yngre eller äldre än 19 år. En ej slutförd gymnasieexamen vid 19 års ålder beror ändå i en majoritet av fallen på att eleven ligger efter i skolan eller har hoppat av gymnasiet. Av denna anledning blir denna variabel relevant när andelen högskolebehöriga efter bakgrund och kön jämförs. Det som kan konstateras är att utrikes födda i betydligt lägre grad än inrikes födda blir behöriga till högskolestudier vid 19 års ålder. Oavsett om eleven eller föräldrarna är utrikes eller inrikes födda är kvinnor i högre utsträckning behöriga till att påbörja högskolestudier än män.
+<span class = "kommentar">Har vi räknat på det här ovan? Känns som uppgift från förra rapporten.</span>
 
+<span class = "kommentar">Vi behöver skapa diagram över 1: Andelar obehöriga till gymnasiet - inskrivna på IM-program utifrån bakgrund och 2: Utrikes födda unga som inte studerar eller inte aktiva på arbetsmarknaden utifrån vistelsetid</span>
 
-```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
-gg_utbniva_bakgrund_alder$utb_niva_bakgrund
-```
-<br>
+Bland personer mellan 16 och 19 år (det vänstra diagrammet nedan) är andelen som varken arbetar eller studerar (UVAS) högre för män än för kvinnor, oavsett om personen är inrikes eller utrikes född. Andelen är dessutom som högst för personer som vistats i Sverige en kort tid, och sjunker med vistelsetid. För utrikes födda kvinnor sjunker andelen som varken arbetar eller studerar bland 16-19 åringar från `r uvas_16_19_kvinnor_0_1` procent för de som varit i Sverige i max 2 år till `r uvas_16_19_kvinnor_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel för inrikes födda kvinnor är `r uvas_16_19_kvinnor_inrikes` procent.
 
-<span class = "kommentar">Diagram över 1: Andelar obehöriga till gymnasiet - inskrivna på IM-program utifrån bakgrund och 2:Utrikes födda unga som inte studerar eller inte aktiva på arbetsmarknaden utifrån vistelsetid</span>
-
-Bland personer mellan 16 och 19 år (det vänstra diagrammet nedan) är andelen som varken arbetar eller studerar (UVAS) högre för kvinnor än för män, oavsett om personen är inrikes eller utrikes född. Andelen är dessutom som högst för personer som vistats i Sverige en kort tid, och sjunker med vistelsetid. För utrikes födda kvinnor sjunker andelen som varken arbetar eller studerar bland 16-19 åringar från `r uvas_16_19_kvinnor_0_1` procent för de som varit i Sverige i max 2 år till `r uvas_16_19_kvinnor_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel för inrikes födda kvinnor är `r uvas_16_19_kvinnor_inrikes` procent.
-
-För utrikes födda män sjunker motsvarande andel bland 16-19 åringar från ca `r uvas_16_19_man_0_1` procent för de som varit i Sverige i max 2 år till ungefär `r uvas_16_19_man_10_` procent för de som varit i landet i minst 10 år. Noterbart är dock att andelen är högre för män som varit i Sverige i mer än 10 år, än fö de som varit i landet mellan 2 och 10 år. Bland inrikes födda varken arbetar eller studerar `r uvas_16_19_man_inrikes` procent av männen mellan 16 och 19 år.
-
-Om de unga mellan 20-25 år istället undersöks framträder en delvis annorlunda bild (se det högra diagrammet nedan). Bland kvinnor är andelen som varken arbetar eller studerar högre i denna åldersgrupp än den var bland 16-19 åringar, oavsett om personern är inrikes eller utrikes född. För utrikes födda kvinnor sjunker andelen som varken arbetar eller studerar bland 20-25 åringar från `r uvas_20_25_kvinnor_0_1` procent för de som varit i Sverige i max 2 år till `r uvas_20_25_kvinnor_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel för inrikes födda kvinnor är `r uvas_20_25_kvinnor_inrikes` procent.
-
-För utrikes födda män är trenden omvänd, där andelen som varken arbetar eller studerar bland 20-25 åringar istället ökar med vistelsetiden,  från ca `r uvas_20_25_man_0_1` procent för de som varit i Sverige i max 2 år till ungefär `r uvas_20_25_man_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel bland inrikes födda män i samma ålder är `r uvas_20_25_man_inrikes` procent. 
-
-Utrikes födda män mellan 20 och 25 år verkar således hamna i någon form av sysselsättning snabbare än män i åldersgruppen 16-19 år, men därefter ökar andelen som varken arbetar eller studerar bland 20-25 åringarna, medan den minskar för de mellan 16-19 år. Bland utrikes födda kvinnor är andelen som varken arbetar eller studerar högre bland 20-25 åringar än bland 16-19 åringar, oavsett vistelsetid, ett mönster som även gäller för inrikes födda kvinnor och män.
+För utrikes födda män sjunker motsvarande andel bland 16-19-åringar från cirka `r uvas_16_19_man_0_1` procent för de som varit i Sverige i max 2 år till ungefär `r uvas_16_19_man_10_` procent för de som varit i landet i minst 10 år. Noterbart är dock att andelen är högre för män som varit i Sverige i mer än 10 år, än för de som varit i landet mellan 2 och 10 år. Bland inrikes födda varken arbetar eller studerar `r uvas_16_19_man_inrikes` procent av männen mellan 16 och 19 år.
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_uvas$UVAS_vistelsetid_inrikes_senastear_Dalarna
 ```
+<span class = "kommentar">Saknas förklaring på kvinnor - gul, män - grön</span>
 <br>
 
-Andelen utrikes födda som varken arbetar eller studerar har förändrats relativt mycket över tid. I slutet på 1990-talet varken arbetade eller studerade runt 60 procent av de utrikes födda mellan 16 och 19 år som varit i Sverige i max 2 år, att jämföra med `r uvas_16_19_senaste_ar_0_1` procent idag. Den största minskningen skedde i början på 2000-talet och därefter har andelen varierat en del över tid. En liknande trend går att utläsa bland utrikes födda 16-19 åringar som varit i landet längre, men bland dessa är andelen som varken arbetar eller studerar tydligt lägre.
+Om de unga mellan 20 och 25 år som varken arbetar eller studerar i stället undersöks framträder en delvis annorlunda bild (se det högra diagrammet ovan). Bland kvinnor är andelen högre i denna åldersgrupp än den var bland 16-19-åringar, oavsett om personen är inrikes eller utrikes född. För utrikes födda kvinnor sjunker andelen som varken arbetar eller studerar bland 20-25 åringar från `r uvas_20_25_kvinnor_0_1` procent för de som varit i Sverige i max 2 år till `r uvas_20_25_kvinnor_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel för inrikes födda kvinnor är `r uvas_20_25_kvinnor_inrikes` procent.
 
-Även bland utrikes födda mellan 20 och 25 år har motsvarande andel förändrats mycket över tid. I slutet på 1990-talet varken arbetade eller studerade runt 70 procent av de utrikes födda mellan 20 och 25 år som varit i Sverige i max 2 år, att jämföra med `r uvas_20_25_senaste_ar_0_1` procent idag. En stor del av minskningen skedde i mitten på 00-talet och därefter har andelen gått såväl upp som ner. En liknande utveckling syns även bland utrikes födda 20-25 åringar som varit i landet längre.
+För utrikes födda män är trenden omvänd, där andelen som varken arbetar eller studerar bland 20-25-åringar istället ökar med vistelsetiden,  från ca `r uvas_20_25_man_0_1` procent för de som varit i Sverige i max 2 år till ungefär `r uvas_20_25_man_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel bland inrikes födda män i samma ålder är `r uvas_20_25_man_inrikes` procent. 
+
+Utrikes födda män mellan 20 och 25 år verkar således hamna i någon form av sysselsättning snabbare än män i åldersgruppen 16-19 år, men därefter ökar andelen som varken arbetar eller studerar bland 20-25-åringarna, medan den minskar för de mellan 16-19 år. Bland utrikes födda kvinnor är andelen som varken arbetar eller studerar högre bland 20-25-åringar än bland 16-19-åringar, oavsett vistelsetid, ett mönster som även gäller för inrikes födda kvinnor och män.
+
+Andelen utrikes födda som varken arbetar eller studerar har förändrats relativt mycket över tid. I slutet på 1990-talet varken arbetade eller studerade runt 60 procent av de utrikes födda mellan 16 och 19 år som varit i Sverige i max 2 år, att jämföra med `r uvas_16_19_senaste_ar_0_1` procent idag. Den största minskningen skedde i början på 2000-talet och därefter har andelen varierat en del över tid. En liknande trend går att utläsa bland utrikes födda 16-19 åringar som varit i landet längre, men bland dessa är andelen som varken arbetar eller studerar tydligt lägre.
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_uvas$UVAS_vistelsetid_inrikes_tid_Dalarna
 ```
 <br>
+
+Även bland utrikes födda mellan 20 och 25 år har motsvarande andel förändrats mycket över tid. I slutet på 1990-talet varken arbetade eller studerade runt 70 procent av de utrikes födda mellan 20 och 25 år som varit i Sverige i max 2 år, att jämföra med `r uvas_20_25_senaste_ar_0_1` procent idag. En stor del av minskningen skedde i mitten på 2000-talet och därefter har andelen gått såväl upp som ner. En liknande utveckling syns även bland utrikes födda 20-25-åringar som varit i landet längre.
 
 ## Arbetsmarknad och sysselsättning
 
