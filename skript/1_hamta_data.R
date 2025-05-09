@@ -547,7 +547,7 @@ utbniva_bakgr_ar <- utbniva_bakgr_kon_df$år %>% unique()
 source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_gym_hogskola_behorighet_vistelsetid_IntRap.R")
 gg_gym_hogskola_behorighet <- diag_gymnasiebehorighet_mm (output_mapp = Output_mapp_figur,
                                                           diag_kon_gym= TRUE,
-                                                          jmf_ar = c("1998","2013","2018"),
+                                                          jmf_ar = c("2005","2007","2009","2011","2013","2015","2017","2019","2021"),
                                                           diag_kon_hogskola = TRUE,
                                                           diag_vistelsetid_gym = TRUE,
                                                           skriv_diagrambildfil = spara_diagram_som_bildfiler,
