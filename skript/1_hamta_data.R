@@ -545,13 +545,30 @@ utbniva_bakgr_ar <- utbniva_bakgr_kon_df$år %>% unique()
 #############################################
 #source(here("skript/","gymnasiebehorighet_kon_vistelsetid.R"))
 source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_gym_hogskola_behorighet_vistelsetid_IntRap.R")
+ar <- as.character(seq(2005, 2021, by = 2))
 gg_gym_hogskola_behorighet <- diag_gymnasiebehorighet_mm (output_mapp = Output_mapp_figur,
                                                           diag_kon_gym= TRUE,
-                                                          jmf_ar = c("2005","2007","2009","2011","2013","2015","2017","2019","2021"),
+                                                          jmf_ar = ar,
                                                           diag_kon_hogskola = TRUE,
                                                           diag_vistelsetid_gym = TRUE,
                                                           skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                                           returnera_data_rmarkdown = TRUE)
+
+
+# Gymnasiet, jämför år - ej tillagda ännu
+ar_min <-  min(ar)
+ar_max <- max(behorighet_gym_df$år)
+inrikes_behorighet_gym_ar_min_bada <- gsub("\\.",",",round(behorighet_gym_df %>% filter(kön == "pojkar och flickor",variabel == "Inrikes född",år== ar_min) %>%  .$`Andel_behoriga`,0))
+inrikes_behorighet_gym_ar_max_bada <- gsub("\\.",",",round(behorighet_gym_df %>% filter(kön == "pojkar och flickor",variabel == "Inrikes född",år== ar_max) %>%  .$`Andel_behoriga`,0))
+
+utrikes_behorighet_gym_ar_max_pojkar <- gsub("\\.",",",round(behorighet_gym_df %>% filter(kön == "pojkar",variabel == "Utrikes född",år== ar_max) %>%  .$`Andel_behoriga`,0))
+utrikes_behorighet_gym_ar_max_flickor <- gsub("\\.",",",round(behorighet_gym_df %>% filter(kön == "flickor",variabel == "Utrikes född",år== ar_max) %>%  .$`Andel_behoriga`,0))
+
+# Högskola, jämför år - ej tillagda ännu
+inrikes_behorighet_hog_ar_max_man <- gsub("\\.",",",round(behorighet_hogskola_df %>% filter(kön == "män",variabel == "Inrikes född",år== ar_max) %>%  .$`Andel_behoriga`,0))
+utrikes_behorighet_hog_ar_max_man <- gsub("\\.",",",round(behorighet_hogskola_df %>% filter(kön == "män",variabel == "Utrikes född",år== ar_max) %>%  .$`Andel_behoriga`,0))
+inrikes_behorighet_hog_ar_max_kvinnor <- gsub("\\.",",",round(behorighet_hogskola_df %>% filter(kön == "kvinnor",variabel == "Inrikes född",år== ar_max) %>%  .$`Andel_behoriga`,0))
+utrikes_behorighet_hog_ar_max_kvinnor <- gsub("\\.",",",round(behorighet_hogskola_df %>% filter(kön == "kvinnor",variabel == "Utrikes född",år== ar_max) %>%  .$`Andel_behoriga`,0))
 
 ############################
 ####      UVAS      ########
