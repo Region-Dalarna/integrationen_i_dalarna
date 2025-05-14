@@ -573,15 +573,27 @@ Av de utrikes födda i Sverige hade ungefär `r ek_standard_utrikes_andel_max_ar
 
 Med varaktigt låg ekonomisk standard avses de personer som lever i ett hushåll som har en disponibel inkomst per konsumtionsenhet som är mindre än 60 procent av medianvärdet för samtliga personer samt under minst två av de tre föregående åren (oklart med två av tre år). 
 
-Vid analyser av sysselsättning så är det av stor vikt att också analysera gruppen som inte förvärvsarbetar. Det är ur samhälleligt avseende stor skillnad på om man har sin försörjning från ekonomiskt bistånd eller studiemedel. Det senare är en form av investering som vanligtvis leder till högre inkomster för individen framöver, medan det förra är en utväg för individer som inte har kunnat lösa sin försörjning på annat sätt. Just ekonomiskt bistånd är den kategori där det finns störst skillnader mellan grupperna med svensk och utländsk bakgrund, där närmare 16 procent av de med utländsk bakgrund har sin största inkomstkälla från ekonomiskt bistånd mot drygt en procent av de med svensk bakgrund.
+Vid analyser av sysselsättning så är det av stor vikt att också analysera gruppen som inte förvärvsarbetar. Det är ur samhälleligt avseende stor skillnad på om man har sin försörjning från ekonomiskt bistånd eller studiemedel. Det senare är en form av investering som vanligtvis leder till högre inkomster för individen framöver, medan det förra är en utväg för individer som inte har kunnat lösa sin försörjning på annat sätt. Just ekonomiskt bistånd är den kategori där det finns störst skillnader mellan grupperna med svensk och utländsk bakgrund, där närmare 16 procent av de med utländsk bakgrund har sin största inkomstkälla från ekonomiskt bistånd mot drygt en procent av de med svensk bakgrund.<span class = "kommentar">mening bör eventuellt formuleras om då vi har data för ekonomiskt stöd, vilket även innefattar bostadsbidrag och äldreförsörjningsstöd</span>
 
-<span class = "kommentar">*Diagram - Huvudsaklig inkomstkälla (exkl förvärvsarbetande) i Dalarnas län, 20-64 år*</span>
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
-Även andelen som saknar inkomst är större i gruppen med utländsk bakgrund, nästan sju procent, mot nästan två procent i gruppen med svensk bakgrund. Dessa två kategorier visar på problematiska effekter av bristande integration. Delar man upp dessa två kategorier utifrån invandringsår framträder dock samma mönster som i tidigare diagram, där andelen personer utan egen försörjning sjunker kraftigt med en ökad vistelsetid i Sverige.
+gg_huv_inkomst$huvud_ink_bakgrund_Dalarna
+
+```
+
+Även andelen som saknar ersättning är större i gruppen med utrikes födda, ca `r saknar_ersattning_utrikes_andel` procent i `r huv_inkomst_manad` `r huv_inkomst_ar`, mot ungefär `r saknar_ersattning_inrikes_andel` procent i gruppen födda i Sverige. Dessa två kategorier visar på problematiska effekter av bristande integration. Delar man upp dessa två kategorier utifrån invandringsår framträder dock samma mönster som i tidigare diagram, där andelen personer utan egen försörjning sjunker kraftigt med en ökad vistelsetid i Sverige. <span class = "kommentar">Den sista meningen bör eventuellt tas bort</span>
 
 <span class = "kommentar">*Diagram - Utrikes födda personer i Dalarnas län 20-64 år utan egen försörjning*</span>
 
-<span class = "kommentar">*Diagram - Från Samhällsekonomiska läget - Antal individer 15-74 år med ekonomiskt stöd i Dalarna, inrikes och utrikes födda 2020-2025*</span>
+Om antalet individer som får ekonomiskt stöd studeras över tid, blir det tydligt att antalet som får stöd minskar men att minskningen i första hand är koncentrerad till utrikes födda. I `r ek_stod_manad_ar_forsta` var det `r ek_stod_skillnad_forsta ` fler utrikes födda personer som var i behov av ekonomiskt stöd i Dalarna, jämfört med inrikes födda. I `r ek_stod_manad_ar_sista` var den skillnaden bara `r ek_stod_skillnad_senaste ` personer.
+
+Ett annat generellt mönster är att det bland inrikes födda är vanligare att män får ekonomiskt stöd, medan det bland utrikes födda är vanligare att kvinnor får det.
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_ek_stod$ekonomiskt_bistand_fodelseland_Dalarna
+
+```
 
 
 <span class = "kommentar">*Nedanstående är hämtat från rapporten om Kvinnor och män i Dalarna. Behöver lyftas in i de delar som finns ovan och värderas om de ska vara kvar eller inte*</span>

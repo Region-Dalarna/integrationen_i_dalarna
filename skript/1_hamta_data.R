@@ -528,6 +528,39 @@ ek_standard_utrikes_andel_max_ar_samtliga <- round(lag_ek_standard_bakgrund_df %
 ek_standadard_forandring_utrikes <- abs(round(lag_ek_standard_bakgrund_df %>% filter(år == ek_standard_max_ar,sysselsättning == "Samtliga personer",bakgrund == "utrikes födda") %>%  .$`Inkomst < 60 procent`-lag_ek_standard_bakgrund_df %>% filter(år == ek_standard_min_ar,sysselsättning == "Samtliga personer",bakgrund == "utrikes födda") %>%  .$`Inkomst < 60 procent`,0))
 ek_standard_inrikes_andel_max_ar_samtliga <- round(lag_ek_standard_bakgrund_df %>% filter(år == ek_standard_max_ar,sysselsättning == "Samtliga personer",bakgrund == "inrikes födda") %>%  .$`Inkomst < 60 procent`,0)
 
+######################################
+##### Huvudsaklig förvärvskälla  #####
+######################################
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_huv_ink_bakgrund_kon_IntRap.R")
+gg_huv_inkomst <- diag_huv_ink_kalla_bakgrund_scb (output_mapp = Output_mapp_figur,
+                                                   diag_kon = FALSE,
+                                                   skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                                   returnera_data_rmarkdown  = TRUE)
+
+huv_inkomst_ar <- unique(huv_ink_df$år)
+huv_inkomst_manad <- unique(huv_ink_df$månad)
+
+saknar_ersattning_inrikes_andel <- gsub("\\.",",",huv_ink_df %>% filter(födelseregion == "inrikes född", kön == "totalt",`huvudsaklig inkomstkälla` == "Saknar ersättningar") %>% .$andel)
+saknar_ersattning_utrikes_andel <- gsub("\\.",",",huv_ink_df %>% filter(födelseregion == "utrikes född", kön == "totalt",`huvudsaklig inkomstkälla` == "Saknar ersättningar") %>% .$andel)
+
+ek_stod_inrikes_andel <- gsub("\\.",",",huv_ink_df %>% filter(födelseregion == "inrikes född", kön == "totalt",`huvudsaklig inkomstkälla` == "Ekonomiskt stöd") %>% .$andel)
+ek_stod_utrikes_andel <- gsub("\\.",",",huv_ink_df %>% filter(födelseregion == "utrikes född", kön == "totalt",`huvudsaklig inkomstkälla` == "Ekonomiskt stöd") %>% .$andel)
+
+######################################
+#####       Ekonomiskt stöd      #####
+######################################
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_ek_stod_bakgrund.R")
+gg_ek_stod <- diagram_ek_stod_bakgrund_SCB (output_mapp = Output_mapp_figur,
+                                            diag_totalt = FALSE,
+                                            skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                            returnera_data_rmarkdown = TRUE)
+
+ek_stod_manad_ar_forsta <- first(ekonomiskt_stod_df$månad_år)
+ek_stod_manad_ar_sista <- last(ekonomiskt_stod_df$månad_år)
+
+ek_stod_skillnad_forsta <- ekonomiskt_stod_df %>% filter(månad_år==first(månad_år)) %>% filter(födelseregion=="utrikes född") %>% .$antal - ekonomiskt_stod_df %>% filter(månad_år==first(månad_år)) %>% filter(födelseregion=="inrikes född") %>% .$antal
+ek_stod_skillnad_senaste <- ekonomiskt_stod_df %>% filter(månad_år==last(månad_år)) %>% filter(födelseregion=="utrikes född") %>% .$antal - ekonomiskt_stod_df %>% filter(månad_år==last(månad_år)) %>% filter(födelseregion=="inrikes född") %>% .$antal
+
 #############################################
 #### Utbildningsnivå för inrikes/utrikes ####
 #############################################
