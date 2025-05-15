@@ -420,7 +420,7 @@ gg_uvas$UVAS_vistelsetid_inrikes_tid_Dalarna
 Även bland utrikes födda mellan 20 och 25 år har motsvarande andel förändrats mycket över tid. I slutet på 1990-talet varken arbetade eller studerade runt 70 procent av de utrikes födda mellan 20 och 25 år som varit i Sverige i max 2 år, att jämföra med `r uvas_20_25_senaste_ar_0_1` procent idag. En stor del av minskningen skedde i mitten på 2000-talet och därefter har andelen gått såväl upp som ner. En liknande utveckling syns även bland utrikes födda 20-25-åringar som varit i landet längre.
 
 ## Arbetslöshet och sysselsättning
-Att arbeta (eller studera) är en viktig komponent i integrationen i samhället. Utrikes födda har generellt en svagare ställning på arbetsmarknaden. Sysselsättningen bland utrikes födda är generellt lägre än bland inrikes födda personer och arbetslösheten, inklusive långtidsarbetslösheten, är högre. Arbetslöshets- och sysselsättningsnivåerna bland utrikes födda varierar dock stort mellan olika grupper.
+Att arbeta (eller studera) är en viktig komponent i integrationen i samhället. Utrikes födda har generellt en svagare ställning på arbetsmarknaden. Sysselsättningen bland utrikes födda är generellt lägre än bland inrikes födda personer och arbetslösheten, inklusive långtidsarbetslösheten, är högre. Arbetslösheten visar hur många av de aktivt arbetssökande som inte har ett arbete.Arbetslöshets- och sysselsättningsnivåerna bland utrikes födda varierar dock stort mellan olika grupper.
 
 Forskning visar att bland annat härkomst, ålder, kön, utbildningsnivå, konjunkturläge, språkkunskaper och kontaktnät är avgörande för utrikes föddas möjligheter att etablera sig på arbetsmarknaden [(IFAU, 2022)](https://www.ifau.se/Press/Forskningssammanfattningar/Utrikes-foddas-eta-pa-arbetsmarknaden-/){target="_blank"}.^[IFAU, Utrikes föddas etablering på arbetsmarknaden (2022-11-19).]
 
@@ -454,7 +454,9 @@ För mer information om arbetsmarknadsstatistiken, klicka nedan:
 <div>
 Skriv om AKU och BAS!
 
-Enligt de svenska arbetsmarknadsundersökningarna, framtagna av Statistiska centralbyrån, är en person sysselsatt om den under mätveckan har arbetat minst en timme, eller varit tillfälligt frånvarande från ett arbete (semester, tjänstledighet, sjukdom, osv). Även personer som deltar i vissa arbetsmarknadspolitiska program räknas som sysselsatta (lönebidrag, start av näringsverksamhet osv). 
+Enligt de svenska arbetsmarknadsundersökningarna, framtagna av Statistiska centralbyrån, är en person sysselsatt om den under mätveckan har arbetat minst en timme, eller varit tillfälligt frånvarande från ett arbete (semester, tjänstledighet, sjukdom, osv). Även personer som deltar i vissa arbetsmarknadspolitiska program räknas som sysselsatta (lönebidrag, start av näringsverksamhet osv).
+
+Arbetsförmedlingen via Kolada för långtidsarbetslöshet.
 
 </div>
  
@@ -470,13 +472,9 @@ gg_arb_76$arbetsloshet_region
 ```
 <br>
 
-Bilden av arbetsmarknaden kompletteras genom att titta på arbetslösheten som visar hur många av de aktivt arbetssökande som inte har ett arbete. En jämförelse av arbetslösheten bland utrikes respektive inrikes födda åskådliggör ett antal viktiga skillnader.
-
-Arbetslösheten är generellt högre för utrikes födda än för inrikes födda. Arbetslösheten för inrikes födda i Dalarna ligger lägre än rikets, `r arblosthet_inrikes_kvinna_Dalarna` procent bland kvinnor och `r arblosthet_inrikes_man_Dalarna` procent bland män (se diagrammet nedan).
+En nationell jämförelse av arbetslösheten bland utrikes respektive inrikes födda åskådliggör ett antal viktiga skillnader, men också likheter. Arbetslösheten är generellt högre för utrikes födda än för inrikes födda. Arbetslösheten för inrikes födda i Dalarna ligger lägre än rikets, `r arblosthet_inrikes_kvinna_Dalarna` procent bland kvinnor och `r arblosthet_inrikes_man_Dalarna` procent bland män (se diagrammet nedan).
 
 Arbetslösheten bland utrikes födda är däremot betydligt högre i samtliga av Sveriges län. I Dalarna är skillnaden i arbetslöshet mellan utrikes och inrikes födda cirka `r arblosthet_kvinnor_utrikes_inrikes_skillnad_Dalarna` procentenheter för kvinnor och cirka `r arblosthet_man_utrikes_inrikes_skillnad_Dalarna` procentenheter för män. Vidare är arbetslösheten bland gruppen utrikes födda kvinnor klart högre än i gruppen utrikes födda män i samtliga av Sveriges län. 
-
-I figuren nedan framgår också att det finns avsevärda skillnader mellan länen. `r arblosthet_utrikes_man_min_lan ` har den lägsta arbetslösheten för utrikes födda män med `r arblosthet_utrikes_man_min_varde` procent medan `r arblosthet_utrikes_kvinna_min_lan ` har den lägsta arbetslösheten för utrikes födda kvinnor med `r arblosthet_utrikes_kvinna_min_varde` procent. Högst arbetslöshet för såväl utrikes födda män som kvinnor har `r arblosthet_utrikes_man_max_lan` med `r arblosthet_utrikes_man_max_varde` procent för män och `r arblosthet_utrikes_kvinna_max_varde` procent för kvinnor. Dalarna ligger något över riksgenomsnittet, men uppvisar inte extrema arbetslöshetssiffror åt något håll.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -485,14 +483,9 @@ gg_diagram_arbetsmarknadsstatus_lan$arbetslosthet_senastear
 ```
 <br>
 
-Precis som var fallet med sysselsättningsgrad tidigare, så uppvisar Dalarnas kommuner ett liknande mönster som på nationell nivå. Bland inrikes födda är arbetslösheten låg och något fler män än kvinnor är arbetslösa. Högst arbetslöshet för såväl inrikes födda kvinnor och män i Dalarna finns i `r arblosthet_inrikes_man_max_kommun`, men skillnaden gentemot genomsnittet i länet är relativt liten. 
+I diagrammet ovan framgår också att det finns avsevärda skillnader mellan länen. `r arblosthet_utrikes_man_min_lan ` har den lägsta arbetslösheten för utrikes födda män med `r arblosthet_utrikes_man_min_varde` procent medan `r arblosthet_utrikes_kvinna_min_lan ` har den lägsta arbetslösheten för utrikes födda kvinnor med `r arblosthet_utrikes_kvinna_min_varde` procent. Högst arbetslöshet för såväl utrikes födda män som kvinnor har `r arblosthet_utrikes_man_max_lan` med `r arblosthet_utrikes_man_max_varde` procent för män och `r arblosthet_utrikes_kvinna_max_varde` procent för kvinnor. Dalarna ligger något över riksgenomsnittet, men uppvisar inte extrema arbetslöshetssiffror åt något håll.
 
-Bland utrikes födda är arbetslösheten avsevärt mycket högre för både kvinnor och män. Genomsnittet i Dalarnas län ligger på `r arblosthet_utrikes_kvinna_Dalarna` procent
-bland utrikes födda kvinnor och  `r arblosthet_utrikes_man_Dalarna` procent bland utrikes födda män. Den högsta arbetslösheten bland utrikes födda kvinnor återfinns i `r arblosthet_utrikes_kvinna_max_kommun `, där den ligger på `r arblosthet_utrikes_kvinna_max_varde` procent. `r arblosthet_utrikes_man_max_kommun ` har också den högsta arbetslösheten bland utrikes födda män med `r arblosthet_utrikes_man_max_varde` procent.
-
-Lägst arbetslöshet bland utrikes födda män återfinns i `r arblosthet_utrikes_man_min_kommun ` kommun, medan `r arblosthet_utrikes_kvinna_min_kommun ` har lägst arbetslöshet bland utrikes födda kvinnor.
-
-Det är återigen värt att notera att de skillnader i arbetslöshet som diskuterades i stycket om sysselsättningsgrad ovan, sannolikt delvis kan förklaras av skillnader i antalet personer och när i tid som de invandrat till olika kommuner.
+Det finns en stor variation i arbetslösheten mellan länets kommuner som liknar den ovan för Sveriges län. Bland inrikes födda är arbetslösheten något högre för män än för kvinnor, men generellt låg i samtliga Dalarnas kommuner. Högst arbetslöshet för såväl inrikes födda kvinnor och män i Dalarna finns i `r arblosthet_inrikes_man_max_kommun`, men skillnaden gentemot genomsnittet i länet är relativt liten (*kolla mening*). 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -501,9 +494,23 @@ gg_diagram_arbetsmarknadsstatus_kommun$arbetslosthet_senastear
 ```
 <br>
 
+Bland utrikes födda är arbetslösheten avsevärt mycket högre för både kvinnor och män, och i de flesta kommuner är arbetslösheten högre för utrikes födda kvinnor än för utrikes födda män. Genomsnittet i Dalarnas län ligger på `r arblosthet_utrikes_kvinna_Dalarna` procent bland utrikes födda kvinnor och  `r arblosthet_utrikes_man_Dalarna` procent bland utrikes födda män. Arbetslösheten är dessutom klart högre för utrikes födda jämfört med inrikes födda, oavsett kön. 
+
+Arbetslösheten för utrikes födda kvinnor i Dalarna är högst i `r arb_bakgr_utrikes_kvinnor_max`, där arbetslösheten i gruppen är hela `r arb_bakgr_utrikes_kvinnor_max_varde` procent. För inrikes födda kvinnor är motsvarande siffra blott `r arb_bakgr_inrikes_kvinnor_max_varde` procent. Arbetslösheten för utrikes födda män i Dalarna är högst i `r arb_bakgr_utrikes_män_max`, med en arbetslöshet i gruppen på `r arb_bakgr_utrikes_män_max_varde` procent. För inrikes födda män är motsvarande siffra `r arb_bakgr_inrikes_män_max_varde` procent.
+
+Lägst arbetslöshet bland utrikes födda kvinnor har `r arb_bakgr_utrikes_kvinnor_min` med `r arb_bakgr_utrikes_kvinnor_min_varde` procent, medan arbetslösheten bland utrikes födda män är lägst i `r arb_bakgr_utrikes_män_min ` med `r arb_bakgr_utrikes_män_min_varde` procent.
+
+Den grupp av utrikes födda som ligger närmast nivåerna för inrikes födda är födda i Norden. Andelen arbetslösa är väsentligt högre bland personer födda i Asien och Afrika, vilka är två världsdelar från vilka flyktinginvandringen varit stor under det senaste decenniet (<span class = "kommentar"> behöver vi visualisera detta?</span>).
+
+De skillnader i arbetslöshet som observeras kan sannolikt delvis förklaras av skillnader i antalet personer och när i tid som de invandrat till olika kommuner.
+
+<span class = "kommentar">*Ta bort nedanstående stycke?*</span>
 Arbetslösheten i Dalarna för inrikes och utrikes födda visar på skillnader över tid. För gruppen inrikes födda syns en nedgång i andelen arbetslösa från 2010 och framåt, med ett litet avbrott i trendlinjen under pandemiåren 2020-2021. Gruppen utrikes födda har två trendlinjer i diagrammet nedan. Från 2006 till 2017 ökade arbetslösheten bland utrikes födda till relativt höga nivåer jämfört med början på tidsperioden. Arbetslösheten bland utrikes födda män i Dalarna var också konsekvent högre än för utrikes födda kvinnor och betydligt högre år 2015 och åren därefter då Sverige hade mycket stor flyktinginvandring. Från 2017 och framåt har arbetslösheten bland gruppen utrikes födda minskat från toppnivåerna och utrikes födda kvinnor är idag i något högre utsträckning arbetslösa jämfört med utrikes födda män. Värt att understryka är att en högre arbetslöshet kan förklaras med att fler aktivt söker arbete, tidigare har en större andel personer varit varken arbetssökande eller i arbete.
 
+<span class = "kommentar">*Komplettera med dimensionen inrikes/utrikes födda - facet-diagram (ev korta tidsserie några år)*</span>
 Hur långt ifrån arbetsmarknaden som en individ befinner sig beror delvis på hur länge personen har varit utan anställning. En person som har varit arbetslös länge har ofta svårare att ta sig tillbaka in på arbetsmarknaden. Som långtidsarbetslös räknas den som har varit öppet arbetslös eller i program med aktivitetsstöd i minst sex månader. År `r langtidsarbetsloshet_ar_min` noterades `r langtidsarbetsloshet_kvinnor_min` procent av länets kvinnor i åldern 25-64 år som långtidsarbetslösa, medan motsvarande siffra för männen var `r langtidsarbetsloshet_man_min` procent. Under 2010-talet gick långtidsarbetslösheten såväl upp som ned, innan den nådde sin topp i samband med pandemin 2020-2021. På senare år har långtidsarbetslösheten minskat tydligt och var år `r langtidsarbetsloshet_ar_max` i Dalarna något högre för män, men något lägre för kvinnor jämfört med 2011. Långtidsarbetslösheten i Sverige är högre än i Dalarna för båda könen. En generell orsak till långtidsarbetslöshet är strukturarbetslöshet som innebär att de arbetssökande saknar rätt kompetens för de arbeten som finns tillgängliga.
+
+<span class = "kommentar">*Hur ser skillnaden ut mellan inrikes och utrikes födda när det gäller långtidsarbetslöshet?*</span>
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -512,31 +519,7 @@ gg_langtidsarbetsloshet$langtidsarbetsloshet_kolad
 ```
 <br>
 
-
-Det finns en stor variation i arbetslösheten mellan länets kommuner, men också mellan inrikes och utrikes födda, och mellan kvinnor och män. Bland inrikes födda är arbetslösheten något högre för män än för kvinnor, men generellt låg i samtliga Dalarnas kommuner. 
-
-För utrikes födda är bilden annorlunda. I de flesta kommuner är arbetslösheten högre för utrikes födda kvinnor än för utrikes födda män. Arbetslösheten är dessutom klart högre för utrikes födda jämfört med inrikes födda, oavsett kön. Arbetslösheten för utrikes födda kvinnor i Dalarna är högst i `r arb_bakgr_utrikes_kvinnor_max`, där arbetslösheten i gruppen är hela `r arb_bakgr_utrikes_kvinnor_max_varde` procent. För inrikes födda kvinnor är motsvarande siffra blott `r arb_bakgr_inrikes_kvinnor_max_varde` procent. Arbetslösheten för utrikes födda män i Dalarna är högst i `r arb_bakgr_utrikes_män_max`, med en arbetslöshet i gruppen på `r arb_bakgr_utrikes_män_max_varde` procent. För inrikes födda män är motsvarande siffra `r arb_bakgr_inrikes_män_max_varde` procent.
-
-Lägst arbetslöshet bland utrikes födda kvinnor har `r arb_bakgr_utrikes_kvinnor_min` med `r arb_bakgr_utrikes_kvinnor_min_varde` procent, medan arbetslösheten bland utrikes födda män är lägst i `r arb_bakgr_utrikes_män_min ` med `r arb_bakgr_utrikes_män_min_varde` procent.
-
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
-
-gg_arb_bakgr$andel_arbetslosa_kommun
-```
-<br>
-
-Den grupp av utrikes födda som ligger närmast nivåerna för inrikes födda är födda i Norden. Andelen arbetslösa är väsentligt högre bland personer födda i Asien och Afrika, vilka är två världsdelar från vilka flyktinginvandringen varit stor under det senaste decenniet (<span class = "kommentar"> behöver vi visualisera detta?</span>).
-
-(<span class = "kommentar"> Från kvinnor och män - sysselsättningsgraden på riksnivå</span>)
-
 Sysselsättningsgraden, det vill säga i vilken utsträckning människor i arbetsför ålder (20-64 år) arbetar, skiljer sig inte märkbart åt mellan könen bland inrikes födda som ses i det vänstra diagrammet nedan. Sverige ligger långt fram i en internationell jämförelse när det gäller att ge kvinnor och män likvärdiga möjligheter att yrkesarbeta, och det återspeglas i sysselsättningsgraden som för båda könen är ungefär lika hög, `r syssgrad_inrikes_kvinna_Sverige` procent för kvinnor och `r syssgrad_inrikes_man_Sverige` procent för män. Variationen i sysselsättningsgrad mellan länen är därför också relativt liten.
-
-Däremot skiljer sig sysselsättningsgraden åt mellan inrikes och utrikes födda. För utrikes födda (det högra diagrammet nedan) är sysselsättningsgraden lägre än sysselsättningsgraden för inrikes födda i samtliga svenska län. Det finns även skillnader mellan kvinnor och män.
-
-Utrikes födda män har en högre sysselsättningsgrad än utrikes födda kvinnor i samtliga län förutom Norrbotten. I Dalarna var sysselsättningsgraden bland utrikes födda män `r syssgrad_utrikes_man_Dalarna` procent, vilket
-är cirka `r syssgrad_utrikes_skillnad_Dalarna ` procentenheter mer än för utrikes födda kvinnor i Dalarna.
-
-Något att ta hänsyn till när man analyserar sysselsättningsgrad och arbetslöshet bland utrikes födda är hur lång tid individen har varit i Sverige. Vistelsetid i Sverige har ett starkt samband med sysselsättningsgrad och arbetslöshet och därmed kommer andelen nyligen invandrade i gruppen utrikes födda att påverka nivån på dessa variabler, se rubrik 2.3.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -544,6 +527,11 @@ gg_diagram_arbetsmarknadsstatus_lan$sysselsattningsgrad_senastear
 
 ```
 <br>
+
+Däremot skiljer sig sysselsättningsgraden åt mellan inrikes och utrikes födda. För utrikes födda (det högra diagrammet ovan) är sysselsättningsgraden lägre än sysselsättningsgraden för inrikes födda i samtliga svenska län. Det finns även skillnader mellan kvinnor och män.
+
+Utrikes födda män har en högre sysselsättningsgrad än utrikes födda kvinnor i samtliga län förutom Norrbotten. I Dalarna var sysselsättningsgraden bland utrikes födda män `r syssgrad_utrikes_man_Dalarna` procent, vilket
+är cirka `r syssgrad_utrikes_skillnad_Dalarna ` procentenheter mer än för utrikes födda kvinnor i Dalarna.
 
 Sysselsättningsgraden i åldersgruppen 20-64 år har ökat för såväl inrikes som utrikes födda i Dalarna sedan det tidiga 1990-talet. År  `r syssgrad_93_forsta_ar` var sysselsättningsgraden för inrikes födda i kvinnor i Dalarna `r syssgrad_93_kvinnor_inrikes_forsta_ar_procent` procent, vilket var något högre än för männen, `r syssgrad_93_män_inrikes_forsta_ar_procent` procent. Att de inrikes födda kvinnornas sysselsättningsgrad var högre än männens beror sannolikt på 90-talskrisen, när branscher med stor dominans av män bland de anställda (industri exempelvis) drabbades hårt. 
 
@@ -560,13 +548,7 @@ gg_sysselsattningsgrad_tidsserie$sysselsattningsgrad_tidsserie_Dalarna
 År `r syssgrad_93_senaste_ar` hade sysselsättningsgraden ökat till `r syssgrad_93_kvinnor_inrikes_max_ar_procent` procent för inrikes födda kvinnor och 
 `r syssgrad_93_män_inrikes_max_ar_procent` procent för inrikes födda män. Inrikes födda kvinnor har således fortfarande något högre sysselsättningsgrad än inrikes födda män. Även för utrikes födda har sysselsättningsgraden ökat tydligt för båda könen, men med `r syssgrad_93_män_utrikes_max_ar_procent` procent har de utrikes födda männen idag en klart högre sysselsättningsgrad än `r syssgrad_93_kvinnor_utrikes_max_ar_procent` procent för de utrikes födda kvinnorna.
 
-(<span class = "kommentar"> Från kvinnor och män - sysselsättningsgraden på kommunnivå</span>)
-
 Sysselsättningsgraden i respektive kommun i Dalarna visar ett liknande mönster som länen på nationell nivå. Gruppen inrikes födda har en högre sysselsättningsgrad i samtliga kommuner i Dalarna jämfört med utrikes födda. Även här är sysselsättningsgraden för inrikes födda kvinnor och män ungefär lika hög. För utrikes födda är det däremot stora skillnader mellan kvinnor och män, också mellan olika kommuner. I linje med den nationella bilden är sysselsättningsgraden högre för gruppen utrikes födda män i jämförelse med utrikes födda kvinnor i de allra flesta kommuner (undantagen är Orsa och Smedjebacken). Sysselsättningsgraden för utrikes födda män skiljer sig dock åt mellan kommuner där den högsta sysselsättningsgraden finns i `r syssgrad_utrikes_man_max_kommun` (`r syssgrad_utrikes_man_max_varde` procent) och den lägsta i `r syssgrad_utrikes_man_min_kommun` (`r syssgrad_utrikes_man_min_varde` procent).
-
-`r syssgrad_utrikes_kvinna_max_kommun` har den högsta sysselsättningsgraden för gruppen utrikes födda kvinnor i Dalarna, `r syssgrad_utrikes_kvinna_max_varde` procent, och ligger klart över genomsnittet för länet. Samtidigt är sysselsättningsgraden i `r syssgrad_utrikes_kvinna_min_kommun` kommun bland utrikes födda kvinnor bara `r syssgrad_utrikes_kvinna_min_varde` procent. 
-
-Värt att notera är att en del av skillnaden i utrikes föddas sysselsättningsgrad mellan kommunerna sannolikt kan förklaras av skillnader i antalet personer som invandrade under åren runt 2015 då invandringen till Sverige var mycket stor. Exempelvis var Avesta, Ludvika och Hedemora de tre kommuner som hade högst invandring i förhållande till folkmängd under 2015, 2016 och 2017. Detta verkar i första hand gälla för utrikes födda kvinnor, då både Hedemora och Ludvika har relativt hög sysselsättningsgrad för utrikes födda män, medan den är klart lägre för utrikes födda kvinnor. I Ludvika är skillnaden mellan könen i sysselsättningsgrad ungefär `r round(arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "utrikes född",region == "Ludvika",variabel == "sysselsättningsgrad") %>% .$varde-arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född",region == "Ludvika",variabel == "sysselsättningsgrad") %>% .$varde,0)` procentenheter, vilket är den största skillnaden i länet.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -574,6 +556,10 @@ gg_diagram_arbetsmarknadsstatus_kommun$sysselsattningsgrad_senastear
 
 ```
 <br>
+
+`r syssgrad_utrikes_kvinna_max_kommun` har den högsta sysselsättningsgraden för gruppen utrikes födda kvinnor i Dalarna, `r syssgrad_utrikes_kvinna_max_varde` procent, och ligger klart över genomsnittet för länet. Samtidigt är sysselsättningsgraden i `r syssgrad_utrikes_kvinna_min_kommun` kommun bland utrikes födda kvinnor bara `r syssgrad_utrikes_kvinna_min_varde` procent. 
+
+Värt att notera är att en del av skillnaden i utrikes föddas sysselsättningsgrad mellan kommunerna sannolikt kan förklaras av skillnader i antalet personer som invandrade under åren runt 2015 då invandringen till Sverige var mycket stor. Exempelvis var Avesta, Ludvika och Hedemora de tre kommuner som hade högst invandring i förhållande till folkmängd under 2015-2017. Detta förefaller i första hand gälla för utrikes födda kvinnor, då både Hedemora och Ludvika har relativt hög sysselsättningsgrad för utrikes födda män, medan den är klart lägre för utrikes födda kvinnor. I Ludvika är skillnaden mellan könen i sysselsättningsgrad ungefär `r round(arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "utrikes född",region == "Ludvika",variabel == "sysselsättningsgrad") %>% .$varde-arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född",region == "Ludvika",variabel == "sysselsättningsgrad") %>% .$varde,0)` procentenheter, vilket är den största skillnaden i länet.
 
 När andelen sysselsatta redovisas per utbildningsnivå är det tydligt att individer med förgymnasial utbildning i lägre utsträckning är förvärvsarbetande (se diagram nedan), vilket även gäller gruppen med utrikes födda. För personer med förgymnasial utbildning är sysselsättningsgraden bland utrikes födda i Dalarna blott `r syssgrad_forgym_utrikes` procent medan den är `r syssgrad_forgym_inrikes` procent för inrikes födda med motsvarande utbildning, en skillnad på `r syssgrad_forgym_skillnad` procentenheter mellan inrikes och utrikes födda.
 
@@ -584,7 +570,7 @@ gg_syssgrad_vistelsetid_utb$sysselsattningsgrad_inrikes_utrikes_utbniva
 ```
 <br>
 
-För såväl utrikes som inrikes födda ökar sysselsättningsgraden tydligt om personerna istället har en gymnasial utbildning, då sysselsättningsgraden bland utrikes födda är `r syssgrad_gym_utrikes` procent medan den för inrikes födda är `r syssgrad_gym_inrikes` procent, en skillnad på `r syssgrad_gym_skillnad` procentenheter mellan inrikes och utrikes födda. 
+För såväl utrikes som inrikes födda ökar sysselsättningsgraden tydligt om personerna istället har en gymnasial utbildning. Då ökar sysselsättningsgraden bland utrikes födda till `r syssgrad_gym_utrikes` procent medan den för inrikes födda är `r syssgrad_gym_inrikes` procent. Det ger en skillnad på `r syssgrad_gym_skillnad` procentenheter mellan inrikes och utrikes födda. 
 
 Bland personer med eftergymnasial utbildning är sysselsättningsgraden för utrikes födda `r syssgrad_eftergym_utrikes` procent, vilket bara är något högre än för gymnasialt utbildade i samma grupp. För inrikes födda med en eftergymnasial utbildning är sysselsättningsgraden hela `r syssgrad_eftergym_inrikes` procent, vilket är `r syssgrad_eftergym_skillnad` högre än för utrikes födda med samma utbildningsnivå.
 
@@ -614,11 +600,13 @@ Något som är viktigt att ha med sig när andelen sysselsatta analyseras är at
 <br>
 <span class = "kommentar">Är BAS numera, stycke behöver uppdateras (komplettera i informationsruta i början av avsnittet)</span>
 
-När vistelsetid tas med i analysen syns samma mönster som i <span class = "kommentar"> diagram 18 (ovan) - vilket diagram refererar vi till?</span>, att det finns en fungerande integration i bemärkelsen att de som vistats längre tid i Sverige har en högre förvärvsfrekvens. Variabeln vistelsetid fungerar som en indikator på en rad andra faktorer som påverkar möjligheterna till att få ett arbete. Efter en ökad tid i landet kan en nyanländ person lära sig svenska, validera och komplettera utbildningar, lära sig hur den svenska arbetsmarknaden fungerar samt knyta kontakter för att öka chansen till att få en sysselsättning och inkomst. Enligt detta resonemang förväntas ett initialt sysselsättningsgap mellan inrikes födda och nyanlända, som minskar succesivt när vistelsetiden i landet blir längre. 
+Något ytterligare att ta hänsyn till när man analyserar sysselsättningsgrad och arbetslöshet bland utrikes födda är hur lång tid individer har varit i Sverige. Vistelsetid i Sverige har ett starkt samband med sysselsättningsgrad och arbetslöshet och därmed kommer andelen nyligen invandrade i gruppen utrikes födda att påverka nivån på dessa variabler.
 
-Bland utrikes födda har män en högre sysselsättningsgrad än kvinnor när vistelsetiden är lägre än 10 år, innan kvinnorna får en något högre sysselsättningsgrad än männen. Bland inrikes födda är sysselsättningsgraden något högre för män än för kvinnor.
+När vistelsetid tas med i analysen syns det att det finns en fungerande integration i bemärkelsen att de som vistats längre tid i Sverige har en högre förvärvsfrekvens. Variabeln vistelsetid fungerar som en indikator på en rad andra faktorer som påverkar möjligheterna till att få ett arbete. Efter en ökad tid i landet kan en nyanländ person lära sig svenska, validera och komplettera utbildningar, lära sig hur den svenska arbetsmarknaden fungerar samt knyta kontakter för att öka chansen till att få en sysselsättning och inkomst. Enligt detta resonemang förväntas ett initialt sysselsättningsgap mellan inrikes födda och nyanlända, som minskar succesivt när vistelsetiden i landet blir längre. 
 
-<span class = "kommentar"> Kan vi säga något om hur många som finns i respektive vistelsetidsgrupp? </span>
+Som diskuterats tidigare är sysselsättningsgraden lägre bland utrikes
+födda generellt, och för invandrade kvinnor tar det betydligt längre tid än för invandrade män att etablera sig på arbetsmarknaden. För utrikesfödda kvinnor som befunnit sig i Sverige i upp till 2 år (0-1 år i diagrammet nedan) är det bara ungefär `r round(etablering_df %>% filter(kön == "kvinnor",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "samtliga utbildningsnivåer") %>% .$andel,0)` procent i arbetsför ålder (20-65 år) som arbetar. För
+motsvarande grupp av män är ungefär `r round(etablering_df %>% filter(kön == "män",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "samtliga utbildningsnivåer") %>% .$andel,0)` procent i arbete inom 2 år. Över tid tenderar ändå sysselsättningsgraden att öka avsevärt och efter mer än tio år i Sverige är det över 70 procent av invandrade, såväl män som kvinnor, som arbetar.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -627,26 +615,19 @@ gg_syssgrad_vistelsetid_utb$sysselsattningsgrad_vistelsetid_inrikes
 ```
 <br>
 
+Bland utrikes födda har män en högre sysselsättningsgrad än kvinnor när vistelsetiden är lägre än 10 år, innan kvinnorna får en något högre sysselsättningsgrad än männen. Bland inrikes födda är sysselsättningsgraden något högre för män än för kvinnor.
+
+<span class = "kommentar"> Kan vi säga något om hur många som finns i respektive vistelsetidsgrupp? </span>
+
 Skillnaderna mellan könen minskar som synes med vistelsetiden i Sverige. [Emma Neuman (2015)](https://www.diva-portal.org/smash/get/diva2:822705/FULLTEXT01.pdf){target="_blank"}^[Neuman Emma (2015) *Essays on Segregation, Gender Economics, and Self-employment*, Linnaeus University Dissertations No 223/2015. Linnaeaus University Press, Växjö.] har undersökt hur kulturella normer bidrar till arbetsmarknadsutfall mellan utrikes födda kvinnor och män i Sverige. Kartläggningen visade att de som invandrat från länder där arbetsdeltagandet för kvinnor var lägre än män, också hade stora skillnader i andelen sysselsatta per kön på den svenska arbetsmarknaden. Efter en längre vistelsetid i Sverige, minskade gapet och skillnaden i sysselsättningsgrad mellan könen närmar sig nivån för inrikes födda. Slutsatsen som drogs var att den kulturella inverkan som ansågs finnas avtar med tiden. Mönstret med en stor skillnad i sysselsättningsgrad mellan kön för utrikes födda med en kort vistelsetid går att se även i Dalarna. Skillnaden mellan könen minskar ju längre vistelsetiden i landet blir, och har helt försvunnit för de som bott i Sverige i 10 år eller mer.
 
-## Arbetsmarknadsetablering för invandrade
-Som diskuterats tidigare är sysselsättningsgraden lägre bland utrikes
-födda generellt, och för invandrade kvinnor tar det betydligt längre tid än för invandrade män att etablera sig på arbetsmarknaden. För utrikesfödda kvinnor som befunnit sig i Sverige i upp till 2 år (0-1 år i diagrammet nedan) är det bara ungefär `r round(etablering_df %>% filter(kön == "kvinnor",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "samtliga utbildningsnivåer") %>% .$andel,0)` procent i arbetsför ålder (20-65 år) som arbetar. För
-motsvarande grupp av män är ungefär `r round(etablering_df %>% filter(kön == "män",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "samtliga utbildningsnivåer") %>% .$andel,0)` procent i arbete inom 2 år. Över tid tenderar ändå etableringsgraden att öka avsevärt och efter mer än tio år i Sverige är det över 70 procent av invandrade såväl män som kvinnor som arbetar.
-
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
-
-gg_etablering$etablering_lan_kon
-
-```
-<br>
-
-Skillnaden mellan utrikes födda kvinnor och utrikes födda män kan bland annat förklaras med att kvinnor som invandrat från ett utomeuropeiskt land i majoriteten av fallen har gjort det som anhörig, antingen till en person med svenskt medborgarskap eller till en person med permanent uppehållstillstånd. Att vara anhörig till arbetskraftsinvandrare är även vanligt förekommande. Givet dessa skäl för invandring är det vanligt att kvinnor invandrar med små barn eller har ett högt barnafödande de första åren i landet. Det har visat sig att kvinnorna sedan tar ett betydligt större omsorgsansvar för barn än barnens fäder, vilket bidrar till att deras inträde på arbetsmarknaden sker betydligt senare än för män i motsvarande situation. Exempelvis är användningen av föräldrapenning mycket ojämställd bland nyligen invandrade föräldrar. Se exempelvis [Expertgruppen för studier i offentlig ekonomi (2021)](https://eso.expertgrupp.se/wp-content/uploads/2020/03/ESO-2021_7_forsorjning-med-fordrojning_webb.pdf){target="_blank"}^[Expertgruppen för studier i offentlig ekonomi (2021)] och [Jämställdhetsmyndigheten (2022)](https://jamstalldhetsmyndigheten.se/media/s5wdbimq/rapport-sta-rkta-mo-jligheter-genom-samverkan.pdf){target="_blank"}^[Jämställdhetsmyndigheten (2022)].
+Skillnaden mellan utrikes födda kvinnor och utrikes födda män kan även förklaras med att kvinnor som invandrat från ett utomeuropeiskt land i majoriteten av fallen har gjort det som anhörig, antingen till en person med svenskt medborgarskap eller till en person med permanent uppehållstillstånd. Att vara anhörig till arbetskraftsinvandrare är även vanligt förekommande. Givet dessa skäl för invandring är det vanligt att kvinnor invandrar med små barn eller har ett högt barnafödande de första åren i landet. Det har visat sig att kvinnorna sedan tar ett betydligt större omsorgsansvar för barn än barnens fäder, vilket bidrar till att deras inträde på arbetsmarknaden sker betydligt senare än för män i motsvarande situation. Exempelvis är användningen av föräldrapenning mycket ojämställd bland nyligen invandrade föräldrar. Se exempelvis [Expertgruppen för studier i offentlig ekonomi (2021)](https://eso.expertgrupp.se/wp-content/uploads/2020/03/ESO-2021_7_forsorjning-med-fordrojning_webb.pdf){target="_blank"}^[Expertgruppen för studier i offentlig ekonomi (2021)] och [Jämställdhetsmyndigheten (2022)](https://jamstalldhetsmyndigheten.se/media/s5wdbimq/rapport-sta-rkta-mo-jligheter-genom-samverkan.pdf){target="_blank"}^[Jämställdhetsmyndigheten (2022)].
 
 Att vara anhöriginvandrare sätter också kvinnan i fråga i en särskild beroendeställning till sin respektive anhörige i jämförelse med om hon invandrat/flytt på egna premisser. Detta i kombination med ofta låg utbildning och brist på arbetslivserfarenhet från hemlandet blir också hinder för att delta i integrationsinsatser, utbildning och arbetssökande. Se exempelvis [Expertgruppen för studier i offentlig ekonomi (2021)](https://eso.expertgrupp.se/wp-content/uploads/2020/03/ESO-2021_7_forsorjning-med-fordrojning_webb.pdf){target="_blank"}^[Expertgruppen för studier i offentlig ekonomi (2021)] och [Regeringen (2023)](<https://www.regeringen.se/contentassets/aaae962745b74fa4abc01f7926bb5adc/sou-2023_24_pdf-a_webb.pdf>){target="_blank"}^[Etablering för fler – jämställda möjligheter till integration (SOU 2023:24)].
 
 Regeringen har under år 2023 satt fokus på insatser som ska få utrikes födda kvinnor i arbete snabbare. Bland annat har länsstyrelserna ett regionalt uppdrag med detta mål.
 
+*Nedanstående behöver lyftas upp i texten till delen ovanför som berör utbildningsnivåer*
 
 Hur snabbt en nyligen invandrad person etableras på arbetsmarknaden är också nära kopplat till vilken utbildningsnivå personen har. För dem med högst utbildning har det visat sig att processen tenderar att gå relativt snabbt och cirka `r round(etablering_df %>% filter(kön == "kvinnor",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "utbildningsnivå: eftergymnasial utbildning") %>% .$andel,0)` procent av kvinnorna och `r round(etablering_df %>% filter(kön == "män",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "utbildningsnivå: eftergymnasial utbildning") %>% .$andel,0)` procent av männen arbetar innan de varit i Sverige i 2 år (0-1 år i figuren nedan). Sedan ökar etableringsgraden över tid och efter 10 år och längre är fler än 80 procent av kvinnorna mellan 20 och 65 år sysselsatta, vilket är i linje med sysselsättningsgraden för inrikes födda kvinnor i samma åldersgrupp. För dem med exempelvis gymnasial utbildning är situationen delvis annorlunda. I den gruppen arbetar ungefär `r round(etablering_df %>% filter(kön == "kvinnor",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "utbildningsnivå: gymnasial utbildning") %>% .$andel,0)` procent av de utrikesfödda kvinnor, och cirka `r round(etablering_df %>% filter(kön == "män",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "utbildningsnivå: gymnasial utbildning") %>% .$andel,0)` procent av de utrikesfödda männen, inom 2 år efter att de kommit till Sverige. Över tid ökar andelen etablerade snabbt på arbetsmarknaden, särskilt för gymnasialt utbildade.
 
