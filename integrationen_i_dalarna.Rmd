@@ -69,13 +69,13 @@ Här ska vi ha en sammanfattning av rapporten. Det ska vara en punktlista med de
 
 <ul>
 
-<li>Första punkten </li>
+<li>Utrikes födda upprätthåller invånarantalet i länet </li>
 
-<li>Andra punkten </li>
+<li>Vistelsetid påverkar integrationsnivåerna </li>
     
-<li>Tredje punkten </li>
+<li>Språk och utbildning avgörande för arbete </li>
 
-<li>Fjärde punkten </li>
+<li>Minskad arbetslöshet och minskat behov av ekonomiskt stöd över tid för utrikes födda </li>
 
 </ul>
 
