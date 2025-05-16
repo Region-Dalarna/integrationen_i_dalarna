@@ -21,7 +21,7 @@ diagram_utbildningsniva_invandringsar <-function(output_mapp_figur = "G:/Samhäl
   objektnamn <- c()
 
   input_mapp <- "G:/skript/projekt/data/integration"
-  files <- list.files(input_mapp, pattern = "utbildning_invandringsar", full.names = TRUE)
+  files <- list.files(input_mapp, pattern = "utbildning_invandringsar_alt", full.names = TRUE)
 
   file_info <- file.info(files)
   latest_file <- rownames(file_info)[which.max(file_info$mtime)]
@@ -35,7 +35,14 @@ diagram_utbildningsniva_invandringsar <-function(output_mapp_figur = "G:/Samhäl
         mutate(andel = round(Antal / sum(Antal) * 100, 2)) %>%
           ungroup() %>%
             mutate(Aldersgrupp = "20-64 år",
-                   Invandringsar = ifelse(Invandringsar == "Ej invandrat","Inrikes född",Invandringsar))
+                   Vistelsetid = case_when(
+                     Invandringsar == "1928 - 2014" ~ "10+ år",
+                     Invandringsar == "2015 - 2020" ~ "4-9 år",
+                     Invandringsar == "2021 - 2022" ~ "2-3 år",
+                     Invandringsar == "2023 - 2024" ~ "0-1 år",
+                     Invandringsar == "Ej invandrat" ~ "Inrikes född"
+                   )
+                   )
 
   utb_invandringsar_df$Utbildningsniva <- trimws(utb_invandringsar_df$Utbildningsniva)
 
@@ -50,12 +57,19 @@ diagram_utbildningsniva_invandringsar <-function(output_mapp_figur = "G:/Samhäl
                                                       "Eftergymnasial utbildning 3 år eller längre",
                                                       "Uppgift saknas"))
 
+  utb_invandringsar_df$Vistelsetid <- factor(utb_invandringsar_df$Vistelsetid,
+                                             levels = c("0-1 år",
+                                                      "2-3 år",
+                                                      "4-9 år",
+                                                      "10+ år",
+                                                      "Inrikes född"))
+
   diagram_capt = "Källa: SCB\nBearbetning: Samhällsanalys, Region Dalarna"
   diagram_titel = glue("Utbildningsnivå i Dalarna år 2024 efter invandringsår ({unique(utb_invandringsar_df$Aldersgrupp)})")
   diagramfilnamn <- "utb_niva_invandringsar.png"
 
   gg_obj <- SkapaStapelDiagram(skickad_df = utb_invandringsar_df,
-                               skickad_x_var = "Invandringsar",
+                               skickad_x_var = "Vistelsetid",
                                skickad_y_var = "andel",
                                skickad_x_grupp = "Utbildningsniva",
                                manual_color = valda_farger,
