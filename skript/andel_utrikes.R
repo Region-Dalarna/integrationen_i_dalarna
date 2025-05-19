@@ -4,9 +4,10 @@ diag_andel_utrikes_scb <- function(region = "20", # Enbart ett i taget.
                                       start_ar = "2000",                                 # Startår för jämförelse. Senaste år jämförs med denna (tidigast 2000 och max 1 år)
                                       output_mapp = "G:/Samhällsanalys/API/Fran_R/utskrift/",                                  # mapp där diagram ska sparas, NA = sparas ingen fil
                                       skriv_diagrambildfil = FALSE,                           # TRUE om diagram ska skrivas till fil, FALSE om diagram inte ska skrivas till fil
-                                      valda_farger = diagramfarger("rus_sex")[5:6],
-                                      ta_bort_diagramtitel = TRUE,
-                                      ta_bort_caption = TRUE,
+                                      valda_farger = diagramfarger("rus_sex"),
+                                      x_axis_storlek = 10.5,
+                                      ta_bort_diagramtitel = FALSE,
+                                      ta_bort_caption = FALSE,
                                       returnera_data_rmarkdown = FALSE,
                                       demo = FALSE             # sätts till TRUE om man bara vill se ett exempel på diagrammet i webbläsaren och inget annat
 ) {
@@ -88,6 +89,7 @@ diag_andel_utrikes_scb <- function(region = "20", # Enbart ett i taget.
                                  diagram_capt =  diagram_capt,
                                  output_mapp = "output_mapp_figur",
                                  stodlinjer_avrunda_fem = TRUE,
+                                 x_axis_storlek = x_axis_storlek,
                                  vand_sortering = TRUE,
                                  x_axis_sort_value = TRUE,
                                  x_axis_sort_grp = 2,

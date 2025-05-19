@@ -71,7 +71,7 @@ diag_utbsniva_invandringsar <-function(output_mapp_figur = "G:/Samhällsanalys/S
                                                         "Inrikes född"))
 
     diagram_capt = "Källa: SCB\nBearbetning: Samhällsanalys, Region Dalarna"
-    diagram_titel = glue("Utbildningsnivå i Dalarna år 2024 efter invandringsår ({unique(utb_invandringsar_df$Aldersgrupp)})")
+    diagram_titel = glue("Utbildningsnivå ({unique(utb_invandringsar_df$Aldersgrupp)}) i Dalarna år 2024 efter vistelsetid")
     diagramfilnamn <- "utb_niva_invandringsar.png"
 
     gg_obj <- SkapaStapelDiagram(skickad_df = utb_invandringsar_df,

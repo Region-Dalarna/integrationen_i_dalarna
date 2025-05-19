@@ -2,7 +2,8 @@ if (!require("pacman")) install.packages("pacman")
 p_load(tidyverse,
        here,
        scales,
-       patchwork)
+       patchwork,
+       glue)
 
 # OBS! Ska sättas till FALSE när skriptet går i produktion - men kan stängas av genom att sätta till TRUE för att se att alla skript fungerar som de ska
 # skriptet är till för att hantera rcurl-fel och inte vanliga fel som ju inte blir bättre av att man försöker flera gånger. =)
@@ -50,7 +51,23 @@ asylsokande_senaste_ar_antal = format(asylsokande_df %>% filter(år == max(år))
 
 # Antal utrikes födda och förändring av antalet utrikes/inrikes födda i kommuner samt kumulativ summa på länsnivå och prognos (4)
 source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_bef_inrikes_utrikes_antal_forandring_prognos_IntRap.R")
+# Utan diagramtitel. Slås ihop med ett annat diagram
+gg_antal_utrikes_utan_titel <- diagram_utrikes_fodda_tidsserie(output_mapp_figur = Output_mapp_figur,
+                                                    spara_figur = spara_diagram_som_bildfiler,
+                                                    ta_bort_diagramtitel = TRUE,
+                                                    diag_antal = FALSE,
+                                                    x_axis_storlek = 9.5,
+                                                    diag_forandring_lan = FALSE,
+                                                    diag_forandring_prognos = FALSE,
+                                                    returnera_data= TRUE)
+
+# Används till titel för sammanslaget diagram nedan
+min_ar <- names(antal_forandring_df)[4]
+max_ar <- names(antal_forandring_df)[5]
+
+# Med diagramtitel (de tre övriga)
 gg_antal_utrikes <- diagram_utrikes_fodda_tidsserie(output_mapp_figur = Output_mapp_figur,
+                                                    diag_forandring_kommuner = FALSE,
                                                     spara_figur = spara_diagram_som_bildfiler,
                                                     returnera_data= TRUE,
                                                     alder_grupp = c(20,65),
@@ -102,6 +119,10 @@ source(here("skript/","andel_utrikes.R"))
 gg_andel_utrikes <- diag_andel_utrikes_scb(output_mapp = Output_mapp_figur,
                                            skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                            start_ar = "2000",
+                                           valda_farger = diagramfarger("rus_sex")[3:4],
+                                           x_axis_storlek = 9.5,
+                                           ta_bort_diagramtitel = TRUE,
+                                           ta_bort_caption = TRUE,
                                            returnera_data_rmarkdown= TRUE)
 
 andel_utrikes_forsta_ar <- min(andel_utrikes_df$år)
@@ -125,10 +146,17 @@ andel_utrikes_kommun_lagst_sista_ar <- andel_utrikes_df %>%filter(!(region%in%c(
 andel_utrikes_kommun_lagst_sista_ar_varde <- round(andel_utrikes_df %>% filter(år == andel_utrikes_senaste_ar,region == andel_utrikes_kommun_lagst_sista_ar) %>%  .$andel_utrikes,0)
 andel_utrikes_kommun_lagst_forsta_ar_varde <- round(andel_utrikes_df %>% filter(år == min(år),region == andel_utrikes_kommun_lagst_sista_ar) %>%  .$andel_utrikes,0)
 
-# Kombinerar diagrammen ovan
+# Kombinerar två av diagrammen
 
-gg_test <- gg_antal_utrikes$befolkningsforandring_Dalarna+gg_andel_utrikes$utrikes_fodda_andel_Dalarna
+gg_kombo <- gg_antal_utrikes_utan_titel$befolkningsforandring_Dalarna+gg_andel_utrikes$utrikes_fodda_andel_Dalarna+
+  plot_annotation(
+    title = glue("Befolkningsförändring {min_ar}-{max_ar} och andel utrikes födda i Dalarna"),
+    theme = theme(plot.title = element_text(hjust = 0.5,size = 18))
+  )
 
+if(spara_diagram_som_bildfiler){
+  ggsave(output_mapp_figur)
+}
 # Största födelseland bland utrikes födda i Dalarna
 source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_storsta_fodelseland_IntRap.R")
 gg_storsta_fodelseland <- diagram_storsta_fodelseland(output_mapp_figur = Output_mapp_figur,
@@ -145,6 +173,22 @@ andra_fodelseland_senaste_ar <- storsta_fodelseland_df %>% filter(år == fodelse
 andra_fodelseland_senaste_ar_antal <- format(storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar,födelseregion != storsta_fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$Antal,big.mark = " ")
 
 ############################################################
+########## Antal utrikes födda efter invandringsår #########
+############################################################
+
+source(here("skript","diag_utbildingsniva_invandringsar.R"))
+gg_antal_invandringsar <- diag_utbsniva_invandringsar(output_mapp = Output_mapp_figur,
+                                                         skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                                         diag_utb = FALSE,
+                                                         returnera_data_rmarkdown = TRUE)
+
+invandringsar_antal_df_max_ar <- invandringsar_antal_df %>% filter(Antal== max(Antal)) %>% .$Invandringsar
+invandringsar_antal_df_max_antal <- invandringsar_antal_df %>% filter(Antal== max(Antal)) %>% .$Antal
+invandringsar_senaste <- max(invandringsar_antal_df$Invandringsar)
+invandringsar_senaste_antal <- format(invandringsar_antal_df %>% filter(Invandringsar== invandringsar_senaste) %>% .$Antal,big.mark = " ")
+
+
+############################################################
 ########## Befolkningspyramid för Inrikes/utrikes ##########
 ############################################################
 
@@ -154,7 +198,7 @@ gg_befpyramid <- diag_befpyramid(geo_vekt = vald_region,
                                  output_mapp = Output_mapp_figur)
 
 ##########################################################################################################################
-# Befolkningsgörändring över tid fördelad på komponenterna födelseöverskott, inrikes flyttnetto och invandringsöverskott #
+# Befolkningsförändring över tid fördelad på komponenterna födelseöverskott, inrikes flyttnetto och invandringsöverskott #
 ##########################################################################################################################
 source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_befutv_per_komponent_ar_scb.R")
 gg_befforandring_komponenter <- diag_befutv_per_komponent_ar(region_vekt = vald_region,
@@ -207,7 +251,7 @@ sfi_sistaar_varde_eftergymnasial <- SFI_df %>% filter(kön == "män och kvinnor"
 source(here("skript","diag_utbildingsniva_invandringsar.R"))
 gg_utb_niva_invandringsar <- diag_utbsniva_invandringsar(output_mapp = Output_mapp_figur,
                                                          skriv_diagrambildfil = spara_diagram_som_bildfiler,
-                                                         diag_invandringsar = FALSE,
+                                                         diag_invandringsar = TRUE,
                                                          returnera_data_rmarkdown = TRUE)
 
 utb_niva_vistelsetid_2_3_eftergym <- round(utb_invandringsar_df %>% filter(Utbildningsniva == "Eftergymnasial utbildning 3 år eller längre",Vistelsetid == "2-3 år") %>% .$andel,0)

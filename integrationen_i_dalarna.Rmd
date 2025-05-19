@@ -195,34 +195,29 @@ Mellan `r min_ar_utrikes_antal` och `r max_ar_utrikes_antal` ökade antalet utri
 gg_antal_utrikes$utrikes_fodda_antal_Dalarna
 
 ```
-<br>
 
-På kommunnivå ökade befolkningen totalt sett i 8 av länets kommuner mellan år 2000–2024, medan den minskade i 7 av dem. Antalet utrikes födda personer har under tidsperioden ökat i Dalarnas läns samtliga kommuner, medan antalet inrikes födda personer har minskat i alla kommuner förutom Falun och Gagnef. Slutsatsen blir att de kommuner i länet som har växt i invånarantal, med undantagen Falun och Gagnef, har gjort det som en följd av invandring, medan de kommuner som krympt har begränsat befolkningsminskningen genom att fler har invandrat än utvandrat. Notera även att utrikes föddas barn ingår i kategorin inrikes födda. Ökningen av antalet utrikes födda var i relation till befolkningsmängd störst i Hedemora, Avesta, Ludvika och Borlänge. 
+På kommunnivå ökade befolkningen totalt sett i 8 av länets kommuner mellan år 2000–2024, medan den minskade i 7 av dem (se det vänstra diagrammet nedan). Antalet utrikes födda personer har under tidsperioden ökat i Dalarnas läns samtliga kommuner, medan antalet inrikes födda personer har minskat i alla kommuner förutom Falun och Gagnef. Slutsatsen blir att de kommuner i länet som har växt i invånarantal, med undantagen Falun och Gagnef, har gjort det som en följd av invandring, medan de kommuner som krympt har begränsat befolkningsminskningen genom att fler har invandrat än utvandrat. Notera även att utrikes föddas barn ingår i kategorin inrikes födda. Ökningen av antalet utrikes födda var i relation till befolkningsmängd störst i Hedemora, Avesta, Ludvika och Borlänge. 
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center',include=FALSE}
 
 gg_antal_utrikes$befolkningsforandring_Dalarna
 
 ```
-<br>
 
-<span class = "kommentar">*Det känns som att de två styckena nedan är snarlikt det som är ovan. Behöver vi vara så detaljerade, och ha två diagram eller ska vi försöka väva ihop det till ett gemensamt avsnitt med ett diagram?*</span>
-
-Andelen av befolkningen som är utrikes födda är lägre i samtliga Dalarnas kommuner jämfört med riket, där ungefär `r andel_utrikes_Sverige_sista_ar` procent av invånarna är födda i ett annat land än Sverige år `r andel_utrikes_senaste_ar`. Högst andel utrikes födda i Dalarna återfinns i `r andel_utrikes_kommun_hogst_sista_ar` där ungefär `r andel_utrikes_kommun_hogst_sista_ar_varde` procent av befolkningen är utrikes födda. Även Borlänge och Avesta har en relativt stor andel utrikes födda (`r andel_utrikes_Borlänge_sista_ar` respektive `r andel_utrikes_Avesta_sista_ar` procent). Lägst andel utrikes födda finns i `r andel_utrikes_kommun_lagst_sista_ar`, där endast `r andel_utrikes_kommun_lagst_sista_ar_varde` procent av befolkningen är utrikes födda. 
+I det högra diagrammet nedan syns att andelen av befolkningen som är utrikes födda är lägre i samtliga Dalarnas kommuner jämfört med riket, där ungefär `r andel_utrikes_Sverige_sista_ar` procent av invånarna är födda i ett annat land än Sverige år `r andel_utrikes_senaste_ar`. Högst andel utrikes födda i Dalarna återfinns i `r andel_utrikes_kommun_hogst_sista_ar` där ungefär `r andel_utrikes_kommun_hogst_sista_ar_varde` procent av befolkningen är utrikes födda. Även Borlänge och Avesta har en relativt stor andel utrikes födda (`r andel_utrikes_Borlänge_sista_ar` respektive `r andel_utrikes_Avesta_sista_ar` procent). Lägst andel utrikes födda finns i `r andel_utrikes_kommun_lagst_sista_ar`, där endast `r andel_utrikes_kommun_lagst_sista_ar_varde` procent av befolkningen är utrikes födda. 
 
 Andelen utrikes födda har ökat i samtliga av Dalarnas kommuner mellan `r andel_utrikes_forsta_ar` och `r andel_utrikes_senaste_ar`, vilket kommer av att invandringen varit större än utvandringen under hela 2000-talet. Hur stor ökningen varit skiljer dock tydligt mellan kommunerna. I `r andel_utrikes_kommun_hogst_sista_ar` har andelen utrikes födda exempelvis ökat med `r andel_utrikes_kommun_hogst_forandring_varde` procentenheter sedan  `r andel_utrikes_forsta_ar`, medan ökningen har varit klart lägre i näraliggande Smedjebacken (ungefär `r andel_utrikes_smedjebacken_forandring_varde` procentenheter under samma tidsperiod) eller Gagnef (ungefär `r andel_utrikes_Gagnef_forandring_varde` procentenheter).
 
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center',include=FALSE}
 
 gg_andel_utrikes$utrikes_fodda_andel_Dalarna
 
 ```
-<br>
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
-gg_test
+gg_kombo
 
 ```
 
@@ -250,10 +245,13 @@ gg_storsta_fodelseland$storsta_fodelseland_Dalarna
 
 ```
 
+När de utrikes födda personer som är bosatta i Dalarna kartläggs utifrån deras invandringsår till Sverige, framgår att många invandrade i mitten av 2010-talet. Sedan dess har åtskilliga lämnat Dalarna, men `r invandringsar_antal_df_max_ar` är fortfarande det år när flest utrikes födda boende i Dalarna invandrade till Sverige. År `r invandringsar_senaste` bodde `r invandringsar_senaste_antal` personer i Dalarna som hade invandrat till Sverige samma år, vilket är klart fler än åren innan. Detta kan naturligtvis delvis förklaras av att vissa som invandrade under åren innan har lämnat Dalarna för andra delar av Sverige, men en viktiga orsak är också att personer födda i Ukraina, som tidigare haft ett uppehållstillstånd med tillfälligt skydd enligt massflyktdirektivet, har haft möjlighet att ansöka om att bli folkbokförda i Sverige sedan i juni 2024. 
 
-När de utrikes födda personer som är bosatta i Dalarna kartläggs utifrån deras invandringsår till Sverige, framgår det med all tydlighet att en stor andel har invandrat under de senaste tio åren. Över hälften av de utrikes födda som bor i Dalarna har bott i Sverige i *8 år eller kortare*. Det faktum att en stor andel av de utrikes födda i Dalarnas län har bott i Sverige en kort tid är viktigt att beakta när faktorer som utbildningsnivå, sysselsättning, medelinkomst m.m. analyseras. Antalet personer bosatta efter invandringsår i diagram 4 går att jämföra mot diagram 1, och det går som väntat att se ett samband mellan antalet immigranter och antal bosatta personer efter invandringsår. Antalet bosatta personer per invandringsår är generellt lägre än antalet immigranter per år i Dalarnas län. Detta kan förklaras med att personer som har invandrat har avlidit, flyttat till andra län, emigrerat, samt att inrikes födda som återvandrat omfattas av diagram 1. Utrikes födda har under 2000-talet varit mer benägna att flytta från Dalarnas län än till Dalarna från övriga Sverige. Mer om det går att läsa i det sista kapitlet, där inrikes flyttningar analyseras.
+När de utrikes födda personer som är bosatta i Dalarna kartläggs utifrån deras invandringsår till Sverige, framgår det med all tydlighet att en stor andel har invandrat under de senaste tio åren. Över hälften av de utrikes födda som bor i Dalarna har bott i Sverige i *8 år eller kortare*. Det faktum att en stor andel av de utrikes födda i Dalarnas län har bott i Sverige en kort tid är viktigt att beakta när faktorer som utbildningsnivå, sysselsättning, medelinkomst m.m. analyseras. Antalet personer bosatta efter invandringsår i diagram 4 går att jämföra mot diagram 1, och det går som väntat att se ett samband mellan antalet immigranter och antal bosatta personer efter invandringsår. Antalet bosatta personer per invandringsår är generellt lägre än antalet immigranter per år i Dalarnas län. Detta kan förklaras med att personer som har invandrat har avlidit, flyttat till andra län, emigrerat, samt att inrikes födda som återvandrat omfattas av diagram 1. Utrikes födda har under 2000-talet varit mer benägna att flytta från Dalarnas län än till Dalarna från övriga Sverige. Mer om det går att läsa i det sista kapitlet, där inrikes flyttningar analyseras.<span class = "kommentar">Avsnitt från tidigare rapport. Oklart hur mycket som fortfarande är relevant. Ta bort?</span>
 
-<span class = "kommentar">*Här ska diagram 5 "Antal utrikes födda i Dalarnas län efter vistelsetid" placeras in - stycket ovan behöver kontrolleras.*</span>
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+gg_antal_invandringsar$invandringsar_antal
+```
 
 Vid en analys av åldersfördelningen i Dalarnas befolkning uppdelat på den inrikes- och utrikes födda befolkningen blir det tydligt att den utrikes födda befolkningen i länet är väsentligt yngre än den inrikes födda, och har en större andel personer i arbetsför ålder (se de svarta linjerna i diagrammet nedan). Detta beror på att de personer som invandrat generellt är yngre än den inrikes födda befolkningen. Följden blir att invandringen totalt sett har en föryngrande effekt på befolkningen. Det finns även stora variationer i medelålder mellan olika grupper av utrikes födda beroende på invandringsår och födelseland. Utrikes födda utgör ungefär `r andel_utrikes` procent av den totala befolkningen i Dalarnas län och är därmed betydligt färre än inrikes födda.
 
@@ -335,8 +333,6 @@ gg_utb_niva_invandringsar$utb_niva_invandringsar
 ```
 
 *Diagram 2 - Vistelsetid, utbildningsnivå och inträde på arbetsmarknaden*
-<span class = "kommentar">Diagram som mer eller mindre motsvarar diagram 2 finns längre ned: sysselsättningsgrad i Dalarna efter utbildningsnivå respektive Andel förvärvsarbetande 20-65 år bland utrikes födda. Bör möjligtivs flyttas hit</span>
-<span class = "kommentar">Diagrammen 1 och 2 ovan behövs för att kunna justera texten i avsnittet.</span>
 
 Idag behövs det enligt Arbetsförmedlingen i regel gymnasiekompetens för att ha en god chans att etablera sig på arbetsmarknaden, även när det gäller bristyrken. 
 
