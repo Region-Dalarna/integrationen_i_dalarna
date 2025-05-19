@@ -205,6 +205,8 @@ gg_utb_niva_invandringsar <- diag_utbsniva_invandringsar(output_mapp = Output_ma
                                                          diag_invandringsar = FALSE,
                                                          returnera_data_rmarkdown = TRUE)
 
+utb_niva_vistelsetid_2_3_eftergym <- round(utb_invandringsar_df %>% filter(Utbildningsniva == "Eftergymnasial utbildning 3 år eller längre",Vistelsetid == "2-3 år") %>% .$andel,0)
+
 
 ########################
 # Arbetsmarknadsstatus #

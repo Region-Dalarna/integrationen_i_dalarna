@@ -309,14 +309,14 @@ Att gruppen utrikes födda är en heterogen grupp blir tydligt när utbildningsn
 gg_utbniva_bakgrund$utbniva_inr_utr_kon_Dalarna_ar2023
 
 ```
-<span class = "kommentar">Justera diagramförklaring ovan till inrikes och utrikes födda?</span>
+<span class = "kommentar">Justera diagramförklaring ovan till inrikes och utrikes födda? Är ett diagramskript som sannolikt används på flera andra ställen, svårt att ändra.</span>
 <br>
 
-<span class = "kommentar">Komplettera nedanstående med diagram och kontrollera texten</span>
+Eftersom det finns stora skillnader i utbildningsbakgrund bland utrikes födda, är det svårt att tala om dem som en samlad grupp. Personer med låg- och hög utbildning stöter på olika typer av utmaningar på arbetsmarknaden.
 
-Eftersom det finns stora skillnader i utbildningsbakgrund bland utrikes födda, är det svårt att tala om dem som en samlad grupp. Personer med låg- och hög utbildning stöter på olika typer av utmaningar på arbetsmarknaden. En aspekt som är viktig att beakta är att <span class = "kommentar">över 30 % av de som invandrat de senaste 11 åren har grundskolekompetens (förgymnasial) eller lägre utbildning</span>. Samtidigt saknas det uppgifter om utbildningsnivå för en stor andel av de utrikes födda, speciellt för de som varit en kortare tid i landet. 
+En förhållandevis stor andel av de utrikes födda i Dalarna hade år 2024 en eftergymnasial utbildning om minst 3 år. Högst utbildning hade de som relativt nyligen invandrat till Sverige, vilket är en indikation på att en större andel av dessa är arbetskraftsinvandrare. Exempelvis har ungefär `r utb_niva_vistelsetid_2_3_eftergym` procent av de som invandrade till Sverige mellan 2021 och 2021 (2-3 år i diagrammet nedan) och nu bor i Dalarna en eftergymnasial utbildning om minst tre år, vilket är klart fler än motsvarande andel bland inrikes födda. Bland övriga utbildningsnivåer ökar andelen med gymnasial utbildning tydligt ju längre tid som gått sedan invandringen. Störst andel med förgymnasial utbildning finns bland de som invandrat mellan 2015 och 2020 (4-9 år i diagrammet nedan).
 
-De utrikes födda i Dalarna som har bott i Sverige en längre tid har generellt sett en högre utbildningsnivå än de som invandrat de senaste åren. Huruvida detta beror på skillnader i utbildningsnivå vid invandring, eller att de med längre vistelsetid i större grad hunnit genomfört en utbildning i Sverige framgår inte av diagrammet. Sannolikt är det en kombination av dessa två faktorer.
+Viktigt att notera är även att det saknas uppgifter om utbildningsnivå för en stor andel av de utrikes födda, speciellt för de som varit en kortare tid i landet. 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_utb_niva_invandringsar$utb_niva_invandringsar
@@ -397,8 +397,6 @@ För utrikes födda män sjunker motsvarande andel bland 16-19-åringar från ci
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_uvas$UVAS_vistelsetid_inrikes_senastear_Dalarna
 ```
-<span class = "kommentar">Saknas förklaring på kvinnor - gul, män - grön</span>
-<br>
 
 Om de unga mellan 20 och 25 år som varken arbetar eller studerar i stället undersöks framträder en delvis annorlunda bild (se det högra diagrammet ovan). Bland kvinnor är andelen högre i denna åldersgrupp än den var bland 16-19-åringar, oavsett om personen är inrikes eller utrikes född. För utrikes födda kvinnor sjunker andelen som varken arbetar eller studerar bland 20-25 åringar från `r uvas_20_25_kvinnor_0_1` procent för de som varit i Sverige i max 2 år till `r uvas_20_25_kvinnor_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel för inrikes födda kvinnor är `r uvas_20_25_kvinnor_inrikes` procent.
 
