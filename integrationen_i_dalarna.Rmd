@@ -133,6 +133,12 @@ I <span class = "kommentar">*Långtidsutredningen 2019 (ref)*</span> beräknas s
 
 För att få en förståelse för den utrikes födda befolkningen i Dalarna och hur invandringen sett ut över tid, behöver situationen i riket som helhet analyseras. Arbetskraftsinvandringen, främst från Norden, tog fart efter andra världskriget och pågick fram till 1960-talets slut. I mitten av 1980-talet förändrades invandringens karaktär och fler flyktingar togs emot till följd av globala katastrofer. Från 1990-talet och framåt har krigssituationer i olika delar av världen föranlett en högre grad av flyktinginvandring med kriget i Syrien i mitten av 2010-talet som den tid då asylinvandringen nådde över 160 000 personer i Sverige. Därefter har antalet asylsökande minskat successivt och `r asylsokande_max_ar` sökte `r asylsokande_senaste_ar_antal` personer asyl i Sverige, vilket är det lägsta antalet sedan 1996.
 
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_asylsokande_antal$asylsokande_antal
+
+```
+
 <span class = "kommentar">*Säg något mer om de senaste 10 åren, efter kriget i Syrien*</span>
 
 För en fördjupad beskrivning av den utrikes födda befolkningens utveckling i Sverige och Dalarna, se fördjupningsavsnittet *Historisk överblick av invandringen i Dalarna*.
@@ -213,6 +219,12 @@ gg_andel_utrikes$utrikes_fodda_andel_Dalarna
 
 ```
 <br>
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+
+gg_test
+
+```
 
 För att förstå befolkningsutvecklingen i Dalarna är det även viktigt att undersöka de andra komponenter, vid sidan om invandringen, som påverkar befolkningsutvecklingen; födelseöverskottet och den inrikes flyttningen (se diagrammet nedan).
 
@@ -409,7 +421,6 @@ Andelen utrikes födda som varken arbetar eller studerar har förändrats relati
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_uvas$UVAS_vistelsetid_inrikes_tid_Dalarna
 ```
-<br>
 
 Även bland utrikes födda mellan 20 och 25 år har motsvarande andel förändrats mycket över tid. I slutet på 1990-talet varken arbetade eller studerade runt 70 procent av de utrikes födda mellan 20 och 25 år som varit i Sverige i max 2 år, att jämföra med `r uvas_20_25_senaste_ar_0_1` procent idag. En stor del av minskningen skedde i mitten på 2000-talet och därefter har andelen gått såväl upp som ner. En liknande utveckling syns även bland utrikes födda 20-25-åringar som varit i landet längre.
 

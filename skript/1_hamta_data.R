@@ -1,7 +1,8 @@
 if (!require("pacman")) install.packages("pacman")
 p_load(tidyverse,
        here,
-       scales)
+       scales,
+       patchwork)
 
 # OBS! Ska sättas till FALSE när skriptet går i produktion - men kan stängas av genom att sätta till TRUE för att se att alla skript fungerar som de ska
 # skriptet är till för att hantera rcurl-fel och inte vanliga fel som ju inte blir bättre av att man försöker flera gånger. =)
@@ -123,6 +124,10 @@ andel_utrikes_Avesta_sista_ar <- round(andel_utrikes_df %>% filter(år == andel_
 andel_utrikes_kommun_lagst_sista_ar <- andel_utrikes_df %>%filter(!(region%in%c("Sverige","Dalarna")),år == andel_utrikes_senaste_ar) %>% filter(andel_utrikes==min(andel_utrikes)) %>%  .$region
 andel_utrikes_kommun_lagst_sista_ar_varde <- round(andel_utrikes_df %>% filter(år == andel_utrikes_senaste_ar,region == andel_utrikes_kommun_lagst_sista_ar) %>%  .$andel_utrikes,0)
 andel_utrikes_kommun_lagst_forsta_ar_varde <- round(andel_utrikes_df %>% filter(år == min(år),region == andel_utrikes_kommun_lagst_sista_ar) %>%  .$andel_utrikes,0)
+
+# Kombinerar diagrammen ovan
+
+gg_test <- gg_antal_utrikes$befolkningsforandring_Dalarna+gg_andel_utrikes$utrikes_fodda_andel_Dalarna
 
 # Största födelseland bland utrikes födda i Dalarna
 source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_storsta_fodelseland_IntRap.R")

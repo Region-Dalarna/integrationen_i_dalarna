@@ -4,7 +4,9 @@ diag_andel_utrikes_scb <- function(region = "20", # Enbart ett i taget.
                                       start_ar = "2000",                                 # Startår för jämförelse. Senaste år jämförs med denna (tidigast 2000 och max 1 år)
                                       output_mapp = "G:/Samhällsanalys/API/Fran_R/utskrift/",                                  # mapp där diagram ska sparas, NA = sparas ingen fil
                                       skriv_diagrambildfil = FALSE,                           # TRUE om diagram ska skrivas till fil, FALSE om diagram inte ska skrivas till fil
-                                      valda_farger = diagramfarger("rus_sex"),
+                                      valda_farger = diagramfarger("rus_sex")[5:6],
+                                      ta_bort_diagramtitel = TRUE,
+                                      ta_bort_caption = TRUE,
                                       returnera_data_rmarkdown = FALSE,
                                       demo = FALSE             # sätts till TRUE om man bara vill se ett exempel på diagrammet i webbläsaren och inget annat
 ) {
@@ -65,6 +67,14 @@ diag_andel_utrikes_scb <- function(region = "20", # Enbart ett i taget.
   diagram_capt = "Källa: SCB:s öppna statistikdatabas\nBearbetning: Samhällsanalys, Region Dalarna"
   diagram_titel = paste0("Andel utrikes födda")
   diagramfilnamn <- paste0("utrikes_fodda_andel_",region_namn,".png")
+
+  if(ta_bort_diagramtitel){
+    diagram_titel = ""
+  }
+
+  if(ta_bort_caption){
+    diagram_capt = ""
+  }
 
   # Skapar diagram där etableringstiden jämförs mellan män och kvinnor, oavsett utbildning
  gg_obj <- SkapaStapelDiagram(skickad_df = andel_utrikes_df,
