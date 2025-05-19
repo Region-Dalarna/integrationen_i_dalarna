@@ -196,6 +196,16 @@ sfi_sistaar_varde_gymnasial <- SFI_df %>% filter(kön == "män och kvinnor",vari
 sfi_sistaar_varde_eftergymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Eftergymnasial utbildning") %>% filter(år == sfi_max_ar) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
 
 
+###########################
+## Utb-nivå vistelsetid ##
+##########################
+source(here("skript","diag_utbildingsniva_invandringsar.R"))
+gg_utb_niva_invandringsar <- diag_utbsniva_invandringsar(output_mapp = Output_mapp_figur,
+                                                         skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                                         diag_invandringsar = FALSE,
+                                                         returnera_data_rmarkdown = TRUE)
+
+
 ########################
 # Arbetsmarknadsstatus #
 ########################

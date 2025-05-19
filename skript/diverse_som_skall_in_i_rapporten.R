@@ -53,4 +53,14 @@ gg_obj <- SkapaStapelDiagram(skickad_df = arblosa_bakgr,
 # Har lagt till diagram och skrivit text
 #https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__AA__AA0003__AA0003H/IntGr8LanKON3/table/tableViewLayout1/
 
+# Figurer som tagits bort
+
+# Under utbildning
+
+# ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
+# gg_utbniva_bakgrund_alder$utb_niva_bakgrund
+# ```
+# <span class = "kommentar">Diagrammet ovan kan tas bort - i princip dublett av det som ligger innan.</span>
+# <br>
+
 

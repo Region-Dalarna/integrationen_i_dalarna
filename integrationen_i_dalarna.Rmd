@@ -312,22 +312,18 @@ gg_utbniva_bakgrund$utbniva_inr_utr_kon_Dalarna_ar2023
 <span class = "kommentar">Justera diagramförklaring ovan till inrikes och utrikes födda?</span>
 <br>
 
-```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
-gg_utbniva_bakgrund_alder$utb_niva_bakgrund
-```
-<span class = "kommentar">Diagrammet ovan kan tas bort - i princip dublett av det som ligger innan.</span>
-<br>
-
 <span class = "kommentar">Komplettera nedanstående med diagram och kontrollera texten</span>
 
 Eftersom det finns stora skillnader i utbildningsbakgrund bland utrikes födda, är det svårt att tala om dem som en samlad grupp. Personer med låg- och hög utbildning stöter på olika typer av utmaningar på arbetsmarknaden. En aspekt som är viktig att beakta är att <span class = "kommentar">över 30 % av de som invandrat de senaste 11 åren har grundskolekompetens (förgymnasial) eller lägre utbildning</span>. Samtidigt saknas det uppgifter om utbildningsnivå för en stor andel av de utrikes födda, speciellt för de som varit en kortare tid i landet. 
 
 De utrikes födda i Dalarna som har bott i Sverige en längre tid har generellt sett en högre utbildningsnivå än de som invandrat de senaste åren. Huruvida detta beror på skillnader i utbildningsnivå vid invandring, eller att de med längre vistelsetid i större grad hunnit genomfört en utbildning i Sverige framgår inte av diagrammet. Sannolikt är det en kombination av dessa två faktorer.
 
-*Diagram 1 - utbildningsnivå i Dalarna efter vistelsetid i Sverige*
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+gg_utb_niva_invandringsar$utb_niva_invandringsar
+```
 
 *Diagram 2 - Vistelsetid, utbildningsnivå och inträde på arbetsmarknaden*
-
+<span class = "kommentar">Diagram som mer eller mindre motsvarar diagram 2 finns längre ned: sysselsättningsgrad i Dalarna efter utbildningsnivå respektive Andel förvärvsarbetande 20-65 år bland utrikes födda. Bör möjligtivs flyttas hit</span>
 <span class = "kommentar">Diagrammen 1 och 2 ovan behövs för att kunna justera texten i avsnittet.</span>
 
 Idag behövs det enligt Arbetsförmedlingen i regel gymnasiekompetens för att ha en god chans att etablera sig på arbetsmarknaden, även när det gäller bristyrken. 
@@ -768,7 +764,7 @@ gg_fohm$bra_eller_mycket_bra_halsa_kon
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
-gg_forvarvsinkomst_utrikes$medianinkomst_bakgrund
+gg_forvarvsinkomst_utrikes$Medianinkomst_bakgrund
 
 ```
 *Diagram - Medianinkomst förvärvsarbetande invånare 20-64 år i Dalarnas län efter vistelsetid*
