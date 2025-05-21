@@ -69,25 +69,24 @@ Här ska vi ha en sammanfattning av rapporten. Det ska vara en punktlista med de
 
 <ul>
 
-<li>Utrikes födda upprätthåller invånarantalet i länet </li>
+<li>Dalarnas befolkning består av en ökad andel utrikes födda. Sedan år 2000 har antalet utrikes födda ökat med cirka 20 000 personer. Samtidigt har antalet inrikes födda minskat. Utan invandring hade länets befolkning minskat </li>
 
-<li>Vistelsetid påverkar integrationsnivåerna </li>
-    
-<li>Språk och utbildning avgörande för arbete </li>
+<li>Andelen arbetslösa utrikes födda är högre än för inrikes födda, men har minskat över tid </li>
 
-<li>Minskad arbetslöshet och minskat behov av ekonomiskt stöd över tid för utrikes födda </li>
+<li>Språk och utbildning avgörande för arbete, men även vistelsetiden påverkar integrationsnivåerna </li>
+
+<li>Minskad arbetslöshet ger även ett minskat behov av ekonomiskt stöd över tid för utrikes födda </li>
+
+<li>Utrikes födda uppvisar stor rörlighet och flyttar i hög grad </li>
+
+<li>Asylinvandringen har minskat markant sedan 2015 </li>
 
 </ul>
 
 # Inledning {-}
-
-<span class = "kommentar">Lägg till något om att vi omväxlat använder Född i Sverige och inrikes född </span>
-
 I år är det 10 år sedan Sverige registrerade det högsta antalet asylsökande genom tiderna. 2015 sökte närmare 163 000 personer asyl i Sverige och för Dalarnas del blev 2016 det år då invandringen var som störst efter att de asylsökande fått uppehållstillstånd och folkbokförts i länet. I november 2015 uttryckte även regeringen att trycket var stort på det svenska samhället och att Sverige behövde "ett andrum för svenskt flyktingmottagande". I och med det skärptes migrationspolitiken, men att det stora mottagandet skulle "vara en stolthet för oss när historien skrivs" [(Sveriges Radio, 2015)](https://www.sverigesradio.se/artikel/6310364){target="_blank"}^[Sveriges Radio, 2015. Regeringens besked om skärpt flyktingpolitik, 2015-11-25.]. [Riksrevisionen (2017)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/riksrevisionens-granskningsrapport/lardomar-av-flyktingsituationen-hosten-2015-_h5b54/){target="_blank"}^[Riksrevisionen, 2017. Granskningsrapport 2017:4, Lärdomar av flyktingsituationen hösten 2015 - beredskap och hantering.] granskade de centrala offentliga aktörernas beredskap och noterar att det brast i vissa avseenden, men att huvuduppdraget ändå kunde genomföras. 
 
 2019 publicerade Region Dalarna rapporten [*Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv*](https://www.regiondalarna.se/contentassets/d845727dbc9f49c3b7b09a2c60456497/integrationsanalys.pdf){target="_blank"}.^[Region Dalarna, 2019. Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv. Regionala utvecklingsförvaltningens rapportserie #1.] Rapporten skrevs i anslutning till och med anledning av den höga asylinvandringen till Sverige och Dalarna. Därefter har asylinvandringen minskat och 2024 var den på en nivå som är den lägsta sedan 1985, vilket är en del i ett paradigmskifte från sittande regering att öka arbetskraftsinvandringen och minska asylinvandringen [(Regeringen, 2025)](https://www.regeringen.se/pressmeddelanden/2025/01/pressbriefing-om-migrationen-till-sverige-under-2024/){target="_blank"}.^[Regeringen. Pressbriefing om migrationen till Sverige under 2024. 2025-01-10.]
-
-Frågan är vad som har hänt under det senaste decenniet? Integrationen av de som invandrat till Sverige är ett ämne som varit ständigt aktuellt i samhällsdebatten. Hur har integrationen av de som invandrat till Sverige och Dalarna utvecklats? 
 
 Beroende på sammanhang kan integration ha olika betydelser:
 <br>
@@ -109,6 +108,18 @@ Begreppet integration kan således ses som *en process där individer eller grup
 
 Även om integrationsfrågan är bredare, präglas samhällsdebatten av integration av utrikes födda i det svenska samhället. Det gör att det är viktigt att belysa hur utrikes födda förhåller sig till inrikes födda inom ett antal samhällsområden. Samhällets förmåga att intregrera utrikes födda i utbildning, arbetsmarknad eller boende är avgörande för t ex kompetensförsörjningen på kort och lång sikt. 
 
+Den här rapportens syfte är att redovisa aktuell statistik relaterat till utrikes föddas integration i samhället i Dalarna och visa på utvecklingen över tid. Som utgångspunkt finns 2019 års rapport, men en anpassning till dagens situation och kunskap görs i stor utsträckning. 
+
+I rapporten från 2019 konstaterades bl a att det var en tydlig skiljelinje i integrationen mellan utrikes födda å ena sidan och inrikes födda med utrikes födda föräldrar respektive inrikes födda med inrikes födda föräldrar å andra sidan. Skillnaden mellan de inrikes födda, oavsett om de hade inrikes eller utrikes födda föräldrar, var relativt liten när det gäller t ex skolresultat och sysselsättningsgrad. Distinktionen i denna rapport är därför primärt mellan utrikes födda och inrikes födda. En uppdelning sker även för kvinnor och män i de delar det är relevant, utbildningsnivåer samt vistelsetid i landet för de som är utrikes födda. I vissa diagram används även begreppet *Född i Sverige*, vilket ska likställas med inrikes född.
+
+# Demografi och invandring
+Sverige är sedan en längre tid inne i en demografisk fas där de stora babyboom-kullarna från slutet av 1940-
+och början av 1950-talet uppnåt pensionsålder och nästa generation från 1960-talet börjar närma sig pension. Många svenska kommuner har en alltmer ålderstigen befolkning, en effekt av den urbaniseringsvåg som pågått under hela 1900- och 2000-talet då många unga lämnat landsbygden och mindre tätorter till förmån för residens- och universitetsstäder. Förutom att den demografiska situationen medför färre skattebetalare som ska försörja allt fler äldre så innebär den också ett stort kompetensförsörjningsproblem.
+
+En stor andel äldre i befolkningen medför ekonomiska påfrestningar för dessa kommuner då allt färre i arbetsför ålder ska försörja allt fler äldre och barn. Redan i [Långtidsutredningen (2015)](https://www.regeringen.se/contentassets/86d73b72a97345feb2a8cbc8b6700fa7/sou-2015104-langtidsutredningen-2015-huvudbetankande/){target="_blank"}^[Regeringen, 2015. Långtidsutredningen 2015, Statens Offentliga Utredningar 2015:104.] gjordes beräkningar på hur mycket kommunalskatten skulle behöva höjas i kommunerna för att upprätthålla samma servicenivå år 2040 som då, som en följd av den förändrade demografiska strukturen. Beräkningarna visade på orimliga skattehöjningar, cirka 50-procentiga ökningar, vilket kan ses som en signal på hur allvarlig situationen var redan för tio år sedan.  
+
+I [Långtidsutredningen (2019)](https://www.regeringen.se/contentassets/ec035a7de89549eaacc14d82f54b4396/sou-2019_65_webb.pdf){target="_blank"}^[Regeringen, 2019. Långtidsutredningen 2019, Statens Offentliga Utredningar 2019:65.] beräknas statsbidragen till kommunsektorn, vid oförändrade kommunalskatter, behöva nästan dubbleras fram till 2035 för att möta den demografiskt betingade efterfrågan på kommunala tjänster. Utmaningen ligger dock inte främst i finansieringen, utan i att hitta arbetskraften. De största personalbristerna förväntas i landsbygdsregioner, med risk för ojämlikhet i levnadsförhållanden och utvecklingsmöjligheter.
+
 Andelen utrikes födda som är i arbetsför ålder (20-64 år) i Dalarna har ökat successivt över de senaste 20 åren, från `r andel_utrikes_min_ar` procent år `r andel_utrikes_inrikes_min_ar` till `r andel_utrikes_max_ar` procent år `r andel_utrikes_inrikes_max_ar`. Ökningen var särskilt tydlig under några år på mitten av 2010-talet, i samband med den stora flyktingströmmen och invandringen till Sverige och Dalarna. Utrikes födda är därför en förutsättning för att kunna kompetensförsörja arbetsmarknaden. 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
@@ -116,20 +127,9 @@ Andelen utrikes födda som är i arbetsför ålder (20-64 år) i Dalarna har ök
 gg_andel_utrikes_inrikes$befolkning_utr_inr_andel_Dalarna
 
 ```
+<br>
 
-Den här rapportens syfte är att redovisa aktuell statistik relaterat till utrikes föddas integration i samhället i Dalarna och visa på utvecklingen över tid. Rapporten tar sin utgångspunkt i 2019 års rapport, men anpassas till  kommer i stora drag följa 2019 års rapportdisposition. 
-
-I rapporten från 2019 konstaterades bl a att det var en tydlig skiljelinje i integrationen mellan utrikes födda å ena sidan och inrikes födda med utrikes födda föräldrar respektive inrikes födda med inrikes födda föräldrar å andra sidan. Skillnaden mellan de inrikes födda, oavsett om de hade inrikes eller utrikes födda föräldrar, var relativt liten när det gäller t ex skolresultat och sysselsättningsgrad. Distinktionen i denna rapport är därför mellan utrikes födda och inrikes födda, men även kvinnor och män i de delar det är relevant samt vistelsetid i landet för de som är utrikes födda. 
-
-# Demografi och invandring
-Sverige är sedan några år inne i en demografisk fas där de stora babyboom-kullarna från slutet av 1940-
-och början av 1950-talet uppnåt pensionsålder. Många svenska kommuner har en alltmer ålderstigen befolkning, en effekt av den urbaniseringsvåg som pågått under hela 1900-och 2000-talet då många unga lämnat landsbygden och mindre tätorter till förmån för residens- och universitetsstäder.
-
-En stor andel äldre i befolkningen medför ekonomiska påfrestningar för dessa kommuner då allt färre i arbetsför ålder ska försörja allt fler äldre och barn. Redan i [Långtidsutredningen (2015)](https://www.regeringen.se/contentassets/86d73b72a97345feb2a8cbc8b6700fa7/sou-2015104-langtidsutredningen-2015-huvudbetankande/){target="_blank"}^[Regeringen, 2015. Långtidsutredningen 2015, Statens Offentliga Utredningar 2015:104.] gjordes beräkningar på hur mycket kommunalskatten skulle behöva höjas i kommunerna för att upprätthålla samma servicenivå år 2040 som då, som en följd av den förändrade demografiska strukturen. Beräkningarna visade på orimliga skattehöjningar, cirka 50-procentiga ökningar, vilket kan ses som en signal på hur allvarlig situationen var redan för tio år sedan. Förutom att den demografiska situationen medför färre skattebetalare som ska försörja allt fler äldre så innebär den också ett stort kompetensförsörjningsproblem. 
-
-I [Långtidsutredningen (2019)](https://www.regeringen.se/contentassets/ec035a7de89549eaacc14d82f54b4396/sou-2019_65_webb.pdf){target="_blank"}^[Regeringen, 2019. Långtidsutredningen 2019, Statens Offentliga Utredningar 2019:65.] beräknas statsbidragen till kommunsektorn, vid oförändrade kommunalskatter, behöva nästan dubbleras fram till 2035 för att möta den demografiskt betingade efterfrågan på kommunala tjänster. Utmaningen ligger dock inte främst i finansieringen, utan i att hitta arbetskraften. De största personalbristerna förväntas i landsbygdsregioner, med risk för ojämlikhet i levnadsförhållanden och utvecklingsmöjligheter.
-
-För att få en förståelse för den utrikes födda befolkningen i Dalarna och hur invandringen sett ut över tid, behöver situationen i riket som helhet analyseras. Arbetskraftsinvandringen, främst från Norden, tog fart efter andra världskriget och pågick fram till 1960-talets slut. I mitten av 1980-talet förändrades invandringens karaktär och fler flyktingar togs emot till följd av globala katastrofer. Från 1990-talet och framåt har krigssituationer i olika delar av världen föranlett en högre grad av flyktinginvandring med kriget i Syrien i mitten av 2010-talet som den tid då asylinvandringen nådde över 160 000 personer i Sverige. Därefter har antalet asylsökande minskat successivt och `r asylsokande_max_ar` sökte `r asylsokande_senaste_ar_antal` personer asyl i Sverige, vilket är det lägsta antalet sedan 1996. En ökning av antalet asylansökningar noteras under 2022 i samband med Rysslands anfallskrig mot Ukraina, men 2024 är antalet asylsökande de lägsta på nästan 30 år.
+För att få en förståelse för den utrikes födda befolkningen i Dalarna och hur invandringen sett ut över tid, behöver situationen i riket som helhet analyseras. Arbetskraftsinvandringen, främst från Norden, tog fart efter andra världskriget och pågick fram till 1960-talets slut. I mitten av 1980-talet förändrades invandringens karaktär och fler flyktingar togs emot till följd av globala katastrofer. Från 1990-talet och framåt har krigssituationer i olika delar av världen föranlett en högre grad av flyktinginvandring med kriget i Syrien i mitten av 2010-talet som den tid då asylinvandringen nådde över 160 000 personer i Sverige. Därefter har antalet asylsökande minskat successivt och `r asylsokande_max_ar` sökte `r asylsokande_senaste_ar_antal` personer asyl i Sverige, vilket är det lägsta antalet sedan 1996. En ökning av antalet asylansökningar noteras under 2022 i samband med Rysslands anfallskrig mot Ukraina, men 2024 är antalet asylsökande det lägsta på nästan 30 år.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -157,7 +157,7 @@ När Jugoslavien drabbades av flera inbördeskrig under första hälften av 1990
 
 Efter att kriget bröt ut i Syrien 2011, ökade invandringen kraftigt och nya toppnoteringar av antalet asylsökande gjordes varje år. Under 2015 var antalet asylsökande som högst, då `r asylsokande_2015` personer sökte asyl i Sverige. Detta var mer än dubbelt så många som under 2014 och nästan en fördubbling av den tidigare högsta noteringen från 1992 då det var krig i forna Jugoslavien.
 
-Under den stora ökning av antalet asylsökande som skedde hösten 2015 hamnade migrations- och integrationsfrågorna högt upp på den politiska dagordningen och Sverige införde en mer restriktiv immigrationspolitik. I Dalarnas län slog invandringen rekord år 2016 med 4 725 personer som immigrerade under året. Därefter har antalet immigranter i länet minskat och antalet var 3 104 personer år 2017 och 2 628 personer år 2018.
+Under den stora ökning av antalet asylsökande som skedde hösten 2015 hamnade migrations- och integrationsfrågorna högt upp på den politiska dagordningen och Sverige införde en mer restriktiv immigrationspolitik. I Dalarnas län slog invandringen rekord år 2016 med 4 725 personer som immigrerade under året. Därefter har antalet immigranter i länet minskat och år 2024 bodde 2 028 personer i Dalarna som hade invandrat samma år. 
 
 Enligt internationell rätt har flyktingar rätt till skydd, så kallad asyl. Asylsökande är den som har ansökt om att få sitt skyddsbehov undersökt i ett land och därigenom få sin rätt till asyl prövad. En utländsk medborgare som erhållit uppehållstillstånd på grund av asyl, har fått det eftersom personen anses vara en flykting enligt utlänningslagen.
 
@@ -170,15 +170,9 @@ i landet. De nya ID-kontrollerna kombinerat med andra åtgärder i Sverige och E
 gg_asylsokande_antal$asylsokande_antal
 
 ```
+<br>
 
 Ett stort antal asylsökande ett år leder ofta till att invandringen ökar året därpå. Det beror på att asylsökande räknas som invandrade först när de har fått uppehållstillstånd och folkbokfört sig i Sverige. Detta gör att antalet immigranter i hög grad påverkas av hur många beslut om uppehållstillstånd Migrationsverket fastställer, samt hur stor andel av dessa ärenden som blir beviljade. Rekordnivån för antalet asylsökande år 2015, ledde till att invandringen slog rekord i Sverige år 2016. Även statistiken för åren 2017 och 2018 påverkades av det stora antalet asylsökande år 2015. Detta eftersom många fick vänta länge på beslut om de fick stanna i landet och för att många anhöriga till de som fick uppehållstillstånd sedan ville flytta till Sverige.
-
-Anhöriginvandring, eller anknytningsinvandring, är när en person vill flytta till eller stanna i Sverige på grund av att den har en anhörig som är svensk medborgare eller har uppehållstillstånd i Sverige. I Sverige finns det möjlighet att få uppehållstillstånd som anhörig för make, maka, barn under 18 år och adoptivbarn. Den som kommer till Sverige benämns som anhöriginvandrare och den som redan bor i Sverige benämns som anknytningsperson.
-Eftersom flyktingar, efter att de har flyttat till Sverige, ofta vill förenas med någon anhörig, följer anhöriginvandringen i viss mån asylinvandringen.
-
-Under åren *2013–2018* beviljades totalt 771 645 uppehållstillstånd i Sverige. Av dessa beviljades 9 procent för studier, 6 procent för EU-medborgare, 31 procent av asylskäl, 31 procent av anknytningsskäl och 23 procent fick uppehållstillstånd på grund av arbetsskäl. Att mindre än en tredjedel av de som beviljades uppehållstillstånd åren *2013–2018* var flyktingar med asylskäl är viktigt att komma ihåg när invandring och integration analyseras. Många av de som fått beviljade uppehållstillstånd på grund av asyl de senaste åren invandrade utan sin närmaste familj. Detta gjorde att även antalet sökta och beviljade uppehållstillstånd av anknytningsskäl var stort. 
-
-<span class = "kommentar">*Utvidga tidsspannet för antal beviljade uppehållstillstånd och titta på perioden 2019-2024 separat.*</span>
 
 </div>
  
@@ -191,6 +185,7 @@ Mellan `r min_ar_utrikes_antal` och `r max_ar_utrikes_antal` ökade antalet utri
 gg_antal_utrikes$utrikes_fodda_antal_Dalarna
 
 ```
+<br>
 
 På kommunnivå ökade befolkningen totalt sett i 8 av länets kommuner mellan år 2000–2024, medan den minskade i 7 av dem (se det vänstra diagrammet nedan). Antalet utrikes födda personer har under tidsperioden ökat i Dalarnas läns samtliga kommuner, medan antalet inrikes födda personer har minskat i alla kommuner förutom Falun och Gagnef. Slutsatsen blir att de kommuner i länet som har växt i invånarantal, med undantagen Falun och Gagnef, har gjort det som en följd av invandring, medan de kommuner som krympt har begränsat befolkningsminskningen genom att fler har invandrat än utvandrat. Notera även att utrikes föddas barn ingår i kategorin inrikes födda. Ökningen av antalet utrikes födda var i relation till befolkningsmängd störst i Hedemora, Avesta, Ludvika och Borlänge. 
 
@@ -201,9 +196,6 @@ gg_antal_utrikes$befolkningsforandring_Dalarna
 ```
 
 I det högra diagrammet nedan syns att andelen av befolkningen som är utrikes födda är lägre i samtliga Dalarnas kommuner jämfört med riket, där ungefär `r andel_utrikes_Sverige_sista_ar` procent av invånarna är födda i ett annat land än Sverige år `r andel_utrikes_senaste_ar`. Högst andel utrikes födda i Dalarna återfinns i `r andel_utrikes_kommun_hogst_sista_ar` där ungefär `r andel_utrikes_kommun_hogst_sista_ar_varde` procent av befolkningen är utrikes födda. Även Borlänge och Avesta har en relativt stor andel utrikes födda (`r andel_utrikes_Borlänge_sista_ar` respektive `r andel_utrikes_Avesta_sista_ar` procent). Lägst andel utrikes födda finns i `r andel_utrikes_kommun_lagst_sista_ar`, där endast `r andel_utrikes_kommun_lagst_sista_ar_varde` procent av befolkningen är utrikes födda. 
-
-Andelen utrikes födda har ökat i samtliga av Dalarnas kommuner mellan `r andel_utrikes_forsta_ar` och `r andel_utrikes_senaste_ar`, vilket kommer av att invandringen varit större än utvandringen under hela 2000-talet. Hur stor ökningen varit skiljer dock tydligt mellan kommunerna. I `r andel_utrikes_kommun_hogst_sista_ar` har andelen utrikes födda exempelvis ökat med `r andel_utrikes_kommun_hogst_forandring_varde` procentenheter sedan  `r andel_utrikes_forsta_ar`, medan ökningen har varit klart lägre i näraliggande Smedjebacken (ungefär `r andel_utrikes_smedjebacken_forandring_varde` procentenheter under samma tidsperiod) eller Gagnef (ungefär `r andel_utrikes_Gagnef_forandring_varde` procentenheter).
-
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center',include=FALSE}
 
@@ -216,24 +208,28 @@ gg_andel_utrikes$utrikes_fodda_andel_Dalarna
 gg_kombo
 
 ```
+<br>
 
-För att förstå befolkningsutvecklingen i Dalarna är det även viktigt att undersöka de andra komponenter, vid sidan om invandringen, som påverkar befolkningsutvecklingen; födelseöverskottet och den inrikes flyttningen (se diagrammet nedan).
+Andelen utrikes födda har ökat i samtliga av Dalarnas kommuner mellan `r andel_utrikes_forsta_ar` och `r andel_utrikes_senaste_ar`, vilket kommer av att invandringen varit större än utvandringen under hela 2000-talet. Hur stor ökningen varit skiljer dock tydligt mellan kommunerna. I `r andel_utrikes_kommun_hogst_sista_ar` har andelen utrikes födda exempelvis ökat med `r andel_utrikes_kommun_hogst_forandring_varde` procentenheter sedan  `r andel_utrikes_forsta_ar`, medan ökningen har varit klart lägre i näraliggande Smedjebacken (ungefär `r andel_utrikes_smedjebacken_forandring_varde` procentenheter under samma tidsperiod) eller Gagnef (ungefär `r andel_utrikes_Gagnef_forandring_varde` procentenheter).
+
+För att förstå befolkningsutvecklingen i Dalarna är det även viktigt att undersöka de andra komponenter, vid sidan om invandringen, som påverkar befolkningsutvecklingen; födelseöverskottet och den inrikes flyttningen.
 
 Mellan år `r befforandring_komponent_min_ar` och `r befforandring_komponent_max_ar` har antalet döda i Dalarna varit fler än antalet födda och antalet utflyttade till övriga Sverige har varit fler än antalet inflyttade från övriga Sverige. Totalt flyttade `r inrikes_flyttningsoverskott_netto` personer netto från Dalarna till andra delar av Sverige under perioden, medan  det dog `r fodelseunderskott_netto` fler personer än det föddes. Under samma period var invandringsöverskottet `r invandringsoverskott_netto` personer. Att Dalarnas befolkning har växt under 2000-talet beror således på att invandringen har varit relativt stor.
-
-Födelseunderskottet minskade successivt från år 2000 och fram till 2019, för att därefter öka kraftigt fram till 2024. Utvecklingen till 2019 beror i stor grad på att de stora ålderskullar som föddes runt 1990 befann sig i barnafödande åldrar, samt en generös familje- och socialpolitik och en stor invandring. De som invandrade till Dalarna i mitten av 2010-talet var generellt sett unga och i en ålder när det är vanligt att skaffa barn. Utrikes födda kvinnor har även en hög fruktsamhet direkt efter att de invandrat till Sverige, men därefter minskar den successivt. Att fruktsamhetstalen är extra höga bland kvinnor som nyligen invandrat beror sannolikt på att många kvinnors invandring är knutet till familjebildning, och att de kommer till Sverige för att återförenas med sin familj eller för att bilda familj. 
-
-De senaste årens markanta minskning av födelsetalen är en fråga som förvånar demografer. Det är inte längre en lika tydlig koppling mellan makroekonomiska upp- och nedgångar eller välfärdssystemets utformning och födslar. Nedgången är mer knuten till oro inför framtiden och påverkar framför allt sannolikheten att skaffa sitt första barn. För en fördjupad genomgång av förändringar i födelsetal, se avsnitt 2.1 i [*Befolkningsutvecklingen i Dalarna*](https://region-dalarna.github.io/befolkningsutvecklingen_i_Dalarna/){target="_blank"}.^[Befolkningsutvecklingen i Dalarna, Samhällsanalys, Region Dalarna (2025-03-25).]
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
 gg_befforandring_komponenter$`befolkningsforandring_per_komponent_Dalarnas län_ar2000-2024`
 
 ```
+<br>
+
+Födelseunderskottet minskade successivt från år 2000 och fram till 2019, för att därefter öka kraftigt fram till 2024. Utvecklingen till 2019 beror i stor grad på att de stora ålderskullar som föddes runt 1990 befann sig i barnafödande åldrar, samt en generös familje- och socialpolitik och en stor invandring. De som invandrade till Dalarna i mitten av 2010-talet var generellt sett unga och i en ålder när det är vanligt att skaffa barn. Utrikes födda kvinnor har även en hög fruktsamhet direkt efter att de invandrat till Sverige, men därefter minskar den successivt. Att fruktsamhetstalen är extra höga bland kvinnor som nyligen invandrat beror sannolikt på att många kvinnors invandring är knutet till familjebildning, och att de kommer till Sverige för att återförenas med sin familj eller för att bilda familj. 
+
+De senaste årens markanta minskning av födelsetalen är en fråga som förvånar demografer. Det är inte längre en lika tydlig koppling mellan makroekonomiska upp- och nedgångar eller välfärdssystemets utformning och födslar. Nedgången är mer knuten till oro inför framtiden och påverkar framför allt sannolikheten att skaffa sitt första barn. För en fördjupad genomgång av förändringar i födelsetal, se avsnitt 2.1 i [*Befolkningsutvecklingen i Dalarna*](https://region-dalarna.github.io/befolkningsutvecklingen_i_Dalarna/){target="_blank"}.^[Befolkningsutvecklingen i Dalarna, Samhällsanalys, Region Dalarna (2025-03-25).]
 
 Förutom att antalet immigranter var stort under framförallt mitten på 2010-talet, har ursprungsländerna förändrats över tid, med ett större antal asylsökande från utomeuropeiska länder. År `r fodelseland_senaste_ar` kan konstateras att det skett omflyttningar av de tio största födelseländerna bland utrikes födda invånare i Sverige. År `r fodelseland_senaste_ar` var `r storsta_fodelseland_senaste_ar` det land som flest invånare i Dalarna var födda i (vid sidan om Sverige). Totalt `r storsta_fodelseland_senaste_ar_antal` invånare i Dalarna hade `r storsta_fodelseland_senaste_ar` som födelseland. Detta är en stor förändring mot 2010, när antalet invånare i Dalarna med Syrien som födelseland kan räknas i låga hundratal. Orsaken till detta är naturligtvis inbördeskriget i Syrien under 2010-talet, när många från landet flydde till Europa och Sverige. Andra länder från vilka invandringen ökat tydligt under 2000-talet är Somalia och Eritrea. 
 
-Det land som näst flest invånare i Dalarna var födda i år `r fodelseland_senaste_ar` var `r andra_fodelseland_senaste_ar` med `r andra_fodelseland_senaste_ar_antal` invånare. Detta är en tydlig minskning sedan 2000, när antalet invånare i Dalarna med landet som födelseland var drygt 6000. Orsaken till detta är att många invandrade från Finland under åren runt och efter andra Världskriget. Dessa börjar således komma upp i åren och eftersom relativt få flyttar till Sverige från Finland idag minskar antalet personer som är födda i Finland i Dalarna stadigt.
+Det land som näst flest invånare i Dalarna var födda i år `r fodelseland_senaste_ar` var `r andra_fodelseland_senaste_ar` med `r andra_fodelseland_senaste_ar_antal` invånare. Detta är en tydlig minskning sedan år 2000, när antalet invånare i Dalarna med Finland som födelseland var drygt 6 000. Orsaken till detta är att många invandrade från Finland under åren runt och efter andra världskriget. Dessa börjar således komma upp i åren och eftersom relativt få flyttar till Sverige från Finland idag minskar antalet personer som är födda i Finland i Dalarna stadigt.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -249,7 +245,7 @@ gg_antal_invandringsar$invandringsar_antal
 ```
 <br>
 
-Vid en analys av åldersfördelningen i Dalarnas befolkning uppdelat på den inrikes- och utrikes födda befolkningen blir det tydligt att den utrikes födda befolkningen i länet är väsentligt yngre än den inrikes födda, och har en större andel personer i arbetsför ålder (se de svarta linjerna i diagrammet nedan). Detta beror på att de personer som invandrat generellt är yngre än den inrikes födda befolkningen. Följden blir att invandringen totalt sett har en föryngrande effekt på befolkningen. Det finns även stora variationer i medelålder mellan olika grupper av utrikes födda beroende på invandringsår och födelseland. Utrikes födda utgör ungefär `r andel_utrikes` procent av den totala befolkningen i Dalarnas län och är därmed betydligt färre än inrikes födda.
+Vid en analys av åldersfördelningen i Dalarnas befolkning uppdelat på den inrikes- och utrikes födda befolkningen blir det tydligt att den utrikes födda befolkningen i länet är väsentligt yngre än den inrikes födda, och har en större andel personer i arbetsför ålder (se de svarta linjerna i diagrammet nedan). Detta beror på att de personer som invandrat generellt är yngre än den inrikes födda befolkningen. Följden blir att invandringen totalt sett har haft en föryngrande effekt på befolkningen. Det finns även stora variationer i medelålder mellan olika grupper av utrikes födda beroende på invandringsår och födelseland. Utrikes födda utgör ungefär `r andel_utrikes` procent av den totala befolkningen i Dalarnas län och är därmed betydligt färre än inrikes födda.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -259,7 +255,7 @@ knitr::include_graphics("Figurer/Befpyramid Dalarnas län 2024_jmfr_utr_inr.png"
 ```
 <br>
 
-Mellan år `r min_ar_utrikes_kumulativ` och `r max_ar_utrikes_kumulativ` minskade antalet inrikes födda i arbetsför ålder (`r unique(antal_forandring_lan_kumulativ$alder_grupper)`) i Dalarnas län med `r kumulativ_summa_inrikes` personer, samtidigt som antalet utrikes födda i samma åldersgrupp ökade med `r kumulativ_summa_utrikes` personer. Minskningen av antalet inrikes födda berodde på att ålderskullarna som fyllde 65 år var större än de som fyllde 20 år, samt en större inrikes utflyttning än inflyttning. Den inrikes födda befolkningen i arbetsför ålder minskade allra mest åren 2010–2015, vilket berodde på att det stora antalet personer födda i slutet av 1940-talet fyllde 65 och därmed uppnådde pensionsålder.
+Mellan år `r min_ar_utrikes_kumulativ` och `r max_ar_utrikes_kumulativ` minskade antalet inrikes födda i arbetsför ålder (`r unique(antal_forandring_lan_kumulativ$alder_grupper)`) i Dalarnas län med `r kumulativ_summa_inrikes` personer, samtidigt som antalet utrikes födda i samma åldersgrupp ökade med `r kumulativ_summa_utrikes` personer. Minskningen av antalet inrikes födda berodde på att ålderskullarna som fyllde 65 år var större än de som fyllde 20 år, samt en större inrikes utflyttning än inflyttning. Den inrikes födda befolkningen i arbetsför ålder minskade allra mest åren 2010–2015, vilket berodde på att det stora antalet personer födda i slutet av 1940-talet uppnådde pensionsålder.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -280,7 +276,7 @@ gg_antal_utrikes$befolkningsprognos_lan_Dalarna
 <span class = "kommentar"> Någon kort text som bryggar över till avsnitt 2</span>
 
 # Utbildning och arbetsmarknad
-Ett viktigt steg för att kunna integreras i ett samhälle är naturligtvis att lära sig språket. Språkkunskaper ger förutsättningar för utbildning som i sin tur skapar möjligheter på arbetsmarknaden. I detta avsnitt görs en genomgång av utvecklingen för utrikes födda inom dessa delar.
+Ett viktigt steg för att kunna integreras i ett samhälle är att lära sig språket. Språkkunskaper ger förutsättningar för utbildning som i sin tur skapar möjligheter på arbetsmarknaden. I detta avsnitt görs en genomgång av utvecklingen för utrikes födda inom dessa delar.
 
 ## Språk
 Att ha grundläggande kunskaper i det officiella språket är viktigt för att kunna delta i samhället, både socialt,  ekonomiskt och kulturellt. För att underlätta integrationen av nyanlända har Sverige ett system för svenskundervisning för invandrare, hädanefter SFI. SFI är en utbildning som erbjuds till personer som är bosatta i Sverige och saknar sådana grundläggande kunskaper i svenska språket som utbildningen syftar till att ge. Från andra kalenderhalvåret det år hen fyller 16 år har personen rätt till SFI ([Skolverket](https://www.skolverket.se/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-sfi){target="_blank"}).
@@ -293,6 +289,7 @@ Män med förgymnasial utbildning som blev godkända i SFI under år `r sfi_max_
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_SFI$sfi_vistelsetid_senastear_Dalarna
 ```
+<br>
 
 Vistelsetiden för de personer boende i Dalarna som blivit godkända i SFI har förändrats relativt mycket över tid, men oavsett utbildningsnivå har vistelsetiden ökat över tid. Under några år i slutet på 1990-talet hade de män och kvinnor med förgymnasial utbildning som blivit godkända i SFI varit i Sverige ungefär 1300-1400 dagar (medianvärde). Därefter såväl ökade som minskade vistelsetiden fram till mitten av 2010-talet, innan den ökade tydligt fram till åren runt pandemin (2020-2021). År `r sfi_max_ar` hade de män och kvinnor med förgymnasial utbildning som blev godkända i SFI i Dalarna varit i Sverige i `r sfi_sistaar_varde_forgymnasial` dagar, vilket är ungefär lika länge som de som blev godkända åren innan. För personer med längre utbildningar (gymnasial eller eftergymnasial) är trenden liknande, men vistelsetiden generellt kortare. 
 
@@ -860,6 +857,8 @@ gg_valdeltagande_vistelsetid$Valdeltagande_i_val_till_kommun
 
 # Sammanfattande diskussion
 Vad ser vi ur ett integrationsperspektiv?
+
+Invandringen har föryngrat befolkningen, bromsat befolkningsminskningen under de senaste decennierna. Den nuvarande invandringsnivån i kombination med låga födelsetal leder till en allt mer åldrad befolkning och utmanar kompetensförsörjningen den närmaste tiden.
 
 Vad är positivt?
 Vad är negativt?
