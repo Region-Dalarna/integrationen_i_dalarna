@@ -727,8 +727,23 @@ uvas_16_19_senaste_ar_4_9 <- round(UVAS_df %>% filter(år == uvas_senaste_ar,var
 uvas_20_25_senaste_ar_4_9 <- round(UVAS_df %>% filter(år == uvas_senaste_ar,variabel == "4-9 år",kön == "män och kvinnor",sysselsattning == "20-25 år" ) %>%  .$varde,0)
 
 
+###########################################
+#######      Utrikes flyttar       ########
+###########################################
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/main/diagram_flytt_inrikes_bakgrund_SCB.R", encoding="UTF-8")
+gg_flytt_bakgrund <- diag_inr_flyttnetto_inr_utr_fodda(region_vekt = "20",
+                                                       skriv_diagram = spara_diagram_som_bildfiler,
+                                                       output_mapp =  Output_mapp_figur,
+                                                       returnera_data = TRUE,
+                                                       fixa_y_axel_varden_jamna_tal = FALSE,
+                                                       farg_vekt = diagramfarger("rus_sex")[2:1])
+flytt_senaste_ar <- max(flytt_bakgrund_df$år)
+flytt_senaste_inrikes <- flytt_bakgrund_df %>% filter(region == "Dalarna",år == max(år),födelseregion == "Född i Sverige") %>% .$Inrikes_flyttnetto
+flytt_senaste_utrikes <- abs(flytt_bakgrund_df %>% filter(region == "Dalarna",år == max(år),födelseregion == "Utrikes född") %>% .$Inrikes_flyttnetto)
 
-
+# Utflytt sedan 2017. Notera att det är i absoluta tal
+utflytt_utrikes_sedan_2017 <- format(abs(sum(flytt_bakgrund_df %>% filter(region == "Dalarna",år>2016,födelseregion == "Utrikes född") %>% .$Inrikes_flyttnetto)),big.mark = " ")
+flytt_inrikes_sedan_2017 <- format(sum(flytt_bakgrund_df %>% filter(region == "Dalarna",år>2016,födelseregion == "Född i Sverige") %>% .$Inrikes_flyttnetto),big.mark = " ")
 ############################################
 #### Boende per upplåtelseform      ########
 ############################################
