@@ -328,13 +328,15 @@ Viktigt att notera är även att det saknas uppgifter om utbildningsnivå för e
 
 Diagrammet ovan visar att vistelsetid i landet och utbildningsbakgrund i stor utsträckning påverkar hur stor andel personer som är sysselsatta. Generellt sett så har utrikes födda personer med låg utbildning svårare att etablera sig på arbetsmarknaden än de med gymnasieutbildning eller högre utbildning. En bidragande faktor kan vara att det finns få enkla jobb på den svenska arbetsmarknaden som inte kräver längre utbildning. För att möjliggöra att fler av de utrikes födda som flyttar till Dalarna ska arbeta, är det av största vikt att så många som möjligt tillgodogör sig en utbildning som efterfrågas av arbetsmarknaden.
 
-Det finns flera tänkbara anledningar till att utrikes födda i genomsnitt presterar sämre på arbetsmarknaden, även när hänsyn tas till skillnader i utbildningsnivå. Några tänkbara förklaringar kan exempelvis vara lägre kunskapar om landet, språket och kulturen. För de som flyttat till Sverige av flyktingskäl kan traumatiska upplevelser också inverka. Det finns emellertid rapporter som visar att diskriminering av personer med utländskt ursprung förekommer på arbetsmarknaden [(Länsstyrelsen Stockholm, 2018)](https://www.diva-portal.org/smash/get/diva2:1273400/FULLTEXT01.pdf){target="_blank"}^[Länsstyrelsen Stockholm, 2018. Antisvart rasism och diskriminering på arbetsmarknaden, Rapport 2018.21.]. Utrikes födda män förefaller vara mer utsatta inom yrken där det finns många inrikes födda [(Bursell, M. och Bygren, M., 2023)](https://www.ifau.se/globalassets/pdf/se/2023/2023-10-etnisk-yrkessegregering-pa-arbetsmarknaden--har-diskriminering-nagon-betydelse.pdf){target="_blank"}^[Bursell, M. och Bygren, M., 2023. Etnisk yrkessegregering på arbetsmarknaden – har diskriminering någon betydelse?, Rapport 2023.10, IFAU.].
+Det finns flera tänkbara anledningar till att utrikes födda i genomsnitt presterar sämre på arbetsmarknaden, även när hänsyn tas till skillnader i utbildningsnivå. Några tänkbara förklaringar kan exempelvis vara lägre kunskapar om landet, språket och kulturen. För de som flyttat till Sverige av flyktingskäl kan traumatiska upplevelser också inverka. Det finns emellertid rapporter som visar att diskriminering av personer med utländskt ursprung förekommer på arbetsmarknaden [(Länsstyrelsen Stockholm, 2018)](https://www.diva-portal.org/smash/get/diva2:1273400/FULLTEXT01.pdf){target="_blank"}^[Länsstyrelsen Stockholm, 2018. Antisvart rasism och diskriminering på arbetsmarknaden, Rapport 2018.21.]. Utrikes födda män förefaller vara mer utsatta inom yrken där det finns många inrikes födda [(Bursell, M. och Bygren, M., 2023)](https://www.ifau.se/globalassets/pdf/se/2023/2023-10-etnisk-yrkessegregering-pa-arbetsmarknaden--har-diskriminering-nagon-betydelse.pdf){target="_blank"}^[Bursell, M. och Bygren, M., 2023. Etnisk yrkessegregering på arbetsmarknaden – har diskriminering någon betydelse?, Rapport 2023:10, IFAU.].
 
 De ekonomiska vinsterna för samhället skulle vara stora om skillnaderna i sysselsättning och medelinkomst, mellan inrikes och utrikes födda skulle utjämnas. I den mån diskriminering förklarar denna skillnad, finns det alltså stora vinster i att bekämpa den, både för samhället och för de utrikes födda själva.
 
 <span class = "kommentar">*De tre styckena ovan har ingen ren koppling till utbildningsavsnittet - flytta till delar där det finns arbetsmarknadskoppling*</span>
 
 Eftersom en gymnasieutbildning förbättrar möjligheten att etablera sig på arbetsmarknaden, är en viktig aspekt att undersöka hur stor andel av avgångseleverna i årskurs 9 i länet som är behöriga till att påbörja gymnasiestudier. Ofullständiga eller låga betyg är i första hand ett problem för den enskilde, då personens valmöjligheter begränsas och etableringen på arbetsmarknaden försvåras. Att en stor andel elever inte blir behöriga till gymnasiet kan även innebära ett samhällsproblem. Samhället misslyckas med att ta tillvara på elevernas potential om de inte når målen för utbildningen i skolan. Det finns även ett starkt samband mellan dåliga skolresultat och sociala problem [(Westin Lundqvist, W. m fl, 2019)](https://www.hv.se/contentassets/82eff73069584573b03f43956b661c05/laga-skolresultat-i-socialt-utsatta-omraden_.pdf){target="_blank"}^[Westin Lundqvist, W., Assmo, P. och Sunnemark, F., 2019. Låga skolresultat i socialt utsatta områden, Högskolan i Väst.]. 
+
+Skillnaden i andelen behöriga till gymnasiet hos avgångselever i årskurs 9 mellan inrikes och utrikes födda är fortsatt stor i Dalarna. Sedan 2005 har gymnasiebehörigheten för inrikes födda minskat från över 90 procent till cirka 85 procent år 2023. Skillnaden mellan inrikes födda pojkar och flickor är marginell och utvecklingen har varit svagt negativ sedan 2005. 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -343,13 +345,9 @@ Eftersom en gymnasieutbildning förbättrar möjligheten att etablera sig på ar
 ```
 <br>
 
-Skillnaden i andelen behöriga till gymnasiet hos avgångselever i årskurs 9 mellan inrikes och utrikes födda är fortsatt stor i Dalarna. Sedan 2005 har gymnasiebehörigheten för inrikes födda minskat från över 90 procent till cirka 85 procent år 2023. Skillnaden mellan inrikes födda pojkar och flickor är marginell och utvecklingen har varit i princip densamma sedan 2005. 
+För utrikes födda, både pojkar och flickor har det varit en stor variation under de senaste 20 åren. 2005 var behörigheten för flickor cirka 5 procentenheter lägre än för inrikes födda flickor. För utrikes födda pojkar var skillnaden nästan tre gånger så stor vid samma tidpunkt. Sedan dess har andelen behöriga utrikes födda flickor fallit fram till 2017, för att därefter öka till omkring 66 procent år 2023. För utrikes födda pojkar var minskningen som störst fram till 2011 för att därefter öka från 44 procent till 68 procent år 2023. Det innebär att utrikes födda pojkar har en högre andel behöriga till gymnasiet än utrikes födda flickor år 2023, vilket är första gången sedan 2013.
 
-För utrikes födda, både pojkar och flickor har det varit en stor variation under de senaste 20 åren. 2005 var behörigheten för flickor cirka 5 procentenheter lägre än för inrikes födda flickor. För utrikes födda pojkar var skillnaden nästan tre gånger så stor vid samma tidpunkt. Sedan dess har andelen behöriga utrikes födda flickor fallit fram till 2017, för att därefter öka till omkring 66 procent år 2023. För utrikes födda pojkar var minskningen som störst fram till 2011 för att därefter öka från 44 procent till 68 procent. Det innebär att utrikes födda pojkar har en högre andel behöriga till gymnasiet än utrikes födda flickor år 2023, vilket är första gången det senaste decenniet.
-
-I rapporten 2019 studerades avgångseleverna i årskurs 9 i Sverige år 2018 och det var tydligt att andelen behöriga påverkades av migrationsbakgrund. Skillnaderna i andelen behöriga var betydligt mindre mellan elever med utländsk och svensk bakgrund när förutsättningarna var mer likvärdiga. Vid en jämförelse var 91 procent av inrikes födda elever behöriga och 86 procent av inrikes födda elever med utrikes födda föräldrar behöriga, medan 85 procent av de utrikes födda eleverna som invandrat före skolstart var behöriga. Bland utrikes födda elever i riket som invandrat i årskurs 1–5 var andelen behöriga elever däremot märkbart lägre, 67 procent. Allra lägst i riket var behörigheten bland utrikes födda elever som hade invandrat under perioden 2014-2018 (då motsvarande högstadiet) eller saknade svenskt personnummer. Där var andelen behöriga elever 28 procent.
-
-Det finns stora skillnader i gymnasiebehörighet mellan grupper med olika vistelsetid i Dalarna där behörigheten är större ju längre eleverna har vistats i Sverige (se diagram nedan). Behörigheten för elever som går ut årskurs 9 med en vistelsetid som är 10 år eller längre, är i det närmaste att likställa med behörigheten för inrikes födda. I gruppen med en vistelsetid mellan 4 och 9 år är behörigheten omkring 20 procentenheter lägre och i gruppen vistelsetid 2-3 år är den ytterligare drygt 20 procentenheter lägre (knappt 40 procent har gymnasiebehörighet). <span class = "kommentar">För lika det som står ovan från rapporten 2019? Ta bort något?.</span>
+Det finns stora skillnader i gymnasiebehörighet mellan grupper med olika vistelsetid i Dalarna där behörigheten är större ju längre eleverna har vistats i Sverige (se diagram nedan). Behörigheten för elever som går ut årskurs 9 med en vistelsetid som är 10 år eller längre, är i det närmaste att likställa med behörigheten för inrikes födda. I gruppen med en vistelsetid 4-9 år är behörigheten omkring 20 procentenheter lägre och i gruppen vistelsetid 2-3 år är den ytterligare drygt 20 procentenheter lägre, vilket innebär att knappt 40 procent i gruppen har gymnasiebehörighet.
 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
@@ -363,13 +361,9 @@ Det finns stora skillnader i gymnasiebehörighet mellan grupper med olika vistel
 
 [Mörtlund (2020)](https://www.ifau.se/Forskning/Publikationer/Rapporter/2020/arbetet-med-nyanlanda-elever-i-grundskolan/){target="_blank"}^[Mörtlund, T., 2020. Arbetet med nyanlända elever i grundskolan, IFAU Rapport 2020:2.] noterade stora utmaningar i grundskolan att kvalitetssäkra undervisningen, trots instatser kring språk- och kunskapsutvecklande arbetssätt. Att på en kort tid lära sig svenska språket och samtidigt utveckla ämneskunskaper är en svår utmaning.
 
-En annan aspekt som är viktig att mäta är hur stor andel av avgångseleverna i gymnasiet som är behöriga till att påbörja högskolestudier. Diagrammet nedan visar att utvecklingen för inrikes födda är relativt opåverkad fram till 2013, men från 2015 faller andelen behöriga markant. Minskningen är som störst för män, nästan 30 procentenheter. 2023 var andelen högskolebehöriga inrikes födda män under 52 procent. Andelen högskolebehöriga inrikes födda kvinnor har också minskat under perioden, men inte i samma utsträckning. 2023 är cirka 74 procent behöriga.
+En annan aspekt som är viktig att mäta är hur stor andel av avgångseleverna i gymnasiet som är behöriga till att påbörja högskolestudier. En problematik att ta hänsyn till är att SCB justerat statistiken för behöriga till högskolan under 2014-2016, vilket påverkar andelarna (se statistikfotnot hos [SCB](https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__AA__AA0003__AA0003H/IntGr8RikKON2/){target="_blank"}). För dessa år minskar den genomsnittliga andelen behöriga med 8-9 procentenheter. Större variationer kan finnas regionalt.
 
-Skillnaderna mellan inrikes och utrikes födda när det gäller högskolebehörighet är inte lika stora som i fallet med gymnasiebehörighet. Fram till 2013 är skillnaden några procentenheter för både kvinnor och män, men därefter faller andelen utrikes födda män med högskolebehörighet till under 48 procent år 2021. 2023 kan dock observeras en markant förbättring för männen. För kvinnor är inte nedgången alls lika påtaglig, utan liknar mer den för inrikes födda kvinnor. 
-
-<span class = "kommentar">Från SCB: I juli 2019 reviderades uppgifterna om andel behöriga till högskolan för åren 2014–2016. Det innebar att andelen behöriga till högskolan gick ner kraftigt jämfört med tidigare publicerade uppgifter för dessa år. Innan revideringen ingick inte personer som hade studiebevis i gruppen avgångna. För år 2016 minskade andelen behöriga på riksnivå med 8 procentenheter till följd av revideringen. För åren 2014 och 2015 var minskningen närmare 9 procentenheter. På regional nivå och efter bakgrundsvariabler kan minskningen i andel behöriga vara betydligt större.</span>
-
-2023 är andelen behöriga inrikes och utrikes födda kvinnor i princip densamma, medan för män är det en högre andel utrikes födda män som är behöriga. Den här utvecklingen stärker vistelsetidens betydelse för integrationen. Invandringen från 2015 påverkade behörigheten till högskolan för utrikes född män under ett antal år, men 2023 är nivån likvärdig med inrikes födda män för tio år sedan. Oavsett om eleven eller föräldrarna är utrikes eller inrikes födda är kvinnor i högre utsträckning behöriga till att påbörja högskolestudier än män. 
+Diagrammet nedan visar att utvecklingen för inrikes födda är relativt opåverkad fram till 2013, men från 2015 faller andelen behöriga markant. Minskningen är som störst för män, nästan 30 procentenheter. 2023 var andelen högskolebehöriga inrikes födda män under 52 procent. Andelen högskolebehöriga inrikes födda kvinnor har också minskat under perioden, men inte i samma utsträckning. 2023 är cirka 74 procent behöriga.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -378,33 +372,9 @@ Skillnaderna mellan inrikes och utrikes födda när det gäller högskolebehöri
 ```
 <br>
 
-När andelen behöriga till högskolan undersöks så kan det vara av större relevans att mäta hur stor andel av 19-åringarna som ett visst år är behöriga till högskolan. Detta eftersom vi i Sverige vanligtvis är 19 år när vi erhåller gymnasieexamen. Det är viktigt att komma ihåg att detta inte ger någon heltäckande bild av alla personer eftersom det finns vissa elever som slutför gymnasiet när de är yngre eller äldre än 19 år. En ej slutförd gymnasieexamen vid 19 års ålder beror ändå i en majoritet av fallen på att eleven ligger efter i skolan eller har hoppat av gymnasiet. Av denna anledning blir denna variabel relevant när andelen högskolebehöriga efter bakgrund och kön jämförs. Det som kan konstateras är att utrikes födda i betydligt lägre grad än inrikes födda blir behöriga till högskolestudier vid 19 års ålder. 
+Skillnaderna mellan inrikes och utrikes födda när det gäller högskolebehörighet är inte lika stora som i fallet med gymnasiebehörighet. Fram till 2013 är skillnaden några procentenheter för både kvinnor och män, men därefter faller andelen utrikes födda män med högskolebehörighet till under 48 procent år 2021. 2023 kan dock observeras en markant förbättring för männen. För kvinnor är inte nedgången alls lika påtaglig, utan liknar mer den för inrikes födda kvinnor. Sannolikt är detta en effekt av vilka som tagit en gymnasieexamen eller erhållit ett studiebevis.
 
-<span class = "kommentar">Har vi räknat på det här ovan? Känns som uppgift från förra rapporten.</span>
-
-<span class = "kommentar">Vi behöver skapa diagram över 1: Andelar obehöriga till gymnasiet - inskrivna på IM-program utifrån bakgrund och 2: Utrikes födda unga som inte studerar eller inte aktiva på arbetsmarknaden utifrån vistelsetid</span>
-
-Bland personer mellan 16 och 19 år (det vänstra diagrammet nedan) är andelen som varken arbetar eller studerar (UVAS) högre för män än för kvinnor, oavsett om personen är inrikes eller utrikes född. Andelen är dessutom som högst för personer som vistats i Sverige en kort tid, och sjunker med vistelsetid. För utrikes födda kvinnor sjunker andelen som varken arbetar eller studerar bland 16-19 åringar från `r uvas_16_19_kvinnor_0_1` procent för de som varit i Sverige i max 2 år till `r uvas_16_19_kvinnor_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel för inrikes födda kvinnor är `r uvas_16_19_kvinnor_inrikes` procent.
-
-För utrikes födda män sjunker motsvarande andel bland 16-19-åringar från cirka `r uvas_16_19_man_0_1` procent för de som varit i Sverige i max 2 år till ungefär `r uvas_16_19_man_10_` procent för de som varit i landet i minst 10 år. Noterbart är dock att andelen är högre för män som varit i Sverige i mer än 10 år, än för de som varit i landet mellan 2 och 10 år. Bland inrikes födda varken arbetar eller studerar `r uvas_16_19_man_inrikes` procent av männen mellan 16 och 19 år.
-
-```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
-gg_uvas$UVAS_vistelsetid_inrikes_senastear_Dalarna
-```
-
-Om de unga mellan 20 och 25 år som varken arbetar eller studerar i stället undersöks framträder en delvis annorlunda bild (se det högra diagrammet ovan). Bland kvinnor är andelen högre i denna åldersgrupp än den var bland 16-19-åringar, oavsett om personen är inrikes eller utrikes född. För utrikes födda kvinnor sjunker andelen som varken arbetar eller studerar bland 20-25 åringar från `r uvas_20_25_kvinnor_0_1` procent för de som varit i Sverige i max 2 år till `r uvas_20_25_kvinnor_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel för inrikes födda kvinnor är `r uvas_20_25_kvinnor_inrikes` procent.
-
-För utrikes födda män är trenden omvänd, där andelen som varken arbetar eller studerar bland 20-25-åringar istället ökar med vistelsetiden,  från ca `r uvas_20_25_man_0_1` procent för de som varit i Sverige i max 2 år till ungefär `r uvas_20_25_man_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel bland inrikes födda män i samma ålder är `r uvas_20_25_man_inrikes` procent. 
-
-Utrikes födda män mellan 20 och 25 år verkar således hamna i någon form av sysselsättning snabbare än män i åldersgruppen 16-19 år, men därefter ökar andelen som varken arbetar eller studerar bland 20-25-åringarna, medan den minskar för de mellan 16-19 år. Bland utrikes födda kvinnor är andelen som varken arbetar eller studerar högre bland 20-25-åringar än bland 16-19-åringar, oavsett vistelsetid, ett mönster som även gäller för inrikes födda kvinnor och män.
-
-Andelen utrikes födda som varken arbetar eller studerar har förändrats relativt mycket över tid. I slutet på 1990-talet varken arbetade eller studerade runt 60 procent av de utrikes födda mellan 16 och 19 år som varit i Sverige i max 2 år, att jämföra med `r uvas_16_19_senaste_ar_0_1` procent idag. Den största minskningen skedde i början på 2000-talet och därefter har andelen varierat en del över tid. En liknande trend går att utläsa bland utrikes födda 16-19 åringar som varit i landet längre, men bland dessa är andelen som varken arbetar eller studerar tydligt lägre.
-
-```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
-gg_uvas$UVAS_vistelsetid_inrikes_tid_Dalarna
-```
-
-Även bland utrikes födda mellan 20 och 25 år har motsvarande andel förändrats mycket över tid. I slutet på 1990-talet varken arbetade eller studerade runt 70 procent av de utrikes födda mellan 20 och 25 år som varit i Sverige i max 2 år, att jämföra med `r uvas_20_25_senaste_ar_0_1` procent idag. En stor del av minskningen skedde i mitten på 2000-talet och därefter har andelen gått såväl upp som ner. En liknande utveckling syns även bland utrikes födda 20-25-åringar som varit i landet längre.
+Det som kan konstateras är dock att 2023 är andelen behöriga inrikes och utrikes födda kvinnor i princip densamma, medan för män är det en högre andel utrikes födda män som är behöriga. Den här utvecklingen verifierar vistelsetidens betydelse för studieresultat och integrationen. Invandringen från 2015 i kombination med statistikförändringen påverkade behörigheten till högskolan för utrikes födda män under ett antal år, men 2023 är nivån likvärdig med den som rådde för inrikes födda män för tio år sedan. Noterbart är också att oavsett om eleven är utrikes eller inrikes född, är kvinnor i högre utsträckning behöriga till att påbörja högskolestudier än män. 
 
 ## Arbetslöshet och sysselsättning
 Att arbeta (eller studera) är en viktig komponent i integrationen i samhället. Utrikes födda har generellt en svagare ställning på arbetsmarknaden. Sysselsättningen bland utrikes födda är generellt lägre än bland inrikes födda personer och arbetslösheten, inklusive långtidsarbetslösheten, är högre. Arbetslösheten visar hur många av de aktivt arbetssökande som inte har ett arbete.Arbetslöshets- och sysselsättningsnivåerna bland utrikes födda varierar dock stort mellan olika grupper.
@@ -671,6 +641,32 @@ gg_etablering$etablering_tid
 
 Regeringen har under år 2023 satt fokus på insatser som ska få utrikes födda kvinnor i arbete snabbare. Bland annat har länsstyrelserna ett regionalt uppdrag med detta mål.
 
+## UVAS
+Avslutningsvis är det även viktigt att titta på de unga individer som varken arbetar eller studerar (UVAS). För mer information om denna grupp, se [MUCF](https://www.mucf.se/uppdrag/unga-som-varken-arbetar-eller-studerar){target="_blank"}.
+
+Bland personer mellan 16 och 19 år (det vänstra diagrammet nedan) är andelen som varken arbetar eller studerar högre för män än för kvinnor, oavsett om personen är inrikes eller utrikes född. Andelen är som högst för personer som vistats i Sverige en kort tid, men sjunker med vistelsetid. För utrikes födda kvinnor sjunker andelen som varken arbetar eller studerar bland 16-19-åringar från `r uvas_16_19_kvinnor_0_1` procent för de som varit i Sverige i max 2 år till `r uvas_16_19_kvinnor_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel för inrikes födda kvinnor är `r uvas_16_19_kvinnor_inrikes` procent.
+
+För utrikes födda män sjunker motsvarande andel bland 16-19-åringar från cirka `r uvas_16_19_man_0_1` procent för de som varit i Sverige i max 2 år till ungefär `r uvas_16_19_man_10_` procent för de som varit i landet i minst 10 år. Noterbart är dock att andelen är högre för män som varit i Sverige i mer än 10 år, än för de som varit i landet mellan 2 och 10 år. Bland inrikes födda män mellan 16 och 19 år, som varken arbetar eller studerar, är andelen `r uvas_16_19_man_inrikes` procent.
+
+```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
+gg_uvas$UVAS_vistelsetid_inrikes_senastear_Dalarna
+```
+
+Om de unga mellan 20 och 25 år som varken arbetar eller studerar i stället undersöks framträder en delvis annorlunda bild (se det högra diagrammet ovan). Bland kvinnor är andelen högre i denna åldersgrupp än den var bland 16-19-åringar, oavsett om personen är inrikes eller utrikes född. För utrikes födda kvinnor sjunker andelen som varken arbetar eller studerar bland 20-25-åringar från `r uvas_20_25_kvinnor_0_1` procent för de som varit i Sverige i max 2 år till `r uvas_20_25_kvinnor_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel för inrikes födda kvinnor är `r uvas_20_25_kvinnor_inrikes` procent.
+
+För utrikes födda män är trenden omvänd, där andelen som varken arbetar eller studerar bland 20-25-åringar istället ökar med vistelsetiden,  från ca `r uvas_20_25_man_0_1` procent för de som varit i Sverige i max 2 år till ungefär `r uvas_20_25_man_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel bland inrikes födda män i samma ålder är `r uvas_20_25_man_inrikes` procent. 
+
+Utrikes födda män mellan 20 och 25 år förefaller således hamna i någon form av sysselsättning snabbare än män i åldersgruppen 16-19 år, men därefter ökar andelen som varken arbetar eller studerar bland 20-25-åringarna, medan den minskar för de mellan 16-19 år. Bland utrikes födda kvinnor är andelen som varken arbetar eller studerar högre bland 20-25-åringar än bland 16-19-åringar, oavsett vistelsetid, ett mönster som även gäller för inrikes födda kvinnor och män.
+
+Andelen utrikes födda som varken arbetar eller studerar har förändrats relativt mycket över tid. I slutet på 1990-talet varken arbetade eller studerade runt 60 procent av de utrikes födda mellan 16 och 19 år som varit i Sverige i max 2 år, att jämföra med `r uvas_16_19_senaste_ar_0_1` procent idag. Den största minskningen skedde i början på 2000-talet och därefter har andelen varierat en del över tid. En liknande trend går att utläsa bland utrikes födda 16-19 åringar som varit i landet längre, men bland dessa är andelen som varken arbetar eller studerar tydligt lägre.
+
+```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
+gg_uvas$UVAS_vistelsetid_inrikes_tid_Dalarna
+```
+
+Även bland utrikes födda mellan 20 och 25 år har motsvarande andel förändrats mycket över tid. I slutet på 1990-talet varken arbetade eller studerade runt 70 procent av de utrikes födda mellan 20 och 25 år som varit i Sverige i max 2 år, att jämföra med `r uvas_20_25_senaste_ar_0_1` procent idag. En stor del av minskningen skedde i mitten på 2000-talet och därefter har andelen gått såväl upp som ner. En liknande utveckling syns även bland utrikes födda 20-25-åringar som varit i landet längre. En trolig förklaring till de höga nivåerna under 1990-talet var den ekonomiska kris som berörs i det föregående avsnittet.
+
+
 # Boende och flyttmönster
 
 ## Boende
@@ -852,6 +848,8 @@ gg_valdeltagande_vistelsetid$Valdeltagande_i_val_till_kommun
 Vad ser vi ur ett integrationsperspektiv?
 
 Invandringen har föryngrat befolkningen, bromsat befolkningsminskningen under de senaste decennierna. Den nuvarande invandringsnivån i kombination med låga födelsetal leder till en allt mer åldrad befolkning och utmanar kompetensförsörjningen den närmaste tiden.
+
+Integration är en process och processer tar tid. Det är tydligt att vistelsetiden har en stor betydelse för utfallet på integrationsområdet. Inom de flesta områden som studerats i rapporten syns en tydlig, positiv utveckling av utfallet när vistelsetiden ökar. 
 
 Vad är positivt?
 Vad är negativt?
