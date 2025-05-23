@@ -736,7 +736,7 @@ Tydligt är att många av de som invandrade till länet i under åren runt 2015-
 
 Om invandringsöverskottet minskar och det negativa inrikes flyttnettot består kommer befolkningen i Dalarna att minska över tid. De senaste decenniernas ökning av befolkningen är i huvudsak en effekt av den invandring som varit.
 
-SCB har under 2022 analyserat flyttningar inom kommun, inom län och mellan län under perioden 2002-2021 [(SCB, 2022)](<https://www.scb.se/contentassets/1a0f506a930d4df992f9689cecb01c3a/be0701_2022a01_br_be51br2210.pdf>){target="_blank"}^[SCB, 2022. Flyttningar inom kommun, inom län och mellan län 2002-2021. Demografiska rapporter 2022:10]. Den generella bilden är att antalet flyttningar per år har ökat under perioden, särskilt sedan mitten av 2010-talet. Flyttbenägenheten för utrikes födda har ökat och mellan 2017 och 2021 flyttar utrikes födda dubbelt så ofta som inrikes födda. Det är främst gruppen som bott i Sverige upp till 4 år som flyttar ofta. Utrikes födda med längre vistelsetider uppvisar samma flyttmönster som inrikes födda. Detta mönster noterades även i Region Dalarnas integraionsrapport från 2019. Det konstaterades att denna trend även gällde före år 2014, och att det finns anledning att tro att utflyttningen av nyanlända med kort vistelsetid även i framtiden kommer att vara större än inflyttningen. Trenden är problematisk för Dalarnas del, då redan befintlig och framtida potentiel arbetskraft i och med detta försvinner från länet.
+SCB har under 2022 analyserat flyttningar inom kommun, inom län och mellan län under perioden 2002-2021 [(SCB, 2022)](<https://www.scb.se/contentassets/1a0f506a930d4df992f9689cecb01c3a/be0701_2022a01_br_be51br2210.pdf>){target="_blank"}^[SCB, 2022. Flyttningar inom kommun, inom län och mellan län 2002-2021. Demografiska rapporter 2022:10]. Den generella bilden är att antalet flyttningar per år har ökat under perioden, särskilt sedan mitten av 2010-talet. Flyttbenägenheten för utrikes födda har ökat och mellan 2017 och 2021 flyttar utrikes födda dubbelt så ofta som inrikes födda. Det är främst gruppen som bott i Sverige upp till 4 år som flyttar ofta. Utrikes födda med längre vistelsetider uppvisar samma flyttmönster som inrikes födda. Detta mönster noterades även i Region Dalarnas integraionsrapport från 2019. Det konstaterades att denna trend även gällde före år 2014, och att det finns anledning att tro att utflyttningen av nyanlända med kort vistelsetid även i framtiden kommer att vara större än inflyttningen. Trenden är problematisk för Dalarnas del, då redan befintlig och framtida potentiell arbetskraft i och med detta försvinner från länet.
 
 
 <span class = "kommentar"> Gammal text nedan </span>
@@ -744,15 +744,18 @@ SCB har under 2022 analyserat flyttningar inom kommun, inom län och mellan län
 Det kan konstateras att flyttströmmarna har varit stora både till och från länet, både för utrikes och inrikes födda. Båda grupperna flyttar dock i större utsträckning från Dalarna till övriga Sverige än till Dalarna från övriga Sverige. Utrikes födda personer har generellt sett varit mer benägna att flytta från länet än inrikes födda varit.
 
 
-
 # Hälsa, ekonomi, tillit och demokrati
+Utöver områden som språk, utbildning och arbete följer ett antal ytterligare områden som är viktiga för integrationen i samhället. Att ha en god hälsa, ekonomiska förutsättningar att utvecklas, samt tillit till samhället och demokratiskt engagemang är samtliga komponenter som behöver värderas ur ett integrationsperspektiv.
 
 ## Hälsa
+Hälsa mäts normalt via Folkhälsomyndigheten i form av den nationella folkhälsoenkäten - Hälsa på lika villkor. 
 Två diagram från Hälsa på lika villkor som är kopplade till självskattad hälsa som möjligtvis kan vara med i rapporten.
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_fohm$bra_eller_mycket_bra_halsa
 ```
+
+Utrikes födda från Övriga Europa och Övriga världen uppger att de har en bättre hälsa än inrikes födda. Den grupp som har lägst självskattad hälsa är gruppen Övriga Norden har lägre nivåer än övriga. Det är sannolikt kopplade till en hög andel personer som invandrat från Finland, vilket är en ålderstigen grupp i samhället. Det kan noteras i avsnitt 1 att den gruppen också minskar i antal.
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_fohm$bra_eller_mycket_bra_halsa_kon
