@@ -501,11 +501,20 @@ arblosthet_utrikes_kvinna_min_varde <- gsub("\\.",",",arbetsmarknadsstatus_kommu
 arblosthet_inrikes_man_max_kommun <- arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "inrikes född") %>%
   filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$region
 
+if(length(arblosthet_inrikes_man_max_kommun)>1){
+  arblosthet_inrikes_man_max_kommun <- paste(arblosthet_inrikes_man_max_kommun, collapse = " och ")
+}
+
+
 arblosthet_inrikes_man_max_varde <- gsub("\\.",",",arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "inrikes född") %>%
                                            filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$varde)
 
 arblosthet_inrikes_kvinna_max_kommun <- arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född") %>%
   filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$region
+
+if(length(arblosthet_inrikes_kvinna_max_kommun)>1){
+  arblosthet_inrikes_kvinna_max_kommun <- paste(arblosthet_inrikes_kvinna_max_kommun, collapse = " och ")
+}
 
 arblosthet_inrikes_kvinna_max_varde <- gsub("\\.",",",arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född") %>%
                                               filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$varde)
@@ -728,8 +737,24 @@ uvas_20_25_senaste_ar_4_9 <- round(UVAS_df %>% filter(år == uvas_senaste_ar,var
 
 
 ###########################################
-#######      Utrikes flyttar       ########
+#######      Inrikes flyttar       ########
 ###########################################
+
+# Inrikes flyttningar, generellt
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/main/diagram_flytt_inrikes_utrikes_netto_SCB.R", encoding="UTF-8")
+gg_flytt <- diagram_inr_utr_flytt(region_vekt = "20",
+                                  spara_figur = spara_diagram_som_bildfiler,
+                                  diag_flyttnetto = FALSE,
+                                  diag_uppdelat = TRUE,
+                                  #tid = c(2000:9999),
+                                  returnera_data = TRUE,
+                                  output_mapp_figur = Output_mapp_figur)
+
+flytt_ar <- max(flytt_df$år)
+utrikes_overskott_senaste <- flytt_df %>% filter(region=="Dalarnas län",variabel == "Invandringsöverskott",år==max(år)) %>% .$varde %>% sum()
+
+
+# Inrikes flyttningar, bakgrund
 source("https://raw.githubusercontent.com/Region-Dalarna/diagram/main/diagram_flytt_inrikes_bakgrund_SCB.R", encoding="UTF-8")
 gg_flytt_bakgrund <- diag_inr_flyttnetto_inr_utr_fodda(region_vekt = "20",
                                                        skriv_diagram = spara_diagram_som_bildfiler,
@@ -744,6 +769,10 @@ flytt_senaste_utrikes <- abs(flytt_bakgrund_df %>% filter(region == "Dalarna",å
 # Utflytt sedan 2017. Notera att det är i absoluta tal
 utflytt_utrikes_sedan_2017 <- format(abs(sum(flytt_bakgrund_df %>% filter(region == "Dalarna",år>2016,födelseregion == "Utrikes född") %>% .$Inrikes_flyttnetto)),big.mark = " ")
 flytt_inrikes_sedan_2017 <- format(sum(flytt_bakgrund_df %>% filter(region == "Dalarna",år>2016,födelseregion == "Född i Sverige") %>% .$Inrikes_flyttnetto),big.mark = " ")
+
+
+
+
 ############################################
 #### Boende per upplåtelseform      ########
 ############################################

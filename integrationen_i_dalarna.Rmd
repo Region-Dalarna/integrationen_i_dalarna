@@ -357,8 +357,6 @@ Det finns stora skillnader i gymnasiebehörighet mellan grupper med olika vistel
 ```
 <br>
 
-<span class = "kommentar">Data för 0-1 år saknas (NA) - lägga in i diagramförklaring?</span>
-
 [Mörtlund (2020)](https://www.ifau.se/Forskning/Publikationer/Rapporter/2020/arbetet-med-nyanlanda-elever-i-grundskolan/){target="_blank"}^[Mörtlund, T., 2020. Arbetet med nyanlända elever i grundskolan, IFAU Rapport 2020:2.] noterade stora utmaningar i grundskolan att kvalitetssäkra undervisningen, trots instatser kring språk- och kunskapsutvecklande arbetssätt. Att på en kort tid lära sig svenska språket och samtidigt utveckla ämneskunskaper är en svår utmaning.
 
 En annan aspekt som är viktig att mäta är hur stor andel av avgångseleverna i gymnasiet som är behöriga till att påbörja högskolestudier. En problematik att ta hänsyn till är att SCB justerat statistiken för behöriga till högskolan under 2014-2016, vilket påverkar andelarna (se statistikfotnot hos [SCB](https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__AA__AA0003__AA0003H/IntGr8RikKON2/){target="_blank"}). För dessa år minskar den genomsnittliga andelen behöriga med 8-9 procentenheter. Större variationer kan finnas regionalt.
@@ -455,11 +453,9 @@ I diagrammet ovan framgår också att det finns avsevärda skillnader mellan lä
 
 Högst arbetslöshet för såväl utrikes födda män som kvinnor har `r arblosthet_utrikes_man_max_lan` med `r arblosthet_utrikes_man_max_varde` procent för män och `r arblosthet_utrikes_kvinna_max_varde` procent för kvinnor. Dalarna ligger något över riksgenomsnittet, men uppvisar inte extrema arbetslöshetssiffror åt något håll.
 
-Det finns en stor variation i arbetslösheten i februari 2025 mellan länets kommuner som liknar den ovan för Sveriges län. Bland inrikes födda är arbetslösheten något högre för män än för kvinnor, men generellt låg i samtliga Dalarnas kommuner. Högst arbetslöshet för såväl inrikes födda kvinnor och män i Dalarna finns i `r arblosthet_inrikes_man_max_kommun`, men skillnaden gentemot genomsnittet i länet är relativt liten.
+Det finns en stor variation i arbetslösheten i februari 2025 mellan länets kommuner som liknar den ovan för Sveriges län. Bland inrikes födda är arbetslösheten något högre för män än för kvinnor, men generellt låg i samtliga Dalarnas kommuner. Högst arbetslöshet för inrikes födda män i Dalarna finns i `r arblosthet_inrikes_man_max_kommun`, men skillnaden gentemot genomsnittet i länet är relativt liten.
 
 Högst arbetslöshet för inrikes födda kvinnor finns i `r arblosthet_inrikes_kvinna_max_kommun`.
-
-<span class = "kommentar">*kolla stycket ovan mot diagrammet. Ser konstigt ut. Har Orsa och Hedemora samma arbetslöshet för män?*</span>
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -544,9 +540,10 @@ Bland personer med eftergymnasial utbildning är sysselsättningsgraden för utr
 
 Skillnaden i sysselsättningsgrad mellan utrikes och inrikes födda är således som störst bland de med lägst utbildningsnivå (förgymnasial), men sjunker tydligt för personer med gymnasial utbildning (från `r syssgrad_forgym_skillnad` procentenheter till `r syssgrad_gym_skillnad` procentenheter). För de personer som har högst utbildning (eftergymnasial) ökar skillnaden återigen i sysselsättningsgrad mellan inrikes och utrikes födda, till `r syssgrad_eftergym_skillnad` procentenheter.
 
-Hur snabbt en nyligen invandrad person etableras på arbetsmarknaden är också nära kopplat till vilken utbildningsnivå personen har. För dem med högst utbildning har det visat sig att processen tenderar att gå relativt snabbt och cirka `r round(etablering_df %>% filter(kön == "kvinnor",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "utbildningsnivå: eftergymnasial utbildning") %>% .$andel,0)` procent av kvinnorna och `r round(etablering_df %>% filter(kön == "män",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "utbildningsnivå: eftergymnasial utbildning") %>% .$andel,0)` procent av männen arbetar innan de varit i Sverige i 2 år (0-1 år i figuren nedan). Sedan ökar etableringsgraden över tid och efter 10 år och längre är fler än 80 procent av kvinnorna mellan 20 och 65 år sysselsatta, vilket är i linje med sysselsättningsgraden för inrikes födda kvinnor i samma åldersgrupp. För dem med exempelvis gymnasial utbildning är situationen delvis annorlunda. I den gruppen arbetar ungefär `r round(etablering_df %>% filter(kön == "kvinnor",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "utbildningsnivå: gymnasial utbildning") %>% .$andel,0)` procent av de utrikesfödda kvinnor, och cirka `r round(etablering_df %>% filter(kön == "män",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "utbildningsnivå: gymnasial utbildning") %>% .$andel,0)` procent av de utrikesfödda männen, inom 2 år efter att de kommit till Sverige. Över tid ökar andelen etablerade snabbt på arbetsmarknaden, särskilt för gymnasialt utbildade.
+Hur snabbt en nyligen invandrad person etableras på arbetsmarknaden är nära kopplat till vilken utbildningsnivå personen har. För dem med högst utbildning har det visat sig att processen tenderar att gå relativt snabbt och cirka `r eftergym_0_1_kvinna` procent av kvinnorna och `r eftergym_0_1_man` procent av männen arbetar innan de varit i Sverige i 2 år (0-1 år i figuren nedan). Sedan ökar etableringsgraden över tid och efter 10 år och längre är fler än 80 procent av kvinnorna mellan 20 och 65 år sysselsatta, vilket är i linje med sysselsättningsgraden för inrikes födda kvinnor i samma åldersgrupp. För dem med exempelvis gymnasial utbildning är situationen delvis annorlunda. I den gruppen arbetar ungefär `r gym_0_1_kvinna` procent av de utrikesfödda kvinnor, och cirka `r gym_0_1_man` procent av de utrikesfödda männen, inom 2 år efter att de kommit till Sverige. Över tid ökar andelen etablerade snabbt på arbetsmarknaden, särskilt för gymnasialt utbildade. 
 
-<br>
+För de med lägst utbildningsnivå (förgymnasialt utbildade) är relativt få etablerade på arbetsmarknaden. I den gruppen arbetar bara ungefär `r forgym_0_1_kvinna` procent av de utrikesfödda kvinnor, och cirka `r forgym_0_1_man` procent av de utrikesfödda männen, inom 2 år efter att de kommit till Sverige. Andelen etablerade ökar sedan med vistelsetiden, men är på klart lägre nivåer än för grupper med högre utbildningsvivåer. Även bland inrikes födda är det en klart lägre andel med förgymnasial utbildning som är etablerade på arbetsmarknaden.
+
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
 gg_etablering$etablering_lan_utb
@@ -560,16 +557,6 @@ gg_etablering$etablering_lan_utb
 Matchningen mellan de som är arbetssökande och de arbeten som är lediga skulle kunna fungera betydligt bättre än idag.
 Konsekvensen av detta kan bli att företag och organisationer kan flytta från länet på grund av att de inte hittar
 arbetskraft och arbetskraftsreserven bestående av utrikes födda riskerar att lämna länet om de inte får jobb.
-
-Diagrammet nedan visar att sysselsättningsgraden för såväl inrikes som utrikes födda har ökat mellan `r syssgrad_tidsserie_forsta_ar` och `r syssgrad_tidsserie_senaste_ar`, men ökningen har varit klart störst för utrikes födda, från `r syssgrad_tidsserie_utrikes_min_ar` procent till `r syssgrad_tidsserie_utrikes_max_ar` procent. För inrikes födda har sysselsättningsgraden ökat från `r syssgrad_tidsserie_inrikes_min_ar` procent till `r syssgrad_tidsserie_inrikes_max_ar` procent under samma tidsperiod. Utrikes födda kommer således i arbete i mycket större utsträckning `r syssgrad_tidsserie_senaste_ar`, än de gjorde `r syssgrad_tidsserie_forsta_ar`.
-
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
-
-gg_sysselsattningsgrad_tidsserie$sysselsattningsgrad_jmf_2017_Dalarna
-
-```
-<span class = "kommentar">Tror att vi kan ta bort ovanstående diagram samt stycket innan. Alternativet är att utöka tidsserien, men då liknar diagrammet linjediagrammet ovan.</span>
-<br>
 
 Något som är viktigt att ha med sig när andelen sysselsatta analyseras är att gränsen för att definieras förvärvsarbetande är relativt låg. Något ytterligare att ta hänsyn till när man analyserar sysselsättningsgrad och arbetslöshet bland utrikes födda är hur lång tid individer har varit i Sverige. Vistelsetid i Sverige har ett starkt samband med sysselsättningsgrad och arbetslöshet och därmed kommer andelen nyligen invandrade i gruppen utrikes födda att påverka nivån på dessa variabler.
 
@@ -722,17 +709,34 @@ Skillnaden mellan de med svensk och utländsk bakgrund är betydligt större fö
 
 ## Flyttmönster
 
-Sedan slutet av 1990-talet har Dalarna haft ett negativt inrikes flyttnetto under en överväldigande majoritet av åren.  I Dalarna är det framförallt unga personer som flyttar, vilket kan förklaras med att de flyttar för att studera och arbeta. Flyttar från Dalarna inrikes sker i första hand till antingen större eller näraliggande län. Flest flyttar skedde till Stockholm, följt av Västmanland och Uppsala (se *Befolkningsutvecklingen i Dalarna - länka*). Effekten av att unga flyttar från länet blir en allt mer ålderstigen befolkning.
+Sedan slutet av 1990-talet har Dalarna haft ett negativt inrikes flyttnetto under en överväldigande majoritet av åren (se figuren nedan).  I Dalarna är det framförallt unga personer som flyttar, vilket kan förklaras med att de flyttar för att studera och arbeta. Flyttar från Dalarna inrikes sker i första hand till antingen större eller näraliggande län. Flest flyttar skedde till Stockholm, följt av Västmanland och Uppsala (se *Befolkningsutvecklingen i Dalarna - länka*). Effekten av att unga flyttar från länet blir en allt mer ålderstigen befolkning.
 
-<span class = "kommentar"> Hämta in diagram från Befolkningsutvecklingen i Dalarna i 3.1 - Inrikes flyttningsöverskott Dalarna </span>
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+gg_flytt$`Inrikes flyttningsöverskott_Dalarna`
+```
 
-Tydligt är att många av de som invandrade till länet i under åren runt 2015-2016 har flyttat därifrån sedan dess. Totalt har 6 456 utrikes födda flyttat från Dalarna till andra län sedan 2017 (netto). För inrikes födda är bilden annorlunda. Under samma tidsperiod flyttade 1435 personer födda i Sverige till Dalarna (netto). Inflyttningen skedde dock framförallt mellan 2020 och 2022, vilket kan vara en effekt av Corona-pandemin. Under 2024 flyttade 1 person född i Sverige till Dalarna från andra län netto.
+<span class = "kommentar">La till diagram och text från befolkningsrapporten, lite oklart om det skall vara med</span>
+
+Till skillnad från det inrikes flyttnettot, har det utrikes flyttnettot (invandringsöverskottet) varit prositivt sedan åtminstone slutet av 1990-talet.  Framförallt invandrade många till Dalarna under åren runt 2015-2016, då mer än 7000 personer netto flyttade till länet från utlandet under ett par år. Sedan dess har invandringen dock minskat avsevärt och under `r flytt_ar` var det utrikes flyttnettot i Dalarna `r utrikes_overskott_senaste` personer. Detta är i linje med perioden 2019-2022, men klart högre än 2023. Den tydliga ökningen 2024 jämfört med 2023, beror sannolikt delvis på att personer födda i Ukraina, som tidigare haft ett uppehållstillstånd med tillfälligt skydd enligt massflyktdirektivet, har haft möjlighet att ansöka om att bli folkbokförda i Sverige sedan i juni 2024 (<span class = "kommentar">länk från befolkningsutvecklingen funkar inte längre, behövs en ny</span>) . Antalet folkbokförda i Dalarna födda i Ukraina ökade från drygt 200 personer 2023 till 667 personer 2024 [(SCB)](https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__BE__BE0101__BE0101E/FolkmRegFlandK/table/tableViewLayout1/){target="_blank"}. 
+
+Viktigt att notera är även att det anmärkningsvärt låga nettot 2023, jämfört med åren innan, delvis kan förklaras med att Skatteverket under 2023 inledde ett arbete med att avregistrera tusentals folkbokförda personer som vid en granskning visat sig inte längre bo i Sverige (se informationsrutan under avsnittet introduktion ovan). Totalt avskrevs drygt 190 personer i Dalarna som utvandrade 2023 och 260 personer 2024.
+
+Den främsta anledningen till det låga invandringsöverskottet på senare år är dock sannolikt en förändrad migrationspolitik. Med undantag för 2024, invandrade mellan 1 400 och 1 600 personer till Dalarna årligen under perioden 2020-2023, att jämföra med mellan 2 000 och 3 000 personer årligen åren dessförinnan. 
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+gg_flytt$Invandringsöverskott_Dalarna
+```
+
+
+Tydligt är att många av de som invandrade till länet under åren runt 2015-2016 har flyttat därifrån sedan dess. Totalt har `r utflytt_utrikes_sedan_2017` utrikes födda flyttat från Dalarna till andra län sedan 2017 (netto). För inrikes födda är bilden annorlunda. Under samma tidsperiod flyttade `r flytt_inrikes_sedan_2017` personer födda i Sverige till Dalarna (netto). Inflyttningen skedde dock framförallt mellan 2020 och 2022, vilket kan vara en effekt av Corona-pandemin. Under `r flytt_senaste_ar` flyttade `r flytt_senaste_inrikes` person född i Sverige till Dalarna från andra län netto.
+
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+gg_flytt_bakgrund$Flyttnetto_bakgrund_Dalarna
+```
 
 *Hur ser det ut med omflyttningar generellt bland utrikes födda de senaste 10 åren? Hur länge stannar de som flyttar in? Kommer de som flyttar att komma tillbaka?*
-
-<span class = "kommentar"> Hämta in diagram från Befolkningsutvecklingen i Dalarna i 3.5 - Inrikes flyttnetto i Dalarna </span>
-
-<span class = "kommentar"> Lägga till något om utrikes flyttningar och invandringsöverskottet </span>
 
 Om invandringsöverskottet minskar och det negativa inrikes flyttnettot består kommer befolkningen i Dalarna att minska över tid. De senaste decenniernas ökning av befolkningen är i huvudsak en effekt av den invandring som varit.
 
