@@ -667,89 +667,52 @@ Att en större andel utrikes födda personer bor i hyresrätt, kan förklaras me
 gg_boendetyp_upplatelseform$boendetyp_vistelsetid_inrikes
 ```
 
-Vid norm 2 sätts gränsen för trångboddhet vid högst två personer per rum, exklusive kök och vardagsrum.
+En annan analys av boendesituation är andelen trångbodda hushåll. Trångboddhet i lägenheter i flerbostadshus mäts av SCB enligt Norm 2 ([Boverket](https://www.boverket.se/sv/kommunernas-bostadsforsorjning/underlag-for-bostadsforsorjningen/sarskilda-grupper/trangbodda/){target="_blank"}), vilket innebär att gränsen för trångboddhet går vid högst två personer per rum, exklusive kök och vardagsrum.
 
-Ytterligare en relevant analys rörande boende är andelen trångbodda hushåll. Trångboddhet i lägenheter i flerbostadshus mäts av SCB enligt Norm 2 ([Boverket](https://www.boverket.se/sv/kommunernas-bostadsforsorjning/underlag-for-bostadsforsorjningen/sarskilda-grupper/trangbodda/){target="_blank"}), vilket innebär att gränsen för trångboddhet går vid högst två personer per rum, exklusive kök och vardagsrum.
-
-Trångboddhet i småhus kan inte mätas på samma sätt eftersom att uppgifter på antal rum inte samlas in. Det går att mäta med hjälp av bostadsyta per hushållsmedlem även om det måttet blir trubbigare än det för flerbostadshus. Trångboddhet i småhushushåll anses dock inte vara ett utbrett problem, varför endast trångboddhet i flerbostadshus behandlas här.
-
-De hushåll i Dalarna som är trångbodda utgör en liten andel av det totala antalet lägenhetshushåll, vilket framförallt beror på att få hushåll med inrikes födda är trångbodda (bara ungefär `r trangboddhet_sista_ar_inrikes_andel` procent år `r  trangboddhet_max_ar`). Bland hushåll med utrikes födda är en klart större andel trångbodda (ungefär `r trangboddhet_sista_ar_utrikes_andel` procent år `r trangboddhet_max_ar`). Sedan `r trangboddhet_min_ar` har antalet hushåll som är trångbodda minskat något för såväl inrikes som utrikes födda.
+De hushåll i Dalarna som är trångbodda utgör en liten andel av det totala antalet lägenhetshushåll, vilket framförallt beror på att få hushåll med inrikes födda är trångbodda (bara ungefär `r trangboddhet_sista_ar_inrikes_andel` procent år `r  trangboddhet_max_ar`). Bland hushåll med utrikes födda är en klart större andel trångbodda (ungefär `r trangboddhet_sista_ar_utrikes_andel` procent år `r trangboddhet_max_ar`). Sedan `r trangboddhet_min_ar`, kort efter invandringen p g a kriget i Syrien, har antalet hushåll som är trångbodda minskat något för såväl inrikes som utrikes födda.
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_trangboddhet$trangboddhet_antal_Dalarna
 ```
 <br>
-<span class = "kommentar">Förlänga tidsserien?</span>
 
-<span class = "kommentar">Vad mer behövs kring boende? Nedanstående är inte justerat ännu.</span>
+Trångboddhet i småhus kan inte mätas på samma sätt eftersom att uppgifter på antal rum inte samlas in. Det går att mäta med hjälp av bostadsyta per hushållsmedlem även om det måttet blir trubbigare än det för flerbostadshus. Trångboddhet i småhushushåll anses dock inte vara ett utbrett problem, varför endast trångboddhet i flerbostadshus behandlas här.
 
-I en kartläggning av trångbodhet utifrån vistelsetid i Sverige så kan det konstateras att många utrikes födda är trångbodda en lång tid efter att de har invandrat. Vidare analyser (inte visade här) visar att det är först i gruppen utlandsfödda som kom till Sverige för ca 35 år sedan som nivåerna på trångboddheten har sjunkit till nivåer jämförbara med de med utländsk bakgrund som är födda i Sverige eller de med svensk bakgrund. Det är viktigt att beakta att denna data visar olika grupper som har varit i Sverige flyttat hit under olika tidsperioder. Det betyder att den demografiska sammansättningen mellan grupperna inte är densamma samt att de kan ha olika preferenser för hur stort de vill bo. Diagram 32 stödjer dock slutsatsen att det finns stora skillnader på bostadsmarknaden mellan de som är inrikes och utrikes födda, samt visar att skillnaderna kan bestå under en väldigt lång tid efter att en person har invandrat till Sverige.
-
-<span class = "kommentar">*Beräkna 2019 års Diagram 32 - trångboddhet efter vistelsetid*</span>
-
-<span class = "kommentar">Förslag att vi stryker resterande delar kring boende, d v s kommunperspektivet samt boendeytor per person </span>
-
-När det gäller trångboddhet är det viktigt att känna till att det vanligtvis är ett lokalt fenomen. Det är fullt möjligt att många kan vara trångbodda i ett bostadsområde samtidigt som få hushåll är trångbodda i grannområdet.
-
-*Diagram 33 - trångbodda per kommun och vistelsetid*
-
-Uppdelat per kommun och vistelsetid blir det påtagligt att det finns skillnader mellan kommunerna. Som förväntat är andelen trångbodda av de med utländsk bakgrund med en vistelsetid på maximalt 11 år högst av alla kategorier. I de flesta kommuner sjunker sedan andelen trångbodda till låga nivåer när vistelsetiden blir längre. Borlänge och Falun sticker här ut och har relativt höga nivåer av trångboddhet även inom gruppen med en vistelsetid över 12 år. Detta skulle kunna reflektera den relativa svårigheten att komma in på respektive bostadsmarknad som till exempel mängden lediga bostäder, nödvändig kötid för att få ett boende och andra faktorer.
-
-Det går att konstatera att varken andelen lägenheter i flerbostadshus, andelen personer med utländsk bakgrund eller andelen som har en vistelsetid under 12 år inte enskilt kan förklara andelen trångbodda i en kommun. För att fullt förstå vilka mekanismer som förklarar skillnaderna mellan olika kommuner behöver djupare analyser göras.
-
-Ett annat sätt att visa boendeförhållanden är att visa boendeytan per hushållsmedlem. Det kan visa skillnader i boendeförhållanden som beror på olika livsperioder. Exempelvis så bor både personer med svensk och utländsk bakgrund relativt litet mellan 0–14 års ålder, vilket är logiskt eftersom deras boendeyta återspeglar boendeförhållandena för barnfamiljer. Boendeytan per person i åldrarna 15–44 år ökar något vilket tyder på att de vuxna som inte har skaffat barn i genomsnitt har en större boendeyta per person än de vuxna med barn. Från åldersgruppen 45–54 år börjar boendeytan öka stadigt i både flerbostadshus och småhus. Detta reflekterar åldersgruppen då barn börjar att flytta hemifrån vilket då ökar boendeytan per person.
-
-Efter 55 år ökar boendeytan per person stadigt vilket kan förklaras med att barn flyttar hemifrån, och en ökad risk för att bli änka eller änkling. Att boendeytan per person är störst i de äldsta åldersgrupperna vsar att många bor kvar i stora bostäder, även efter att barn har flyttat ut, efter en separation eller att ens partner har avlidit.
-
-*Ev Diagram 34 - Boendeyta per person i hushållet för olika ålderskategorier?*
-
-Skillnaden i boendeyta per person för personer med svensk och utländsk bakgrund i småhus är liten över alla åldersgrupper, och är mellan två och fem kvadratmeter per person. Denna lilla skillnad tyder på att de hushållen med utländsk bakgrund som köper småhus i Dalarna har ungefär samma preferenser och ekonomiska förutsättningar som hushåll med svensk bakgrund. Det är sannolikt även en konsekvens av att de flesta småhus i Dalarna liknar varandra storleksmässigt.
-
-Skillnaden mellan de med svensk och utländsk bakgrund är betydligt större för de som bor i flerbostadshus i samtliga åldersgrupper fram till 75+ år. Anledningen till detta kan bero på flera faktorer, som exempelvis att personer med svensk bakgrund har större möjlighet att påverka storleken på sin bostad, antingen genom att köpa en större bostad, en längre kötid, eller möjlighet att byta hyreskontrakt eller liknande. En annan förklaring är att personer med utländsk bakgrund i genomsnitt är en person mer i hushållet än personer med svensk bakgrund. Förutsatt samma boendeyta, får då personer med utländsk bakgrund automatiskt mindre boendeyta per person än de med svensk bakgrund. Det kan också finns skillnader i preferenser för hur stort man vill bo mellan de här två grupperna.
+I Region Dalarnas rapport från 2019 konstaterades att många utrikes födda är trångbodda en lång tid efter att de har invandrat. Det finns stora skillnader på bostadsmarknaden mellan de som är inrikes och utrikes födda, samt skillnaderna kan bestå under en väldigt lång tid efter att en person har invandrat till Sverige. Det är också viktigt att känna till att trångboddhet kan vara ett lokalt fenomen. Det är fullt möjligt att många kan vara trångbodda i ett bostadsområde samtidigt som få hushåll är trångbodda i grannområdet.
 
 ## Flyttmönster
-
-Sedan slutet av 1990-talet har Dalarna haft ett negativt inrikes flyttnetto under en överväldigande majoritet av åren (se figuren nedan).  I Dalarna är det framförallt unga personer som flyttar, vilket kan förklaras med att de flyttar för att studera och arbeta. Flyttar från Dalarna inrikes sker i första hand till antingen större eller näraliggande län. Flest flyttar skedde till Stockholm, följt av Västmanland och Uppsala (se *Befolkningsutvecklingen i Dalarna - länka*). Effekten av att unga flyttar från länet blir en allt mer ålderstigen befolkning.
+Sedan slutet av 1990-talet har Dalarna haft ett negativt inrikes flyttnetto under en överväldigande majoritet av åren (se figuren nedan). I Dalarna är det framförallt unga personer som flyttar, vilket kan förklaras med att de flyttar för att studera och arbeta. Flyttar från Dalarna inrikes sker i första hand till antingen större eller näraliggande län. Flest flyttar skedde till Stockholm, följt av Västmanland och Uppsala (se <span class = "kommentar">*Befolkningsutvecklingen i Dalarna - länka*</span>). Effekten av att unga flyttar från länet blir en allt mer ålderstigen befolkning.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_flytt$`Inrikes flyttningsöverskott_Dalarna`
 ```
 
-<span class = "kommentar">La till diagram och text från befolkningsrapporten, lite oklart om det skall vara med</span>
+<span class = "kommentar">La till diagram och text från befolkningsrapporten, lite oklart om det skall vara med - bra!</span>
 
-Till skillnad från det inrikes flyttnettot, har det utrikes flyttnettot (invandringsöverskottet) varit prositivt sedan åtminstone slutet av 1990-talet.  Framförallt invandrade många till Dalarna under åren runt 2015-2016, då mer än 7000 personer netto flyttade till länet från utlandet under ett par år. Sedan dess har invandringen dock minskat avsevärt och under `r flytt_ar` var det utrikes flyttnettot i Dalarna `r utrikes_overskott_senaste` personer. Detta är i linje med perioden 2019-2022, men klart högre än 2023. Den tydliga ökningen 2024 jämfört med 2023, beror sannolikt delvis på att personer födda i Ukraina, som tidigare haft ett uppehållstillstånd med tillfälligt skydd enligt massflyktdirektivet, har haft möjlighet att ansöka om att bli folkbokförda i Sverige sedan i juni 2024 (<span class = "kommentar">länk från befolkningsutvecklingen funkar inte längre, behövs en ny</span>) . Antalet folkbokförda i Dalarna födda i Ukraina ökade från drygt 200 personer 2023 till 667 personer 2024 [(SCB)](https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__BE__BE0101__BE0101E/FolkmRegFlandK/table/tableViewLayout1/){target="_blank"}. 
-
-Viktigt att notera är även att det anmärkningsvärt låga nettot 2023, jämfört med åren innan, delvis kan förklaras med att Skatteverket under 2023 inledde ett arbete med att avregistrera tusentals folkbokförda personer som vid en granskning visat sig inte längre bo i Sverige (se informationsrutan under avsnittet introduktion ovan). Totalt avskrevs drygt 190 personer i Dalarna som utvandrade 2023 och 260 personer 2024.
-
-Den främsta anledningen till det låga invandringsöverskottet på senare år är dock sannolikt en förändrad migrationspolitik. Med undantag för 2024, invandrade mellan 1 400 och 1 600 personer till Dalarna årligen under perioden 2020-2023, att jämföra med mellan 2 000 och 3 000 personer årligen åren dessförinnan. 
-
+Till skillnad från det inrikes flyttnettot, har det utrikes flyttnettot (invandringsöverskottet) varit positivt sedan åtminstone slutet av 1990-talet. Som redovisat i avsnitt 1 invandrade många till Dalarna under åren runt 2015-2016, då mer än 7 000 personer netto flyttade till länet från utlandet under ett par år. Sedan dess har invandringen dock minskat avsevärt och under `r flytt_ar` var det utrikes flyttnettot i Dalarna `r utrikes_overskott_senaste` personer. Detta är i linje med perioden 2019-2022, men klart högre än 2023. Den tydliga ökningen 2024 jämfört med 2023, beror sannolikt delvis på att personer födda i Ukraina, som tidigare haft ett uppehållstillstånd med tillfälligt skydd enligt massflyktdirektivet, har haft möjlighet att ansöka om att bli folkbokförda i Sverige sedan i juni 2024 (<span class = "kommentar">länk från befolkningsutvecklingen funkar inte längre, behövs en ny</span>) . Antalet folkbokförda i Dalarna födda i Ukraina ökade från drygt 200 personer 2023 till 667 personer 2024 [(SCB)](https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__BE__BE0101__BE0101E/FolkmRegFlandK/table/tableViewLayout1/){target="_blank"}. 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_flytt$Invandringsöverskott_Dalarna
 ```
+<br>
 
+Viktigt att notera är även att det anmärkningsvärt låga nettot 2023, jämfört med åren innan, delvis kan förklaras med att Skatteverket under 2023 inledde ett arbete med att avregistrera tusentals folkbokförda personer som vid en granskning visat sig inte längre bo i Sverige (<span class = "kommentar">se informationsrutan under avsnittet introduktion ovan - gäller väl befolkningsrapporten?</span>). Totalt avskrevs drygt 190 personer i Dalarna som utvandrade 2023 och 260 personer 2024.
 
-Tydligt är att många av de som invandrade till länet under åren runt 2015-2016 har flyttat därifrån sedan dess. Totalt har `r utflytt_utrikes_sedan_2017` utrikes födda flyttat från Dalarna till andra län sedan 2017 (netto). För inrikes födda är bilden annorlunda. Under samma tidsperiod flyttade `r flytt_inrikes_sedan_2017` personer födda i Sverige till Dalarna (netto). Inflyttningen skedde dock framförallt mellan 2020 och 2022, vilket kan vara en effekt av Corona-pandemin. Under `r flytt_senaste_ar` flyttade `r flytt_senaste_inrikes` person född i Sverige till Dalarna från andra län netto.
+Den främsta anledningen till det låga invandringsöverskottet på senare år är dock sannolikt en förändrad migrationspolitik. Med undantag för 2024, invandrade mellan 1 400 och 1 600 personer till Dalarna årligen under perioden 2020-2023, jämfört med mellan 2 000 och 3 000 personer årligen åren dessförinnan. 
 
+Tydligt är att många av de som invandrade till länet under åren runt 2015-2016 har flyttat därifrån sedan dess. Totalt har `r utflytt_utrikes_sedan_2017` utrikes födda flyttat från Dalarna till andra län sedan 2017 (netto). För inrikes födda är bilden annorlunda. Under samma tidsperiod flyttade `r flytt_inrikes_sedan_2017` personer födda i Sverige till Dalarna (netto). Inflyttningen skedde dock framförallt mellan 2020 och 2022, vilket kan vara en effekt av Corona-pandemin. Under `r flytt_senaste_ar` flyttade `r flytt_senaste_inrikes` person född i Sverige till Dalarna från andra län (netto).
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_flytt_bakgrund$Flyttnetto_bakgrund_Dalarna
 ```
-
-*Hur ser det ut med omflyttningar generellt bland utrikes födda de senaste 10 åren? Hur länge stannar de som flyttar in? Kommer de som flyttar att komma tillbaka?*
+<br>
 
 Om invandringsöverskottet minskar och det negativa inrikes flyttnettot består kommer befolkningen i Dalarna att minska över tid. De senaste decenniernas ökning av befolkningen är i huvudsak en effekt av den invandring som varit.
 
 SCB har under 2022 analyserat flyttningar inom kommun, inom län och mellan län under perioden 2002-2021 [(SCB, 2022)](<https://www.scb.se/contentassets/1a0f506a930d4df992f9689cecb01c3a/be0701_2022a01_br_be51br2210.pdf>){target="_blank"}^[SCB, 2022. Flyttningar inom kommun, inom län och mellan län 2002-2021. Demografiska rapporter 2022:10]. Den generella bilden är att antalet flyttningar per år har ökat under perioden, särskilt sedan mitten av 2010-talet. Flyttbenägenheten för utrikes födda har ökat och mellan 2017 och 2021 flyttar utrikes födda dubbelt så ofta som inrikes födda. Det är främst gruppen som bott i Sverige upp till 4 år som flyttar ofta. Utrikes födda med längre vistelsetider uppvisar samma flyttmönster som inrikes födda. Detta mönster noterades även i Region Dalarnas integraionsrapport från 2019. Det konstaterades att denna trend även gällde före år 2014, och att det finns anledning att tro att utflyttningen av nyanlända med kort vistelsetid även i framtiden kommer att vara större än inflyttningen. Trenden är problematisk för Dalarnas del, då redan befintlig och framtida potentiell arbetskraft i och med detta försvinner från länet.
 
-
-<span class = "kommentar"> Gammal text nedan </span>
-
-Det kan konstateras att flyttströmmarna har varit stora både till och från länet, både för utrikes och inrikes födda. Båda grupperna flyttar dock i större utsträckning från Dalarna till övriga Sverige än till Dalarna från övriga Sverige. Utrikes födda personer har generellt sett varit mer benägna att flytta från länet än inrikes födda varit.
-
-
 # Hälsa, ekonomi, tillit och demokrati
-Utöver områden som språk, utbildning och arbete följer ett antal ytterligare områden som är viktiga för integrationen i samhället. Att ha en god hälsa, ekonomiska förutsättningar att utvecklas, samt tillit till samhället och demokratiskt engagemang är samtliga komponenter som behöver värderas ur ett integrationsperspektiv.
+Utöver områden som språk, utbildning och arbete följer ett antal ytterligare områden som är viktiga för integrationen i samhället. Att ha en god hälsa, ekonomiska förutsättningar att utvecklas, samt tillit till samhället och demokratiskt engagemang är samtliga komponenter som behöver analyseras ur ett integrationsperspektiv.
 
 ## Hälsa
 Hälsa mäts normalt via Folkhälsomyndigheten i form av den nationella folkhälsoenkäten - Hälsa på lika villkor. 
