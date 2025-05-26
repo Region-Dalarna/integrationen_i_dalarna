@@ -369,6 +369,9 @@ gg_diagram_arbetsmarknadsstatus_lan <- diagram_arbetsmarknadsstatus(region_vekt 
                                                                        data_namm = "arbetsmarknadsstatus_lan_df")
 
 # Variabler sysselsättningsgrad län
+arbetsloshesstatus_manad <- unique(arbetsmarknadsstatus_lan_df$manad_long)
+arbetsloshesstatus_ar <- unique(arbetsmarknadsstatus_lan_df$ar)
+
 
 # Sysselsättningsgrad inrikes Sverige
 syssgrad_inrikes_man_Sverige <- gsub("\\.",",",arbetsmarknadsstatus_lan_df %>% filter(kön == "män",födelseregion == "inrikes född",region == "Sverige",variabel == "sysselsättningsgrad" ) %>%  .$varde)
