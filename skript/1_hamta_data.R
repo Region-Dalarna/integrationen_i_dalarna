@@ -824,6 +824,9 @@ gg_fohm <- diag_fohm (output_mapp = Output_mapp_figur,
                       skriv_diagrambildfil = spara_diagram_som_bildfiler,
                       returnera_data_rmarkdown = TRUE)
 
+sjalvskattad_forsta_ar <- min(sjalvskattad_halsa_tid_df$År)
+sjalvskattad_senaste_ar <- max(sjalvskattad_halsa_tid_df$År)
+
 source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_sociala_rel_sjalvskattad_halsa_inrikes_utrikes_int_rap.R")
 gg_fohm_alt_tillit <- diag_fohm (output_mapp = Output_mapp_figur,
                                  diag_sjalvskattad_halsa_tid = FALSE,
