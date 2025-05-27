@@ -299,6 +299,16 @@ arb_bakgr_inrikes_män_min_varde <-  gsub("\\.",",",arblosa_bakgr_df %>% filter(
 # gg_matchning_bakgr <- skapa_matcning_utbniva_bakgrund_diagram(returnera_dataframe_global_environment = TRUE,
 #                                                               output_mapp = NA)
 
+# Arbetslöshet tidsserie
+source("https://raw.githubusercontent.com/Region-Dalarna/diagram/main/diagram_arbetsmarknadsstatus_tidsserie_SCB.R")
+gg_arbetsloshet_tidsserie <- diagram_arbetsmarknadsstatus_tidsserie (spara_figur = spara_diagram_som_bildfiler,
+                                                                     output_mapp_figur = Output_mapp_figur,
+                                                                     returnera_data = TRUE,
+                                                                     marginal_yaxis_facet = c(0.02,0.02),
+                                                                     diagram_ej_upp = FALSE,
+                                                                     diagram_facet = TRUE,
+                                                                     returnera_figur = TRUE)
+
 
 
 ######################################
