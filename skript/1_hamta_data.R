@@ -314,6 +314,23 @@ arbetsloshet_tidsserie_manad <- unique(last(arbetsmarknadsstatus_tidsserie %>% f
 arbetsloshet_tidserie_Dalarna_inrikes_varde <- gsub("\\.",",",last(arbetsmarknadsstatus_tidsserie %>% filter(region=="Dalarna",födelseregion=="inrikes född") %>% .$varde))
 arbetsloshet_tidserie_Dalarna_utrikes_varde <- gsub("\\.",",",last(arbetsmarknadsstatus_tidsserie %>% filter(region=="Dalarna",födelseregion=="utrikes född") %>% .$varde))
 
+# Hämta antal arbetslösa (till texten enbart)
+source("https://raw.githubusercontent.com/Region-Dalarna/hamta_data/refs/heads/main/hamta_bas_arbstatus_region_kon_alder_fodelseregion_prel_manad_ArbStatusM_scb.R")
+arbstatus_df <- hamta_bas_arbstatus_region_kon_alder_fodelseregion_prel_manad_scb(region_vekt = "20",
+                                                                                  alder_klartext = unique(arbetsmarknadsstatus_tidsserie$ålder),
+                                                                                  kon_klartext = "totalt",
+                                                                                  fodelseregion_klartext = unique(arbetsmarknadsstatus_tidsserie$födelseregion),
+                                                                                  cont_klartext = "antal arbetslösa",
+                                                                                  wide_om_en_contvar = FALSE,
+                                                                                  tid_koder = "9999") %>%
+  manader_bearbeta_scbtabeller()
+
+arblosa_utrikes <- format(arbstatus_df %>% filter(födelseregion == "utrikes född") %>% .$varde,big.mark = " ")
+arblosa_inrikes <- format(arbstatus_df %>% filter(födelseregion == "inrikes född") %>% .$varde,big.mark = " ")
+arblosa_manad <- unique(arbstatus_df$månad)
+arblosa_ar <- unique(arbstatus_df$år)
+arblosa_alder <- unique(arbstatus_df$ålder)
+
 
 
 ######################################
