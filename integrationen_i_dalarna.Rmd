@@ -463,7 +463,7 @@ De skillnader i arbetslöshet som observeras kan sannolikt förklaras av skillna
 
 För att få en uppfattning om skillnader i arbetslöshet mellan inrikes och utrikes födda, räcker det dock inte med att enbart studera situationen idag, utan även förändringen över tid är av intresse.
 
-Bland inrikes födda (det vänstra diagrammet nedan) har  arbetslösheten ökat under 2024 och inledningen av 2025, jämfört med samma period föregående år. I `r arbetsloshet_tidsserie_manad` `r arbetsloshet_tidsserie_ar` var arbetslösheten bland inrikes födda `r arbetsloshet_tidserie_Dalarna_inrikes_varde` procent i Dalarna, den högsta arbetslösheten i gruppen under en februari-månad sedan 2021. Bland utrikes födda (det högra diagrammet nedan) har arbetslösheten fortsatt att minska stadigt under samma tidsperiod, men är som sagt klart högre än bland inrikes födda (`r arbetsloshet_tidserie_Dalarna_utrikes_varde` procent i `r arbetsloshet_tidsserie_manad` `r arbetsloshet_tidsserie_ar`).
+Bland inrikes födda (det vänstra diagrammet nedan) har  arbetslösheten ökat under 2024 och inledningen av 2025, jämfört med samma period föregående år. I `r arbetsloshet_tidsserie_manad` `r arbetsloshet_tidsserie_ar` var arbetslösheten bland inrikes födda `r arbetsloshet_tidserie_Dalarna_inrikes_varde` procent i Dalarna. Bland utrikes födda (det högra diagrammet nedan) har arbetslösheten fortsatt att minska stadigt under samma tidsperiod, men är som sagt klart högre än bland inrikes födda (`r arbetsloshet_tidserie_Dalarna_utrikes_varde` procent i `r arbetsloshet_tidsserie_manad` `r arbetsloshet_tidsserie_ar`).
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_arbetsloshet_tidsserie$arbetslöshet_tidsserie_facet_totalt_Dalarna
