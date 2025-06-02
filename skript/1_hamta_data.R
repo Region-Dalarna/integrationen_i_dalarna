@@ -701,20 +701,36 @@ gg_gym_hogskola_behorighet <- diag_gymnasiebehorighet_mm (output_mapp = Output_m
                                                           returnera_data_rmarkdown = TRUE)
 
 
-# Gymnasiet, jämför år - ej tillagda ännu
+# Gymnasiet, jämför år
+
 ar_min <-  min(ar)
 ar_max <- max(behorighet_gym_df$år)
+
+# Totalt
 inrikes_behorighet_gym_ar_min_bada <- gsub("\\.",",",round(behorighet_gym_df %>% filter(kön == "pojkar och flickor",variabel == "Inrikes född",år== ar_min) %>%  .$`Andel_behoriga`,0))
 inrikes_behorighet_gym_ar_max_bada <- gsub("\\.",",",round(behorighet_gym_df %>% filter(kön == "pojkar och flickor",variabel == "Inrikes född",år== ar_max) %>%  .$`Andel_behoriga`,0))
 
 utrikes_behorighet_gym_ar_max_pojkar <- gsub("\\.",",",round(behorighet_gym_df %>% filter(kön == "pojkar",variabel == "Utrikes född",år== ar_max) %>%  .$`Andel_behoriga`,0))
+utrikes_behorighet_gym_ar_2011_pojkar <- gsub("\\.",",",round(behorighet_gym_df %>% filter(kön == "pojkar",variabel == "Utrikes född",år== "2011") %>%  .$`Andel_behoriga`,0))
 utrikes_behorighet_gym_ar_max_flickor <- gsub("\\.",",",round(behorighet_gym_df %>% filter(kön == "flickor",variabel == "Utrikes född",år== ar_max) %>%  .$`Andel_behoriga`,0))
 
-# Högskola, jämför år - ej tillagda ännu
+# Uppdelat på vistelsetid
+# Skillnad mellan vistelsetider (för pojkar och flickor)
+utrikes_skillnad_10_jmf_4_9 <- round(behorighet_gym_df %>% filter(kön == "pojkar och flickor",variabel == "10- år",år== ar_max) %>%  .$`Andel_behoriga` - behorighet_gym_df %>% filter(kön == "pojkar och flickor",variabel == "4-9 år",år== ar_max) %>%  .$`Andel_behoriga`,0)
+utrikes_skillnad_4_9_jmf_2_3 <- round(behorighet_gym_df %>% filter(kön == "pojkar och flickor",variabel == "4-9 år",år== ar_max) %>%  .$`Andel_behoriga` - behorighet_gym_df %>% filter(kön == "pojkar och flickor",variabel == "2-3 år",år== ar_max) %>%  .$`Andel_behoriga`,0)
+utrikes_2_3_andel <- round(behorighet_gym_df %>% filter(kön == "pojkar och flickor",variabel == "2-3 år",år== ar_max) %>%  .$`Andel_behoriga`,0)
+
+# Högskola, jämför år
 inrikes_behorighet_hog_ar_max_man <- gsub("\\.",",",round(behorighet_hogskola_df %>% filter(kön == "män",variabel == "Inrikes född",år== ar_max) %>%  .$`Andel_behoriga`,0))
 utrikes_behorighet_hog_ar_max_man <- gsub("\\.",",",round(behorighet_hogskola_df %>% filter(kön == "män",variabel == "Utrikes född",år== ar_max) %>%  .$`Andel_behoriga`,0))
 inrikes_behorighet_hog_ar_max_kvinnor <- gsub("\\.",",",round(behorighet_hogskola_df %>% filter(kön == "kvinnor",variabel == "Inrikes född",år== ar_max) %>%  .$`Andel_behoriga`,0))
 utrikes_behorighet_hog_ar_max_kvinnor <- gsub("\\.",",",round(behorighet_hogskola_df %>% filter(kön == "kvinnor",variabel == "Utrikes född",år== ar_max) %>%  .$`Andel_behoriga`,0))
+
+utrikes_behorighet_hog_ar_2021_man <- gsub("\\.",",",round(behorighet_hogskola_df %>% filter(kön == "män",variabel == "Utrikes född",år== 2021) %>%  .$`Andel_behoriga`,0))
+
+
+# Skillnad mot 2013
+skillnad_2013_senaste_man <- round(behorighet_hogskola_df %>% filter(kön == "män",variabel == "Inrikes född",år== 2013) %>%  .$`Andel_behoriga` - behorighet_hogskola_df %>% filter(kön == "män",variabel == "Inrikes född",år== ar_max) %>%  .$`Andel_behoriga`,0)
 
 ############################
 ####      UVAS      ########
