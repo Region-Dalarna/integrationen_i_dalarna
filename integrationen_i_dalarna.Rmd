@@ -462,6 +462,18 @@ Lägst arbetslöshet bland utrikes födda kvinnor har `r arb_bakgr_utrikes_kvinn
 
 De skillnader i arbetslöshet som observeras kan sannolikt förklaras av skillnader i antalet personer och när i tid som de invandrat till olika kommuner.
 
+För att få en uppfattning om skillnader i arbetslöshet mellan inrikes och utrikes födda, räcker det dock inte med att enbart studera situationen idag, utan även förändringen över tid är av intresse.
+
+Bland inrikes födda (det vänstra diagrammet nedan) har  arbetslösheten ökat under 2024 och inledningen av 2025, jämfört med samma period föregående år. I `r arbetsloshet_tidsserie_manad` `r arbetsloshet_tidsserie_ar` var arbetslösheten bland inrikes födda `r arbetsloshet_tidserie_Dalarna_inrikes_varde` procent i Dalarna, den högsta arbetslösheten i gruppen under en februari-månad sedan 2021. Bland utrikes födda (det högra diagrammet nedan) har arbetslösheten fortsatt att minska stadigt under samma tidsperiod, men är som sagt klart högre än bland inrikes födda (`r arbetsloshet_tidserie_Dalarna_utrikes_varde` procent i `r arbetsloshet_tidsserie_manad` `r arbetsloshet_tidsserie_ar`).
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+gg_arbetsloshet_tidsserie$arbetslöshet_tidsserie_facet_totalt_Dalarna
+```
+
+Att en större andel utrikes födda arbetar idag, jämfört med för ett par år sedan är viktigt för integrationen, då möjligheten att försörja sig själv och skapa nya sociala sammanhang ses som en av de viktigaste faktorerna för  att integreras i samhället ([Jönköpings universitet](https://ju.se/forskning/langlasning/arkiv/2022-03-04-engagemang-kontakter-och-sprakkunskaper-ger-snabbare-integration-pa-arbetsmarknaden.html){target="_blank"}). 
+
+Totalt var `r arblosa_inrikes` inrikes födda personer och `r arblosa_utrikes` utrikes födda personer i åldersgruppen `r arblosa_alder` arbetslösa i Dalarna i `r arblosa_manad` `r arblosa_ar`.
+
 Hur långt ifrån arbetsmarknaden som en individ befinner sig beror delvis på hur länge personen har varit utan anställning. En person som har varit arbetslös länge har ofta svårare att ta sig tillbaka in på arbetsmarknaden. År `r langtidsarbetsloshet_ar_min` noterades `r langtidsarbetsloshet_kvinnor_min` procent av länets kvinnor i åldern 25-64 år som långtidsarbetslösa, medan motsvarande siffra för männen var `r langtidsarbetsloshet_man_min` procent. Under 2010-talet gick långtidsarbetslösheten såväl upp som ned, innan den nådde sin topp i samband med pandemin 2020-2021. På senare år har långtidsarbetslösheten minskat tydligt och var år `r langtidsarbetsloshet_ar_max` i Dalarna något högre för män, men något lägre för kvinnor jämfört med 2011. Långtidsarbetslösheten i Sverige är högre än i Dalarna för båda könen. En generell orsak till långtidsarbetslöshet är strukturarbetslöshet som innebär att de arbetssökande saknar rätt kompetens för de arbeten som finns tillgängliga.
 
 <span class = "kommentar">*Hur ser skillnaden ut mellan inrikes och utrikes födda när det gäller långtidsarbetslöshet?*</span>
