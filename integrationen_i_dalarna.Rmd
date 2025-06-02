@@ -469,7 +469,7 @@ Bland inrikes födda (det vänstra diagrammet nedan) har  arbetslösheten ökat 
 gg_arbetsloshet_tidsserie$arbetslöshet_tidsserie_facet_totalt_Dalarna
 ```
 
-Att en större andel utrikes födda arbetar idag, jämfört med för ett par år sedan är viktigt för integrationen, då möjligheten att försörja sig själv och skapa nya sociala sammanhang ses som en av de viktigaste faktorerna för  att integreras i samhället ([Jönköpings universitet](https://ju.se/forskning/langlasning/arkiv/2022-03-04-engagemang-kontakter-och-sprakkunskaper-ger-snabbare-integration-pa-arbetsmarknaden.html){target="_blank"}). 
+Att en större andel utrikes födda arbetar idag, jämfört med för ett par år sedan, är viktigt för integrationen, då möjligheten att försörja sig själv och skapa nya sociala sammanhang ses som en av de viktigaste faktorerna för  att integreras i samhället ([Jönköpings universitet](https://ju.se/forskning/langlasning/arkiv/2022-03-04-engagemang-kontakter-och-sprakkunskaper-ger-snabbare-integration-pa-arbetsmarknaden.html){target="_blank"}). 
 
 Totalt var `r arblosa_inrikes` inrikes födda personer och `r arblosa_utrikes` utrikes födda personer i åldersgruppen `r arblosa_alder` arbetslösa i Dalarna i `r arblosa_manad` `r arblosa_ar`.
 
