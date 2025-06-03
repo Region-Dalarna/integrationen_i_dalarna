@@ -255,7 +255,9 @@ knitr::include_graphics("Figurer/Befpyramid Dalarnas län 2024_jmfr_utr_inr.png"
 ```
 <br>
 
-<span class = "kommentar"> Här behövs en kort text som förklarar varför vi nu fokuserar på arbetsför ålder</span>
+Befolkningen i arbetsför ålder är särskilt intressant att fokusera på då den bidrar till att balansera en allt äldre befolkning och förbättrar möjligheten att kompetensförsörja näringsliv och offentlig sektor i framtiden.
+
+<span class = "kommentar"> Är ovanstående ok som brygga mot nedanstående om arbetsför ålder?</span>
 
 Mellan år `r min_ar_utrikes_kumulativ` och `r max_ar_utrikes_kumulativ` minskade antalet inrikes födda i arbetsför ålder (`r unique(antal_forandring_lan_kumulativ$alder_grupper)`) i Dalarnas län med `r kumulativ_summa_inrikes` personer, samtidigt som antalet utrikes födda i samma åldersgrupp ökade med `r kumulativ_summa_utrikes` personer. Minskningen av antalet inrikes födda berodde på att ålderskullarna som fyllde 65 år var större än de som fyllde 20 år, samt en större inrikes utflyttning än inflyttning. Den inrikes födda befolkningen i arbetsför ålder minskade allra mest åren 2010–2015, vilket berodde på att det stora antalet personer födda i slutet av 1940-talet uppnådde pensionsålder.
 
@@ -275,7 +277,9 @@ gg_antal_utrikes$befolkningsprognos_lan_Dalarna
 ```
 <br>
 
-<span class = "kommentar"> Någon kort text som bryggar över till avsnitt 2 - en sammanfattning av avsnittet i typ två meningar och sedan en övergång till nästa?</span>
+Den demografiska översikten visar att andelen utrikes födda i Dalarna ökat över tid och bidragit till att föryngra och vidmakthålla länets invånarantal. I nästa avsnitt fokuseras på integrationen i form av språk, utbildning, inträde och etablering på arbetsmarknaden.
+
+<span class = "kommentar"> Är ovanstående ok som kort övergång till avsnitt 2? </span>
 
 # Utbildning och arbetsmarknad
 Ett viktigt steg för att kunna integreras i ett samhälle är att lära sig språket. Språkkunskaper ger förutsättningar för utbildning som i sin tur skapar möjligheter på arbetsmarknaden. I detta avsnitt görs en genomgång av utvecklingen för utrikes födda inom dessa delar.
@@ -722,10 +726,10 @@ Om invandringsöverskottet minskar och det negativa inrikes flyttnettot består 
 SCB har under 2022 analyserat flyttningar inom kommun, inom län och mellan län under perioden 2002-2021 [(SCB, 2022)](<https://www.scb.se/contentassets/1a0f506a930d4df992f9689cecb01c3a/be0701_2022a01_br_be51br2210.pdf>){target="_blank"}^[SCB, 2022. Flyttningar inom kommun, inom län och mellan län 2002-2021. Demografiska rapporter 2022:10]. Den generella bilden är att antalet flyttningar per år har ökat under perioden, särskilt sedan mitten av 2010-talet. Flyttbenägenheten för utrikes födda har ökat och mellan 2017 och 2021 flyttar utrikes födda dubbelt så ofta som inrikes födda. Det är främst gruppen som bott i Sverige upp till 4 år som flyttar ofta. Utrikes födda med längre vistelsetider uppvisar samma flyttmönster som inrikes födda. Detta mönster noterades även i Region Dalarnas integraionsrapport från 2019. Det konstaterades att denna trend även gällde före år 2014, och att det finns anledning att tro att utflyttningen av nyanlända med kort vistelsetid även i framtiden kommer att vara större än inflyttningen. Trenden är problematisk för Dalarnas del, då redan befintlig och framtida potentiell arbetskraft i och med detta försvinner från länet.
 
 # Hälsa, ekonomi, tillit och demokrati
-Utöver områden som språk, utbildning och arbete följer ett antal ytterligare områden som är viktiga för integrationen i samhället. Att ha en god hälsa, ekonomiska förutsättningar att utvecklas, samt tillit till samhället och demokratiskt engagemang är samtliga komponenter som behöver analyseras ur ett integrationsperspektiv.
+Utöver områden som språk, utbildning, boende och arbete följer ett antal ytterligare områden som är viktiga för integrationen i samhället. Att ha en god hälsa, ekonomiska förutsättningar att utvecklas, samt tillit till samhället och demokratiskt engagemang är samtliga komponenter som behöver analyseras ur ett integrationsperspektiv.
 
 ## Hälsa
-Hälsa mäts normalt via Folkhälsomyndigheten i form av den nationella folkhälsoenkäten - Hälsa på lika villkor. Utrikes födda från Övriga Europa och Övriga världen uppger att de har en bättre hälsa än inrikes födda. Detta hänger sannolikt samman med att dessa grupper är yngre än inrikes födda och således också har en bättre hälsa generellt (se avsnitt 1, demografi och invandring) . Den grupp som har lägst självskattad hälsa är gruppen "Övriga Norden". Det är sannolikt kopplade till en hög andel personer som invandrat från Finland, vilket är en ålderstigen grupp i samhället. Det kan noteras i avsnitt 1 att den gruppen också minskar i antal.
+Hälsa mäts bland annat via Folkhälsomyndigheten i form av den nationella folkhälsoenkäten - Hälsa på lika villkor. Utrikes födda från Övriga Europa och Övriga världen uppger att de har en bättre hälsa än inrikes födda. Detta hänger sannolikt samman med att dessa grupper är yngre än inrikes födda och således också har en bättre hälsa generellt (se avsnitt 1, Demografi och invandring). Den grupp som har lägst självskattad hälsa är gruppen "Övriga Norden". Det är sannolikt kopplat till en hög andel personer som invandrat från Finland fram till 1970-talet och i dag är en ålderstigen grupp i samhället som också minskar i antal.
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_fohm$bra_eller_mycket_bra_halsa
@@ -739,11 +743,10 @@ Med undantag för gruppen som är födda i övriga Norden, uppger en större and
 gg_fohm$bra_eller_mycket_bra_halsa_kon
 ```
 
-<span class = "kommentar">Det finns en del underlag från hälso- och sjukvårdsbarometern kring hälso- och vårdupplevelser där utrikes födda är mindre nöjda. Titta på underlag från Xuefei. Inte tillgång till vård som behövs. Väntetider för långa, men samtidigt lika stort förtroende och fler upplever att vården ges på lika villkor. Tyvärr ett litet urval av utrikes födda. </span> 
+Sveriges kommuner och regioner (SKR) mäter patientperspektivet i hälso- och sjukvården i den nationella hälso- och sjukvårdsbarometern, men i det fallet är underlaget för begränsat för att göra skillnader mellan inrikes och utrikes födda på länsnivå. På nationell nivå skiljer sig dock inte vårdupplevelsen för utrikes födda nämnvärt från inrikes födda. 
 
 ## Ekonomi
-
-Utrikes födda personer i Dalarna har generellt sett lägre inkomster än personer födda i Sverige. Detta gäller framför allt de första åren efter flytten till Sverige. Skillnaderna är som kan konstateras väsentligt mindre för personer som bott i Sverige en längre tid. Inkomsterna skiljer sig även mellan personer som är födda i olika länder. Oavsett bakgrund har män en högre medianinkomst än kvinnor, något som framförallt gäller under de första åren efter flytten till Sverige.
+Utrikes födda personer i Dalarna har generellt sett lägre inkomster än personer födda i Sverige. Detta gäller framför allt de första åren efter flytten till Sverige. Skillnaderna är väsentligt mindre för personer som bott i Sverige en längre tid. Inkomsterna skiljer sig även mellan personer som är födda i olika länder. Oavsett bakgrund har män en högre medianinkomst än kvinnor, något som framförallt gäller under de första åren efter flytten till Sverige.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -770,12 +773,11 @@ Vid analyser av sysselsättning så är det av stor vikt att också analysera gr
 gg_huv_inkomst$huvud_ink_bakgrund_Dalarna
 
 ```
+<br>
 
-Även andelen som saknar ersättning är större i gruppen med utrikes födda, ca `r saknar_ersattning_utrikes_andel` procent i `r huv_inkomst_manad` `r huv_inkomst_ar`, mot ungefär `r saknar_ersattning_inrikes_andel` procent i gruppen födda i Sverige. Dessa två kategorier visar på problematiska effekter av bristande integration. Delar man upp dessa två kategorier utifrån invandringsår framträder dock samma mönster som i tidigare diagram, där andelen personer utan egen försörjning sjunker kraftigt med en ökad vistelsetid i Sverige. <span class = "kommentar">Den sista meningen bör eventuellt tas bort</span>
+Även andelen som saknar ersättning är större i gruppen med utrikes födda, ca `r saknar_ersattning_utrikes_andel` procent i `r huv_inkomst_manad` `r huv_inkomst_ar`, mot ungefär `r saknar_ersattning_inrikes_andel` procent i gruppen födda i Sverige. Dessa två kategorier visar på problematiska effekter av bristande integration.
 
-<span class = "kommentar">*Diagram - Utrikes födda personer i Dalarnas län 20-64 år utan egen försörjning*</span>
-
-Om antalet individer som får ekonomiskt stöd studeras över tid, blir det tydligt att antalet som får stöd minskar men att minskningen i första hand är koncentrerad till utrikes födda. I `r ek_stod_manad_ar_forsta` var det `r ek_stod_skillnad_forsta ` fler utrikes födda personer som var i behov av ekonomiskt stöd i Dalarna, jämfört med inrikes födda. I `r ek_stod_manad_ar_sista` var den skillnaden bara `r ek_stod_skillnad_senaste ` personer.
+Om antalet individer som får ekonomiskt stöd studeras över tid, blir det tydligt att antalet som får stöd minskar, men att minskningen i första hand är koncentrerad till utrikes födda. I `r ek_stod_manad_ar_forsta` var det `r ek_stod_skillnad_forsta ` fler utrikes födda personer som var i behov av ekonomiskt stöd i Dalarna, jämfört med inrikes födda. I `r ek_stod_manad_ar_sista` var den skillnaden bara `r ek_stod_skillnad_senaste ` personer.
 
 Ett annat generellt mönster är att det bland inrikes födda är vanligare att män får ekonomiskt stöd, medan det bland utrikes födda är vanligare att kvinnor får det.
 
@@ -784,26 +786,24 @@ Ett annat generellt mönster är att det bland inrikes födda är vanligare att 
 gg_ek_stod$ekonomiskt_bistand_fodelseland_Dalarna
 
 ```
-
- 
+<br>
 
 ## Tillit
-Enligt Folkhälsomyndighetens undersökningar om hälsa och levnadsvanor ("Hälsa på lika villkor") från år `r tillit_andra_ar` har gruppen som är födda i `r tillit_andra_max_kvinnor_grupp` lägst tillit till andra människor, såväl om kvinnorna som männen i Sverige tillfrågas. I den första gruppen uppger ca `r tillit_andra_max_kvinnor_varde` procent att de har svårt att lita på andra, medan motsvarande siffra bland männen är ungefär `r tillit_andra_max_man_varde` procent. Högst tilltro till andra har personer födda i `r tillit_andra_min_man_grupp`, såväl bland kvinnorna som männen i Sverige. Bland kvinnorna uppgav `r tillit_andra_min_kvinnor_varde` procent att de hade låg tilltro till andra, medan motsvarande siffra bland männen var ca `r tillit_andra_min_man_varde` procent. Även personer födda i Sverige har relativt stor tilltro till andra.
+Även tillit mäts i Folkhälsomyndighetens Hälsa på lika villkor. I den senaste undersökningen `r tillit_andra_ar` har gruppen som är födda i `r tillit_andra_max_kvinnor_grupp` lägst tillit till andra människor, såväl om kvinnorna som männen i Sverige tillfrågas. Bland kvinnorna uppger ca `r tillit_andra_max_kvinnor_varde` procent att de har svårt att lita på andra, medan motsvarande siffra bland männen är ungefär `r tillit_andra_max_man_varde` procent. Högst tilltro till andra har personer födda i `r tillit_andra_min_man_grupp`, såväl bland kvinnorna som männen i Sverige. Bland kvinnorna uppgav `r tillit_andra_min_kvinnor_varde` procent att de hade låg tilltro till andra, medan motsvarande siffra bland männen var ca `r tillit_andra_min_man_varde` procent. Även personer födda i Sverige har relativt stor tilltro till andra.
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_fohm_alt_tillit$svart_att_lita_pa_andra
 ```
+<br>
 
 Om frågan istället fokuserar på tillit till samhällets institutioner är det generellt färre i Sverige som uppger att de har låg tillit. Bland män säger ungefär var fjärde att de har låg tillit till samhällets institutioner, oavsett om de har svensk eller utländsk bakgrund. Bland kvinnor födda i Sverige eller övriga Norden uppger runt 20 procent att de har låg tillit till samhällets institutioner, vilket är något lägre än männen med motsvarande bakgrund. Bland kvinnor födda i övriga Europa och övriga världen har kvinnorna istället något lägre tilltro till institutioner än männen med motsvarande bakgrund.
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_fohm$lag_tillit_till_samhallets_institutioner
 ```
-
+<br>
 
 Mellanmänsklig tillit undersöks av SOM-Institutet i den nationella SOM-undersökningen. 2024 hade 56 procent hög tillit till människor i allmänhet. 32 respektive 12 procent hade medelhög eller låg tillit. Sedan 1996 har resultaten inte påverkats nämnvärt, utan har varit relativt konstanta över en 30-årsperiod.
-
-Förtroendet för samhällsinstitutioner... - ökat över tid för Polisen, Domstolarna och Försvaret. Minskning för riksdag och regering, men stora variationer över tid. 
 
 Utvecklingen av organiserad brottslighet är den fråga som flest, 72 procent, är mycket oroade över under 2024. Lag och ordning är det samhällsproblem som högst andel, 42 procent, är viktigast.
 
@@ -811,29 +811,34 @@ Sedan 2015 har andelen svarande som tycker att ta emot färre flyktingar är ett
 
 I SOM-institutets forskningsantologi 81, Du sköra nya värld, behandlar Sören Holmberg och Bo Rothstein den svenska tilliten ([Holmberg, S. och Rothstein, B., 2022](<https://www.gu.se/sites/default/files/2022-06/061-072%20Holmberg%20o%20Rothstein.pdf>){target="_blank"}).^[Holmberg, S. och Rothstein, B., 2022. Den svenska tilliten fortsatt hög - men sjunker i utsatta grupper. I Andersson, U. et al. (red) Du sköra nya värld. SOM-rapport nr. 81. SOM-Institutet, Göteborgs Universitet.] Den mellanmänskliga tilliten är fortsatt hög, men faller i utsatta grupper som arbetslösa, personer med dålig hälsa, personer med sjuk- och aktivitetsersättning, lågutbildade och bland unga.
 
-Utrikes födda utmärker sig inte i undersökningen med fallande tillit över tid, men det finns däremot en lägre tillit generellt bland utrikes födda än personer uppväxta i Sverige. Den skillnaden har varit relativt konstant mellan 1996 och 2021.
+Utrikes födda utmärker sig inte i undersökningen med fallande tillit över tid, men det finns däremot en lägre tillit generellt bland utrikes födda än personer uppväxta i Sverige. Den skillnaden har varit relativt konstant sedan slutet av 1990-talet.
 
-I 2020 års SOM-undersökning studerades även frågan om mångkulturens påverkan på tilliten ([Holmberg, S. och Rothstein, B., 2020](<https://www.gu.se/sites/default/files/migrated/1772921_f--rhandspublicering-m--ngkultur-och-tillit----holmberg-o-rothstein.pdf>){target="_blank"}).^[Holmberg, S. och Rothstein, B., 2020. Minskar mångkulturella samhällen den sociala tilliten?. I Andersson, U. et al. (red) Regntunga skyar. SOM-antologi nr. 76. SOM-Institutet, Göteborgs Universitet.]. Resultatet visade att "invandrartäta kommuner har lika stor andel höglitare som kommuner med låg andel utrikes födda. Det finns inget statistiskt samband mellan andelen utrikes födda och social tillit." Flyktingmottagandet från 2015 och framåt hade m a o ingen påverkan på den sociala tilliten.
+I 2020 års SOM-undersökning studerades även frågan om mångkulturens påverkan på tilliten ([Holmberg, S. och Rothstein, B., 2020](<https://www.gu.se/sites/default/files/migrated/1772921_f--rhandspublicering-m--ngkultur-och-tillit----holmberg-o-rothstein.pdf>){target="_blank"}).^[Holmberg, S. och Rothstein, B., 2020. Minskar mångkulturella samhällen den sociala tilliten?. I Andersson, U. et al. (red) Regntunga skyar. SOM-antologi nr. 76. SOM-Institutet, Göteborgs Universitet.]. Resultatet visade att "invandrartäta kommuner har lika stor andel höglitare som kommuner med låg andel utrikes födda. Det finns inget statistiskt samband mellan andelen utrikes födda och social tillit." Flyktingmottagandet från 2015 och framåt hade m a o ingen påverkan på den sociala tilliten enligt författarna.
 
 ## Demokrati
 
-Bland inrikes födda är valdeltagandet i Dalarna, i val till Riksdagen, relativt högt (närmare 90 procent) och har inte förändrats nämnvärt mellan valen `r forsta_ar_valdeltagande` och `r sista_ar_valdeltagande`. Utrikes födda har generellt ett lägre valdeltagande och i den gruppen har även valdeltagandet minskat på senare år. Valdeltagandet bland utrikes födda varierar dessutom baserat på hur länge personerna har bott i Sverige. För de som varit i Sverige mindre än 10 år var valdeltagandet i Dalarna, i val till Riksdagen, år `r sista_ar_valdeltagande` `r valdeltagande_riksdag_under_10_senaste_varde` procent, att jämföra med `r valdeltagande_riksdag_over_10_senaste_varde` procent för de som varit i Sverige längre än 10 år. 
+Bland inrikes födda är valdeltagandet i Dalarna, i val till riksdagen, relativt högt (närmare 90 procent) och har inte förändrats nämnvärt mellan valen `r forsta_ar_valdeltagande` och `r sista_ar_valdeltagande`. Utrikes födda har generellt ett lägre valdeltagande och i den gruppen har även valdeltagandet minskat på senare år. Valdeltagandet bland utrikes födda varierar dessutom baserat på hur länge personerna har bott i Sverige. För de som varit i Sverige mindre än 10 år var valdeltagandet i Dalarna, i val till riksdagen år `r sista_ar_valdeltagande`, `r valdeltagande_riksdag_under_10_senaste_varde` procent, att jämföra med `r valdeltagande_riksdag_over_10_senaste_varde` procent för de som varit i Sverige längre än 10 år. 
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_valdeltagande_vistelsetid$Valdeltagande_i_val_till_riksdag
 ```
+<br>
 
-När det gäller val till region- och kommunfullmäktige är valdeltagandet bland inrikes födda något lägre än valdeltagandet till riksdagsvalet, men skillnaderna är små. För utrikes födda är skillnaderna däremot relativt stora. För de personer som bott i Sverige mindre än 10 år är valdeltagandet i val till Dalarnas regionfullmäktige (det första diagrammet nedan) blott `r valdeltagande_region_under_10_senaste_varde` procent år `r sista_ar_valdeltagande`, vilket är hela `r valdeltagande_skillnad_under10` procentenheter lägre än valdeltagandet i val till Riksdagen. För de som bott i Sverige längre än 10 år var valdeltagandet år `r sista_ar_valdeltagande` i samma val `r valdeltagande_region_over_10_senaste_varde` procent, vilket är `r valdeltagande_skillnad_over10` procentenheter lägre än valdeltagandet i val till Riksdagen. Det verkar således som att utrikes födda, som varit relativt kort period i Sverige, i första hand visar ett intresse för politiken på riksnivå, men att intresset för den regionala och lokala politiken ökar med tiden. Värt att notera är även att det är små skillnader mellan valdeltagande på regional och kommunal nivå. Röstar man i det ena valet så tenderar man även att rösta i det andra (se det tredje diagrammet nedan).
+När det gäller val till region- och kommunfullmäktige är valdeltagandet bland inrikes födda något lägre än valdeltagandet till riksdagsvalet, men skillnaderna är små. För utrikes födda är skillnaderna däremot relativt stora. För de personer som bott i Sverige mindre än 10 år är valdeltagandet i val till Dalarnas regionfullmäktige (det första diagrammet nedan) blott `r valdeltagande_region_under_10_senaste_varde` procent år `r sista_ar_valdeltagande`, vilket är hela `r valdeltagande_skillnad_under10` procentenheter lägre än valdeltagandet i val till riksdagen. För de som bott i Sverige längre än 10 år var valdeltagandet år `r sista_ar_valdeltagande` i samma val `r valdeltagande_region_over_10_senaste_varde` procent, vilket är `r valdeltagande_skillnad_over10` procentenheter lägre än valdeltagandet i val till riksdagen. Det verkar således som att utrikes födda, som varit relativt kort period i Sverige, i första hand visar ett intresse för politiken på riksnivå, men att intresset för den regionala och lokala politiken ökar med tiden. 
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_valdeltagande_vistelsetid$Valdeltagande_i_val_till_region
 
 ```
+<br>
+
+Värt att notera är även att det är små skillnader mellan valdeltagande på regional och kommunal nivå. Röstar man i det ena valet så tenderar man även att rösta i det andra (se diagrammet nedan).
 
 ```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
 gg_valdeltagande_vistelsetid$Valdeltagande_i_val_till_kommun
 
 ```
+<br>
 
 
 # Sammanfattande diskussion
