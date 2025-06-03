@@ -255,6 +255,8 @@ knitr::include_graphics("Figurer/Befpyramid Dalarnas län 2024_jmfr_utr_inr.png"
 ```
 <br>
 
+<span class = "kommentar"> Här behövs en kort text som förklarar varför vi nu fokuserar på arbetsför ålder</span>
+
 Mellan år `r min_ar_utrikes_kumulativ` och `r max_ar_utrikes_kumulativ` minskade antalet inrikes födda i arbetsför ålder (`r unique(antal_forandring_lan_kumulativ$alder_grupper)`) i Dalarnas län med `r kumulativ_summa_inrikes` personer, samtidigt som antalet utrikes födda i samma åldersgrupp ökade med `r kumulativ_summa_utrikes` personer. Minskningen av antalet inrikes födda berodde på att ålderskullarna som fyllde 65 år var större än de som fyllde 20 år, samt en större inrikes utflyttning än inflyttning. Den inrikes födda befolkningen i arbetsför ålder minskade allra mest åren 2010–2015, vilket berodde på att det stora antalet personer födda i slutet av 1940-talet uppnådde pensionsålder.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
@@ -273,7 +275,7 @@ gg_antal_utrikes$befolkningsprognos_lan_Dalarna
 ```
 <br>
 
-<span class = "kommentar"> Någon kort text som bryggar över till avsnitt 2</span>
+<span class = "kommentar"> Någon kort text som bryggar över till avsnitt 2 - en sammanfattning av avsnittet i typ två meningar och sedan en övergång till nästa?</span>
 
 # Utbildning och arbetsmarknad
 Ett viktigt steg för att kunna integreras i ett samhälle är att lära sig språket. Språkkunskaper ger förutsättningar för utbildning som i sin tur skapar möjligheter på arbetsmarknaden. I detta avsnitt görs en genomgång av utvecklingen för utrikes födda inom dessa delar.
