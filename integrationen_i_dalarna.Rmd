@@ -673,9 +673,7 @@ gg_uvas$UVAS_vistelsetid_inrikes_tid_Dalarna
 
 # Boende och flyttmönster
 
-
-<span class = "kommentar"> Här behövs en introduktion likt de som finns i övriga avsnitt. </span>
-
+Vid sidan om utbildning och arbete, utgör sannolikt boende och flyttmönster viktiga aspekter för att förstå integrationensprocessen i Dalarna. Boende och flyttmönster kan påverka möjligheterna till arbete, utbildning och sociala kontakter, vilket i sin tur kan påverka integrationen. 
 
 ## Boende
 Det finns flera sätt att mäta boende på och alla indikerar boendeskillnader mellan inrikes och utrikes födda. Typ av boende (villa eller lägenhet), boendeyta och bostadsägande säger alla någonting om hur människor bor, något som också speglar den ekonomiska situationen. Det innebär, precis som på de flesta andra områden, att gruppen utrikes födda kommer att ha en stor spridning avseende etablering i samhället. Några i gruppen kommer att ha bott i Sverige i mindre än ett år och andra i flera decennier. Således finns även inom boendeområdet anledning att göra analyser uppdelat på vistelsetid i Sverige. Människor som bott längre i Sverige äger i högre utsträckning sitt eget boende, antingen genom äganderätt (småhus) eller bostadsrätt (småhus eller lägenhet).
@@ -699,6 +697,8 @@ Trångboddhet i småhus kan inte mätas på samma sätt eftersom att uppgifter p
 I Region Dalarnas rapport från 2019 konstaterades att många utrikes födda är trångbodda en lång tid efter att de har invandrat. Det finns stora skillnader på bostadsmarknaden mellan de som är inrikes och utrikes födda, samt skillnaderna kan bestå under en väldigt lång tid efter att en person har invandrat till Sverige. Det är också viktigt att känna till att trångboddhet kan vara ett lokalt fenomen. Det är fullt möjligt att många kan vara trångbodda i ett bostadsområde samtidigt som få hushåll är trångbodda i grannområdet.
 
 ## Flyttmönster
+
+Benägenheten att flytta skiljer sig åt mellan inrikes och utrikes födda. Enligt en rapport från SCB ([SCB, 2021](https://www.scb.se/contentassets/1a0f506a930d4df992f9689cecb01c3a/be0701_2022a01_br_be51br2210.pdf){target="_blank"}) flyttade utrikes födda ungefär dubbelt så ofta som inrikes födda under perioden 2017-2021.
 
 I den här rapporten delas flyttar upp i två typer, inrikes och utrikes. Inrikes flyttar är de som sker mellan olika län i Sverige, medan utrikes flyttar är de som sker mellan Sverige och andra länder och normalt benämns in- respektive utvandring. I texten nedan benämns nettot mellan inrikes in- och utflyttar inrikes flyttnetto alternativt inrikes flyttningsöverskott, medan nettot mellan utrikes in- och utflyttar benämns invandringsöverskott eller utrikes flyttnetto.
 
