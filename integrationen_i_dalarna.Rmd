@@ -165,12 +165,11 @@ Efter år 2015 har antalet ansökningar om asyl i Sverige minskat. Anledningarna
 ut istället för permanenta, samt att familjeåterförening har försvårats. De gränskontroller som infördes i södra Sverige i början av 2016 gör att personer som saknar giltig legitimation inte längre har möjlighet att ta sig in
 i landet. De nya ID-kontrollerna kombinerat med andra åtgärder i Sverige och Europa har haft en stor påverkan på antalet asylsökare. Under `r asylsokande_max_ar` sökte `r asylsokande_senaste_ar_antal` personer asyl i Sverige, vilket är det lägsta antalet sedan 1996.
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center',include=FALSE}
 
 gg_asylsokande_antal$asylsokande_antal
 
 ```
-<br>
 
 Ett stort antal asylsökande ett år leder ofta till att invandringen ökar året därpå. Det beror på att asylsökande räknas som invandrade först när de har fått uppehållstillstånd och folkbokfört sig i Sverige. Detta gör att antalet immigranter i hög grad påverkas av hur många beslut om uppehållstillstånd Migrationsverket fastställer, samt hur stor andel av dessa ärenden som blir beviljade. Rekordnivån för antalet asylsökande år 2015, ledde till att invandringen slog rekord i Sverige år 2016. Även statistiken för åren 2017 och 2018 påverkades av det stora antalet asylsökande år 2015. Detta eftersom många fick vänta länge på beslut om de fick stanna i landet och för att många anhöriga till de som fick uppehållstillstånd sedan ville flytta till Sverige.
 
@@ -669,8 +668,14 @@ gg_uvas$UVAS_vistelsetid_inrikes_tid_Dalarna
 
 Även bland utrikes födda mellan 20 och 25 år har motsvarande andel förändrats mycket över tid. I slutet på 1990-talet varken arbetade eller studerade runt 70 procent av de utrikes födda mellan 20 och 25 år som varit i Sverige i max 2 år, att jämföra med `r uvas_20_25_senaste_ar_0_1` procent idag. En stor del av minskningen skedde i mitten på 2000-talet och därefter har andelen gått såväl upp som ner. En liknande utveckling syns även bland utrikes födda 20-25-åringar som varit i landet längre. En trolig förklaring till de höga nivåerna under 1990-talet var den ekonomiska kris som berörs i det föregående avsnittet.
 
+<span class = "kommentar">Kort sammanfattning av ett långt avsnitt?</span>
+
 
 # Boende och flyttmönster
+
+
+<span class = "kommentar"> Här behövs en introduktion likt de som finns i övriga avsnitt. </span>
+
 
 ## Boende
 Det finns flera sätt att mäta boende på och alla indikerar boendeskillnader mellan inrikes och utrikes födda. Typ av boende (villa eller lägenhet), boendeyta och bostadsägande säger alla någonting om hur människor bor, något som också speglar den ekonomiska situationen. Det innebär, precis som på de flesta andra områden, att gruppen utrikes födda kommer att ha en stor spridning avseende etablering i samhället. Några i gruppen kommer att ha bott i Sverige i mindre än ett år och andra i flera decennier. Således finns även inom boendeområdet anledning att göra analyser uppdelat på vistelsetid i Sverige. Människor som bott längre i Sverige äger i högre utsträckning sitt eget boende, antingen genom äganderätt (småhus) eller bostadsrätt (småhus eller lägenhet).
@@ -694,6 +699,10 @@ Trångboddhet i småhus kan inte mätas på samma sätt eftersom att uppgifter p
 I Region Dalarnas rapport från 2019 konstaterades att många utrikes födda är trångbodda en lång tid efter att de har invandrat. Det finns stora skillnader på bostadsmarknaden mellan de som är inrikes och utrikes födda, samt skillnaderna kan bestå under en väldigt lång tid efter att en person har invandrat till Sverige. Det är också viktigt att känna till att trångboddhet kan vara ett lokalt fenomen. Det är fullt möjligt att många kan vara trångbodda i ett bostadsområde samtidigt som få hushåll är trångbodda i grannområdet.
 
 ## Flyttmönster
+
+
+<span class = "kommentar"> Första gången vi pratar om flyttmönster, så det behövs nog någon kort introduktion. Typ flyttar delas upp i två typer, inrikes och utrikes </span>
+
 Sedan slutet av 1990-talet har Dalarna haft ett negativt inrikes flyttnetto under en överväldigande majoritet av åren (se figuren nedan). I Dalarna är det framförallt unga personer som flyttar, vilket kan förklaras med att de flyttar för att studera och arbeta. Flyttar från Dalarna inrikes sker i första hand till antingen större eller näraliggande län. Flest flyttar skedde till Stockholm, följt av Västmanland och Uppsala (se [Befolkningsutvecklingen i Dalarna](https://region-dalarna.github.io/befolkningsutvecklingen_i_Dalarna/){target="_blank"}). Effekten av att unga flyttar från länet blir en allt mer ålderstigen befolkning.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
