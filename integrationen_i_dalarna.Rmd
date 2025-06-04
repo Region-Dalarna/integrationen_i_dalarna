@@ -255,11 +255,9 @@ knitr::include_graphics("Figurer/Befpyramid Dalarnas län 2024_jmfr_utr_inr.png"
 ```
 <br>
 
-Befolkningen i arbetsför ålder är särskilt intressant att fokusera på då den bidrar till att balansera en allt äldre befolkning och förbättrar möjligheten att kompetensförsörja näringsliv och offentlig sektor i framtiden.
+Befolkningen i arbetsför ålder (`r unique(antal_forandring_lan_kumulativ$alder_grupper)`) är särskilt intressant att fokusera på då den bidrar till att balansera en allt äldre befolkning och förbättrar möjligheten att kompetensförsörja näringsliv och offentlig sektor i framtiden.
 
-<span class = "kommentar"> Är ovanstående ok som brygga mot nedanstående om arbetsför ålder?</span>
-
-Mellan år `r min_ar_utrikes_kumulativ` och `r max_ar_utrikes_kumulativ` minskade antalet inrikes födda i arbetsför ålder (`r unique(antal_forandring_lan_kumulativ$alder_grupper)`) i Dalarnas län med `r kumulativ_summa_inrikes` personer, samtidigt som antalet utrikes födda i samma åldersgrupp ökade med `r kumulativ_summa_utrikes` personer. Minskningen av antalet inrikes födda berodde på att ålderskullarna som fyllde 65 år var större än de som fyllde 20 år, samt en större inrikes utflyttning än inflyttning. Den inrikes födda befolkningen i arbetsför ålder minskade allra mest åren 2010–2015, vilket berodde på att det stora antalet personer födda i slutet av 1940-talet uppnådde pensionsålder.
+Mellan år `r min_ar_utrikes_kumulativ` och `r max_ar_utrikes_kumulativ` minskade antalet inrikes födda i arbetsför ålder i Dalarnas län med `r kumulativ_summa_inrikes` personer, samtidigt som antalet utrikes födda i samma åldersgrupp ökade med `r kumulativ_summa_utrikes` personer. Minskningen av antalet inrikes födda berodde på att ålderskullarna som fyllde 65 år var större än de som fyllde 20 år, samt en större inrikes utflyttning än inflyttning. Den inrikes födda befolkningen i arbetsför ålder minskade allra mest åren 2010–2015, vilket berodde på att det stora antalet personer födda i slutet av 1940-talet uppnådde pensionsålder.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
@@ -278,8 +276,6 @@ gg_antal_utrikes$befolkningsprognos_lan_Dalarna
 <br>
 
 Den demografiska översikten visar att andelen utrikes födda i Dalarna ökat över tid och bidragit till att föryngra och vidmakthålla länets invånarantal. I nästa avsnitt fokuseras på integrationen i form av språk, utbildning, inträde och etablering på arbetsmarknaden.
-
-<span class = "kommentar"> Är ovanstående ok som kort övergång till avsnitt 2? </span>
 
 # Utbildning och arbetsmarknad
 Ett viktigt steg för att kunna integreras i ett samhälle är att lära sig språket. Språkkunskaper ger förutsättningar för utbildning som i sin tur skapar möjligheter på arbetsmarknaden. I detta avsnitt görs en genomgång av utvecklingen för utrikes födda inom dessa delar.
@@ -479,16 +475,18 @@ Att en större andel utrikes födda arbetar idag, jämfört med för ett par år
 
 Totalt var `r arblosa_inrikes` inrikes födda personer och `r arblosa_utrikes` utrikes födda personer i åldersgruppen `r arblosa_alder` arbetslösa i Dalarna i `r arblosa_manad` `r arblosa_ar`.
 
-Hur långt ifrån arbetsmarknaden som en individ befinner sig beror delvis på hur länge personen har varit utan anställning. En person som har varit arbetslös länge har ofta svårare att ta sig tillbaka in på arbetsmarknaden. År `r langtidsarbetsloshet_ar_min` noterades `r langtidsarbetsloshet_kvinnor_min` procent av länets kvinnor i åldern 25-64 år som långtidsarbetslösa, medan motsvarande siffra för männen var `r langtidsarbetsloshet_man_min` procent. Under 2010-talet gick långtidsarbetslösheten såväl upp som ned, innan den nådde sin topp i samband med pandemin 2020-2021. På senare år har långtidsarbetslösheten minskat tydligt och var år `r langtidsarbetsloshet_ar_max` i Dalarna något högre för män, men något lägre för kvinnor jämfört med 2011. Långtidsarbetslösheten i Sverige är högre än i Dalarna för båda könen. En generell orsak till långtidsarbetslöshet är strukturarbetslöshet som innebär att de arbetssökande saknar rätt kompetens för de arbeten som finns tillgängliga.
+Hur långt ifrån arbetsmarknaden som en individ befinner sig beror delvis på hur länge personen har varit utan anställning. En person som har varit arbetslös länge har ofta svårare att ta sig tillbaka in på arbetsmarknaden. Bland arbetslösa inrikes födda i åldersgruppen `r arbesloshetstid_aldersgrupp` har ungefär `r arbetsloshetstid_inrikes_24_manader` procent varit arbetslösa länge (minst 24 månader) och får anses stå långt från arbetsmarknaden. Sammanlagt har ungefär `r arbetsloshetstid_inrikes_minst_12_manader` procent av arbetslösa inrikes födda varit det i minst 12 månader. Bland inrikes födda arbetslösa är det istället de som har varit arbetslösa under en relativt kort period (< 6 månader) som är den störstsa gruppen (ca `r arbetsloshetstid_inrikes_6_manader` av alla inrikes födda arbetslösa).
 
-<span class = "kommentar">*Hur ser skillnaden ut mellan inrikes och utrikes födda när det gäller långtidsarbetslöshet?*</span>
+Bland utrikes födda är bilden delvis annorlunda. Här är den största gruppen arbetslösa de som varit arbetslösa väldigt länge (längre än 24 månader), totalt tillhör `r arbetsloshetstid_utrikes_24_manader` procent av de arbetslösa utrikes födda i åldersgruppen `r arbesloshetstid_aldersgrupp` den gruppen. Sammanlagt har mer än `r arbetsloshetstid_utrikes_minst_12_manader` procent av de arbetslösa utrikes födda varit det i minst 12 månader. 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 
-gg_langtidsarbetsloshet$langtidsarbetsloshet_kolad
+gg_arbetsloshetstid$langtidsarbetsloshet
 
 ```
 <br>
+
+Fördelningen är relativt jämn mellan kvinnor och män. Bland inrikes födda har något större andel kvinnor än män varit arbetslösa länge (mer än 24 månader), medan något större andel män än kvinnor varit arbetslösa under en kort period. För utrikes födda har ungefär lika stor andel kvinnor som män varit arbetslösa i minst 24 månader.
 
 Sysselsättningsgraden, det vill säga i vilken utsträckning människor i arbetsför ålder (20-64 år) arbetar, är ett annat sätt att titta på arbetsmarknaden. Den mäter andelen av hela befolkningen som har ett arbete. Sysselsättningsgraden skiljer sig inte märkbart åt mellan könen bland inrikes födda som ses i det vänstra diagrammet nedan. Sverige ligger långt fram i en internationell jämförelse när det gäller att ge kvinnor och män likvärdiga möjligheter att yrkesarbeta, och det återspeglas i sysselsättningsgraden som för båda könen är ungefär lika hög, `r syssgrad_inrikes_kvinna_Sverige` procent för kvinnor och `r syssgrad_inrikes_man_Sverige` procent för män. Variationen i sysselsättningsgrad mellan länen är därför också relativt liten.
 

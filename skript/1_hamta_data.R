@@ -331,6 +331,24 @@ arblosa_manad <- unique(arbstatus_df$månad)
 arblosa_ar <- unique(arbstatus_df$år)
 arblosa_alder <- unique(arbstatus_df$ålder)
 
+#######################
+## Tid som arbetslös ##
+#######################
+source(here("skript/","diag_arbetsloshetstid_bakgrund.R"))
+gg_arbetsloshetstid <- diag_arbetsloshetstid_bakgrund(output_mapp = Output_mapp_figur,
+                                                    skriv_diagrambildfil = spara_diagram_som_bildfiler,
+                                                    returnera_data_rmarkdown= TRUE)
+
+arbetsloshetstid_ar <- unique(arbetsloshetstid_df$År)
+arbesloshetstid_aldersgrupp <- unique(arbetsloshetstid_df$Aldersgrupp)
+
+arbetsloshetstid_inrikes_6_manader <- round(arbetsloshetstid_df %>% filter(Bakgrund == "Inrikes född",Arbetsloshetsstatus == "< 6 månader",Kon == "Totalt") %>%  .$andel,0)
+arbetsloshetstid_inrikes_24_manader <- round(arbetsloshetstid_df %>% filter(Bakgrund == "Inrikes född",Arbetsloshetsstatus == "24- månader",Kon == "Totalt") %>%  .$andel,0)
+arbetsloshetstid_inrikes_minst_12_manader <- round(arbetsloshetstid_df %>% filter(Bakgrund == "Inrikes född",Arbetsloshetsstatus %in% c("12-24 månader","24- månader"),Kon == "Totalt") %>%  .$andel %>% sum(),0)
+
+arbetsloshetstid_utrikes_6_manader <- round(arbetsloshetstid_df %>% filter(Bakgrund == "Utrikes född",Arbetsloshetsstatus == "< 6 månader",Kon == "Totalt") %>%  .$andel,0)
+arbetsloshetstid_utrikes_24_manader <- round(arbetsloshetstid_df %>% filter(Bakgrund == "Utrikes född",Arbetsloshetsstatus == "24- månader",Kon == "Totalt") %>%  .$andel,0)
+arbetsloshetstid_utrikes_minst_12_manader <- round(arbetsloshetstid_df %>% filter(Bakgrund == "Utrikes född",Arbetsloshetsstatus %in% c("12-24 månader","24- månader"),Kon == "Totalt") %>%  .$andel %>% sum(),0)
 
 
 ######################################
