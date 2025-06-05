@@ -793,21 +793,21 @@ gg_valdeltagande_vistelsetid$Valdeltagande_i_val_till_kommun
 <br>
 
 # Sammanfattande diskussion
-Vad ser vi ur ett integrationsperspektiv?
-
-Invandringen har föryngrat befolkningen, bromsat befolkningsminskningen under de senaste decennierna. Den nuvarande invandringsnivån i kombination med låga födelsetal leder till en allt mer åldrad befolkning och utmanar kompetensförsörjningen den närmaste tiden.
+I denna rapport har integrationen av utrikes födda analyserats utifrån demografi, utbildning, arbetsmarknad, boende, flyttmönster, hälsa, ekonomi, tillit och demokrati. Trots den breda genomgången inom ett flertal, för integrationen, viktiga områden gör rapporten inte anspråk på att vara heltäckande. 
 
 Integration är en process och processer tar tid. Det är tydligt att vistelsetiden har en stor betydelse för utfallet på integrationsområdet. Inom de flesta områden som studerats i rapporten syns en tydlig, positiv utveckling av utfallet när vistelsetiden ökar. 
 
-Vad är positivt?
-Vad är negativt?
+Det är dock tydligt att invandringen till Dalarna fört med sig ett antal 
 
-Hur går det i skolan?
-Hur kommer de i arbete?
-Var jobbar de?
-Hur har det ekonomiska biståndet utvecklats?
-Hur går det med demokratin och tilliten till institutioner?
-Hur skulle Dalarna se ut, utan de utrikes födda?
+Dalarnas inrikes födda befolkning har under de senaste decennierna minskat i antal och fått en förändrad åldersstruktur. Färre i arbetsför ålder ska försörja fler som inte arbetar. Befolkningstillskottet från utrikes födda har bidragit till att begränsa denna negativa demografiska utveckling, dels i antal invånare, dels i en ökad andel i arbetsför ålder och föryngring av befolkningen. Den aktuella invandringsnivån, i kombination med låga födelsetal, leder till en allt mer åldrad befolkning och utmanar kompetensförsörjningen framöver.
+
+<span class = "kommentar"> Plocka upp de positiva trenderna som finns </span>
+
+Trots den positiva utveckling som kan ses inom ett flertal områden i rapporten, är det fortfarande en generell skillnad mellan inrikes och utrikes födda, även när vistelsetiden i Sverige tas i beaktande.
+
+Andelen utrikes födda med behörighet till gymnasiet är lägre. Även andelen som är behöriga till högskola är lägre, men inte i samma utsträckning som i fallet med gymnasiebehörighet. Utbildningsnivån är generellt lägre och arbetslösheten högre, även långtidsarbetslösheten. Det finns en högre andel hushåll med utrikes födda som är trångbodda, fler personer finns i hushåll med låg ekonomisk standard och högre andelar har behov av ekonomiskt stöd eller saknar inkomster. I de flesta fall är ovanstående observationer giltiga för såväl män som kvinnor.
+
+Det finns med andra ord mer att göra när det kommer till att utnyttja den resurs som utrikes födda är, särskilt på arbetsmarknaden nu och i framtiden. Att säkerställa kunskap i svenska och att lyfta utbildningsnivån för utrikes födda är avgörande för att se en ökad etablering på arbetsmarknaden. Det minskar även behovet av introduktion och utbildning på arbetsplatsen från den inrikes födda arbetskraften i en tid där det finns stora utmaningar med kompetensförsörjningen på arbetsmarknaden.
 
 [(Regeringen, 2022)](<https://www.regeringen.se/contentassets/46945970585240a4a5bfd9a0f75ecf3d/ekonomisk-jamstalldhet.pdf>){target="_blank"}^[Regeringen, Budgetproposition 2022/23:1 bilaga 3, Ekonomisk jämställdhet.]
 
