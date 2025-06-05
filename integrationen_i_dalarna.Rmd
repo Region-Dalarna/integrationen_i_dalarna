@@ -165,7 +165,6 @@ i landet. De nya ID-kontrollerna kombinerat med andra åtgärder i Sverige och E
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center',include=FALSE}
 gg_asylsokande_antal$asylsokande_antal
 ```
-<br>
 
 Ett stort antal asylsökande ett år leder ofta till att invandringen ökar året därpå. Det beror på att asylsökande räknas som invandrade först när de har fått uppehållstillstånd och folkbokfört sig i Sverige. Detta gör att antalet immigranter i hög grad påverkas av hur många beslut om uppehållstillstånd Migrationsverket fastställer, samt hur stor andel av dessa ärenden som blir beviljade. Rekordnivån för antalet asylsökande år 2015, ledde till att invandringen slog rekord i Sverige år 2016. Även statistiken för åren 2017 och 2018 påverkades av det stora antalet asylsökande år 2015. Detta eftersom många fick vänta länge på beslut om de fick stanna i landet och för att många anhöriga till de som fick uppehållstillstånd sedan ville flytta till Sverige.
 
@@ -222,7 +221,7 @@ gg_storsta_fodelseland$storsta_fodelseland_Dalarna
 ```
 <br>
 
-När de utrikes födda personer som är bosatta i Dalarna kartläggs utifrån deras invandringsår till Sverige, framgår att många invandrade i mitten av 2010-talet. Sedan dess har åtskilliga lämnat Dalarna, men `r invandringsar_antal_df_max_ar` är fortfarande det år när flest utrikes födda boende i Dalarna invandrade till Sverige. År `r invandringsar_senaste` bodde `r invandringsar_senaste_antal` personer i Dalarna som hade invandrat till Sverige samma år, vilket är klart fler än åren innan. Detta kan naturligtvis delvis förklaras av att vissa som invandrade under åren innan har lämnat Dalarna för andra delar av Sverige, men en viktiga orsak är också att personer födda i Ukraina, som tidigare haft ett uppehållstillstånd med tillfälligt skydd enligt massflyktdirektivet, har haft möjlighet att ansöka om att bli folkbokförda i Sverige sedan i juni 2024. 
+När de utrikes födda personer som är bosatta i Dalarna kartläggs utifrån deras invandringsår till Sverige, framgår att många invandrade i mitten av 2010-talet. Sedan dess har åtskilliga lämnat Dalarna, men `r invandringsar_antal_df_max_ar` är fortfarande det år när flest utrikes födda boende i Dalarna invandrade till Sverige. År `r invandringsar_senaste` bodde `r invandringsar_senaste_antal` personer i Dalarna som hade invandrat till Sverige samma år, vilket är klart fler än åren innan. Detta kan naturligtvis delvis förklaras av att vissa som invandrade under åren innan har lämnat Dalarna för andra delar av Sverige, men en viktig orsak är också att personer födda i Ukraina, som tidigare haft ett uppehållstillstånd med tillfälligt skydd enligt massflyktdirektivet, har haft möjlighet att ansöka om att bli folkbokförda i Sverige sedan i juni 2024. 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_antal_invandringsar$invandringsar_antal
@@ -412,7 +411,7 @@ Högst arbetslöshet för såväl utrikes födda män som kvinnor har `r arblost
 
 Även bland länets kommuner är variationen i arbetslöshet stor. För inrikes födda var arbetslösheten något högre för män än för kvinnor, men generellt låg i samtliga Dalarnas kommuner. Högst arbetslöshet för inrikes födda män i Dalarna finns i `r arblosthet_inrikes_man_max_kommun`, men skillnaden gentemot genomsnittet i länet är relativt liten.
 
-Högst arbetslöshet för inrikes födda kvinnor finns i `r arblosthet_inrikes_kvinna_max_kommun`.
+Även bland inrikes födda kvinnor finns den högsta arbetslösheten i `r arblosthet_inrikes_kvinna_max_kommun`.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_diagram_arbetsmarknadsstatus_kommun$arbetslosthet_senastear
@@ -429,7 +428,7 @@ De skillnader i arbetslöshet som observeras kan sannolikt förklaras av skillna
 
 För att få en uppfattning om skillnader i arbetslöshet mellan inrikes och utrikes födda, räcker det dock inte med att enbart studera situationen idag, utan även förändringen över tid är av intresse.
 
-Bland inrikes födda (det vänstra diagrammet nedan) har  arbetslösheten ökat under 2024 och inledningen av 2025, jämfört med samma period föregående år. I `r arbetsloshet_tidsserie_manad` `r arbetsloshet_tidsserie_ar` var arbetslösheten bland inrikes födda `r arbetsloshet_tidserie_Dalarna_inrikes_varde` procent i Dalarna. Bland utrikes födda (det högra diagrammet nedan) har arbetslösheten fortsatt att minska stadigt under samma tidsperiod, men är som sagt klart högre än bland inrikes födda (`r arbetsloshet_tidserie_Dalarna_utrikes_varde` procent i `r arbetsloshet_tidsserie_manad` `r arbetsloshet_tidsserie_ar`).
+Efter att ha minskat tydligt under flera år, har arbetslösheten bland inrikes födda (det vänstra diagrammet nedan) ökat under 2024 och inledningen av 2025, jämfört med samma period föregående år. I `r arbetsloshet_tidsserie_manad` `r arbetsloshet_tidsserie_ar` var arbetslösheten bland inrikes födda `r arbetsloshet_tidserie_Dalarna_inrikes_varde` procent i Dalarna. Bland utrikes födda (det högra diagrammet nedan) har arbetslösheten minskat stadigt sedan en topp under pandemin (den var 22,5 procent i juni 2020), men är som sagt klart högre än bland inrikes födda (`r arbetsloshet_tidserie_Dalarna_utrikes_varde` procent i `r arbetsloshet_tidsserie_manad` `r arbetsloshet_tidsserie_ar`). 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_arbetsloshet_tidsserie$arbetslöshet_tidsserie_facet_totalt_Dalarna
@@ -440,9 +439,9 @@ Att en större andel utrikes födda arbetar idag, jämfört med för ett par år
 
 Totalt var `r arblosa_inrikes` inrikes födda personer och `r arblosa_utrikes` utrikes födda personer i åldersgruppen `r arblosa_alder` arbetslösa i Dalarna i `r arblosa_manad` `r arblosa_ar`.
 
-Hur långt ifrån arbetsmarknaden som en individ befinner sig beror delvis på hur länge personen har varit utan anställning. En person som har varit arbetslös länge har ofta svårare att ta sig tillbaka in på arbetsmarknaden. Bland arbetslösa inrikes födda i åldersgruppen `r arbesloshetstid_aldersgrupp` har ungefär `r arbetsloshetstid_inrikes_24_manader` procent varit arbetslösa länge (minst 24 månader) och får anses stå långt från arbetsmarknaden. Sammanlagt har ungefär `r arbetsloshetstid_inrikes_minst_12_manader` procent av arbetslösa inrikes födda varit det i minst 12 månader. Bland inrikes födda arbetslösa är det istället de som har varit arbetslösa under en relativt kort period (< 6 månader) som är den störstsa gruppen (ca `r arbetsloshetstid_inrikes_6_manader` av alla inrikes födda arbetslösa).
+Hur långt ifrån arbetsmarknaden som en individ befinner sig beror delvis på hur länge personen har varit utan anställning. En person som har varit arbetslös länge har ofta svårare att ta sig tillbaka in på arbetsmarknaden. Bland arbetslösa inrikes födda i åldersgruppen `r arbesloshetstid_aldersgrupp` har ungefär `r arbetsloshetstid_inrikes_24_manader` procent varit arbetslösa länge (minst 24 månader) och får anses stå väldigt långt från arbetsmarknaden. Sammanlagt har ungefär `r arbetsloshetstid_inrikes_minst_12_manader` procent av de inrikes födda i åldersgruppen som är arbetslösa varit det i minst 12 månader. Istället är det de som har varit arbetslösa under en relativt kort period (< 6 månader) som är den största gruppen (ca `r arbetsloshetstid_inrikes_6_manader` procent av alla inrikes födda arbetslösa).
 
-Bland utrikes födda är bilden delvis annorlunda. Här är den största gruppen arbetslösa de som varit arbetslösa väldigt länge (längre än 24 månader), totalt tillhör `r arbetsloshetstid_utrikes_24_manader` procent av de arbetslösa utrikes födda i åldersgruppen `r arbesloshetstid_aldersgrupp` den gruppen. Sammanlagt har mer än `r arbetsloshetstid_utrikes_minst_12_manader` procent av de arbetslösa utrikes födda varit det i minst 12 månader. 
+Bland utrikes födda är bilden delvis annorlunda. Här är den största gruppen arbetslösa de som varit det i minst 24 månader, totalt `r arbetsloshetstid_utrikes_24_manader` procent av de arbetslösa utrikes födda tillhör den gruppen. Sammanlagt har ungefär `r arbetsloshetstid_utrikes_minst_12_manader` procent av de arbetslösa utrikes födda varit det i minst 12 månader. 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_arbetsloshetstid$langtidsarbetsloshet
