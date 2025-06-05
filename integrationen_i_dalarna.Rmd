@@ -600,9 +600,10 @@ Bland personer mellan 16 och 19 år (det vänstra diagrammet nedan) är andelen 
 
 För utrikes födda män sjunker motsvarande andel bland 16-19-åringar från cirka `r uvas_16_19_man_0_1` procent för de som varit i Sverige i max 2 år till ungefär `r uvas_16_19_man_10_` procent för de som varit i landet i minst 10 år. Noterbart är dock att andelen är högre för män som varit i Sverige i mer än 10 år, än för de som varit i landet mellan 2 och 10 år. Bland inrikes födda män mellan 16 och 19 år, som varken arbetar eller studerar, är andelen `r uvas_16_19_man_inrikes` procent.
 
-```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center', fig.cap="."}
+```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_uvas$UVAS_vistelsetid_inrikes_senastear_Dalarna
 ```
+<br>
 
 Om de unga mellan 20 och 25 år som varken arbetar eller studerar i stället undersöks framträder en delvis annorlunda bild (se det högra diagrammet ovan). Bland kvinnor är andelen högre i denna åldersgrupp än den var bland 16-19-åringar, oavsett om personen är inrikes eller utrikes född. För utrikes födda kvinnor sjunker andelen som varken arbetar eller studerar bland 20-25-åringar från `r uvas_20_25_kvinnor_0_1` procent för de som varit i Sverige i max 2 år till `r uvas_20_25_kvinnor_10_` procent för de som varit i landet i minst 10 år. Motsvarande andel för inrikes födda kvinnor är `r uvas_20_25_kvinnor_inrikes` procent.
 
@@ -612,9 +613,10 @@ Utrikes födda män mellan 20 och 25 år förefaller således hamna i någon for
 
 Andelen utrikes födda som varken arbetar eller studerar har förändrats relativt mycket över tid. I slutet på 1990-talet varken arbetade eller studerade runt 60 procent av de utrikes födda mellan 16 och 19 år som varit i Sverige i max 2 år, att jämföra med `r uvas_16_19_senaste_ar_0_1` procent idag. Den största minskningen skedde i början på 2000-talet och därefter har andelen varierat en del över tid. En liknande trend går att utläsa bland utrikes födda 16-19 åringar som varit i landet längre, men bland dessa är andelen som varken arbetar eller studerar tydligt lägre.
 
-```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center', fig.cap="."}
+```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_uvas$UVAS_vistelsetid_inrikes_tid_Dalarna
 ```
+<br>
 
 Även bland utrikes födda mellan 20 och 25 år har motsvarande andel förändrats mycket över tid. I slutet på 1990-talet varken arbetade eller studerade runt 70 procent av de utrikes födda mellan 20 och 25 år som varit i Sverige i max 2 år, att jämföra med `r uvas_20_25_senaste_ar_0_1` procent idag. En stor del av minskningen skedde i mitten på 2000-talet och därefter har andelen gått såväl upp som ner. En liknande utveckling syns även bland utrikes födda 20-25-åringar som varit i landet längre. En trolig förklaring till de höga nivåerna under 1990-talet var den ekonomiska kris som berörs i det föregående avsnittet.
 
@@ -630,17 +632,19 @@ Det finns flera sätt att mäta boende på och alla indikerar boendeskillnader m
 
 Att en större andel utrikes födda personer bor i hyresrätt, kan förklaras med att nyanlända personer generellt ännu inte hunnit etablera sig i Sverige så pass att de har ekonomiska möjligheter att äga sitt eget boende. De utrikes födda bland Dalarnas invånare som bott i Sverige länge (mer än 10 år) tenderar dock att äga sin bostad, antingen som äganderätt eller bostadsrätt, i relativt stor utsträckning, ungefär `r boendetyp_10_ar_äga` procent av de utrikes födda gör det. Det går dock att konstatera att andelen som äger sin bostad är väsentligt högre bland de som är inrikes födda, ca `r boendetyp_inrikes_äga` procent. 
 
-```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', fig.cap="."}
+```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center'}
 gg_boendetyp_upplatelseform$boendetyp_vistelsetid_inrikes
 ```
+<br>
 
 En annan analys av boendesituation är andelen trångbodda hushåll. Trångboddhet i lägenheter i flerbostadshus mäts av SCB enligt Norm 2 ([Boverket](https://www.boverket.se/sv/kommunernas-bostadsforsorjning/underlag-for-bostadsforsorjningen/sarskilda-grupper/trangbodda/){target="_blank"}), vilket innebär att gränsen för trångboddhet går vid högst två personer per rum, exklusive kök och vardagsrum.
 
 De hushåll i Dalarna som är trångbodda utgör en liten andel av det totala antalet lägenhetshushåll, vilket framförallt beror på att få hushåll med inrikes födda är trångbodda (bara ungefär `r trangboddhet_sista_ar_inrikes_andel` procent år `r  trangboddhet_max_ar`). Bland hushåll med utrikes födda är en klart större andel trångbodda (ungefär `r trangboddhet_sista_ar_utrikes_andel` procent år `r trangboddhet_max_ar`). Sedan `r trangboddhet_min_ar`, kort efter invandringen p g a kriget i Syrien, har antalet hushåll som är trångbodda minskat något för såväl inrikes som utrikes födda.
 
-```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center', fig.cap="."}
+```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_trangboddhet$trangboddhet_antal_Dalarna
 ```
+<br>
 
 Trångboddhet i småhus kan inte mätas på samma sätt eftersom att uppgifter på antal rum inte samlas in. Det går att mäta med hjälp av bostadsyta per hushållsmedlem även om det måttet blir trubbigare än det för flerbostadshus. Trångboddhet i småhushushåll anses dock inte vara ett utbrett problem, varför endast trångboddhet i flerbostadshus behandlas här.
 
@@ -684,17 +688,19 @@ Utöver områden som språk, utbildning, boende och arbete följer ett antal ytt
 ## Hälsa
 Hälsa mäts bland annat via Folkhälsomyndigheten i form av den nationella folkhälsoenkäten - Hälsa på lika villkor. Utrikes födda från Övriga Europa och Övriga världen uppger att de har en bättre hälsa än inrikes födda. Detta hänger sannolikt samman med att dessa grupper är yngre än inrikes födda och således också har en bättre hälsa generellt (se avsnitt 1, Demografi och invandring). Den grupp som har lägst självskattad hälsa är gruppen "Övriga Norden". Det är sannolikt kopplat till en hög andel personer som invandrat från Finland fram till 1970-talet och i dag är en ålderstigen grupp i samhället som också minskar i antal.
 
-```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center', fig.cap="."}
+```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_fohm$bra_eller_mycket_bra_halsa
 ```
+<br>
 
 Oavsett var man är född, har den upplevda hälsan försämrats mellan undersökningen `r sjalvskattad_forsta_ar` och den senaste (`r sjalvskattad_senaste_ar`).
 
 Med undantag för gruppen som är födda i övriga Norden, uppger en större andel män än kvinnor att de har en bra hälsa.
 
-```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center', fig.cap="."}
+```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_fohm$bra_eller_mycket_bra_halsa_kon
 ```
+<br>
 
 Sveriges kommuner och regioner (SKR) mäter patientperspektivet i hälso- och sjukvården i den nationella hälso- och sjukvårdsbarometern, men i det fallet är underlaget för begränsat för att göra skillnader mellan inrikes och utrikes födda på länsnivå. På nationell nivå skiljer sig dock inte vårdupplevelsen för utrikes födda nämnvärt från inrikes födda. 
 
@@ -738,14 +744,14 @@ gg_ek_stod$ekonomiskt_bistand_fodelseland_Dalarna
 ## Tillit
 Även tillit mäts i Folkhälsomyndighetens Hälsa på lika villkor. I den senaste undersökningen `r tillit_andra_ar` har gruppen som är födda i `r tillit_andra_max_kvinnor_grupp` lägst tillit till andra människor, såväl om kvinnorna som männen i Sverige tillfrågas. Bland kvinnorna uppger ca `r tillit_andra_max_kvinnor_varde` procent att de har svårt att lita på andra, medan motsvarande siffra bland männen är ungefär `r tillit_andra_max_man_varde` procent. Högst tilltro till andra har personer födda i `r tillit_andra_min_man_grupp`, såväl bland kvinnorna som männen i Sverige. Bland kvinnorna uppgav `r tillit_andra_min_kvinnor_varde` procent att de hade låg tilltro till andra, medan motsvarande siffra bland männen var ca `r tillit_andra_min_man_varde` procent. Även personer födda i Sverige har relativt stor tilltro till andra.
 
-```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center', fig.cap="."}
+```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_fohm_alt_tillit$svart_att_lita_pa_andra
 ```
 <br>
 
 Om frågan istället fokuserar på tillit till samhällets institutioner är det generellt färre i Sverige som uppger att de har låg tillit. Bland män säger ungefär var fjärde att de har låg tillit till samhällets institutioner, oavsett om de har svensk eller utländsk bakgrund. Bland kvinnor födda i Sverige eller övriga Norden uppger runt 20 procent att de har låg tillit till samhällets institutioner, vilket är något lägre än männen med motsvarande bakgrund. Bland kvinnor födda i övriga Europa och övriga världen har kvinnorna istället något lägre tilltro till institutioner än männen med motsvarande bakgrund.
 
-```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center', fig.cap="."}
+```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_fohm$lag_tillit_till_samhallets_institutioner
 ```
 <br>
@@ -766,14 +772,14 @@ I 2020 års SOM-undersökning studerades även frågan om mångkulturens påverk
 
 Bland inrikes födda är valdeltagandet i Dalarna, i val till riksdagen, relativt högt (närmare 90 procent) och har inte förändrats nämnvärt mellan valen `r forsta_ar_valdeltagande` och `r sista_ar_valdeltagande`. Utrikes födda har generellt ett lägre valdeltagande och i den gruppen har även valdeltagandet minskat på senare år. Valdeltagandet bland utrikes födda varierar dessutom baserat på hur länge personerna har bott i Sverige. För de som varit i Sverige mindre än 10 år var valdeltagandet i Dalarna, i val till riksdagen år `r sista_ar_valdeltagande`, `r valdeltagande_riksdag_under_10_senaste_varde` procent, att jämföra med `r valdeltagande_riksdag_over_10_senaste_varde` procent för de som varit i Sverige längre än 10 år. 
 
-```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center', fig.cap="."}
+```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_valdeltagande_vistelsetid$Valdeltagande_i_val_till_riksdag
 ```
 <br>
 
 När det gäller val till region- och kommunfullmäktige är valdeltagandet bland inrikes födda något lägre än valdeltagandet till riksdagsvalet, men skillnaderna är små. För utrikes födda är skillnaderna däremot relativt stora. För de personer som bott i Sverige mindre än 10 år är valdeltagandet i val till Dalarnas regionfullmäktige (det första diagrammet nedan) blott `r valdeltagande_region_under_10_senaste_varde` procent år `r sista_ar_valdeltagande`, vilket är hela `r valdeltagande_skillnad_under10` procentenheter lägre än valdeltagandet i val till riksdagen. För de som bott i Sverige längre än 10 år var valdeltagandet år `r sista_ar_valdeltagande` i samma val `r valdeltagande_region_over_10_senaste_varde` procent, vilket är `r valdeltagande_skillnad_over10` procentenheter lägre än valdeltagandet i val till riksdagen. Det verkar således som att utrikes födda, som varit relativt kort period i Sverige, i första hand visar ett intresse för politiken på riksnivå, men att intresset för den regionala och lokala politiken ökar med tiden. 
 
-```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center', fig.cap="."}
+```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_valdeltagande_vistelsetid$Valdeltagande_i_val_till_region
 
 ```
@@ -781,7 +787,7 @@ gg_valdeltagande_vistelsetid$Valdeltagande_i_val_till_region
 
 Värt att notera är även att det är små skillnader mellan valdeltagande på regional och kommunal nivå. Röstar man i det ena valet så tenderar man även att rösta i det andra (se diagrammet nedan).
 
-```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center', fig.cap="."}
+```{r, echo=FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_valdeltagande_vistelsetid$Valdeltagande_i_val_till_kommun
 ```
 <br>
