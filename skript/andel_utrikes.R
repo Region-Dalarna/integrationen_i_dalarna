@@ -57,7 +57,7 @@ diag_andel_utrikes_scb <- function(region = "20", # Enbart ett i taget.
   # Calculate share of utrikes födda by using a pivot wider
   andel_utrikes_df <- antal_inrikes_utrikes_df %>%
     pivot_wider(names_from = födelseregion, values_from = Antal) %>%
-      mutate(andel_utrikes = (`Utrikes född`/`Född i Sverige`)*100) %>%
+      mutate(andel_utrikes = (`Utrikes född`/(`Född i Sverige`+`Utrikes född`))*100) %>%
         select(region,år,andel_utrikes)
 
 
