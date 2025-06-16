@@ -184,7 +184,6 @@ På kommunnivå ökade befolkningen totalt sett i 8 av länets kommuner mellan �
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center',include=FALSE}
 gg_antal_utrikes$befolkningsforandring_Dalarna
 ```
-<br>
 
 I det högra diagrammet nedan syns att andelen av befolkningen som är utrikes födda är lägre i samtliga Dalarnas kommuner jämfört med riket, där ungefär `r andel_utrikes_Sverige_sista_ar` procent av invånarna är födda i ett annat land än Sverige år `r andel_utrikes_senaste_ar`. Högst andel utrikes födda i Dalarna återfinns i `r andel_utrikes_kommun_hogst_sista_ar` där ungefär `r andel_utrikes_kommun_hogst_sista_ar_varde` procent av befolkningen är utrikes födda. Även Borlänge och Avesta har en relativt stor andel utrikes födda (`r andel_utrikes_Borlänge_sista_ar` respektive `r andel_utrikes_Avesta_sista_ar` procent). Lägst andel utrikes födda finns i `r andel_utrikes_kommun_lagst_sista_ar`, där endast `r andel_utrikes_kommun_lagst_sista_ar_varde` procent av befolkningen är utrikes födda. 
 
