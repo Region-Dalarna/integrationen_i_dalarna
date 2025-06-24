@@ -4,8 +4,11 @@ author: ""
 date: ""
 output: 
   html_document:
+    self_contained: true
     includes:
-      in_header: hero_image.html
+      in_header: 
+      - favicon.html
+      - hero_image.html
     toc: yes
     toc_float: yes
     toc_depth: 6
@@ -209,7 +212,7 @@ gg_befforandring_komponenter$`befolkningsforandring_per_komponent_Dalarnas län_
 
 Födelseunderskottet minskade successivt från år 2000 och fram till 2019, för att därefter öka kraftigt fram till 2024. Utvecklingen till 2019 beror i stor grad på att de stora ålderskullar som föddes runt 1990 befann sig i barnafödande åldrar, samt en generös familje- och socialpolitik och en stor invandring. De som invandrade till Dalarna i mitten av 2010-talet var generellt sett unga och i en ålder när det är vanligt att skaffa barn. Utrikes födda kvinnor har även en hög fruktsamhet direkt efter att de invandrat till Sverige, men därefter minskar den successivt. Att fruktsamhetstalen är extra höga bland kvinnor som nyligen invandrat beror sannolikt på att många kvinnors invandring är knutet till familjebildning, och att de kommer till Sverige för att återförenas med sin familj eller för att bilda familj. 
 
-De senaste årens markanta minskning av födelsetalen är en fråga som förvånar demografer. Det är inte längre en lika tydlig koppling mellan makroekonomiska upp- och nedgångar eller välfärdssystemets utformning och födslar. Nedgången är mer knuten till oro inför framtiden och påverkar framför allt sannolikheten att skaffa sitt första barn. För en fördjupad genomgång av förändringar i födelsetal, se avsnitt 2.1 i [*Befolkningsutvecklingen i Dalarna*](https://region-dalarna.github.io/befolkningsutvecklingen_i_Dalarna/){target="_blank"}.^[Befolkningsutvecklingen i Dalarna, Samhällsanalys, Region Dalarna (2025-03-25).]
+De senaste årens markanta minskning av födelsetalen är en fråga som förvånar demografer. Det är inte längre en lika tydlig koppling mellan makroekonomiska upp- och nedgångar eller välfärdssystemets utformning och födslar. Nedgången är mer knuten till oro inför framtiden och påverkar framför allt sannolikheten att skaffa sitt första barn. För en fördjupad genomgång av förändringar i födelsetal, se avsnitt 2.1 i [*Befolkningsutvecklingen i Dalarna*](https://samhallsanalys.regiondalarna.se/befolkningsutveckling){target="_blank"}.^[Befolkningsutvecklingen i Dalarna, Samhällsanalys, Region Dalarna (2025-03-25).]
 
 Förutom att antalet immigranter var stort under framförallt mitten på 2010-talet, har ursprungsländerna förändrats över tid, med ett större antal asylsökande från utomeuropeiska länder. År `r fodelseland_senaste_ar` kan konstateras att det skett omflyttningar av de tio största födelseländerna bland utrikes födda invånare i Sverige. År `r fodelseland_senaste_ar` var `r storsta_fodelseland_senaste_ar` det land som flest invånare i Dalarna var födda i (vid sidan om Sverige). Totalt `r storsta_fodelseland_senaste_ar_antal` invånare i Dalarna hade `r storsta_fodelseland_senaste_ar` som födelseland. Detta är en stor förändring mot 2010, när antalet invånare i Dalarna med Syrien som födelseland kan räknas i låga hundratal. Orsaken till detta är naturligtvis inbördeskriget i Syrien under 2010-talet, när många från landet flydde till Europa och Sverige. Andra länder från vilka invandringen ökat tydligt under 2000-talet är Somalia och Eritrea. 
 
@@ -651,7 +654,7 @@ I Region Dalarnas integrationsrapport från 2019 ([Region Dalarna, 2019](https:/
 ## Flyttmönster
 I den här rapporten delas flyttar upp i två typer, inrikes och utrikes. Inrikes flyttar är de som sker mellan olika län i Sverige, medan utrikes flyttar är de som sker mellan Sverige och andra länder och normalt benämns in- respektive utvandring. I texten nedan benämns nettot mellan inrikes in- och utflyttar inrikes flyttnetto alternativt inrikes flyttningsöverskott, medan nettot mellan utrikes in- och utflyttar benämns invandringsöverskott eller utrikes flyttnetto.
 
-Sedan slutet av 1990-talet har Dalarna haft ett negativt inrikes flyttnetto under en överväldigande majoritet av åren (se figuren nedan). I Dalarna är det framförallt unga personer som flyttar, vilket kan förklaras med att de flyttar för att studera och arbeta. Flyttar från Dalarna inrikes sker i första hand till antingen större eller näraliggande län. Flest flyttar skedde till Stockholm, följt av Västmanland och Uppsala (se [Befolkningsutvecklingen i Dalarna](https://region-dalarna.github.io/befolkningsutvecklingen_i_Dalarna/){target="_blank"}). Effekten av att unga flyttar från länet blir en allt mer ålderstigen befolkning.
+Sedan slutet av 1990-talet har Dalarna haft ett negativt inrikes flyttnetto under en överväldigande majoritet av åren (se figuren nedan). I Dalarna är det framförallt unga personer som flyttar, vilket kan förklaras med att de flyttar för att studera och arbeta. Flyttar från Dalarna inrikes sker i första hand till antingen större eller näraliggande län. Flest flyttar skedde till Stockholm, följt av Västmanland och Uppsala (se [Befolkningsutvecklingen i Dalarna](https://samhallsanalys.regiondalarna.se/befolkningsutveckling){target="_blank"}). Effekten av att unga flyttar från länet blir en allt mer ålderstigen befolkning.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_flytt$`Inrikes flyttningsöverskott_Dalarna`
