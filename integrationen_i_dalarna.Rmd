@@ -66,23 +66,17 @@ Senast uppdaterad: `r Sys.Date()`</i>
 </p>
 
 # Sammanfattning {-}
-
-Här ska vi ha en sammanfattning av rapporten. Det ska vara en punktlista med de viktigaste budskapen och inte ett referat av varje avsnitt.
-<br>
-
 <ul>
 
-<li>Dalarnas befolkning består av en ökad andel utrikes födda. Sedan år 2000 har antalet utrikes födda ökat med cirka 20 000 personer. Samtidigt har antalet inrikes födda minskat. Utan invandring hade länets befolkning minskat </li>
+<li>Utvecklingen inom utbildnings- och arbetsmarknadsområdet är positiv över tid för utrikes födda </li>
 
-<li>Andelen arbetslösa utrikes födda är högre än för inrikes födda, men har minskat över tid </li>
+<li>Språkkunskaper och utbildning är avgörande för etablering på arbetsmarknaden </li>
 
-<li>Språk och utbildning avgörande för arbete, men även vistelsetiden påverkar integrationsnivåerna </li>
+<li>Behovet av ekonomiskt stöd till utrikes födda har minskat över tid </li>
 
-<li>Minskad arbetslöshet ger även ett minskat behov av ekonomiskt stöd över tid för utrikes födda </li>
+<li>Vistelsetiden i Sverige har stor betydelse för det positiva utfallet inom de flesta områden som studerats, vilket betonar integrationen som en process </li> 
 
-<li>Utrikes födda uppvisar stor rörlighet och flyttar i hög grad </li>
-
-<li>Asylinvandringen har minskat markant sedan 2015 </li>
+<li>De senaste decenniernas invandring har motverkat en markant minskning invånarantalet i länet och bidragit till att föryngra befolkningen </li>
 
 </ul>
 
@@ -90,6 +84,14 @@ Här ska vi ha en sammanfattning av rapporten. Det ska vara en punktlista med de
 I år är det 10 år sedan Sverige registrerade det högsta antalet asylsökande genom tiderna. 2015 sökte närmare 163 000 personer asyl i Sverige och för Dalarnas del blev 2016 det år då invandringen var som störst efter att de asylsökande fått uppehållstillstånd och folkbokförts i länet. I november 2015 uttryckte även regeringen att trycket var stort på det svenska samhället och att Sverige behövde "ett andrum för svenskt flyktingmottagande". I och med det skärptes migrationspolitiken, men att det stora mottagandet skulle "vara en stolthet för oss när historien skrivs" [(Sveriges Radio, 2015)](https://www.sverigesradio.se/artikel/6310364){target="_blank"}^[Sveriges Radio, 2015. Regeringens besked om skärpt flyktingpolitik, 2015-11-25.]. [Riksrevisionen (2017)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/riksrevisionens-granskningsrapport/lardomar-av-flyktingsituationen-hosten-2015-_h5b54/){target="_blank"}^[Riksrevisionen, 2017. Granskningsrapport 2017:4, Lärdomar av flyktingsituationen hösten 2015 - beredskap och hantering.] granskade de centrala offentliga aktörernas beredskap och noterar att det brast i vissa avseenden, men att huvuduppdraget ändå kunde genomföras. 
 
 2019 publicerade Region Dalarna rapporten [*Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv*](https://www.regiondalarna.se/contentassets/d845727dbc9f49c3b7b09a2c60456497/integrationsanalys.pdf){target="_blank"}.^[Region Dalarna, 2019. Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv. Regionala utvecklingsförvaltningens rapportserie #1.] Rapporten skrevs i anslutning till och med anledning av den höga asylinvandringen till Sverige och Dalarna. Därefter har asylinvandringen minskat och 2024 var den på en nivå som är den lägsta sedan 1985, vilket är en del i ett paradigmskifte från sittande regering att öka arbetskraftsinvandringen och minska asylinvandringen [(Regeringen, 2025)](https://www.regeringen.se/pressmeddelanden/2025/01/pressbriefing-om-migrationen-till-sverige-under-2024/){target="_blank"}.^[Regeringen. Pressbriefing om migrationen till Sverige under 2024. 2025-01-10.]
+
+Integration kan ses som *en process där individer eller grupper med olika bakgrunder och förutsättningar blir en del av ett större socialt, ekonomiskt eller kulturellt sammanhang, samtidigt som deras egen identitet och särart respekteras*. 
+
+<details>
+
+  <summary>Fördjupning - Integrationsbegreppet</summary>
+
+<div>
 
 Beroende på sammanhang kan integration ha olika betydelser:
 <br>
@@ -107,11 +109,13 @@ Beroende på sammanhang kan integration ha olika betydelser:
 
 Den strukturella integrationen handlar om skyldigheter och rättigheter via samhälleliga system, lagar och regler. Den kulturella integrationen handlar mer om hur vi upplever oss som integrerade via normer, värderingar och identiteter. En känsla av delaktighet skapar kulturell integration medan en lag skapar strukturell integration. I grunden handlar det här om alla individer som lever i ett land, även om den vardagliga diskussionen i mångt och mycket handlar om invandrare i förhållande till de som är födda och uppväxta i ett land.
 
-Begreppet integration kan således ses som *en process där individer eller grupper med olika bakgrunder och förutsättningar blir en del av ett större socialt, ekonomiskt eller kulturellt sammanhang, samtidigt som deras egen identitet och särart respekteras*.
+</div>
+ 
+</details>
 
-Även om integrationsfrågan är bredare, präglas samhällsdebatten av integration av utrikes födda i det svenska samhället. Det gör att det är viktigt att belysa hur utrikes födda förhåller sig till inrikes födda inom ett antal samhällsområden. Samhällets förmåga att intregrera utrikes födda i utbildning, arbetsmarknad eller boende är avgörande för t ex kompetensförsörjningen på kort och lång sikt. 
+Även om integrationsbegreppet är brett, präglas samhällsdebatten av integration av utrikes födda i det svenska samhället. Det gör att det är viktigt att belysa hur utrikes födda förhåller sig till inrikes födda inom ett antal samhällsområden. Samhällets förmåga att intregrera utrikes födda i utbildning, arbetsmarknad eller boende är avgörande för t ex kompetensförsörjningen på kort och lång sikt. 
 
-Den här rapportens syfte är att redovisa aktuell statistik relaterat till utrikes föddas integration i samhället i Dalarna och visa på utvecklingen över tid. Som utgångspunkt finns 2019 års rapport, men en anpassning till dagens situation och kunskap görs i stor utsträckning. 
+Den här rapportens syfte är att redovisa aktuell statistik relaterat till utrikes föddas integration i samhället i Dalarna och visa på utvecklingen över tid. Som utgångspunkt finns 2019 års rapport, men en anpassning till dagens situation och kunskap görs i stor utsträckning. Rapporten kommer inte att behandla frågor som rör invandringens påverkan på de offentliga finanserna eller utrikes föddas inblandning i brottslighet. För den som är intresserad av att läsa mer om dessa områden rekommenderas rapporter från [Konjunkturinstitutet](https://www.konj.se/media/kpgnt5iw/specialstudie-117-invandrades-nettobidrag-till-de-offentliga-finanserna-1983-2022.pdf){target="_blank"} och [Brottsförebyggande rådet](https://bra.se/rapporter/arkiv/2021-08-25-misstankta-for-brott-bland-personer-med-inrikes-respektive-utrikes-bakgrund){target="_blank"}.
 
 I rapporten från 2019 konstaterades bl a att det var en tydlig skiljelinje i integrationen mellan utrikes födda å ena sidan och inrikes födda med utrikes födda föräldrar respektive inrikes födda med inrikes födda föräldrar å andra sidan. Skillnaden mellan de inrikes födda, oavsett om de hade inrikes eller utrikes födda föräldrar, var relativt liten när det gäller t ex skolresultat och sysselsättningsgrad. Distinktionen i denna rapport är därför primärt mellan utrikes födda och inrikes födda. En uppdelning sker även för kvinnor och män i de delar det är relevant, utbildningsnivåer samt vistelsetid i landet för de som är utrikes födda. I vissa diagram används även begreppet *Född i Sverige*, vilket ska likställas med inrikes född.
 
@@ -253,7 +257,7 @@ gg_antal_utrikes$befolkningsprognos_lan_Dalarna
 ```
 <br>
 
-Den demografiska översikten visar att andelen utrikes födda i Dalarna ökat över tid och bidragit till att föryngra och vidmakthålla länets invånarantal. I nästa avsnitt fokuseras på integrationen i form av språk, utbildning, inträde och etablering på arbetsmarknaden.
+Den demografiska översikten visar att andelen utrikes födda i Dalarna ökat över tid och bidragit till att både föryngra och vidmakthålla länets invånarantal.
 
 # Utbildning och arbetsmarknad
 Ett viktigt steg för att kunna integreras i ett samhälle är att lära sig språket. Språkkunskaper ger förutsättningar för utbildning som i sin tur skapar möjligheter på arbetsmarknaden. I detta avsnitt görs en genomgång av utvecklingen för utrikes födda inom dessa delar.
@@ -337,26 +341,6 @@ Det som kan konstateras är dock att `r ar_max` är andelen behöriga inrikes oc
 
 ## Arbetslöshet och sysselsättning
 I förlängningen av att studera är att arbeta en viktig komponent i integrationen i samhället. Utrikes födda har generellt en svagare ställning på arbetsmarknaden, vilket speglas i att sysselsättningen bland utrikes födda är lägre än bland inrikes födda personer och arbetslösheten, inklusive långtidsarbetslösheten, är högre. Forskning visar att bland annat härkomst, ålder, kön, utbildningsnivå, konjunkturläge, språkkunskaper och kontaktnät är avgörande för utrikes föddas möjligheter att etablera sig på arbetsmarknaden [(IFAU, 2022)](https://www.ifau.se/Press/Forskningssammanfattningar/Utrikes-foddas-eta-pa-arbetsmarknaden-/){target="_blank"}.^[IFAU. Utrikes föddas etablering på arbetsmarknaden (2022-11-19).] Arbetslöshets- och sysselsättningsnivåerna bland utrikes födda varierar dock stort mellan olika grupper.
-
-I detta avsnitt ska förhoppningsvis nedanstående frågor kring utrikes födda besvaras:
-
-<ul>
-
-<li>*Vilka kommer i arbete?*</li>
-
-<li>*När kommer de i arbete?*</li>
-    
-<li>*Vilka yrken arbetar de i? - ej berört*</li>
-
-<li>*Hur ser etableringen ut baserat på vistelsetid?*</li>
-
-<li>*Hur är matchningen mellan arbete och utbildning?*</li>
-
-<li>*Vilka arbetar inte? Vilken utbildning har de?*</li>
-
-<li>*Hur ser långtidsarbetslösheten ut?*</li>
-
-</ul>
 
 Arbetsmarknadsstatistik finns hos SCB och Arbetsförmedlingen. I anslutning till respektive diagram finns information om källa. För mer information om arbetsmarknadsstatistiken, klicka nedan:
 <br>
@@ -510,23 +494,9 @@ gg_etablering$etablering_lan_utb
 ```
 <br>
 
-<span class = "kommentar">Kan det vara så att den minskade asylinvandringen till länet under senare år slår igenom i gruppen med eftergymnasial utbildning. En större andel är rekryterade till länet, jämfört med tidigare då högutbildade sökte asyl i länet. Processen att integreras utifrån ett asylperspektiv tar längre tid, men når höga nivåer redan efter fyra år.</span>
-<br>
-
 En bidragande orsak till att utrikes födda personer med låg utbildning har svårare att etablera sig på arbetsmarknaden kan vara att det finns få enkla jobb på den svenska arbetsmarknaden som inte kräver längre utbildning. För att möjliggöra att fler av de utrikes födda som flyttar till Dalarna ska arbeta, är det av största vikt att så många som möjligt tillgodogör sig en utbildning som efterfrågas av arbetsmarknaden.
 
 Det finns flera tänkbara anledningar till att utrikes födda i genomsnitt presterar sämre på arbetsmarknaden, även när hänsyn tas till skillnader i utbildningsnivå. Några tänkbara förklaringar kan exempelvis vara lägre kunskapar om landet, språket och kulturen. För de som flyttat till Sverige av flyktingskäl kan traumatiska upplevelser också inverka. Det finns emellertid rapporter som visar att diskriminering av personer med utländskt ursprung förekommer på arbetsmarknaden [(Länsstyrelsen Stockholm, 2018)](https://www.diva-portal.org/smash/get/diva2:1273400/FULLTEXT01.pdf){target="_blank"}^[Länsstyrelsen Stockholm, 2018. Antisvart rasism och diskriminering på arbetsmarknaden, Rapport 2018.21.]. Utrikes födda män förefaller vara mer utsatta inom yrken där det finns många inrikes födda [(Bursell, M. och Bygren, M., 2023)](https://www.ifau.se/globalassets/pdf/se/2023/2023-10-etnisk-yrkessegregering-pa-arbetsmarknaden--har-diskriminering-nagon-betydelse.pdf){target="_blank"}^[Bursell, M. och Bygren, M., 2023. Etnisk yrkessegregering på arbetsmarknaden – har diskriminering någon betydelse?, Rapport 2023:10, IFAU.].
-
-<span class = "kommentar">Ta bort stycket nedan?</span>
-De ekonomiska vinsterna för samhället skulle vara stora om skillnaderna i sysselsättning och medelinkomst, mellan inrikes och utrikes födda skulle utjämnas. I den mån diskriminering förklarar denna skillnad, finns det alltså stora vinster i att bekämpa den, både för samhället och för de utrikes födda själva.
-
-<span class = "kommentar">Ta bort stycket nedan?</span>
-Matchningen mellan de som är arbetssökande och de arbeten som är lediga skulle kunna fungera betydligt bättre än idag.
-Konsekvensen av detta kan bli att företag och organisationer kan flytta från länet på grund av att de inte hittar
-arbetskraft och arbetskraftsreserven bestående av utrikes födda riskerar att lämna länet om de inte får jobb.
-
-<span class = "kommentar">Ta bort stycket nedan?</span>
-Något som är viktigt att ha med sig när andelen sysselsatta analyseras är att gränsen för att definieras förvärvsarbetande är relativt låg. Något ytterligare att ta hänsyn till när man analyserar sysselsättningsgrad och arbetslöshet bland utrikes födda är hur lång tid individer har varit i Sverige. Vistelsetid i Sverige har ett starkt samband med sysselsättningsgrad och arbetslöshet och därmed kommer andelen nyligen invandrade i gruppen utrikes födda att påverka nivån på dessa variabler.
 
 Om fokus enbart är på kopplingen mellan vistelsetid och sysselsättningsgrad, blir det tydligt att vistelsetiden är en viktig faktor för att skapa integration i samhället (se diagrammet nedan). De som vistats längre tid i Sverige har en högre förvärvsfrekvens. Variabeln vistelsetid fungerar som en indikator på en rad andra faktorer som påverkar möjligheterna till att få ett arbete. Ökad tid i landet ger möjlighet för en nyanländ person att lära sig svenska, validera och komplettera utbildningar, lära sig hur den svenska arbetsmarknaden fungerar samt knyta kontakter för att öka chansen till att få en sysselsättning och inkomst. Enligt detta resonemang förväntas ett initialt sysselsättningsgap mellan inrikes födda och nyanlända, som minskar succesivt när vistelsetiden i landet blir längre. 
 
@@ -621,8 +591,7 @@ gg_uvas$UVAS_vistelsetid_inrikes_tid_Dalarna
 
 Även bland utrikes födda mellan 20 och 25 år har motsvarande andel förändrats mycket över tid. I slutet på 1990-talet varken arbetade eller studerade runt 70 procent av de utrikes födda mellan 20 och 25 år som varit i Sverige i max 2 år, att jämföra med `r uvas_20_25_senaste_ar_0_1` procent idag. En stor del av minskningen skedde i mitten på 2000-talet och därefter har andelen gått såväl upp som ner. En liknande utveckling syns även bland utrikes födda 20-25-åringar som varit i landet längre. En trolig förklaring till de höga nivåerna under 1990-talet var den ekonomiska kris som berörs i det föregående avsnittet.
 
-<span class = "kommentar">Kort sammanfattning av ett långt avsnitt?</span>
-
+Språk och utbildning är avgörande för etablering på arbetsmarknaden. En hög asylinvandring gör att samhället behöver resurssätta för att möta behoven av grundläggande språkutbildning som i sin tur ger möjlighet att tillgodogöra sig utbildning. Det är tydligt att det är en process som kräver tid, men de flesta områden utvecklas också positivt över tid. Under senare år har vistelsetidens påverkan på integrationen förkortats, vilket kan vara ett tecken på att invandringen de senaste åren är av annan karaktär än under åren efter 2015.
 
 # Boende och flyttmönster
 
@@ -793,24 +762,37 @@ gg_valdeltagande_vistelsetid$Valdeltagande_i_val_till_kommun
 ```
 <br>
 
-# Sammanfattande diskussion
-I denna rapport har integrationen av utrikes födda analyserats utifrån demografi, utbildning, arbetsmarknad, boende, flyttmönster, hälsa, ekonomi, tillit och demokrati. Trots den breda genomgången inom ett flertal, för integrationen, viktiga områden gör rapporten inte anspråk på att vara heltäckande. 
+# Avslutning
+I denna rapport har integrationen av utrikes födda analyserats utifrån demografi, utbildning, arbetsmarknad, boende, flyttmönster, hälsa, ekonomi, tillit och demokrati. Inom flera områden har det skett en positiv utveckling för utrikes födda.
 
-Integration är en process och processer tar tid. Det är tydligt att vistelsetiden har en stor betydelse för utfallet på integrationsområdet. Inom de flesta områden som studerats i rapporten syns en tydlig, positiv utveckling av utfallet när vistelsetiden ökar. 
+Dalarnas inrikes födda befolkning har under de senaste decennierna minskat i antal och fått en förändrad åldersstruktur. Färre i arbetsför ålder ska försörja fler som inte arbetar. Befolkningstillskottet från utrikes födda har bidragit till att begränsa denna negativa demografiska utveckling, dels i antal invånare, dels i en ökad andel i arbetsför ålder och därmed en föryngring av befolkningen. 
 
-Det är dock tydligt att invandringen till Dalarna fört med sig ett antal 
+En viktig komponent för integrationen är utbildningsnivån. Det finns en tydlig skiljelinje mellan individer med endast förgymnasial utbildning och de som har gymnasial eller högre utbildningsnivå. Detta är en generell observation och gäller oavsett om individen är inrikes eller utrikes född. Utrikes födda har dock en språklig utmaning att möta. Att lära sig svenska skapar möjligheter för att utbilda sig och etableras på arbetsmarknaden. 
 
-Dalarnas inrikes födda befolkning har under de senaste decennierna minskat i antal och fått en förändrad åldersstruktur. Färre i arbetsför ålder ska försörja fler som inte arbetar. Befolkningstillskottet från utrikes födda har bidragit till att begränsa denna negativa demografiska utveckling, dels i antal invånare, dels i en ökad andel i arbetsför ålder och föryngring av befolkningen. Den aktuella invandringsnivån, i kombination med låga födelsetal, leder till en allt mer åldrad befolkning och utmanar kompetensförsörjningen framöver.
+Integration är en process och processer tar tid. Det är tydligt att vistelsetiden har en stor betydelse för utfallet på integrationsområdet. Inom de flesta områden som studerats i rapporten syns en tydlig, positiv utveckling av utfallet när vistelsetiden ökar. De tydligaste trenderna för utrikes födda är att 
 
-<span class = "kommentar"> Plocka upp de positiva trenderna som finns </span>
+<ul>
 
-Trots den positiva utveckling som kan ses inom ett flertal områden i rapporten, är det fortfarande en generell skillnad mellan inrikes och utrikes födda, även när vistelsetiden i Sverige tas i beaktande.
+<li>*Andelen behöriga till gymnasiet och högskolan ökar*</li>
 
-Andelen utrikes födda med behörighet till gymnasiet är lägre. Även andelen som är behöriga till högskola är lägre, men inte i samma utsträckning som i fallet med gymnasiebehörighet. Utbildningsnivån är generellt lägre och arbetslösheten högre, även långtidsarbetslösheten. Det finns en högre andel hushåll med utrikes födda som är trångbodda, fler personer finns i hushåll med låg ekonomisk standard och högre andelar har behov av ekonomiskt stöd eller saknar inkomster. I de flesta fall är ovanstående observationer giltiga för såväl män som kvinnor.
+<li>*Utbildningsnivån ökar*</li>
+    
+<li>*Sysselsättningsgraden ökar*</li>
 
-Det finns med andra ord mer att göra när det kommer till att utnyttja den resurs som utrikes födda är, särskilt på arbetsmarknaden nu och i framtiden. Att säkerställa kunskap i svenska och att lyfta utbildningsnivån för utrikes födda är avgörande för att se en ökad etablering på arbetsmarknaden. Det minskar även behovet av introduktion och utbildning på arbetsplatsen från den inrikes födda arbetskraften i en tid där det finns stora utmaningar med kompetensförsörjningen på arbetsmarknaden.
+<li>*Arbetslösheten minskar*</li>
 
-[(Regeringen, 2022)](<https://www.regeringen.se/contentassets/46945970585240a4a5bfd9a0f75ecf3d/ekonomisk-jamstalldhet.pdf>){target="_blank"}^[Regeringen, Budgetproposition 2022/23:1 bilaga 3, Ekonomisk jämställdhet.]
+<li>*Medelinkomsten ökar*</li>
+
+<li>*Behovet av ekonomiskt stöd minskar*</li>
+
+<li>*Andelen unga vuxna som inte studerar eller arbetar minskar*</li>
+
+</ul>
+
+De senaste åren har invandringen till länet minskat och antalet utrikes födda i Dalarna har stabiliserats. Ett negativt inrikes flyttnetto i kombination med låga födelsetal, leder till en allt mer åldrad befolkning och utmanar kompetensförsörjningen för näringsliv och offentlig förvaltning.
+
+Det finns dock en generell skillnad mellan inrikes och utrikes födda, även när vistelsetiden i Sverige tas i beaktande. Det finns med andra ord mer att göra när det kommer till att utnyttja den resurs som utrikes födda är, men det förtar inte den positiva utveckling som vi redogjort för. Vikten av att fortsätta integrationsarbetet är särskilt viktigt för att kompetensförsörja arbetsmarknaden nu och i framtiden. Att säkerställa kunskap i svenska och att lyfta utbildningsnivån för utrikes födda är avgörande för att se en ökad etablering på arbetsmarknaden.
+
 
 
 ```{r, include = FALSE}
