@@ -678,11 +678,11 @@ if(uppdatera_data == TRUE){
   huv_inkomst_ar <- unique(huv_ink_df$år)
   huv_inkomst_manad <- unique(huv_ink_df$månad)
 
-  saknar_ersattning_inrikes_andel <- gsub("\\.",",",huv_ink_df %>% filter(födelseregion == "inrikes född", kön == "totalt",`huvudsaklig inkomstkälla` == "Saknar ersättningar") %>% .$andel)
-  saknar_ersattning_utrikes_andel <- gsub("\\.",",",huv_ink_df %>% filter(födelseregion == "utrikes född", kön == "totalt",`huvudsaklig inkomstkälla` == "Saknar ersättningar") %>% .$andel)
+  saknar_ersattning_inrikes_andel <- gsub("\\.",",",round(huv_ink_df %>% filter(födelseregion == "inrikes född", kön == "totalt",`huvudsaklig inkomstkälla` == "Saknar ersättningar") %>% .$andel,0))
+  saknar_ersattning_utrikes_andel <- gsub("\\.",",",round(huv_ink_df %>% filter(födelseregion == "utrikes född", kön == "totalt",`huvudsaklig inkomstkälla` == "Saknar ersättningar") %>% .$andel,0))
 
-  ek_stod_inrikes_andel <- gsub("\\.",",",huv_ink_df %>% filter(födelseregion == "inrikes född", kön == "totalt",`huvudsaklig inkomstkälla` == "Ekonomiskt stöd") %>% .$andel)
-  ek_stod_utrikes_andel <- gsub("\\.",",",huv_ink_df %>% filter(födelseregion == "utrikes född", kön == "totalt",`huvudsaklig inkomstkälla` == "Ekonomiskt stöd") %>% .$andel)
+  ek_stod_inrikes_andel <- gsub("\\.",",",round(huv_ink_df %>% filter(födelseregion == "inrikes född", kön == "totalt",`huvudsaklig inkomstkälla` == "Ekonomiskt stöd") %>% .$andel,0))
+  ek_stod_utrikes_andel <- gsub("\\.",",",round(huv_ink_df %>% filter(födelseregion == "utrikes född", kön == "totalt",`huvudsaklig inkomstkälla` == "Ekonomiskt stöd") %>% .$andel,0))
 
   ######################################
   #####       Ekonomiskt stöd      #####
