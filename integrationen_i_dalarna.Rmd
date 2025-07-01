@@ -384,7 +384,7 @@ gg_arb_76$arbetsloshet_region
 
 En nationell jämförelse av arbetslösheten bland utrikes respektive inrikes födda åskådliggör ett antal viktiga skillnader, men också likheter. Arbetslösheten är generellt högre för utrikes födda än för inrikes födda. Arbetslösheten för inrikes födda i Dalarna var i `r arbetsloshesstatus_manad` `r arbetsloshesstatus_ar`  lägre än rikets, `r arblosthet_inrikes_kvinna_Dalarna` procent bland kvinnor och `r arblosthet_inrikes_man_Dalarna` procent bland män (se diagrammet nedan).
 
-Arbetslösheten bland utrikes födda är däremot betydligt högre i samtliga av Sveriges län. I Dalarna är skillnaden i arbetslöshet mellan utrikes och inrikes födda cirka `r arblosthet_kvinnor_utrikes_inrikes_skillnad_Dalarna` procentenheter för kvinnor och cirka `r arblosthet_man_utrikes_inrikes_skillnad_Dalarna` procentenheter för män. Vidare är arbetslösheten bland gruppen utrikes födda kvinnor klart högre än i gruppen utrikes födda män i samtliga av Sveriges län. 
+Arbetslösheten bland utrikes födda är däremot betydligt högre i samtliga av Sveriges län. I Dalarna är skillnaden i arbetslöshet mellan utrikes och inrikes födda cirka `r arblosthet_kvinnor_utrikes_inrikes_skillnad_Dalarna` procentenheter för kvinnor och cirka `r arblosthet_man_utrikes_inrikes_skillnad_Dalarna` procentenheter för män. Vidare är arbetslösheten bland gruppen utrikes födda kvinnor klart högre än i gruppen utrikes födda män i samtliga av Sveriges län, förutom på Gotland där den är lika hög.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_diagram_arbetsmarknadsstatus_lan$arbetslosthet_senastear
