@@ -791,6 +791,31 @@ De senaste åren har invandringen till länet minskat och antalet utrikes födda
 
 Det finns dock en generell skillnad mellan inrikes och utrikes födda, även när vistelsetiden i Sverige tas i beaktande. Det finns med andra ord mer att göra när det kommer till att utnyttja den resurs som utrikes födda är, men det förtar inte den positiva utveckling som vi redogjort för. Vikten av att fortsätta integrationsarbetet är särskilt viktigt för att kompetensförsörja arbetsmarknaden nu och i framtiden. Att säkerställa kunskap i svenska och att lyfta utbildningsnivån för utrikes födda är avgörande för att se en ökad etablering på arbetsmarknaden.
 
+```{r, results='asis', echo=FALSE}
+cat('
+<script>
+
+const debounce = (fn) => {
+  let frame;
+  return (...params) => {
+    if (frame) cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(() => fn(...params));
+  };
+};
+
+const storeScroll = () => {
+  const threshold = 150;
+  const scrolled = window.scrollY > threshold;
+  document.documentElement.dataset.scroll = scrolled ? "scrolled" : "top";
+};
+
+document.addEventListener("scroll", debounce(storeScroll), { passive: true });
+storeScroll();
+</script>
+')
+
+```
+
 
 
 ```{r, include = FALSE}
