@@ -1,3 +1,12 @@
+# Skript som hämtar data och skapar figurer/variabler som används för att skapa markdown-rapporten. Det finns två alternativ för skriptet:
+
+# 1: Kör skriptet utan att uppdatera data - sätt variabeln uppdatera_data till FALSE. Då läses den senast sparade versionen av R-studio global environment in.
+# Detta är ett bra alternativ om man enbart vill ändra text eller liknande, men inte uppdatera data.
+
+# 2: Uppdatera data - sätt variabeln uppdatera_data till FALSE. Då uppdateras data, alla figurer skapas på nytt och en ny enviroment sparas.
+# Tar längre tid (ett par minuter) och medför en risk att text inte längre är aktuell då figurer har ändrats.
+
+
 if (!require("pacman")) install.packages("pacman")
 p_load(tidyverse,
        here,
