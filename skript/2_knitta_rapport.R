@@ -3,7 +3,7 @@ p_load(here,
        stringr)
 
 senaste_rmd_filen <- list.files(here(), pattern = "\\.Rmd$") %>%
-  .[which.max(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAWElEQVR42mNgGPTAxsZmJsVqQApgmGw1yApwKcQiT7phRBuCzzCSDSHGMKINIeDNmWQlA2IigKJwIssQkHdINgxfmBBtGDEBS3KCxBc7pMQgMYE5c/AXPwAwSX4lV3pTWwAAAABJRU5ErkJggg==file.info(.)$mtime)]
+  .[which.max(file.info(.)$mtime)]
 
 renderad_fil <- senaste_rmd_filen %>%
   str_replace(".Rmd", ".html")
