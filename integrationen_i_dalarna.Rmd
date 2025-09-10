@@ -696,7 +696,7 @@ gg_huv_inkomst$huvud_ink_bakgrund_Dalarna
 ```
 <br>
 
-Även andelen som saknar ersättning är större i gruppen med utrikes födda, ca `r saknar_ersattning_utrikes_andel` procent i `r huv_inkomst_manad` `r huv_inkomst_ar`, mot ungefär `r saknar_ersattning_inrikes_andel` procent i gruppen födda i Sverige. Dessa två kategorier visar på problematiska effekter av bristande integration.
+Även andelen som saknar ersättning är större i gruppen med utrikes födda, knappt `r saknar_ersattning_utrikes_andel` procent i `r huv_inkomst_manad` `r huv_inkomst_ar`, mot `r saknar_ersattning_inrikes_andel` procent i gruppen födda i Sverige. Dessa två kategorier visar på problematiska effekter av bristande integration.
 
 Om antalet individer som får ekonomiskt stöd studeras över tid, blir det tydligt att antalet som får stöd minskar, men att minskningen i första hand är koncentrerad till utrikes födda. I `r ek_stod_manad_ar_forsta` var det `r ek_stod_skillnad_forsta ` fler utrikes födda personer som var i behov av ekonomiskt stöd i Dalarna, jämfört med inrikes födda. I `r ek_stod_manad_ar_sista` var den skillnaden bara `r ek_stod_skillnad_senaste ` personer.
 
