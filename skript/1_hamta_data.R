@@ -313,19 +313,30 @@ if(uppdatera_data == TRUE){
   #                                                               output_mapp = NA)
 
   # Arbetslöshet tidsserie
-  source("https://raw.githubusercontent.com/Region-Dalarna/diagram/main/diagram_arbetsmarknadsstatus_tidsserie_SCB.R")
-  gg_arbetsloshet_tidsserie <- diagram_arbetsmarknadsstatus_tidsserie (spara_figur = spara_diagram_som_bildfiler,
-                                                                       output_mapp_figur = Output_mapp_figur,
-                                                                       returnera_data = TRUE,
-                                                                       marginal_yaxis_facet = c(0.02,0.02),
-                                                                       diagram_ej_upp = FALSE,
-                                                                       diagram_facet = TRUE,
-                                                                       returnera_figur = TRUE)
 
-  arbetsloshet_tidsserie_ar <-  unique(last(arbetsmarknadsstatus_tidsserie %>% filter(region=="Dalarna",födelseregion=="inrikes född") %>% .$ar))
-  arbetsloshet_tidsserie_manad <- unique(last(arbetsmarknadsstatus_tidsserie %>% filter(region=="Dalarna",födelseregion=="inrikes född") %>% .$manad_long))
-  arbetsloshet_tidserie_Dalarna_inrikes_varde <- gsub("\\.",",",last(arbetsmarknadsstatus_tidsserie %>% filter(region=="Dalarna",födelseregion=="inrikes född") %>% .$varde))
-  arbetsloshet_tidserie_Dalarna_utrikes_varde <- gsub("\\.",",",last(arbetsmarknadsstatus_tidsserie %>% filter(region=="Dalarna",födelseregion=="utrikes född") %>% .$varde))
+  # source("https://raw.githubusercontent.com/Region-Dalarna/diagram/main/diagram_arbetsmarknadsstatus_tidsserie_SCB.R")
+  # gg_arbetsloshet_tidsserie <- diagram_arbetsmarknadsstatus_tidsserie (spara_figur = spara_diagram_som_bildfiler,
+  #                                                                      output_mapp_figur = Output_mapp_figur,
+  #                                                                      returnera_data = TRUE,
+  #                                                                      marginal_yaxis_facet = c(0.02,0.02),
+  #                                                                      diagram_ej_upp = FALSE,
+  #                                                                      diagram_facet = TRUE,
+  #                                                                      returnera_figur = TRUE)
+
+  source("G:/skript/diagram/diag_bas_syss_arblosa_inr_utr_fodda_manad.R")
+  gg_arbetsloshet_tidsserie <- diag_bas_arblosa_inr_utr_fodda_manad(vald_region = valt_lan,
+                                                                    skriv_diagram = spara_diagram_som_bildfiler,
+                                                                    dataetiketter = c(FALSE),
+                                                                    x_axis_visa_var_xe_etikett = 6,
+                                                                    returnera_dataframe_global_environment = TRUE,
+                                                                    output_mapp = Output_mapp_figur)
+
+
+
+  arbetsloshet_tidsserie_ar <-  unique(last(arbetsmarknadsstatus_tidsserie %>% filter(region=="Dalarna",födelseregion=="inrikes född") %>% .$år))
+  arbetsloshet_tidsserie_manad <- unique(last(arbetsmarknadsstatus_tidsserie %>% filter(region=="Dalarna",födelseregion=="inrikes född") %>% .$månad))
+  arbetsloshet_tidserie_Dalarna_inrikes_varde <- gsub("\\.",",",last(arbetsmarknadsstatus_tidsserie %>% filter(region=="Dalarna",födelseregion=="inrikes född") %>% .$arbetslöshet))
+  arbetsloshet_tidserie_Dalarna_utrikes_varde <- gsub("\\.",",",last(arbetsmarknadsstatus_tidsserie %>% filter(region=="Dalarna",födelseregion=="utrikes född") %>% .$arbetslöshet))
 
   # Hämta antal arbetslösa (till texten enbart)
   source("https://raw.githubusercontent.com/Region-Dalarna/hamta_data/refs/heads/main/hamta_bas_arbstatus_region_kon_alder_fodelseregion_prel_manad_ArbStatusM_scb.R")
