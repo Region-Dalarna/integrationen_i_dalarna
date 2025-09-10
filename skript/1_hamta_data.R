@@ -575,26 +575,17 @@ if(uppdatera_data == TRUE){
 
   # Inrikes
 
-  arblosthet_inrikes_man_max_kommun <- arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "inrikes född") %>%
-    filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$region
+  arblosthet_inrikes_man_max_kommun <- arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "inrikes född",region!="Sverige") %>%
+    filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$region %>%  glue_collapse(sep = ", ", last = " och ")
 
-  if(length(arblosthet_inrikes_man_max_kommun)>1){
-    arblosthet_inrikes_man_max_kommun <- paste(arblosthet_inrikes_man_max_kommun, collapse = " och ")
-  }
+  arblosthet_inrikes_man_max_varde <- gsub("\\.",",",arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "inrikes född",region!="Sverige") %>%
+                                             filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$varde %>% first())
 
+  arblosthet_inrikes_kvinna_max_kommun <- arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född",region!="Sverige") %>%
+    filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$region %>%  glue_collapse(sep = ", ", last = " och ")
 
-  arblosthet_inrikes_man_max_varde <- gsub("\\.",",",arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "inrikes född") %>%
-                                             filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$varde)
-
-  arblosthet_inrikes_kvinna_max_kommun <- arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född") %>%
-    filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$region
-
-  if(length(arblosthet_inrikes_kvinna_max_kommun)>1){
-    arblosthet_inrikes_kvinna_max_kommun <- paste(arblosthet_inrikes_kvinna_max_kommun, collapse = " och ")
-  }
-
-  arblosthet_inrikes_kvinna_max_varde <- gsub("\\.",",",arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född") %>%
-                                                filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$varde)
+  arblosthet_inrikes_kvinna_max_varde <- sub("\\.",",",arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född",region!="Sverige") %>%
+                                               filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$varde %>% first())
 
   ########################
   # Långtidsarbetslöshet #
