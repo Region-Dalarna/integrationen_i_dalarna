@@ -259,8 +259,8 @@ gg_antal_utrikes$befolkningsprognos_lan_Dalarna
 
 Den demografiska översikten visar således att andelen utrikes födda i Dalarna ökat över tid och bidragit till att både föryngra och vidmakthålla länets invånarantal.
 
-# Utbildning och arbetsmarknad
-Ett viktigt steg för att kunna integreras i ett samhälle är att lära sig språket. Språkkunskaper ger förutsättningar för utbildning som i sin tur skapar möjligheter på arbetsmarknaden. I detta avsnitt görs en genomgång av utvecklingen för utrikes födda inom dessa delar.
+# Utbildning
+Ett viktigt steg för att kunna integreras i ett samhälle är att lära sig språket. Språkkunskaper ger förutsättningar för utbildning som i sin tur skapar möjligheter på arbetsmarknaden. I detta avsnitt görs en genomgång av utvecklingen för utrikes födda inom språk och utbildning. I nästa avsnitt diskuteras utvecklingen på arbetsmarknaden
 
 ## Språk
 Att ha grundläggande kunskaper i det officiella språket är viktigt för att kunna delta i samhället, både socialt, ekonomiskt och kulturellt. För att underlätta integrationen av nyanlända har Sverige ett system för svenskundervisning för invandrare, hädanefter benämnt SFI. SFI är en utbildning som erbjuds till personer som är bosatta i Sverige men saknar sådana grundläggande kunskaper i svenska språket som utbildningen syftar till att ge. Från andra kalenderhalvåret det år hen fyller 16 år har personen rätt till SFI ([Skolverket](https://www.skolverket.se/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-sfi){target="_blank"}).
@@ -338,6 +338,8 @@ Diagrammet nedan visar att utvecklingen för inrikes födda är relativt opåver
 Skillnaderna mellan inrikes och utrikes födda när det gäller högskolebehörighet är inte lika stora som i fallet med gymnasiebehörighet. Fram till 2013 är skillnaden några procentenheter för både kvinnor och män, men därefter faller andelen utrikes födda män med högskolebehörighet till ungefär `r utrikes_behorighet_hog_ar_2021_man` procent år 2021. `r ar_max` kan dock observeras en markant förbättring för männen. För kvinnor är inte nedgången alls lika påtaglig, utan liknar mer den för inrikes födda kvinnor. Sannolikt är detta en effekt av vilka som tagit en gymnasieexamen eller erhållit ett studiebevis.
 
 Det som kan konstateras är dock att `r ar_max` är andelen behöriga inrikes och utrikes födda kvinnor i princip densamma, medan för män är det en högre andel utrikes födda män som är behöriga. Den här utvecklingen verifierar vistelsetidens betydelse för studieresultat och integration. Invandringen från 2015 i kombination med statistikförändringen påverkade behörigheten till högskolan för utrikes födda män under ett antal år, men `r ar_max` är nivån likvärdig med den som rådde för inrikes födda män för tio år sedan. Noterbart är också att oavsett om eleven är utrikes eller inrikes född, är kvinnor i högre utsträckning behöriga till att påbörja högskolestudier än män. 
+
+# Arbetsmarknad
 
 ## Arbetslöshet och sysselsättning
 I förlängningen av att studera är att arbeta en viktig komponent i integrationen i samhället. Utrikes födda har generellt en svagare ställning på arbetsmarknaden, vilket speglas i att sysselsättningen bland utrikes födda är lägre än bland inrikes födda personer, samt att arbetslösheten, inklusive långtidsarbetslösheten, är högre. Forskning visar att bland annat härkomst, ålder, kön, utbildningsnivå, konjunkturläge, språkkunskaper och kontaktnät är avgörande för utrikes föddas möjligheter att etablera sig på arbetsmarknaden [(IFAU, 2022)](https://www.ifau.se/Press/Forskningssammanfattningar/Utrikes-foddas-eta-pa-arbetsmarknaden-/){target="_blank"}^[IFAU. Utrikes föddas etablering på arbetsmarknaden (2022-11-19).]. Arbetslöshets- och sysselsättningsnivåerna bland utrikes födda varierar dock stort mellan olika grupper.
