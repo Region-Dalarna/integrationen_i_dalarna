@@ -707,8 +707,8 @@ if(uppdatera_data == TRUE){
   ek_stod_manad_ar_forsta <- first(ekonomiskt_stod_df$månad_år)
   ek_stod_manad_ar_sista <- last(ekonomiskt_stod_df$månad_år)
 
-  ek_stod_skillnad_forsta <- ekonomiskt_stod_df %>% filter(månad_år==first(månad_år)) %>% filter(födelseregion=="utrikes född") %>% .$antal - ekonomiskt_stod_df %>% filter(månad_år==first(månad_år)) %>% filter(födelseregion=="inrikes född") %>% .$antal
-  ek_stod_skillnad_senaste <- ekonomiskt_stod_df %>% filter(månad_år==last(månad_år)) %>% filter(födelseregion=="utrikes född") %>% .$antal - ekonomiskt_stod_df %>% filter(månad_år==last(månad_år)) %>% filter(födelseregion=="inrikes född") %>% .$antal
+  ek_stod_skillnad_forsta <- plyr::round_any(ekonomiskt_stod_df %>% filter(månad_år==first(månad_år)) %>% filter(födelseregion=="utrikes född") %>% .$antal - ekonomiskt_stod_df %>% filter(månad_år==first(månad_år)) %>% filter(födelseregion=="inrikes född") %>% .$antal,10)
+  ek_stod_skillnad_senaste <- plyr::round_any(ekonomiskt_stod_df %>% filter(månad_år==last(månad_år)) %>% filter(födelseregion=="utrikes född") %>% .$antal - ekonomiskt_stod_df %>% filter(månad_år==last(månad_år)) %>% filter(födelseregion=="inrikes född") %>% .$antal,10)
 
   # Enbart för data
   source("https://raw.githubusercontent.com/Region-Dalarna/hamta_data/refs/heads/main/hamta_bas_huvink_region_huvudfot1m_kon_alder_fodelseregion_tid_ArbStatFoT1_scb.R")
@@ -718,7 +718,12 @@ if(uppdatera_data == TRUE){
                                                                                              cont_klartext = "antal totalt",
                                                                                              alder_klartext = "15-74 år",
                                                                                              tid_koder = "9999",
-                                                                                             kon_klartext = c("kvinnor","män"))
+                                                                                             kon_klartext = c("*"))
+
+  antal_kvinnor_stod_inrikes <- plyr::round_any(ekonomiskt_bistand_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född") %>% .$`antal totalt`,10)
+  antal_man_stod_inrikes <- plyr::round_any(ekonomiskt_bistand_df %>% filter(kön == "män",födelseregion == "inrikes född") %>% .$`antal totalt`,10)
+  antal_kvinnor_stod_utrikes <- plyr::round_any(ekonomiskt_bistand_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% .$`antal totalt`,10)
+  antal_man_stod_utrikes <- plyr::round_any(ekonomiskt_bistand_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% .$`antal totalt`,10)
 
 
 
