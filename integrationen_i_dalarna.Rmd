@@ -201,7 +201,7 @@ gg_kombo
 ```
 <br>
 
-Andelen utrikes födda har ökat i samtliga av Dalarnas kommuner mellan `r andel_utrikes_forsta_ar` och `r andel_utrikes_senaste_ar`, vilket kommer av att invandringen varit större än utvandringen under hela 2000-talet. Hur stor ökningen varit skiljer dock tydligt mellan kommunerna. I `r andel_utrikes_kommun_hogst_sista_ar` har andelen utrikes födda exempelvis ökat med `r andel_utrikes_kommun_hogst_forandring_varde` procentenheter sedan  `r andel_utrikes_forsta_ar`, medan ökningen har varit klart lägre i näraliggande Smedjebacken (ungefär `r andel_utrikes_smedjebacken_forandring_varde` procentenheter under samma tidsperiod) eller Gagnef (ungefär `r andel_utrikes_Gagnef_forandring_varde` procentenheter).
+Andelen utrikes födda har ökat i samtliga av Dalarnas kommuner mellan `r andel_utrikes_forsta_ar` och `r andel_utrikes_senaste_ar`, vilket kommer av att invandringen varit större än utvandringen under hela 2000-talet, samtidigt som antalet inrikes födda minskat i de flesta kommuner. Hur stor ökningen varit skiljer dock tydligt mellan kommunerna. I `r andel_utrikes_kommun_hogst_sista_ar` har andelen utrikes födda exempelvis ökat med `r andel_utrikes_kommun_hogst_forandring_varde` procentenheter sedan  `r andel_utrikes_forsta_ar`, medan ökningen har varit klart lägre i näraliggande Smedjebacken (ungefär `r andel_utrikes_smedjebacken_forandring_varde` procentenheter under samma tidsperiod) eller Gagnef (ungefär `r andel_utrikes_Gagnef_forandring_varde` procentenheter).
 
 För att förstå befolkningsutvecklingen i Dalarna är det även viktigt att undersöka de delar som, vid sidan om invandringen, påverkar befolkningsutvecklingen; födelseöverskottet och den inrikes flyttningen.
 
