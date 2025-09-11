@@ -66,6 +66,49 @@ Senast uppdaterad: `r Sys.Date()`</i>
 </p>
 
 # Sammanfattning {-}
+
+<ul>
+
+<li>Det demografiska bidraget och koppling till kompetensförsörjningsutmaningen</li>
+
+<li>Den huvudsakliga utvecklingen för utrikes födda över tid - positivt/negativt</li>
+
+<li>De kvarstående utmaningarna och skillnader mellan inrikes och utrikes födda</li>
+
+<li>Vikten av ett fortsatt integrationsarbete med fokus på språk, utbildning och arbete för att minska skillnader</li>
+
+</ul>
+
+*3 punkter*
+
+<ul>
+
+<li>Utrikes födda har bromsat Dalarnas negativa demografiska utveckling genom att bidra med befolkningstillskott och föryngring, vilket stärker arbetsförsörjningen i ett län med åldrande inrikes född befolkning  </li>
+
+<li>Trenderna visar positiv utveckling: högre utbildningsnivå, ökad sysselsättning, minskad arbetslöshet, förbättrad ekonomi och minskad trångboddhet. Vistelsetid och utbildningsnivå är avgörande faktorer för framgångsrik integration  </li>
+
+<li>Utmaningar kvarstår med lägre inkomster, högre arbetslöshet och trångboddhet för utrikes födda. Minskad invandring, låga födelsetal och negativt flyttnetto hotar framtida kompetensförsörjning, vilket gör satsningar på språk och utbildning centrala  </li>
+
+</ul>
+
+*5 punkter*
+
+<ul>
+
+<li>Dalarna har en åldrande inrikes född befolkning med färre i arbetsför ålder. Utrikes födda har bidragit till att bromsa utvecklingen genom befolkningstillskott och föryngring  </li>
+
+<li>Utrikes födda visar tydliga framsteg: högre utbildningsnivåer, ökad sysselsättning, minskad arbetslöshet, högre inkomster och förbättrad bostadssituation. Samtidigt minskar behovet av ekonomiskt stöd över tid  </li>
+
+<li>Vistelsetid och utbildningsnivå är avgörande för integration. Ju längre tid i Sverige och högre utbildning, desto bättre resultat i språk, arbetsmarknad och ekonomisk etablering  </li>
+
+<li>Utmaningar kvarstår: utrikes födda har i genomsnitt lägre inkomster, högre arbetslöshet och större risk för trångboddhet än inrikes födda, även med längre vistelsetid och högre utbildning  </li>
+
+<li>Minskad invandring, negativt inrikes flyttnetto och låga födelsetal hotar Dalarnas framtida kompetensförsörjning. Att stärka språkkunskaper och utbildningsnivå är avgörande för fortsatt positiv integrationsutveckling  </li>
+
+</ul>
+
+*Gamla punkter*
+
 <ul>
 
 <li>De senaste decenniernas invandring har bidragit till att motverka det sjunkande invånarantalet i länet och till att föryngra befolkningen </li>
@@ -121,7 +164,7 @@ Den här rapportens syfte är att redovisa aktuell statistik relaterat till utri
 
 I Region Dalarnas rapport från 2019 konstaterades bland annat att det fanns en tydlig skiljelinje mellan hur väl integrationsprocessen fungerar för gruppen utrikes födda å ena sidan, och inrikes födda med utrikes födda föräldrar respektive inrikes födda med inrikes födda föräldrar å andra sidan. Skillnaden i förutsättningar och förmåga mellan de inrikes födda, oavsett om de hade inrikes eller utrikes födda föräldrar, var relativt liten när det gäller skolresultat och sysselsättningsgrad. Distinktionen i denna rapport belyser därför primärt utrikes födda i jämförelse med inrikes födda. En uppdelning sker även för kvinnor och män i de delar det är relevant, som exempelvis utbildningsnivåer samt vistelsetid i landet. I vissa diagram används även begreppet *Född i Sverige*, vilket ska likställas med inrikes född.
 
-# Befolkningsutvecklingen och invandring
+# Befolkningsutveckling och invandring
 Sverige är sedan en längre tid inne i en demografisk fas där de stora babyboom-kullarna från slutet av 1940- och början av 1950-talet uppnåt pensionsålder och nästa generation från 1960-talet börjar närma sig pension. Många svenska kommuner har en alltmer ålderstigen befolkning, en effekt av den urbaniseringsvåg som pågått sedan tidigt 1900-tal, då många unga lämnat landsbygden och mindre tätorter till förmån för residens- och universitetsstäder. Förutom att befolkningsutvecklingen medför färre skattebetalare som ska försörja allt fler äldre så innebär den också ett stort kompetensförsörjningsproblem.
 
 En stor andel äldre i befolkningen medför ekonomiska påfrestningar för en kommun då allt färre i arbetsför ålder ska försörja dem som inte förvärvsarbetar, det vill säga äldre och barn. Redan i [Långtidsutredningen (2015)](https://www.regeringen.se/contentassets/86d73b72a97345feb2a8cbc8b6700fa7/sou-2015104-langtidsutredningen-2015-huvudbetankande/){target="_blank"}^[Regeringen, 2015. Långtidsutredningen 2015, Statens Offentliga Utredningar 2015:104.] gjordes beräkningar på hur mycket kommunalskatten skulle behöva höjas i kommunerna för att upprätthålla samma servicenivå år 2040 som då, som en följd av den förändrade demografiska strukturen. Beräkningarna visade på cirka 50-procentiga ökningar, i mångas ögon orimliga skattehöjningar, vilket kan ses som en signal på hur allvarlig situationen var redan för tio år sedan.  
@@ -770,7 +813,7 @@ Dalarnas inrikes födda befolkning har under de senaste decennierna minskat i an
 
 Befolkningstillskottet från utrikes födda som invandrat under det senaste decenniet har bidragit till att begränsa denna negativa demografiska utveckling, dels i antal invånare, dels i en ökad andel i arbetsför ålder som bidragit till en föryngring av länets befolkning. 
 
-De generella trenderna för utrikes födda som kan observeras är att 
+De generella trenderna över tid för utrikes födda som kan observeras är att 
 
 <ul>
 
@@ -812,7 +855,7 @@ De skillnader som observeras förtar inte den övergripande positiva utvecklinge
 
 De senaste åren har invandringen till länet minskat och antalet utrikes födda i Dalarna har stabiliserats. Samtidigt har Dalarna ett negativt inrikes flyttnetto och låga födelsetal, en kombination som leder till en allt mer åldrad befolkning och utmanar kompetensförsörjningen för näringsliv och offentlig förvaltning framgent. Den demografiska prognosen det kommande decenniet indikerar en minskad befolkning.
 
-Att säkerställa goda kunskaper i svenska och att lyfta utbildningsnivån för utrikes födda, främst de med endast förgymansial utbildning, är avgörande för att se en ökad etablering på arbetsmarknaden och en fortsatt positiv utveckling av integrationen av utrikes födda i Dalarna.
+Att säkerställa goda kunskaper i svenska och att lyfta utbildningsnivån för utrikes födda, främst de med endast förgymnasial utbildning, är avgörande för att se en ökad etablering på arbetsmarknaden och en fortsatt positiv utveckling av integrationen av utrikes födda i Dalarna.
 
 
 ```{r, results='asis', echo=FALSE}
