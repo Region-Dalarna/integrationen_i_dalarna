@@ -259,7 +259,7 @@ gg_antal_utrikes$befolkningsprognos_lan_Dalarna
 
 Den demografiska översikten visar således att andelen utrikes födda i Dalarna ökat över tid och bidragit till att både föryngra och vidmakthålla länets invånarantal.
 
-# Utbildning
+# Språk och utbildning
 Ett viktigt steg för att kunna integreras i ett samhälle är att lära sig språket. Språkkunskaper ger förutsättningar för utbildning som i sin tur skapar möjligheter på arbetsmarknaden. I detta avsnitt görs en genomgång av utvecklingen för utrikes födda inom språk och utbildning. I nästa avsnitt diskuteras utvecklingen på arbetsmarknaden
 
 ## Språk
@@ -340,10 +340,9 @@ Skillnaderna mellan inrikes och utrikes födda när det gäller högskolebehöri
 Det som kan konstateras är dock att `r ar_max` är andelen behöriga inrikes och utrikes födda kvinnor i princip densamma, medan för män är det en högre andel utrikes födda män som är behöriga. Den här utvecklingen verifierar vistelsetidens betydelse för studieresultat och integration. Invandringen från 2015 i kombination med statistikförändringen påverkade behörigheten till högskolan för utrikes födda män under ett antal år, men `r ar_max` är nivån likvärdig med den som rådde för inrikes födda män för tio år sedan. Noterbart är också att oavsett om eleven är utrikes eller inrikes född, är kvinnor i högre utsträckning behöriga till att påbörja högskolestudier än män. 
 
 # Arbetsmarknad
-
-## Arbetslöshet och sysselsättning
 I förlängningen av att studera är att arbeta en viktig komponent i integrationen i samhället. Utrikes födda har generellt en svagare ställning på arbetsmarknaden, vilket speglas i att sysselsättningen bland utrikes födda är lägre än bland inrikes födda personer, samt att arbetslösheten, inklusive långtidsarbetslösheten, är högre. Forskning visar att bland annat härkomst, ålder, kön, utbildningsnivå, konjunkturläge, språkkunskaper och kontaktnät är avgörande för utrikes föddas möjligheter att etablera sig på arbetsmarknaden [(IFAU, 2022)](https://www.ifau.se/Press/Forskningssammanfattningar/Utrikes-foddas-eta-pa-arbetsmarknaden-/){target="_blank"}^[IFAU. Utrikes föddas etablering på arbetsmarknaden (2022-11-19).]. Arbetslöshets- och sysselsättningsnivåerna bland utrikes födda varierar dock stort mellan olika grupper.
 
+## Arbetslöshet och sysselsättning
 Arbetsmarknadsstatistik finns både hos SCB och Arbetsförmedlingen, men i denna rapport används statistik från SCB. För mer information om arbetsmarknadsstatistiken, klicka nedan:
 <br>
 
