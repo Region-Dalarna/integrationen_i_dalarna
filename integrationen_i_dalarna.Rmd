@@ -267,8 +267,6 @@ Att ha grundläggande kunskaper i det officiella språket är viktigt för att k
 
 Vistelsetiden för de personer boende i Dalarna som blivit godkända i SFI har förändrats relativt mycket över tid, men oavsett utbildningsnivå har vistelsetiden ökat över tid. Under några år i slutet på 1990-talet hade de män och kvinnor med förgymnasial utbildning som blivit godkända i SFI varit i Sverige ungefär 1300-1400 dagar (medianvärde). Därefter såväl ökade som minskade vistelsetiden fram till mitten av 2010-talet, innan den ökade tydligt fram till åren runt pandemin (2020-2021). År `r sfi_max_ar` hade de män och kvinnor med förgymnasial utbildning som blev godkända i SFI i Dalarna varit i Sverige i `r sfi_sistaar_varde_forgymnasial` dagar, vilket är ungefär lika länge som de som blev godkända åren innan. För personer med längre utbildningar (gymnasial eller eftergymnasial) är trenden liknande, men vistelsetiden generellt kortare. 
 
-En orsak till att vistelsetiden ökade stadigt för de som blev godkända från mitten av 2010-talet, oavsett utbildningsbakgrund, kan vara att många då invandrade till Sverige. Det, i kombination med en pandemi som sannolikt försvårade möjligheterna till undervisning, kan ha gjort att det tog längre tid att slutföra SFI.
-
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_SFI$sfi_vistelsetid_tidsserie_Dalarna
 ```
@@ -283,7 +281,9 @@ gg_SFI$sfi_vistelsetid_senastear_Dalarna
 ```
 <br>
 
-Från 1 januari 2025 har kraven på att delta i SFI skärpts. Deltagande är bland annat begränsat till tre år och en individuell studieplan ska upprättas i samband med antagning. Det innebär att genomströmningstiderna behöver återgå till den nivå som rådde innan pandemin, utan att kvaliteten i utbildningen försämras. 
+En orsak till att vistelsetiden ökade stadigt för de som blev godkända från mitten av 2010-talet, oavsett utbildningsbakgrund, kan vara att många då invandrade till Sverige. Det, i kombination med en pandemi som sannolikt försvårade möjligheterna till undervisning, kan ha gjort att det tog längre tid att slutföra SFI och har resulterat i historiskt långa vistelsetider för att nå godkänt i SFI.
+
+Från 1 januari 2025 har kraven på att delta i SFI skärpts. Deltagande är bland annat begränsat till tre år och en individuell studieplan ska upprättas i samband med antagning. Det innebär att genomströmningstiderna behöver återgå till den nivå som rådde innan pandemin, utan att kvaliteten i utbildningen försämras. En sänkning av genomströmningstiderna ökar i sin tur möjigheten att gå vidare i utbildningssystemet och skynda på integrationsprocessen.
 
 ## Utbildning
 En fullgjord gymnasieutbildning är en av de viktigaste faktorerna för ett gott liv på många sätt, såsom hälsa, inkomst, medellivslängd och möjligheten till arbete. De med en högre utbildning lever generellt längre ([SCB](https://www.scb.se/hitta-statistik/statistik-efter-amne/befolkning-och-levnadsforhallanden/befolkningens-sammansattning-och-utveckling/demografisk-analys/pong/statistiknyhet/livslangd-efter-utbildningsniva/){target="_blank"}), har en genomsnittligt högre inkomst ([SCB](https://www.scb.se/hitta-statistik/sverige-i-siffror/utbildning-jobb-och-pengar/medelloner-i-sverige/){target="_blank"}) och mår i allmänhet bättre än de med lägre utbildning ([FHM](https://www.folkhalsomyndigheten.se/contentassets/ca6067606d8847f7945e922642853caf/utbildning-halsa-faktablad.pdf){target="_blank"}). Utbildningsnivån hos utrikes födda har därför en stor påverkan på möjligheterna att etablera sig i samhället, särskilt bland de unga som anländer till Sverige under skolåren och har hela arbetslivet framför sig. Idag behövs det enligt Arbetsförmedlingen i regel gymnasiekompetens för att ha en god chans att etablera sig på arbetsmarknaden, även när det gäller bristyrken. 
@@ -410,22 +410,22 @@ Arbetslösheten för utrikes födda kvinnor i Dalarna är högst i `r arb_bakgr_
 
 Lägst arbetslöshet bland utrikes födda kvinnor har `r arb_bakgr_utrikes_kvinnor_min` med `r arb_bakgr_utrikes_kvinnor_min_varde` procent, medan arbetslösheten bland utrikes födda män är lägst i `r arb_bakgr_utrikes_män_min ` med `r arb_bakgr_utrikes_män_min_varde` procent. Den grupp av utrikes födda som ligger närmast nivåerna för inrikes födda är födda i Norden. Andelen arbetslösa är väsentligt högre bland personer födda i Asien och Afrika, vilka är två världsdelar från vilka flyktinginvandringen varit stor under det senaste decenniet.
 
-De skillnader i arbetslöshet som observeras kan sannolikt förklaras av skillnader i antalet personer och när i tid som de invandrat till olika kommuner.
+De skillnader i arbetslöshet som observeras kan sannolikt förklaras av skillnader i antalet personer, när i tid som de invandrat till olika kommuner och med vilken utbildningsnivå. En ytterligare dimension som påverkar arbetslösheten är den demografiska utvecklingen med en allt äldre inrikes född befolkning. Arbetskraftsreserven består i allt större grad av utrikes födda och den åldrande inrikes födda befolkningen leder till pensionsavgångar som i sin tur öppnar för utrikes föddas inträde på arbetsmarknaden. Ju bättre rustade de utrikes födda är, desto enklare sker etableringen på arbetsmarknaden. Den allt äldre befolkningen leder även till ökade behov inom bl a vård och omsorg, en bransch där många utrikes födda arbetar idag.
 
 För att få en uppfattning om skillnader i arbetslöshet mellan inrikes och utrikes födda, räcker det dock inte med att enbart studera situationen idag, utan även förändringen över tid är av intresse.
 
-För inrikes födda har arbetslösheten minskat något sedan coronapandemin (2020-2021), men varit relativt stabil på senare år. I `r arbetsloshet_tidsserie_manad` `r arbetsloshet_tidsserie_ar` var arbetslösheten bland inrikes födda `r arbetsloshet_tidserie_Dalarna_inrikes_varde` procent i Dalarna. Bland utrikes födda har arbetslösheten minskat stadigt sedan en topp under pandemin (den var 22,5 procent i juni 2020), men är som sagt klart högre än bland inrikes födda (`r arbetsloshet_tidserie_Dalarna_utrikes_varde` procent i `r arbetsloshet_tidsserie_manad` `r arbetsloshet_tidsserie_ar`). 
+För inrikes födda har arbetslösheten minskat något sedan coronapandemin (2020-2021), men varit relativt stabil på senare år. I `r arbetsloshet_tidsserie_manad` `r arbetsloshet_tidsserie_ar` var arbetslösheten bland inrikes födda `r arbetsloshet_tidserie_Dalarna_inrikes_varde` procent i Dalarna. Bland utrikes födda har arbetslösheten minskat stadigt och markant sedan en topp under pandemin (den var 22,5 procent i juni 2020), men är som sagt klart högre än bland inrikes födda (`r arbetsloshet_tidserie_Dalarna_utrikes_varde` procent i `r arbetsloshet_tidsserie_manad` `r arbetsloshet_tidsserie_ar`). 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
 gg_arbetsloshet_tidsserie$`andel_arbetslosa_bakgr_tid_20-64ar_Dalarna`
 ```
 <br>
 
-Att en större andel utrikes födda arbetar idag, jämfört med för ett par år sedan, är viktigt för integrationen, då möjligheten att försörja sig själv och skapa nya sociala sammanhang ses som en av de viktigaste faktorerna för att integreras i samhället ([Jönköpings universitet](https://ju.se/forskning/langlasning/arkiv/2022-03-04-engagemang-kontakter-och-sprakkunskaper-ger-snabbare-integration-pa-arbetsmarknaden.html){target="_blank"}). 
+Att en större andel utrikes födda arbetar idag, jämfört med för ett par år sedan, är mycket viktigt för integrationen, då möjligheten att försörja sig själv och skapa nya sociala sammanhang ses som en av de viktigaste faktorerna för att integreras i samhället ([Jönköpings universitet](https://ju.se/forskning/langlasning/arkiv/2022-03-04-engagemang-kontakter-och-sprakkunskaper-ger-snabbare-integration-pa-arbetsmarknaden.html){target="_blank"}). 
 
 Totalt var `r arblosa_inrikes` inrikes födda personer och `r arblosa_utrikes` utrikes födda personer i åldersgruppen `r arblosa_alder` arbetslösa i Dalarna i `r arblosa_manad` `r arblosa_ar`.
 
-Hur långt ifrån arbetsmarknaden som en individ befinner sig beror delvis på hur länge personen har varit utan anställning. En person som har varit arbetslös länge har ofta svårare att ta sig tillbaka in på arbetsmarknaden. Bland arbetslösa inrikes födda i åldersgruppen `r arbesloshetstid_aldersgrupp` har ungefär `r arbetsloshetstid_inrikes_24_manader` procent varit arbetslösa länge (minst 24 månader) och får anses stå väldigt långt från arbetsmarknaden. Sammanlagt har ungefär `r arbetsloshetstid_inrikes_minst_12_manader` procent av de inrikes födda i åldersgruppen som är arbetslösa varit det i minst 12 månader. Istället är det de som har varit arbetslösa under en relativt kort period (< 6 månader) som är den största gruppen (ca `r arbetsloshetstid_inrikes_6_manader` procent av alla inrikes födda arbetslösa).
+Hur långt ifrån arbetsmarknaden som en individ befinner sig beror delvis på hur länge personen har varit utan anställning. En person som har varit arbetslös länge har ofta svårare att ta sig tillbaka in på arbetsmarknaden. Bland arbetslösa inrikes födda i åldersgruppen `r arbesloshetstid_aldersgrupp` har ungefär `r arbetsloshetstid_inrikes_24_manader` procent varit arbetslösa länge (minst 24 månader) och får anses stå väldigt långt från arbetsmarknaden. Sammanlagt har ungefär `r arbetsloshetstid_inrikes_minst_12_manader` procent av de inrikes födda i åldersgruppen som är arbetslösa varit det i minst 12 månader. Istället är det de som har varit arbetslösa under en relativt kort period (<6 månader) som är den största gruppen (ca `r arbetsloshetstid_inrikes_6_manader` procent av alla inrikes födda arbetslösa).
 
 Bland utrikes födda är bilden delvis annorlunda. Här är den största gruppen arbetslösa de som varit det i minst 24 månader, totalt `r arbetsloshetstid_utrikes_24_manader` procent av de arbetslösa utrikes födda tillhör den gruppen. Sammanlagt har ungefär `r arbetsloshetstid_utrikes_minst_12_manader` procent av de arbetslösa utrikes födda varit det i minst 12 månader. 
 
@@ -696,7 +696,7 @@ gg_huv_inkomst$huvud_ink_bakgrund_Dalarna
 ```
 <br>
 
-Även andelen som saknar ersättning är större i gruppen med utrikes födda, knappt `r saknar_ersattning_utrikes_andel` procent i `r huv_inkomst_manad` `r huv_inkomst_ar`, mot `r saknar_ersattning_inrikes_andel` procent i gruppen födda i Sverige. Dessa två kategorier visar på problematiska effekter av bristande integration.
+Även andelen som saknar ersättning är större i gruppen med utrikes födda, knappt `r saknar_ersattning_utrikes_andel` procent i `r huv_inkomst_manad` `r huv_inkomst_ar`, mot `r saknar_ersattning_inrikes_andel` procent i gruppen inrikes födda. Behovet av stöd och avsaknaden av ersättningar är två delar som visar på en bristande ekonomisk integration.
 
 Om antalet individer som får ekonomiskt stöd studeras över tid, blir det tydligt att antalet som får stöd minskar, men att minskningen i första hand är koncentrerad till utrikes födda. I `r ek_stod_manad_ar_forsta` var det ungefär `r ek_stod_skillnad_forsta ` fler utrikes födda personer som var i behov av ekonomiskt stöd i Dalarna, jämfört med inrikes födda. I `r ek_stod_manad_ar_sista` var den skillnaden bara ca `r ek_stod_skillnad_senaste ` personer.
 
@@ -708,6 +708,8 @@ gg_ek_stod$ekonomiskt_bistand_fodelseland_Dalarna
 
 ```
 <br>
+
+Sammanfattningsvis är det fortsatt stora skillnader mellan inrikes och utrikes födda när det gäller andelar i behov av ekonomiskt stöd respektive saknar ersättningar. De senaste fem åren har dock skillnaderna minskat tydligt när det gäller antalet utrikes födda med ekonomiskt stöd som huvudsaklig inomkomstkälla.
 
 ## Tillit
 Även tillit mäts i Folkhälsomyndighetens *Hälsa på lika villkor*. I den senaste undersökningen `r tillit_andra_ar` har gruppen som är födda i `r tillit_andra_max_kvinnor_grupp` lägst tillit till andra människor, såväl kvinnor som män. Bland kvinnorna uppger ca `r tillit_andra_max_kvinnor_varde` procent att de har svårt att lita på andra, medan motsvarande siffra bland männen är ungefär `r tillit_andra_max_man_varde` procent. Högst tillit till andra har personer födda i `r tillit_andra_min_man_grupp`, såväl bland kvinnorna som männen i Sverige. Bland kvinnorna uppgav `r tillit_andra_min_kvinnor_varde` procent att de hade låg tillit till andra, medan motsvarande siffra bland männen var ca `r tillit_andra_min_man_varde` procent. Även personer födda i Sverige har relativt stor tillit till andra.
@@ -761,15 +763,13 @@ gg_valdeltagande_vistelsetid$Valdeltagande_i_val_till_kommun
 <br>
 
 # Avslutning
-I denna rapport har integrationen av utrikes födda analyserats utifrån demografi, utbildning, arbetsmarknad, boende, flyttmönster, hälsa, ekonomi, tillit och demokrati. Inom flera områden har det skett en positiv utveckling för utrikes födda.
+I denna rapport har integrationen av utrikes födda analyserats utifrån demografi, språk, utbildning, arbetsmarknad, boende, flyttmönster, hälsa, ekonomi, tillit och demokrati. Inom flera områden har det skett en positiv utveckling för utrikes födda och i vissa fall en väldigt positiv utveckling. 
 
-Dalarnas inrikes födda befolkning har under de senaste decennierna minskat i antal och fått en förändrad åldersstruktur. Färre i arbetsför ålder ska försörja fler som inte arbetar. Befolkningstillskottet från utrikes födda har bidragit till att begränsa denna negativa demografiska utveckling, dels i antal invånare, dels i en ökad andel i arbetsför ålder och därmed en föryngring av befolkningen. 
+Dalarnas inrikes födda befolkning har under de senaste decennierna minskat i antal och fått en förändrad åldersstruktur. Färre i arbetsför ålder ska försörja fler, framförallt äldre, som inte arbetar. 
 
-En viktig komponent för integrationen är utbildningsnivån. Det finns en tydlig skiljelinje mellan individer med endast förgymnasial utbildning och de som har gymnasial eller högre utbildningsnivå. Detta är en generell observation och gäller oavsett om individen är inrikes eller utrikes född. Utrikes födda har dock en språklig utmaning att möta. Att lära sig svenska skapar möjligheter för att utbilda sig och etableras på arbetsmarknaden. 
+Befolkningstillskottet från utrikes födda som invandrat under det senaste decenniet har bidragit till att begränsa denna negativa demografiska utveckling, dels i antal invånare, dels i en ökad andel i arbetsför ålder som bidragit till en föryngring av länets befolkning. 
 
-Integration är en process och processer tar tid. Det är tydligt att vistelsetiden har en stor betydelse för utfallet på integrationsområdet. Inom de flesta områden som studerats i rapporten syns en tydlig, positiv utveckling av utfallet när vistelsetiden ökar. 
-
-De tydligaste trenderna för utrikes födda är att 
+De generella trenderna för utrikes födda som kan observeras är att 
 
 <ul>
 
@@ -779,19 +779,40 @@ De tydligaste trenderna för utrikes födda är att
     
 <li>*Sysselsättningsgraden ökar*</li>
 
-<li>*Arbetslösheten minskar*</li>
+<li>*Arbetslösheten minskar markant*</li>
 
 <li>*Medelinkomsten ökar*</li>
+
+<li>*Trångboddheten minskar*</li>
+
+<li>*Andel personer i hushåll med låg ekonomisk standard minskar*</li>
 
 <li>*Behovet av ekonomiskt stöd minskar*</li>
 
 <li>*Andelen unga vuxna som inte studerar eller arbetar minskar*</li>
 
+<li>*Vistelsetiden för godkänt i SFI ökar*</li>
+
 </ul>
 
-De senaste åren har invandringen till länet minskat och antalet utrikes födda i Dalarna har stabiliserats. Ett negativt inrikes flyttnetto i kombination med låga födelsetal, leder till en allt mer åldrad befolkning och utmanar kompetensförsörjningen för näringsliv och offentlig förvaltning.
+Sammantaget är ovanstående trender utan tvekan väldigt positivt för Dalarna.
 
-Det finns dock en generell skillnad mellan inrikes och utrikes födda, även när vistelsetiden i Sverige tas i beaktande. Det finns med andra ord mer att göra när det kommer till att utnyttja den resurs som utrikes födda är, men det förtar inte den positiva utveckling som redovisats. Vikten av att fortsätta integrationsarbetet är särskilt viktigt för att kompetensförsörja arbetsmarknaden nu och i framtiden. Att säkerställa kunskap i svenska och att lyfta utbildningsnivån för utrikes födda är avgörande för att se en ökad etablering på arbetsmarknaden.
+Det är tydligt att vistelsetid och utbildningsnivå har en stor betydelse för utfallet på integrationsområdet. Inom de flesta områden som studerats i rapporten syns en väldigt tydlig positiv utveckling av utfallet när antingen vistelsetiden ökar och/eller utbildningsnivån höjs.
+
+Det konstaterades inledningsvis att integration är en process där grupper med olika bakgrund ska bli en del av ett socialt, ekonomiskt och kulturellt sammanhang. Det är därför inte förvånande att vistelsetiden har en tydlig roll i att öka integrationen och minska skillnaderna mellan inrikes och utrikes födda. Beroende på individens förutsättningar kommer tiden att integreras i samhället att variera.
+
+När det gäller utbildningsnivån finns det en tydlig skiljelinje mellan individer med endast förgymnasial utbildning och de som har gymnasial eller högre utbildningsnivå. De med endast förgymnasial utbildning har svårare att etablera sig på arbetsmarknaden och behöver längre tid för att bland annat nå godkänt i SFI. Utmaningen för de med endast förgymnasial utbildning gäller dock oavsett om individen är inrikes eller utrikes född, men de utrikes födda har en språklig utmaning att möta. Att lära sig svenska skapar möjligheter för att utbilda sig och etableras på arbetsmarknaden.
+
+Att uppnå godkänt i SFI har det senaste decenniet tagit allt längre tid i genomsnitt, oavsett utbildningsnivå. Sannolikt är det en kombination av det stora tryck som flyktinginvandringen 2016 och framåt medförde, i kombination med coronapandemins påverkan på utbildningsväsendet. Att förbättra genomströmningen i SFI är en mycket viktig del under kommande år för att rusta utrikes födda inför fortsatt utbildning och etablering på arbetsmarknaden.
+
+Även om det skett en positiv utveckling i många delar finns det generella skillnader mellan inrikes och utrikes födda som kan observeras, även när vistelsetiden i Sverige och utbildningsnivån tas i beaktande. Utrikes födda har exempelvis lägre medianinkomster, en högre andel är trångbodda, en högre andel arbetslösa och även långtidsarbetslösa.
+
+De skillnader som observeras förtar inte den övergripande positiva utvecklingen inom de områden som analyserats, men de visar att det finns mer att göra när det kommer till att utnyttja den resurs som utrikes födda är. Vikten av att fortsätta integrationsarbetet är särskilt viktigt för att kompetensförsörja arbetsmarknaden nu och i framtiden. 
+
+De senaste åren har invandringen till länet minskat och antalet utrikes födda i Dalarna har stabiliserats. Samtidigt har Dalarna ett negativt inrikes flyttnetto och låga födelsetal, en kombination som leder till en allt mer åldrad befolkning och utmanar kompetensförsörjningen för näringsliv och offentlig förvaltning framgent. Den demografiska prognosen det kommande decenniet indikerar en minskad befolkning.
+
+Att säkerställa goda kunskaper i svenska och att lyfta utbildningsnivån för utrikes födda, främst de med endast förgymansial utbildning, är avgörande för att se en ökad etablering på arbetsmarknaden och en fortsatt positiv utveckling av integrationen av utrikes födda i Dalarna.
+
 
 ```{r, results='asis', echo=FALSE}
 cat('
