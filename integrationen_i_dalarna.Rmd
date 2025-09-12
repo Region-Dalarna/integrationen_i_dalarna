@@ -69,57 +69,13 @@ Senast uppdaterad: `r Sys.Date()`</i>
 
 <ul>
 
-<li>Det demografiska bidraget och koppling till kompetensförsörjningsutmaningen</li>
+<li>Dalarna har en negativ befolkningsutveckling över tid med allt fler äldre inrikes födda och allt färre i arbetsför ålder. De senaste decenniernas invandring har bromsat den negativa utvecklingen, bidragit till en föryngring av befolkningen och arbetsmarknadens kompetensförsörjning</li>
 
-<li>Den huvudsakliga utvecklingen för utrikes födda över tid - positivt/negativt</li>
+<li>Utvecklingen på arbetsmarknaden för utrikes födda under senare år är mycket positiv med nästan en halvering av arbetslösheten sedan 2020. Den förbättrade sysselsättningen ger i sin tur en positiv utveckling för utrikes födda i form av förbättrad ekonomi, minskad trångboddhet och färre i behov av ekonomiskt stöd. Däremot har genomströmningstiden för godkänt i SFI ökat det senaste decenniet, vilket behöver adresseras då språkkunskaperna är viktigt för utbildning och etablering på arbetsmarknaden</li>
 
-<li>De kvarstående utmaningarna och skillnader mellan inrikes och utrikes födda</li>
+<li>Högre utbildningsnivåer samt längre vistelsetider i Sverige för utrikes födda har en markant positiv effekt när det gäller att minska skillnaderna i utbildningssystemet och på arbetsmarknaden mot inrikes födda, men det finns trots det kvarstående skillnader i form av exempelvis lägre gymnasiebehörigheter, högre arbetslöshet och lägre inkomster</li>
 
-<li>Vikten av ett fortsatt integrationsarbete med fokus på språk, utbildning och arbete för att minska skillnader</li>
-
-</ul>
-
-*3 punkter*
-
-<ul>
-
-<li>Utrikes födda har bromsat Dalarnas negativa demografiska utveckling genom att bidra med befolkningstillskott och föryngring, vilket stärker arbetsförsörjningen i ett län med åldrande inrikes född befolkning  </li>
-
-<li>Trenderna visar positiv utveckling: högre utbildningsnivå, ökad sysselsättning, minskad arbetslöshet, förbättrad ekonomi och minskad trångboddhet. Vistelsetid och utbildningsnivå är avgörande faktorer för framgångsrik integration  </li>
-
-<li>Utmaningar kvarstår med lägre inkomster, högre arbetslöshet och trångboddhet för utrikes födda. Minskad invandring, låga födelsetal och negativt flyttnetto hotar framtida kompetensförsörjning, vilket gör satsningar på språk och utbildning centrala  </li>
-
-</ul>
-
-*5 punkter*
-
-<ul>
-
-<li>Dalarna har en åldrande inrikes född befolkning med färre i arbetsför ålder. Utrikes födda har bidragit till att bromsa utvecklingen genom befolkningstillskott och föryngring  </li>
-
-<li>Utrikes födda visar tydliga framsteg: högre utbildningsnivåer, ökad sysselsättning, minskad arbetslöshet, högre inkomster och förbättrad bostadssituation. Samtidigt minskar behovet av ekonomiskt stöd över tid  </li>
-
-<li>Vistelsetid och utbildningsnivå är avgörande för integration. Ju längre tid i Sverige och högre utbildning, desto bättre resultat i språk, arbetsmarknad och ekonomisk etablering  </li>
-
-<li>Utmaningar kvarstår: utrikes födda har i genomsnitt lägre inkomster, högre arbetslöshet och större risk för trångboddhet än inrikes födda, även med längre vistelsetid och högre utbildning  </li>
-
-<li>Minskad invandring, negativt inrikes flyttnetto och låga födelsetal hotar Dalarnas framtida kompetensförsörjning. Att stärka språkkunskaper och utbildningsnivå är avgörande för fortsatt positiv integrationsutveckling  </li>
-
-</ul>
-
-*Gamla punkter*
-
-<ul>
-
-<li>De senaste decenniernas invandring har bidragit till att motverka det sjunkande invånarantalet i länet och till att föryngra befolkningen </li>
-
-<li>Utvecklingen inom utbildnings- och arbetsmarknadsområdet är positiv över tid för utrikes födda </li>
-
-<li>Språkkunskaper och utbildning är avgörande för etablering på arbetsmarknaden </li>
-
-<li>Behovet av ekonomiskt stöd till utrikes födda har minskat över tid </li>
-
-<li>Vistelsetiden i Sverige har stor betydelse för det positiva utfallet inom de flesta områden som studerats, vilket betonar integrationen som en process </li> 
+<li>Sammantaget observeras en mycket positiv utveckling, men de kvarstående skillnaderna visar på vikten av ett fortsatt integrationsarbete med fokus på språk, utbildning och arbete för att minska skillnader mellan inrikes och utrikes födda</li>
 
 </ul>
 
