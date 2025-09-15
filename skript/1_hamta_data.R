@@ -78,18 +78,28 @@ if(uppdatera_data == TRUE){
   min_ar <- names(antal_forandring_df)[4]
   max_ar <- names(antal_forandring_df)[5]
 
-  # Med diagramtitel (de tre övriga)
+  # Med diagramtitel (tre andra)
   gg_antal_utrikes <- diagram_utrikes_fodda_tidsserie(output_mapp_figur = Output_mapp_figur,
                                                       diag_forandring_kommuner = FALSE,
                                                       spara_figur = spara_diagram_som_bildfiler,
+                                                      diag_antal = FALSE,
                                                       returnera_data= TRUE,
                                                       alder_grupp = c(20,65),
                                                       prognos_ar = 2040)
 
-  min_ar_utrikes_antal = min(antal_utrikes_region_df$år)
-  max_ar_utrikes_antal = max(antal_utrikes_region_df$år)
-  min_antal_utrikes = format(antal_utrikes_region_df %>% filter(år == min_ar_utrikes_antal) %>%  .$Antal,big.mark = " ")
-  max_antal_utrikes = antal_utrikes_region_df %>% filter(år == max_ar_utrikes_antal) %>%  .$Antal %>% format(big.mark = " ")
+  # Antal totalt olika år - till texten
+  # Senaste år
+  max_antal_bef_totalt <- format(sum(antal_inrikes_utrikes_df %>% filter(år == max(år)) %>% .$Antal),big.mark = " ")
+  # 2007
+  max_antal_bef_2007 <- format(sum(antal_inrikes_utrikes_df %>% filter(år == "2007") %>% .$Antal),big.mark = " ")
+  # 2021
+  max_antal_bef_2021 <- format(sum(antal_inrikes_utrikes_df %>% filter(år == "2021") %>% .$Antal),big.mark = " ")
+
+  # Antal utrikes
+  min_ar_utrikes_antal = min(antal_inrikes_utrikes_df$år)
+  max_ar_utrikes_antal = max(antal_inrikes_utrikes_df$år)
+  min_antal_utrikes = format(antal_inrikes_utrikes_df %>% filter(år == min_ar_utrikes_antal,födelseregion == "utrikes född") %>%  .$Antal,big.mark = " ")
+  max_antal_utrikes = antal_inrikes_utrikes_df %>% filter(år == max_ar_utrikes_antal,födelseregion == "utrikes född") %>%  .$Antal %>% format(big.mark = " ")
 
   # Antal kommuner där befolkningen ökat totalt
   forandring_totalt_antal = antal_forandring_df %>% group_by(region) %>% summarize(netto = sum(forandring))
@@ -99,19 +109,20 @@ if(uppdatera_data == TRUE){
   kommuner_okning_inrikes <- str_c(rev(antal_forandring_df %>% filter(region!= "Dalarna",födelseregion == "Född i Sverige",forandring > 0) %>% .$region), collapse = " och ") # Antal kommuner som ökat i befolkning och är utrikes födda
 
   # Antal inrikes. Enbart för att få data
-  source("https://raw.githubusercontent.com/Region-Dalarna/hamta_data/refs/heads/main/hamta_bef_region_alder_kon_fodelseregion_tid_InrUtrFoddaRegAlKon_scb.R")
-  antal_inrikes_df <- hamta_bef_region_alder_kon_fodelseregion_tid_scb(region_vekt = "20",
-                                                                               alder_koder = NA,
-                                                                               kon_klartext =  NA,
-                                                                               tid_koder = c("2000","9999")) %>%
-    mutate(region = skapa_kortnamn_lan(region))  %>% filter(födelseregion == "Född i Sverige",region == "Dalarna")
+  # source("https://raw.githubusercontent.com/Region-Dalarna/hamta_data/refs/heads/main/hamta_bef_region_alder_kon_fodelseregion_tid_InrUtrFoddaRegAlKon_scb.R")
+  # antal_inrikes_df <- hamta_bef_region_alder_kon_fodelseregion_tid_scb(region_vekt = "20",
+  #                                                                              alder_koder = NA,
+  #                                                                              kon_klartext =  NA,
+  #                                                                              tid_koder = c("2000","9999")) %>%
+  #   mutate(region = skapa_kortnamn_lan(region))  %>% filter(födelseregion == "född i Sverige",region == "Dalarna")
 
-  min_ar_inrikes_antal = min(antal_inrikes_df$år)
-  max_ar_inrikes_antal = max(antal_inrikes_df$år)
-  min_antal_inrikes = format(antal_inrikes_df %>% filter(år == min_ar_inrikes_antal) %>%  .$Antal,big.mark = " ")
-  max_antal_inrikes = antal_inrikes_df %>% filter(år == max_ar_inrikes_antal) %>%  .$Antal %>% format(big.mark = " ")
+  min_ar_inrikes_antal = min(antal_inrikes_utrikes_df$år)
+  max_ar_inrikes_antal = max(antal_inrikes_utrikes_df$år)
+  min_antal_inrikes = format(antal_inrikes_utrikes_df %>% filter(år == min_ar_inrikes_antal,födelseregion == "född i Sverige") %>%  .$Antal,big.mark = " ")
+  max_antal_inrikes = antal_inrikes_utrikes_df %>% filter(år == max_ar_inrikes_antal,födelseregion == "född i Sverige") %>%  .$Antal %>% format(big.mark = " ")
 
-  andel_utrikes <- round((antal_utrikes_region_df %>% filter(år == max_ar_utrikes_antal) %>%  .$Antal)/(antal_utrikes_region_df %>% filter(år == max_ar_utrikes_antal) %>%  .$Antal+antal_inrikes_df %>% filter(år == max_ar_inrikes_antal) %>%  .$Antal)*100,0)
+  #andel_utrikes <- round((antal_utrikes_region_df %>% filter(år == max_ar_utrikes_antal) %>%  .$Antal)/(antal_utrikes_region_df %>% filter(år == max_ar_utrikes_antal) %>%  .$Antal+antal_inrikes_df %>% filter(år == max_ar_inrikes_antal) %>%  .$Antal)*100,0)
+  andel_utrikes <- round((antal_inrikes_utrikes_df %>% filter(år == max_ar_utrikes_antal,födelseregion == "utrikes född") %>%  .$Antal)/(sum(antal_inrikes_utrikes_df %>% filter(år == max_ar_inrikes_antal) %>% .$Antal))*100,0)
 
   min_ar_utrikes_kumulativ <- min(antal_forandring_lan_kumulativ$år)
   max_ar_utrikes_kumulativ <- max(antal_forandring_lan_kumulativ$år)
