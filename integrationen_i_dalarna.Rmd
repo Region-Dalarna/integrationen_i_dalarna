@@ -176,10 +176,12 @@ Ett stort antal asylsökande ett år leder ofta till att invandringen ökar åre
  
 </details>
 
+Den totala befolkningen i Dalarna varierar en del över tid och var som störst 1994 med 291 203 invånare, men minskade därefter till `r max_antal_bef_2007` år 2007. Vid utgången av `r max_ar_utrikes_antal` noterades `r max_antal_bef_totalt` invånare i länet, vilket är en minskning från de senaste årens högsta nivå, `r max_antal_bef_2021` år 2021. 
+
 Mellan `r min_ar_utrikes_antal` och `r max_ar_utrikes_antal` ökade antalet utrikes födda personer i Dalarnas län från `r min_antal_utrikes` till `r max_antal_utrikes` personer. Effekten av den ökade invandringen under 2000-talet är därmed att den utrikes födda befolkningen i Dalarna har mer än fördubblats. Ökningen skedde fram till 2019, men därefter har den utrikes födda befolkningen i Dalarna minskat något. Antalet inrikes födda minskade under samma tid från `r min_antal_inrikes` personer till `r max_antal_inrikes` personer. Genom att studera befolkningsutvecklingen för inrikes och utrikes födda i länet de senaste åren, blir det tydligt att befolkningen i länet som helhet hade minskat utan invandringen.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
-gg_antal_utrikes$utrikes_fodda_antal_Dalarna
+gg_antal_utrikes$utrikes_inrikes_antal_Dalarna
 ```
 <br>
 
