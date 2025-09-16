@@ -874,6 +874,7 @@ if(uppdatera_data == TRUE){
   gg_flytt_bakgrund <- diag_inr_flyttnetto_inr_utr_fodda(region_vekt = "20",
                                                          skriv_diagram = spara_diagram_som_bildfiler,
                                                          output_mapp =  Output_mapp_figur,
+                                                         diagram_capt = "Källa: SCB:s öppna statistikdatabas\nBearbetning: Samhällsanalys, Region Dalarna\nInrikes flyttnetto är skillnaden mellan de som flyttat in till och de som flyttat ut från en\nkommun/region, från och till andra kommuner/regioner.",
                                                          returnera_data = TRUE,
                                                          fixa_y_axel_varden_jamna_tal = FALSE,
                                                          farg_vekt = diagramfarger("rus_sex")[2:1])
