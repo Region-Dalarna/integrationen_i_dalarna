@@ -10,6 +10,7 @@ diag_bef_inr_utr_tid <- function(region = "20", # Enbart ett län i taget.
 
   # =======================================================================================================================
   # Diagram för antalet inrikes/utrikes födda i arbetsför ålder
+  # Ändrat från Född i Sverige till född i Sverige då SCB gjort någon ändring
   # =======================================================================================================================
 
   # om parametern demo är satt till TRUE så öppnas en flik i webbläsaren med ett exempel på hur diagrammet ser ut och därefter avslutas funktionen
@@ -39,7 +40,7 @@ diag_bef_inr_utr_tid <- function(region = "20", # Enbart ett län i taget.
       group_by(år,region,födelseregion,alder_grupp) %>%
         summarise(Antal = sum(Antal, na.rm = TRUE)) %>%
           ungroup() %>%
-                mutate(födelseregion = ifelse(födelseregion == "Född i Sverige", "Inrikes född", "Utrikes född")) %>%
+                mutate(födelseregion = ifelse(födelseregion == "född i Sverige", "Inrikes född", "Utrikes född")) %>%
             filter(alder_grupp == unique(alder_grupp)[2] )
 
   andel_utrikes_bakgr_df <- bef_bakgr %>%
