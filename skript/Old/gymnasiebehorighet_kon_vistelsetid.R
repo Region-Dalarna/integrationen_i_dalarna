@@ -1,4 +1,4 @@
-diag_gymnasiebehorighet_mm <- function(region = "20", # Enbart ett i taget.
+diag_gymnasiebehorighet_mm <- function(region_vekt = "20", # Enbart ett i taget.
                                     diag_kon_gym= TRUE,
                                     diag_kon_hogskola = TRUE,
                                     diag_vistelsetid_gym = TRUE,

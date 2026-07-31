@@ -761,6 +761,7 @@ if(uppdatera_data == TRUE){
                                                             jmf_ar = ar,
                                                             diag_kon_hogskola = TRUE,
                                                             diag_vistelsetid_gym = TRUE,
+                                                            visa_logga_i_diagram = FALSE,
                                                             skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                                             returnera_data_rmarkdown = TRUE)
 
