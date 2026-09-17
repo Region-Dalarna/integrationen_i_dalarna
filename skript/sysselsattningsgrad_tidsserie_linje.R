@@ -57,7 +57,7 @@ diag_sysselsattningsgrad_tidsserie <- function(region = "20", # Enbart ett i tag
                                                                       kon_klartext = c("*"),
                                                                       fodelseregion_klartext = c("inrikes född", "utrikes född"),
                                                                       cont_klartext = "sysselsättningsgrad",
-                                                                      alder_klartext = "20-64 år") %>%
+                                                                      alder_klartext = "20–64 år") %>%
     mutate(region = skapa_kortnamn_lan(region),
            kön = ifelse(kön == "totalt","kvinnor och män",kön),
            födelseregion = case_when(
@@ -69,7 +69,8 @@ diag_sysselsattningsgrad_tidsserie <- function(region = "20", # Enbart ett i tag
       select(år,region,kön,födelseregion,kombo,ålder,sysselsättningsgrad)
 
 
-  sysselsattningsgrad_tidsserie_df <- rbind(sysselsatta, sysselsatta_bas_preliminär %>% filter(!(år%in%unique(sysselsatta$år))))
+  sysselsattningsgrad_tidsserie_df <- rbind(sysselsatta, sysselsatta_bas_preliminär %>% filter(!(år%in%unique(sysselsatta$år)))) |>
+    mutate(ålder = str_replace_all(ålder, "^20-64 år$", "20–64 år"))
 
   gg_list <- list()
 

@@ -12,7 +12,7 @@ diag_arbetsloshet_kommun <- function(region = "20", # Enbart ett län i taget.
   #
   # Ett diagram för förvärvsinkomst kopplad till bakgrund (vistelsetid)
   #
-  #
+  # Uppdaterat med ny version av PXweb Jon 2026-09-08
   #
   # =======================================================================================================================
 
@@ -28,19 +28,24 @@ diag_arbetsloshet_kommun <- function(region = "20", # Enbart ett län i taget.
 
   if (!require("pacman")) install.packages("pacman")
   p_load(tidyverse)
+  p_load_gh("FaluPeppe/pxweb2r")
 
   source("https://raw.githubusercontent.com/Region-Dalarna/funktioner/main/func_API.R")
   source("https://raw.githubusercontent.com/Region-Dalarna/funktioner/main/func_SkapaDiagram.R")
-  source("https://raw.githubusercontent.com/Region-Dalarna/hamta_data/refs/heads/main/hamta_bas_arbstatus_region_kon_alder_fodelseregion_prel_manad_ArbStatusM_scb.R")
 
   vald_region = skapa_kortnamn_lan(hamtaregion_kod_namn(region)$region)
 
-  arblosa_bakgr <- hamta_bas_arbstatus_region_kon_alder_fodelseregion_prel_manad_scb(region_vekt = hamtakommuner(lan = region,tamedlan = TRUE,tamedriket = TRUE),
-                                                                                     alder_klartext = "20-64 år",
-                                                                                     kon_klartext = c("kvinnor","män"),
-                                                                                     fodelseregion_klartext = c("inrikes född", "utrikes född"),
-                                                                                     cont_klartext = "arbetslöshet",
-                                                                                     tid_koder = "9999") %>%
+  arblosa_bakgr <- pxweb2_get_data(
+    table = "TAB6260",
+    query = list(
+      Region = hamtakommuner(lan = region,tamedlan = TRUE,tamedriket = TRUE),
+      Kon = c("kvinnor","män"),
+      Alder = "20–64 år",
+      Fodelseregion = c("inrikes född", "utrikes född"),
+      ContentsCode = "arbetslöshet",
+      Tid = "9999"
+    )) %>%
+    rename(arbetslöshet = value) |>
     mutate(region = region %>% skapa_kortnamn_lan(byt_ut_riket_mot_sverige = TRUE)) %>%
     manader_bearbeta_scbtabeller()
 

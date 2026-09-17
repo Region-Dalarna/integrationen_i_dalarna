@@ -27,37 +27,40 @@ diag_sysselsattningsgrad_vistelsetid_inrikes_scb <- function(region = "20", # En
     if (length(demo_url) > 1) cat(paste0(length(demo_url), " diagram har öppnats i webbläsaren."))
     stop_tyst()
   }
-
-  if (!require("pacman")) install.packages("pacman")
-  p_load(tidyverse,
-         glue)
+  # Bara paket, ingen source() mot funktioner-/hamta_data-reporna och inget
+  # p_load(tidyverse). Anropas med fullt namespace (dplyr::filter() osv.) i
+  # stället för library().
+  if (!requireNamespace("rddiagram", quietly = TRUE)) {
+    remotes::install_github("Region-Dalarna/rdpaket", subdir = "packages/rddiagram")
+  }
+  if (!requireNamespace("rdverktyg", quietly = TRUE)) {
+    remotes::install_github("Region-Dalarna/rdpaket", subdir = "packages/rdverktyg")
+  }
+  if (!requireNamespace("pxweb2r", quietly = TRUE)) remotes::install_github("FaluPeppe/pxweb2r")
+  if (!requireNamespace("glue", quietly = TRUE)) install.packages("glue")
+  if (!requireNamespace("glue", quietly = TRUE)) install.packages("tidyverse")
 
 
   gg_list <- list()
 
-  source("https://raw.githubusercontent.com/Region-Dalarna/funktioner/main/func_API.R")
-  source("https://raw.githubusercontent.com/Region-Dalarna/funktioner/main/func_SkapaDiagram.R")
-  source("https://raw.githubusercontent.com/Region-Dalarna/hamta_data/refs/heads/main/hamta_etableringstid_mm_region_kon_utbniv_bakgrvar_tid_IntGr1KomKonUtb_ny_BAS_scb.R")
-
-  if (!require("pacman")) install.packages("pacman")
-  pacman::p_load(tidyverse,
-                 pxweb,
-                 readxl)
-
   if(diag_vistelsetid){
 
     # Hämtar data
-    syssgrad_df <- hamta_etableringstid_mm_region_kon_utbniv_bakgrvar_tid_scb_ny (region_vekt = region,
-                                                                                   kon_klartext = c("män", "kvinnor"),
-                                                                                   utbniv_klartext = "samtliga utbildningsnivåer",
-                                                                                   bakgrvar_klartext = c("födelseregion: Sverige","vistelsetid 0-1 år", "vistelsetid 2-3 år", "vistelsetid 4-9 år", "vistelsetid 10- år"),
-                                                                                   cont_klartext = "Andel sysselsatta",
-                                                                                   tid_koder = "9999") %>%
-      mutate(bakgrundsvariabel = case_when(
-        bakgrundsvariabel == "vistelsetid 0-1 år" ~ "0-1 år",
-        bakgrundsvariabel == "vistelsetid 2-3 år" ~ "2-3 år",
-        bakgrundsvariabel == "vistelsetid 4-9 år" ~ "4-9 år",
-        bakgrundsvariabel == "vistelsetid 10- år" ~ "10- år",
+    syssgrad_df <- pxweb2r::pxweb2_get_data(
+      table = "TAB6384",
+      query = list(
+        Region = region,
+        Kon = c("män", "kvinnor"),
+        UtbNiv = "samtliga utbildningsnivåer",
+        BakgrVar = c("födelseregion: Sverige","vistelsetid 0–1 år", "vistelsetid 2–3 år", "vistelsetid 4–9 år", "vistelsetid 10– år"),
+        ContentsCode = "Andel sysselsatta",
+        Tid = "9999"
+      ))  |>
+      dplyr::mutate(bakgrundsvariabel = dplyr::case_when(
+        bakgrundsvariabel == "vistelsetid 0–1 år" ~ "0–1 år",
+        bakgrundsvariabel == "vistelsetid 2–3 år" ~ "2–3 år",
+        bakgrundsvariabel == "vistelsetid 4–9 år" ~ "4–9 år",
+        bakgrundsvariabel == "vistelsetid 10– år" ~ "10– år",
         bakgrundsvariabel == "födelseregion: Sverige" ~ "Inrikes född",
         TRUE ~ bakgrundsvariabel
       ))
@@ -67,13 +70,11 @@ diag_sysselsattningsgrad_vistelsetid_inrikes_scb <- function(region = "20", # En
       assign("syssgrad_vistelsetid_inrikes_df", syssgrad_df, envir = .GlobalEnv)
     }
 
-
-
     diagram_capt <- "Källa: SCB:s öppna statistikdatabas, BAS.\nBearbetning: Samhällsanalys, Region Dalarna."
 
     # Skapar en faktorvariabel för att få tid sedan etablering i "rätt" ordning i figuren
-    syssgrad_df$bakgrundsvariabel <- factor(syssgrad_df$bakgrundsvariabel, levels = c("0-1 år","2-3 år",
-                                                                                        "4-9 år","10- år",
+    syssgrad_df$bakgrundsvariabel <- factor(syssgrad_df$bakgrundsvariabel, levels = c("0–1 år","2–3 år",
+                                                                                        "4–9 år","10– år",
                                                                                         "Inrikes född"))
 
     diagramtitel <- paste0("Sysselsättningsgrad i Dalarna"," ",max(syssgrad_df$år)," efter vistelsetid")
@@ -81,45 +82,49 @@ diag_sysselsattningsgrad_vistelsetid_inrikes_scb <- function(region = "20", # En
     diagramfilnamn <- paste0("sysselsattningsgrad_vistelsetid_inrikes.png")
 
     # Skapar diagram där etableringstiden jämförs mellan män och kvinnor, oavsett utbildning
-    gg_obj <- SkapaStapelDiagram(skickad_df =syssgrad_df %>%
-                                   filter(kön != "totalt"),
-                                 skickad_x_var = "bakgrundsvariabel",
-                                 skickad_y_var = "Andel sysselsatta",
-                                 skickad_x_grupp = "kön",
-                                 # manual_x_axis_text_vjust=0.9,
-                                 manual_color = diagramfarger("kon"),
-                                 diagram_titel = diagramtitel,
-                                 diagram_capt =  diagram_capt,
-                                 manual_y_axis_title = "procent",
-                                 manual_x_axis_title = "Vistelsetid i Sverige",
-                                 y_axis_100proc = TRUE,
-                                 x_axis_lutning = 0,
-                                 output_mapp = output_mapp,
-                                 filnamn_diagram = diagramfilnamn,
-                                 lagg_pa_logga = visa_logga_i_diagram,
-                                 skriv_till_diagramfil = skriv_diagrambildfil)
+    gg_obj <- rddiagram::SkapaStapelDiagram(skickad_df = syssgrad_df  |>
+                                             dplyr::filter(kön != "totalt"),
+                                           skickad_x_var = "bakgrundsvariabel",
+                                           skickad_y_var = "value",
+                                           skickad_x_grupp = "kön",
+                                           # manual_x_axis_text_vjust=0.9,
+                                           manual_color = rddiagram::diagramfarger("kon"),
+                                           diagram_titel = diagramtitel,
+                                           diagram_capt =  diagram_capt,
+                                           manual_y_axis_title = "procent",
+                                           manual_x_axis_title = "Vistelsetid i Sverige",
+                                           y_axis_100proc = TRUE,
+                                           x_axis_lutning = 0,
+                                           output_mapp = output_mapp,
+                                           filnamn_diagram = diagramfilnamn,
+                                           lagg_pa_logga = visa_logga_i_diagram,
+                                           skriv_till_diagramfil = skriv_diagrambildfil)
 
 
     gg_list <- c(gg_list, list(gg_obj))
-    names(gg_list)[[length(gg_list)]] <- diagramfilnamn %>% str_remove(".png")
+    names(gg_list)[[length(gg_list)]] <- diagramfilnamn |> stringr::str_remove(".png")
   }
 
   if(diag_utbniva){
 
     # Hämtar data. Av någon oklar anledning får man dubbletter för utrikes födda, varför distinct används på slutet
-    syssgrad_df <- hamta_etableringstid_mm_region_kon_utbniv_bakgrvar_tid_scb_ny (region_vekt = region,
-                                                                                  kon_klartext = c("män och kvinnor"),
-                                                                                  utbniv_klartext =  c("utbildningsnivå: förgymnasial utbildning", "utbildningsnivå: gymnasial utbildning", "utbildningsnivå: eftergymnasial utbildning"),
-                                                                                  bakgrvar_klartext = c("födelseregion: Sverige","samtliga utrikes födda invandrare"),
-                                                                                  cont_klartext = "Andel sysselsatta",
-                                                                                  tid_koder = "9999") %>%
-      mutate(utbildningsnivå = sub("utbildningsnivå: ", "", utbildningsnivå),
-             utbildningsnivå = str_to_sentence(utbildningsnivå),
-             bakgrundsvariabel = case_when(
-        bakgrundsvariabel == "födelseregion: Sverige" ~ "Inrikes född",
-        bakgrundsvariabel == "samtliga utrikes födda invandrare" ~ "Utrikes född",
-        TRUE ~ bakgrundsvariabel
-      )) %>% distinct()
+    syssgrad_df <- pxweb2r::pxweb2_get_data(
+      table = "TAB6384",
+      query = list(
+        Region = region,
+        Kon = "män och kvinnor",
+        UtbNiv = c("utbildningsnivå: förgymnasial utbildning", "utbildningsnivå: gymnasial utbildning", "utbildningsnivå: eftergymnasial utbildning"),
+        BakgrVar = c("födelseregion: Sverige","samtliga utrikes födda invandrare"),
+        ContentsCode = "Andel sysselsatta",
+        Tid = "9999"
+      ))  |>
+      dplyr::mutate(utbildningsnivå = sub("utbildningsnivå: ", "", utbildningsnivå),
+                    utbildningsnivå = stringr::str_to_sentence(utbildningsnivå),
+                    bakgrundsvariabel = dplyr::case_when(
+                      bakgrundsvariabel == "födelseregion: Sverige" ~ "Inrikes född",
+                      bakgrundsvariabel == "samtliga utrikes födda invandrare" ~ "Utrikes född",
+                      TRUE ~ bakgrundsvariabel
+                    )) |> distinct()
 
 
     if(returnera_data_rmarkdown == TRUE){
@@ -138,25 +143,25 @@ diag_sysselsattningsgrad_vistelsetid_inrikes_scb <- function(region = "20", # En
     diagramfilnamn <- paste0("sysselsattningsgrad_inrikes_utrikes_utbniva.png")
 
     # Skapar diagram där etableringstiden jämförs mellan män och kvinnor, oavsett utbildning
-    gg_obj <- SkapaStapelDiagram(skickad_df =syssgrad_df ,
-                                 skickad_x_var = "utbildningsnivå",
-                                 skickad_y_var = "Andel sysselsatta",
-                                 skickad_x_grupp = "bakgrundsvariabel",
-                                 # manual_x_axis_text_vjust=0.9,
-                                 manual_color = diagramfarger("rus_sex"),
-                                 diagram_titel = diagramtitel,
-                                 diagram_capt =  diagram_capt,
-                                 manual_y_axis_title = "procent",
-                                 y_axis_100proc = TRUE,
-                                 x_axis_lutning = 0,
-                                 output_mapp = output_mapp,
-                                 filnamn_diagram = diagramfilnamn,
-                                 lagg_pa_logga = visa_logga_i_diagram,
-                                 skriv_till_diagramfil = skriv_diagrambildfil)
+    gg_obj <- rddiagram::SkapaStapelDiagram(skickad_df =syssgrad_df ,
+                                             skickad_x_var = "utbildningsnivå",
+                                             skickad_y_var = "value",
+                                             skickad_x_grupp = "bakgrundsvariabel",
+                                             # manual_x_axis_text_vjust=0.9,
+                                             manual_color = rddiagram::diagramfarger("rus_sex"),
+                                             diagram_titel = diagramtitel,
+                                             diagram_capt =  diagram_capt,
+                                             manual_y_axis_title = "procent",
+                                             y_axis_100proc = TRUE,
+                                             x_axis_lutning = 0,
+                                             output_mapp = output_mapp,
+                                             filnamn_diagram = diagramfilnamn,
+                                             lagg_pa_logga = visa_logga_i_diagram,
+                                             skriv_till_diagramfil = skriv_diagrambildfil)
 
 
     gg_list <- c(gg_list, list(gg_obj))
-    names(gg_list)[[length(gg_list)]] <- diagramfilnamn %>% str_remove(".png")
+    names(gg_list)[[length(gg_list)]] <- diagramfilnamn |> stringr::str_remove(".png")
   }
 
   return(gg_list)

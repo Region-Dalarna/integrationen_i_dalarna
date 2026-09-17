@@ -23,6 +23,7 @@ if(uppdatera_data == TRUE){
   start_time <- Sys.time()
 
   source("https://raw.githubusercontent.com/Region-Dalarna/funktioner/main/func_API.R", encoding = "utf-8", echo = FALSE)
+  if (!requireNamespace("pxweb2r", quietly = TRUE)) remotes::install_github("FaluPeppe/pxweb2r")
 
   Output_mapp = here("Data","/")
   Output_mapp_figur = here("Figurer","/")
@@ -251,22 +252,22 @@ if(uppdatera_data == TRUE){
   sfi_max_ar <- max(SFI_df$år)
 
   # Könsuppdelat
-  sfi_kvinnor_forgymnasial <- SFI_df %>% filter(kön == "kvinnor",variabel == "Förgymnasial utbildning") %>% filter(år == max(år)) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
-  sfi_kvinnor_gymnasial <- SFI_df %>% filter(kön == "kvinnor",variabel == "Gymnasial utbildning") %>% filter(år == max(år)) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
-  sfi_kvinnor_eftergymnasial <- SFI_df %>% filter(kön == "kvinnor",variabel == "Eftergymnasial utbildning") %>% filter(år == max(år)) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
+  sfi_kvinnor_forgymnasial <- SFI_df %>% filter(kön == "kvinnor",variabel == "Förgymnasial utbildning") %>% filter(år == max(år)) %>% .$value
+  sfi_kvinnor_gymnasial <- SFI_df %>% filter(kön == "kvinnor",variabel == "Gymnasial utbildning") %>% filter(år == max(år)) %>% .$value
+  sfi_kvinnor_eftergymnasial <- SFI_df %>% filter(kön == "kvinnor",variabel == "Eftergymnasial utbildning") %>% filter(år == max(år)) %>% .$value
 
-  sfi_man_forgymnasial <- SFI_df %>% filter(kön == "män",variabel == "Förgymnasial utbildning") %>% filter(år == max(år)) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
-  sfi_man_gymnasial <- SFI_df %>% filter(kön == "män",variabel == "Gymnasial utbildning") %>% filter(år == max(år)) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
-  sfi_man_eftergymnasial <- SFI_df %>% filter(kön == "män",variabel == "Eftergymnasial utbildning") %>% filter(år == max(år)) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
+  sfi_man_forgymnasial <- SFI_df %>% filter(kön == "män",variabel == "Förgymnasial utbildning") %>% filter(år == max(år)) %>% .$value
+  sfi_man_gymnasial <- SFI_df %>% filter(kön == "män",variabel == "Gymnasial utbildning") %>% filter(år == max(år)) %>% .$value
+  sfi_man_eftergymnasial <- SFI_df %>% filter(kön == "män",variabel == "Eftergymnasial utbildning") %>% filter(år == max(år)) %>% .$value
 
   # Tidsserie
-  sfi_forstaar_varde_forgymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Förgymnasial utbildning") %>% filter(år == sfi_min_ar) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
-  sfi_forstaar_varde_gymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Gymnasial utbildning") %>% filter(år == sfi_min_ar) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
-  sfi_forstaar_varde_eftergymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Eftergymnasial utbildning") %>% filter(år == sfi_min_ar) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
+  sfi_forstaar_varde_forgymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Förgymnasial utbildning") %>% filter(år == sfi_min_ar) %>% .$value
+  sfi_forstaar_varde_gymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Gymnasial utbildning") %>% filter(år == sfi_min_ar) %>% .$value
+  sfi_forstaar_varde_eftergymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Eftergymnasial utbildning") %>% filter(år == sfi_min_ar) %>% .$value
 
-  sfi_sistaar_varde_forgymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Förgymnasial utbildning") %>% filter(år == sfi_max_ar) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
-  sfi_sistaar_varde_gymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Gymnasial utbildning") %>% filter(år == sfi_max_ar) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
-  sfi_sistaar_varde_eftergymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Eftergymnasial utbildning") %>% filter(år == sfi_max_ar) %>% .$`Vistelsetid för godkända i sfi, median i antal dagar`
+  sfi_sistaar_varde_forgymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Förgymnasial utbildning") %>% filter(år == sfi_max_ar) %>% .$value
+  sfi_sistaar_varde_gymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Gymnasial utbildning") %>% filter(år == sfi_max_ar) %>% .$value
+  sfi_sistaar_varde_eftergymnasial <- SFI_df %>% filter(kön == "män och kvinnor",variabel == "Eftergymnasial utbildning") %>% filter(år == sfi_max_ar) %>% .$value
 
 
   ###########################
@@ -297,26 +298,26 @@ if(uppdatera_data == TRUE){
   arbloshet_76_senaste_ar <- max(arbetsloshet_76$år)
 
 
-  # Arbetslöshet uppdelat på kön, bakgrund och kommun
-  source(here("skript/","arbetsloshet_kommun_bakgr.R"))
-  gg_arb_bakgr <- diag_arbetsloshet_kommun(output_mapp = Output_mapp_figur,
-                                           skriv_diagrambildfil = spara_diagram_som_bildfiler,
-                                           returnera_data_rmarkdown= TRUE)
-
-  arb_bakgr_manad_ar <- unique(arblosa_bakgr_df$månad_år)
-  arb_bakgr_utrikes_kvinnor_max <- arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$region
-  arb_bakgr_utrikes_kvinnor_max_varde <- gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$arbetslöshet)
-  arb_bakgr_inrikes_kvinnor_max_varde <-  gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född",region == arb_bakgr_utrikes_kvinnor_max) %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$arbetslöshet)
-  arb_bakgr_utrikes_män_max <- arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$region
-  arb_bakgr_utrikes_män_max_varde <- gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$arbetslöshet)
-  arb_bakgr_inrikes_män_max_varde <-  gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "inrikes född",region == arb_bakgr_utrikes_män_max) %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$arbetslöshet)
-
-  arb_bakgr_utrikes_kvinnor_min <- arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$region
-  arb_bakgr_utrikes_kvinnor_min_varde <- gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$arbetslöshet)
-  arb_bakgr_inrikes_kvinnor_min_varde <-  gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född",region == arb_bakgr_utrikes_kvinnor_min) %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$arbetslöshet)
-  arb_bakgr_utrikes_män_min <- arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$region
-  arb_bakgr_utrikes_män_min_varde <- gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$arbetslöshet)
-  arb_bakgr_inrikes_män_min_varde <-  gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "inrikes född",region == arb_bakgr_utrikes_män_min) %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$arbetslöshet)
+  # Arbetslöshet uppdelat på kön, bakgrund och kommun - Används sannolikt inte längr.
+  # source(here("skript/","arbetsloshet_kommun_bakgr.R"))
+  # gg_arb_bakgr <- diag_arbetsloshet_kommun(output_mapp = Output_mapp_figur,
+  #                                          skriv_diagrambildfil = spara_diagram_som_bildfiler,
+  #                                          returnera_data_rmarkdown= TRUE)
+  #
+  # arb_bakgr_manad_ar <- unique(arblosa_bakgr_df$månad_år)
+  # arb_bakgr_utrikes_kvinnor_max <- arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$region
+  # arb_bakgr_utrikes_kvinnor_max_varde <- gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$arbetslöshet)
+  # arb_bakgr_inrikes_kvinnor_max_varde <-  gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född",region == arb_bakgr_utrikes_kvinnor_max) %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$arbetslöshet)
+  # arb_bakgr_utrikes_män_max <- arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$region
+  # arb_bakgr_utrikes_män_max_varde <- gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$arbetslöshet)
+  # arb_bakgr_inrikes_män_max_varde <-  gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "inrikes född",region == arb_bakgr_utrikes_män_max) %>% filter(arbetslöshet == max(arbetslöshet)) %>%  .$arbetslöshet)
+  #
+  # arb_bakgr_utrikes_kvinnor_min <- arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$region
+  # arb_bakgr_utrikes_kvinnor_min_varde <- gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$arbetslöshet)
+  # arb_bakgr_inrikes_kvinnor_min_varde <-  gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född",region == arb_bakgr_utrikes_kvinnor_min) %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$arbetslöshet)
+  # arb_bakgr_utrikes_män_min <- arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$region
+  # arb_bakgr_utrikes_män_min_varde <- gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$arbetslöshet)
+  # arb_bakgr_inrikes_män_min_varde <-  gsub("\\.",",",arblosa_bakgr_df %>% filter(kön == "män",födelseregion == "inrikes född",region == arb_bakgr_utrikes_män_min) %>% filter(arbetslöshet == min(arbetslöshet)) %>%  .$arbetslöshet)
 
   # Utbildningsnivå kopplat till matchning
   # source("https://raw.githubusercontent.com/Region-Dalarna/socioekonomisk_analys_nms/refs/heads/main/skript/socioek_matchning_bakgr_utbniva.R")
@@ -427,17 +428,17 @@ if(uppdatera_data == TRUE){
                                                                                   returnera_data_rmarkdown= TRUE)
 
   syssgrad_vistelsetid_ar <- unique(syssgrad_vistelsetid_inrikes_df$år)
-  syssgrad_forgym_utrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Förgymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$`Andel sysselsatta`)
-  syssgrad_forgym_inrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Förgymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$`Andel sysselsatta`)
-  syssgrad_forgym_skillnad <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Förgymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$`Andel sysselsatta`-syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Förgymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$`Andel sysselsatta`)
+  syssgrad_forgym_utrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Förgymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$value)
+  syssgrad_forgym_inrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Förgymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$value)
+  syssgrad_forgym_skillnad <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Förgymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$value-syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Förgymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$value)
 
-  syssgrad_gym_utrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Gymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$`Andel sysselsatta`)
-  syssgrad_gym_inrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Gymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$`Andel sysselsatta`)
-  syssgrad_gym_skillnad <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Gymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$`Andel sysselsatta`-syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Gymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$`Andel sysselsatta`)
+  syssgrad_gym_utrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Gymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$value)
+  syssgrad_gym_inrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Gymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$value)
+  syssgrad_gym_skillnad <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Gymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$value-syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Gymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$value)
 
-  syssgrad_eftergym_utrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Eftergymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$`Andel sysselsatta`)
-  syssgrad_eftergym_inrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Eftergymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$`Andel sysselsatta`)
-  syssgrad_eftergym_skillnad <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Eftergymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$`Andel sysselsatta`-syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Eftergymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$`Andel sysselsatta`)
+  syssgrad_eftergym_utrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Eftergymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$value)
+  syssgrad_eftergym_inrikes <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Eftergymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$value)
+  syssgrad_eftergym_skillnad <- gsub("\\.",",",syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Eftergymnasial utbildning",bakgrundsvariabel == "Inrikes född") %>%  .$value-syssgrad_utrikes_inrikes_utbniva_df %>% filter(utbildningsnivå == "Eftergymnasial utbildning",bakgrundsvariabel == "Utrikes född") %>%  .$value)
 
   ##########
   ## Län ##
@@ -445,7 +446,7 @@ if(uppdatera_data == TRUE){
   source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diagram_arbetsmarknadsstatus_senastear.R")
   gg_diagram_arbetsmarknadsstatus_lan <- diagram_arbetsmarknadsstatus(region_vekt = hamtaAllaLan(),
                                                                          kon_klartext = c("kvinnor","män"),
-                                                                         alder_klartext = "20-64 år",
+                                                                         alder_klartext = "20–64 år",
                                                                          valda_farger = diagramfarger("kon"),
                                                                          fodelseregion_klartext_vekt = c("inrikes född", "utrikes född"),
                                                                          diag_arbetskraftsdeltagande = FALSE,
@@ -519,7 +520,7 @@ if(uppdatera_data == TRUE){
   source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diagram_arbetsmarknadsstatus_senastear.R")
   gg_diagram_arbetsmarknadsstatus_kommun <- diagram_arbetsmarknadsstatus(region_vekt = hamtakommuner(),
                                                                          kon_klartext = c("kvinnor","män"),
-                                                                         alder_klartext = "20-64 år",
+                                                                         alder_klartext = "20–64 år",
                                                                          valda_farger = diagramfarger("kon"),
                                                                          fodelseregion_klartext_vekt = c("inrikes född", "utrikes född"),
                                                                          diag_arbetskraftsdeltagande = FALSE,
@@ -566,11 +567,17 @@ if(uppdatera_data == TRUE){
   arblosthet_utrikes_man_kommun_max_varde <- gsub("\\.",",",arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "utrikes född") %>%
                                            filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$varde)
 
+  arblosthet_utrikes_man_kommun_max_varde_motsvarande <- gsub("\\.",",",arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "inrikes född",region == arblosthet_utrikes_man_max_kommun) %>%
+                                                                   filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$varde)
+
   arblosthet_utrikes_kvinna_max_kommun <- arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>%
     filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$region
 
   arblosthet_utrikes_kvinna_kommun_max_varde <- gsub("\\.",",",arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>%
                                            filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$varde)
+
+  arblosthet_utrikes_kvinna_kommun_max_varde_motsvarande <- gsub("\\.",",",arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född",region == arblosthet_utrikes_kvinna_max_kommun) %>%
+                                                                   filter(variabel == "arbetslöshet" ) %>% filter(varde == max(varde)) %>%  .$varde)
 
   arblosthet_utrikes_man_min_kommun <- arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "utrikes född") %>%
     filter(variabel == "arbetslöshet" ) %>% filter(varde == min(varde)) %>%  .$region
@@ -616,37 +623,36 @@ if(uppdatera_data == TRUE){
   # langtidsarbetsloshet_man_min = gsub("\\.",",",round(långtidsarbetslöshet %>% filter(kon=="män",ar==min(ar)) %>%  .$varde,1))
   # langtidsarbetsloshet_man_max = gsub("\\.",",",round(långtidsarbetslöshet %>% filter(kon=="män",ar==max(ar)) %>%  .$varde,1))
 
-  source("https://raw.githubusercontent.com/Region-Dalarna/funktioner/main/func_API.R", encoding = "utf-8", echo = FALSE)
 
-  # Utbildningsnivå (bakgrund och åldersgrupper) - hämtad från Figur 20 Kompetensförsörjningsrapporten
-  source("https://raw.githubusercontent.com/Region-Dalarna/diagram/main/diagram_utb_bakgr_alder_NMS.R", encoding="UTF-8")
-  gg_utbniva_bakgrund_alder <- diag_utb_niva_bakgr_alder(output_mapp_figur = Output_mapp_figur,
-                                                         diag_utb_bakgrund = TRUE,
-                                                         diag_utb_alder = TRUE,
-                                                         skapa_fil = spara_diagram_som_bildfiler,
-                                                         returnera_figur = TRUE,
-                                                         returnera_data = TRUE)
-
-  utb_niva_bakgrund_alder_ar <- unique(utb_niva_bakgrund$Ar)
+  # Används inte längre
+  # Utbildningsnivå (bakgrund och åldersgrupper) - hämtad från Figur 20 Kompetensförsörjningsrapporten - ANVÄNDS INTE LÄNGRE!
+  # source("https://raw.githubusercontent.com/Region-Dalarna/diagram/main/diagram_utb_bakgr_alder_NMS.R", encoding="UTF-8")
+  # gg_utbniva_bakgrund_alder <- diag_utb_niva_bakgr_alder(output_mapp_figur = Output_mapp_figur,
+  #                                                        diag_utb_bakgrund = TRUE,
+  #                                                        diag_utb_alder = TRUE,
+  #                                                        skapa_fil = spara_diagram_som_bildfiler,
+  #                                                        returnera_figur = TRUE,
+  #                                                        returnera_data = TRUE)
+  #
+  # utb_niva_bakgrund_alder_ar <- unique(utb_niva_bakgrund$Ar)
 
   #Laddade in det här för att kunna köra raderna 396 och framåt i Rmd-filen
   #etablering_df <- read.xlsx("G:/skript/projekt/data/kvinnor_man/etableringstid.xlsx")
   source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_etableringstid_kon_lan_tidsserie_KvMa_IntRap.R")
-  #source(here("skript/","etablering_kon_utbildningsniva.R"))
   gg_etablering <- diag_etablering_utb_kon_scb(output_mapp = Output_mapp_figur,
                                                utbildningsniva_jmf = c("utbildningsnivå: förgymnasial utbildning","utbildningsnivå: gymnasial utbildning" ,"utbildningsnivå: eftergymnasial utbildning"), # Finns även "samtliga utbildningsnivåer", "utbildningsnivå: förgymnasial utbildning", Skriv i den ordning de skall visas i diagram
                                                facet_kolumner = 2,# Välj antalet kolumner som skall visas i Facet-diagramet (diag_utbildning)
                                               skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                               returnera_data_rmarkdown = TRUE)
 
-  eftergym_0_1_kvinna <- round(etablering_df %>% filter(kön == "kvinnor",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "utbildningsnivå: eftergymnasial utbildning") %>% .$andel,0)
-  eftergym_0_1_man <- round(etablering_df %>% filter(kön == "män",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "utbildningsnivå: eftergymnasial utbildning") %>% .$andel,0)
-  eftergym_10_kvinna <- round(etablering_df %>% filter(kön == "kvinnor",bakgrundsvariabel == "10- år",år == max(år),utbildningsnivå == "utbildningsnivå: eftergymnasial utbildning") %>% .$andel,0)
+  eftergym_0_1_kvinna <- round(etablering_df %>% filter(kön == "kvinnor",bakgrundsvariabel == "0–1 år",år == max(år),utbildningsnivå == "utbildningsnivå: eftergymnasial utbildning") %>% .$andel,0)
+  eftergym_0_1_man <- round(etablering_df %>% filter(kön == "män",bakgrundsvariabel == "0–1 år",år == max(år),utbildningsnivå == "utbildningsnivå: eftergymnasial utbildning") %>% .$andel,0)
+  eftergym_10_kvinna <- round(etablering_df %>% filter(kön == "kvinnor",bakgrundsvariabel == "10– år",år == max(år),utbildningsnivå == "utbildningsnivå: eftergymnasial utbildning") %>% .$andel,0)
   samtliga_inrikes_kvinna <- round(etablering_df %>% filter(kön == "kvinnor",bakgrundsvariabel == "Inrikes född",år == max(år),utbildningsnivå == "samtliga utbildningsnivåer") %>% .$andel,0)
-  gym_0_1_kvinna <- round(etablering_df %>% filter(kön == "kvinnor",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "utbildningsnivå: gymnasial utbildning") %>% .$andel,0)
-  gym_0_1_man <-  round(etablering_df %>% filter(kön == "män",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "utbildningsnivå: gymnasial utbildning") %>% .$andel,0)
-  forgym_0_1_kvinna <- round(etablering_df %>% filter(kön == "kvinnor",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "utbildningsnivå: förgymnasial utbildning") %>% .$andel,0)
-  forgym_0_1_man <- round(etablering_df %>% filter(kön == "män",bakgrundsvariabel == "0-1 år",år == max(år),utbildningsnivå == "utbildningsnivå: förgymnasial utbildning") %>% .$andel,0)
+  gym_0_1_kvinna <- round(etablering_df %>% filter(kön == "kvinnor",bakgrundsvariabel == "0–1 år",år == max(år),utbildningsnivå == "utbildningsnivå: gymnasial utbildning") %>% .$andel,0)
+  gym_0_1_man <-  round(etablering_df %>% filter(kön == "män",bakgrundsvariabel == "0–1 år",år == max(år),utbildningsnivå == "utbildningsnivå: gymnasial utbildning") %>% .$andel,0)
+  forgym_0_1_kvinna <- round(etablering_df %>% filter(kön == "kvinnor",bakgrundsvariabel == "0–1 år",år == max(år),utbildningsnivå == "utbildningsnivå: förgymnasial utbildning") %>% .$andel,0)
+  forgym_0_1_man <- round(etablering_df %>% filter(kön == "män",bakgrundsvariabel == "0–1 år",år == max(år),utbildningsnivå == "utbildningsnivå: förgymnasial utbildning") %>% .$andel,0)
 
   # # Utbildningsnivå från 85 och framåt uppdelat på kön. Data hämtas i detta fall från GGplot-objektet (när data används i markdown) FEL
   # source("https://raw.githubusercontent.com/Region-Dalarna/diagram/main/diag_utbniva_flera_diagram_scb.R")
@@ -722,19 +728,22 @@ if(uppdatera_data == TRUE){
   ek_stod_skillnad_senaste <- plyr::round_any(ekonomiskt_stod_df %>% filter(månad_år==last(månad_år)) %>% filter(födelseregion=="utrikes född") %>% .$antal - ekonomiskt_stod_df %>% filter(månad_år==last(månad_år)) %>% filter(födelseregion=="inrikes född") %>% .$antal,10)
 
   # Enbart för data
-  source("https://raw.githubusercontent.com/Region-Dalarna/hamta_data/refs/heads/main/hamta_bas_huvink_region_huvudfot1m_kon_alder_fodelseregion_tid_ArbStatFoT1_scb.R")
-  ekonomiskt_bistand_df<- hamta_bas_huvink_region_huvudfot1m_kon_alder_fodelseregion_tid_scb(region = "20",
-                                                                                             huvudfot1m_klartext = "ekonomiskt stöd",
-                                                                                             fodelseregion_klartext = "*",
-                                                                                             cont_klartext = "antal totalt",
-                                                                                             alder_klartext = "15-74 år",
-                                                                                             tid_koder = "9999",
-                                                                                             kon_klartext = c("*"))
+  ekonomiskt_bistand_df <- pxweb2r::pxweb2_get_data(
+    table = "TAB1784",
+    query = list(
+      Region = "20",
+      HuvudFoT1m = "ekonomiskt stöd",
+      Kon = "*",
+      Alder = "15–74 år",
+      Fodelseregion = "*",
+      ContentsCode = "antal totalt",
+      Tid = "9999"
+    ))
 
-  antal_kvinnor_stod_inrikes <- plyr::round_any(ekonomiskt_bistand_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född") %>% .$`antal totalt`,10)
-  antal_man_stod_inrikes <- plyr::round_any(ekonomiskt_bistand_df %>% filter(kön == "män",födelseregion == "inrikes född") %>% .$`antal totalt`,10)
-  antal_kvinnor_stod_utrikes <- plyr::round_any(ekonomiskt_bistand_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% .$`antal totalt`,10)
-  antal_man_stod_utrikes <- plyr::round_any(ekonomiskt_bistand_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% .$`antal totalt`,10)
+  antal_kvinnor_stod_inrikes <- plyr::round_any(ekonomiskt_bistand_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född") %>% .$value,10)
+  antal_man_stod_inrikes <- plyr::round_any(ekonomiskt_bistand_df %>% filter(kön == "män",födelseregion == "inrikes född") %>% .$value,10)
+  antal_kvinnor_stod_utrikes <- plyr::round_any(ekonomiskt_bistand_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>% .$value,10)
+  antal_man_stod_utrikes <- plyr::round_any(ekonomiskt_bistand_df %>% filter(kön == "män",födelseregion == "utrikes född") %>% .$value,10)
 
 
 
@@ -751,7 +760,7 @@ if(uppdatera_data == TRUE){
   utbniva_bakgr_ar <- utbniva_bakgr_kon_df$år %>% unique()
 
   #############################################
-  ####      Behörighet gymnasiet och högskola          ####
+  #### Behörighet gymnasiet och högskola   ####
   #############################################
   #source(here("skript/","gymnasiebehorighet_kon_vistelsetid.R"))
   source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_gym_hogskola_behorighet_vistelsetid_IntRap.R")
@@ -880,14 +889,12 @@ if(uppdatera_data == TRUE){
                                                          fixa_y_axel_varden_jamna_tal = FALSE,
                                                          farg_vekt = diagramfarger("rus_sex")[2:1])
   flytt_senaste_ar <- max(flytt_bakgrund_df$år)
-  flytt_senaste_inrikes <- flytt_bakgrund_df %>% filter(region == "Dalarna",år == max(år),födelseregion == "Född i Sverige") %>% .$Inrikes_flyttnetto
-  flytt_senaste_utrikes <- abs(flytt_bakgrund_df %>% filter(region == "Dalarna",år == max(år),födelseregion == "Utrikes född") %>% .$Inrikes_flyttnetto)
+  flytt_senaste_inrikes <- flytt_bakgrund_df %>% filter(region == "Dalarna",år == max(år),födelseregion == "född i Sverige") %>% .$Inrikes_flyttnetto
+  flytt_senaste_utrikes <- abs(flytt_bakgrund_df %>% filter(region == "Dalarna",år == max(år),födelseregion == "utrikes född") %>% .$Inrikes_flyttnetto)
 
   # Utflytt sedan 2017. Notera att det är i absoluta tal
-  utflytt_utrikes_sedan_2017 <- format(abs(sum(flytt_bakgrund_df %>% filter(region == "Dalarna",år>2016,födelseregion == "Utrikes född") %>% .$Inrikes_flyttnetto)),big.mark = " ")
-  flytt_inrikes_sedan_2017 <- format(sum(flytt_bakgrund_df %>% filter(region == "Dalarna",år>2016,födelseregion == "Född i Sverige") %>% .$Inrikes_flyttnetto),big.mark = " ")
-
-
+  utflytt_utrikes_sedan_2017 <- format(abs(sum(flytt_bakgrund_df %>% filter(region == "Dalarna",år>2016,födelseregion == "utrikes född") %>% .$Inrikes_flyttnetto)),big.mark = " ")
+  flytt_inrikes_sedan_2017 <- format(sum(flytt_bakgrund_df %>% filter(region == "Dalarna",år>2016,födelseregion == "född i Sverige") %>% .$Inrikes_flyttnetto),big.mark = " ")
 
 
   ############################################
@@ -941,7 +948,6 @@ if(uppdatera_data == TRUE){
   sjalvskattad_forsta_ar <- min(sjalvskattad_halsa_tid_df$År)
   sjalvskattad_senaste_ar <- max(sjalvskattad_halsa_tid_df$År)
 
-  source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_sociala_rel_sjalvskattad_halsa_inrikes_utrikes_int_rap.R")
   gg_fohm_alt_tillit <- diag_fohm (output_mapp = Output_mapp_figur,
                                    diag_sjalvskattad_halsa_tid = FALSE,
                                    diag_sjalvskattad_halsa_kon = FALSE,
