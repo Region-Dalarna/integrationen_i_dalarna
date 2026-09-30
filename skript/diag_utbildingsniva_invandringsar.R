@@ -110,7 +110,7 @@ diag_utbsniva_invandringsar <-function(output_mapp_figur = "G:/Samhällsanalys/S
     }
 
     diagram_capt = "Källa: SCB\nBearbetning: Samhällsanalys, Region Dalarna"
-    diagram_titel = glue("Utrikes födda personer i Dalarna år 2024 efter invandringsår")
+    diagram_titel = glue("Utrikes födda personer i Dalarna år {max(invandringsar_antal_df$Invandringsar)} efter invandringsår")
     diagramfilnamn <- "invandringsar_antal.png"
 
     gg_obj <- SkapaStapelDiagram(skickad_df = invandringsar_antal_df,

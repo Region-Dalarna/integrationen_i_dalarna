@@ -15,14 +15,14 @@ p_load(tidyverse,
        glue)
 
 # Skall data uppdateras? Annars läses data in från en sparad global environment-fil.
-uppdatera_data = FALSE
+uppdatera_data = TRUE
 
 if(uppdatera_data == TRUE){
 
   cat("Hämtning av data påbörjad")
   start_time <- Sys.time()
 
-  source("https://raw.githubusercontent.com/Region-Dalarna/funktioner/main/func_API.R", encoding = "utf-8", echo = FALSE)
+  #source("https://raw.githubusercontent.com/Region-Dalarna/funktioner/main/func_API.R", encoding = "utf-8", echo = FALSE)
   if (!requireNamespace("pxweb2r", quietly = TRUE)) remotes::install_github("FaluPeppe/pxweb2r")
 
   Output_mapp = here("Data","/")
@@ -61,7 +61,7 @@ if(uppdatera_data == TRUE){
 
   asylsokande_max_ar = max(asylsokande_df$år)
   asylsokande_2015 = format(asylsokande_df %>% filter(år == 2015) %>% .$Antal,big.mark = " ")
-  asylsokande_senaste_ar_antal = format(asylsokande_df %>% filter(år == max(år)) %>% .$Antal,big.mark = " ")
+  asylsokande_senaste_ar_antal = format(plyr::round_any(asylsokande_df %>% filter(år == max(år)) %>% .$Antal,100),big.mark = " ")
 
   # Antal utrikes födda och förändring av antalet utrikes/inrikes födda i kommuner samt kumulativ summa på länsnivå och prognos (4)
   source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_bef_inrikes_utrikes_antal_forandring_prognos_IntRap.R")
@@ -90,24 +90,28 @@ if(uppdatera_data == TRUE){
 
   # Antal totalt olika år - till texten
   # Senaste år
-  max_antal_bef_totalt <- format(sum(antal_inrikes_utrikes_df %>% filter(år == max(år)) %>% .$Antal),big.mark = " ")
+  max_antal_bef_totalt <- format(plyr::round_any(sum(antal_inrikes_utrikes_df %>% filter(år == max(år)) %>% .$Antal),100),big.mark = " ")
   # 2007
-  max_antal_bef_2007 <- format(sum(antal_inrikes_utrikes_df %>% filter(år == "2007") %>% .$Antal),big.mark = " ")
+  max_antal_bef_2007 <- format(plyr::round_any(sum(antal_inrikes_utrikes_df %>% filter(år == "2007") %>% .$Antal),100),big.mark = " ")
   # 2021
-  max_antal_bef_2021 <- format(sum(antal_inrikes_utrikes_df %>% filter(år == "2021") %>% .$Antal),big.mark = " ")
+  max_antal_bef_2021 <- format(plyr::round_any(sum(antal_inrikes_utrikes_df %>% filter(år == "2021") %>% .$Antal),100),big.mark = " ")
 
   # Antal utrikes
   min_ar_utrikes_antal = min(antal_inrikes_utrikes_df$år)
   max_ar_utrikes_antal = max(antal_inrikes_utrikes_df$år)
-  min_antal_utrikes = format(antal_inrikes_utrikes_df %>% filter(år == min_ar_utrikes_antal,födelseregion == "utrikes född") %>%  .$Antal,big.mark = " ")
-  max_antal_utrikes = antal_inrikes_utrikes_df %>% filter(år == max_ar_utrikes_antal,födelseregion == "utrikes född") %>%  .$Antal %>% format(big.mark = " ")
+  min_antal_utrikes = format(plyr::round_any(antal_inrikes_utrikes_df %>% filter(år == min_ar_utrikes_antal,födelseregion == "utrikes född") %>%  .$Antal,100),big.mark = " ")
+  max_antal_utrikes = plyr::round_any(antal_inrikes_utrikes_df %>% filter(år == max_ar_utrikes_antal,födelseregion == "utrikes född") %>%  .$Antal,100) %>% format(big.mark = " ")
+  max_ar_antal_utrikes_varde = plyr::round_any(antal_inrikes_utrikes_df %>% filter(födelseregion == "utrikes född") %>% filter(Antal == max(Antal)) %>%  .$Antal,100) %>% format(big.mark = " ")
+  max_ar_antal_utrikes_ar =  antal_inrikes_utrikes_df %>% filter(födelseregion == "utrikes född") %>% filter(Antal == max(Antal)) %>%  .$år
+
 
   # Antal kommuner där befolkningen ökat totalt
   forandring_totalt_antal = antal_forandring_df %>% group_by(region) %>% summarize(netto = sum(forandring))
   antal_okning_kommun_total <- forandring_totalt_antal %>% filter(region!= "Dalarna",netto > 0) %>% nrow() # Antal kommuner som ökat i befolkning
+  antal_minskning_kommun_total <- forandring_totalt_antal %>% filter(region!= "Dalarna",netto < 0) %>% nrow() # Antal kommuner som ökat i befolkning
 
   # Vilka kommuner har en ökande befolning inrikes
-  kommuner_okning_inrikes <- str_c(rev(antal_forandring_df %>% filter(region!= "Dalarna",födelseregion == "Född i Sverige",forandring > 0) %>% .$region), collapse = " och ") # Antal kommuner som ökat i befolkning och är utrikes födda
+  kommuner_okning_inrikes <- str_c(rev(antal_forandring_df %>% filter(region!= "Dalarna",födelseregion == "född i Sverige",forandring > 0) %>% .$region), collapse = " och ") # Antal kommuner som ökat i befolkning och är utrikes födda
 
   # Antal inrikes. Enbart för att få data
   # source("https://raw.githubusercontent.com/Region-Dalarna/hamta_data/refs/heads/main/hamta_bef_region_alder_kon_fodelseregion_tid_InrUtrFoddaRegAlKon_scb.R")
@@ -119,8 +123,8 @@ if(uppdatera_data == TRUE){
 
   min_ar_inrikes_antal = min(antal_inrikes_utrikes_df$år)
   max_ar_inrikes_antal = max(antal_inrikes_utrikes_df$år)
-  min_antal_inrikes = format(antal_inrikes_utrikes_df %>% filter(år == min_ar_inrikes_antal,födelseregion == "född i Sverige") %>%  .$Antal,big.mark = " ")
-  max_antal_inrikes = antal_inrikes_utrikes_df %>% filter(år == max_ar_inrikes_antal,födelseregion == "född i Sverige") %>%  .$Antal %>% format(big.mark = " ")
+  min_antal_inrikes = format(plyr::round_any(antal_inrikes_utrikes_df %>% filter(år == min_ar_inrikes_antal,födelseregion == "född i Sverige") %>%  .$Antal,100),big.mark = " ")
+  max_antal_inrikes = plyr::round_any(antal_inrikes_utrikes_df %>% filter(år == max_ar_inrikes_antal,födelseregion == "född i Sverige") %>%  .$Antal,100) %>% format(big.mark = " ")
 
   #andel_utrikes <- round((antal_utrikes_region_df %>% filter(år == max_ar_utrikes_antal) %>%  .$Antal)/(antal_utrikes_region_df %>% filter(år == max_ar_utrikes_antal) %>%  .$Antal+antal_inrikes_df %>% filter(år == max_ar_inrikes_antal) %>%  .$Antal)*100,0)
   andel_utrikes <- round((antal_inrikes_utrikes_df %>% filter(år == max_ar_utrikes_antal,födelseregion == "utrikes född") %>%  .$Antal)/(sum(antal_inrikes_utrikes_df %>% filter(år == max_ar_inrikes_antal) %>% .$Antal))*100,0)
@@ -140,7 +144,7 @@ if(uppdatera_data == TRUE){
 
   # Andel utrikes födda (diagram)
 
-  source(here("skript/","andel_utrikes.R"))
+  source(here("skript/","andel_utrikes_ny.R"))
   gg_andel_utrikes <- diag_andel_utrikes_scb(output_mapp = Output_mapp_figur,
                                              skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                              start_ar = "2000",
@@ -193,9 +197,9 @@ if(uppdatera_data == TRUE){
   fodelseland_senaste_ar <- max(storsta_fodelseland_df$år)
 
   storsta_fodelseland_senaste_ar <- storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$födelseregion
-  storsta_fodelseland_senaste_ar_antal <- format(storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$Antal,big.mark = " ")
+  storsta_fodelseland_senaste_ar_antal <- format(plyr::round_any(storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$Antal,100),big.mark = " ")
   andra_fodelseland_senaste_ar <- storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar,födelseregion != storsta_fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$födelseregion
-  andra_fodelseland_senaste_ar_antal <- format(storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar,födelseregion != storsta_fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$Antal,big.mark = " ")
+  andra_fodelseland_senaste_ar_antal <- format(plyr::round_any(storsta_fodelseland_df %>% filter(år == fodelseland_senaste_ar,födelseregion != storsta_fodelseland_senaste_ar) %>% filter(Antal == max(Antal)) %>%  .$Antal,100),big.mark = " ")
 
   ############################################################
   ########## Antal utrikes födda efter invandringsår #########
@@ -210,17 +214,17 @@ if(uppdatera_data == TRUE){
   invandringsar_antal_df_max_ar <- invandringsar_antal_df %>% filter(Antal== max(Antal)) %>% .$Invandringsar
   invandringsar_antal_df_max_antal <- invandringsar_antal_df %>% filter(Antal== max(Antal)) %>% .$Antal
   invandringsar_senaste <- max(invandringsar_antal_df$Invandringsar)
-  invandringsar_senaste_antal <- format(invandringsar_antal_df %>% filter(Invandringsar== invandringsar_senaste) %>% .$Antal,big.mark = " ")
+  invandringsar_senaste_antal <- format(plyr::round_any(invandringsar_antal_df %>% filter(Invandringsar== invandringsar_senaste) %>% .$Antal,20),big.mark = " ")
 
 
   ############################################################
-  ########## Befolkningspyramid för Inrikes/utrikes ##########
+  ########## Befolkningspyramid för Inrikes/utrikes ########## # FUNKAR INTE. FINNS DOCK ÄLDRE SPARADE FILER SOM ANVÄNDS ISTÄLLET.
   ############################################################
 
-  source("G:/skript/diagram/diag_befpyramid.R")
-  gg_befpyramid <- diag_befpyramid(geo_vekt = vald_region,
-                                   jmfr_linje = "utr_inr",
-                                   output_mapp = Output_mapp_figur)
+  # source("G:/skript/diagram/diag_befpyramid.R")
+  # gg_befpyramid <- diag_befpyramid(geo_vekt = vald_region,
+  #                                  jmfr_linje = "utr_inr",
+  #                                  output_mapp = Output_mapp_figur)
 
   ##########################################################################################################################
   # Befolkningsförändring över tid fördelad på komponenterna födelseöverskott, inrikes flyttnetto och invandringsöverskott #
@@ -236,9 +240,9 @@ if(uppdatera_data == TRUE){
   befforandring_komponent_min_ar <- min(befutv_per_komponent_ar_scb_df$år)
   befforandring_komponent_max_ar <- max(befutv_per_komponent_ar_scb_df$år)
 
-  fodelseunderskott_netto <- format(abs(sum(befutv_per_komponent_ar_scb_df %>% filter(förändringar == "Födelseöverskott") %>%  .$personer)),big.mark = " ")
-  inrikes_flyttningsoverskott_netto <- format(abs(sum(befutv_per_komponent_ar_scb_df %>% filter(förändringar == "Inrikes flyttnetto") %>%  .$personer)),big.mark = " ")
-  invandringsoverskott_netto <- format(sum(befutv_per_komponent_ar_scb_df %>% filter(förändringar == "Invandringsöverskott") %>%  .$personer),big.mark = " ")
+  fodelseunderskott_netto <- format(plyr::round_any(abs(sum(befutv_per_komponent_ar_scb_df %>% filter(förändringar == "Födelseöverskott") %>%  .$personer)),100),big.mark = " ")
+  inrikes_flyttningsoverskott_netto <- format(plyr::round_any(abs(sum(befutv_per_komponent_ar_scb_df %>% filter(förändringar == "Inrikes flyttnetto") %>%  .$personer)),100),big.mark = " ")
+  invandringsoverskott_netto <- format(plyr::round_any(sum(befutv_per_komponent_ar_scb_df %>% filter(förändringar == "Invandringsöverskott") %>%  .$personer),100),big.mark = " ")
 
   ####################################
   ### SFI kopplat till vistelsetid ###
@@ -273,13 +277,19 @@ if(uppdatera_data == TRUE){
   ###########################
   ## Utb-nivå vistelsetid ##
   ##########################
-  source(here("skript","diag_utbildingsniva_invandringsar.R"))
-  gg_utb_niva_invandringsar <- diag_utbsniva_invandringsar(output_mapp = Output_mapp_figur,
-                                                           skriv_diagrambildfil = spara_diagram_som_bildfiler,
-                                                           diag_invandringsar = TRUE,
-                                                           returnera_data_rmarkdown = TRUE)
+  source(here("skript","diag_utbildingsniva_vistelsetid_ny_API.R"))
+  gg_utb_niva_vistelsetid <- diag_utbniva_vistelsetid_lan(output_mapp = Output_mapp_figur,
+                                                           skriv_diagramfil = spara_diagram_som_bildfiler,
+                                                           returnera_df_rmarkdown = TRUE)
+  utb_niva_vistelsetid_ar <- max(utbniva_vistelsetid_df$år)
+  utb_niva_vistelsetid_0_3_eftergym <- round(utbniva_vistelsetid_df %>% filter(utbildning == "eftergymnasial utbildning",vistelsetid == "0–3 år") %>% .$varde,0)
 
-  utb_niva_vistelsetid_2_3_eftergym <- round(utb_invandringsar_df %>% filter(Utbildningsniva == "Eftergymnasial utbildning 3 år eller längre",Vistelsetid == "2-3 år") %>% .$andel,0)
+  # gg_utb_niva_invandringsar <- diag_utbsniva_invandringsar(output_mapp = Output_mapp_figur,
+  #                                                          skriv_diagrambildfil = spara_diagram_som_bildfiler,
+  #                                                          diag_invandringsar = TRUE,
+  #                                                          returnera_data_rmarkdown = TRUE)
+  #
+  # utb_niva_vistelsetid_2_3_eftergym <- round(utb_invandringsar_df %>% filter(Utbildningsniva == "Eftergymnasial utbildning 3 år eller längre",Vistelsetid == "2-3 år") %>% .$andel,0)
 
 
   ########################
@@ -750,14 +760,15 @@ if(uppdatera_data == TRUE){
   #############################################
   #### Utbildningsnivå för inrikes/utrikes ####
   #############################################
-  source("https://raw.githubusercontent.com/Region-Dalarna/diagram/main/diag_utbniva_inr_utr_fodda_lan_scb.R")
+  #source("https://raw.githubusercontent.com/Region-Dalarna/diagram/main/diag_utbniva_inr_utr_fodda_lan_scb.R")
+  source(here("skript/","diag_utbildingsniva_bakgrund_ny_API.R"))
   gg_utbniva_bakgrund <- funktion_upprepa_forsok_om_fel( function() {
     diag_utbniva_inr_utr_fodda_kon_lan(skriv_diagramfil = spara_diagram_som_bildfiler,
                                        output_mapp = Output_mapp_figur,
                                        returnera_df_rmarkdown = TRUE)
   })
 
-  utbniva_bakgr_ar <- utbniva_bakgr_kon_df$år %>% unique()
+  utbniva_bakgr_ar <- max(utbniva_bakgr_kon_df$år)
 
   #############################################
   #### Behörighet gymnasiet och högskola   ####
@@ -876,7 +887,7 @@ if(uppdatera_data == TRUE){
                                     output_mapp_figur = Output_mapp_figur)
 
   flytt_ar <- max(flytt_df$år)
-  utrikes_overskott_senaste <- flytt_df %>% filter(region=="Dalarnas län",variabel == "Invandringsöverskott",år==max(år)) %>% .$varde %>% sum()
+  utrikes_overskott_senaste <- plyr::round_any(flytt_df %>% filter(region=="Dalarnas län",variabel == "Invandringsöverskott",år==max(år)) %>% .$varde %>% sum(),10)
 
 
   # Inrikes flyttningar, bakgrund
