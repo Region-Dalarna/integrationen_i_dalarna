@@ -41,6 +41,12 @@ jobs:
 
           mkdir -p _publish
           cp "$KALLFIL" _publish/index.html
+
+          # Underrapporter (t.ex. en sida per kommun) ligger i mappen underrapporter/ och hamnar under
+          # rapportens adress. De får inget eget kort på landningssidan.
+          if [ -d "underrapporter" ]; then
+            cp -r underrapporter _publish/underrapporter
+          fi
           echo "$REPO_NAMN" > _publish/.repo_namn_anvant
 
       - name: Deploy rapport using server-side script
