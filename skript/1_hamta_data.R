@@ -23,6 +23,9 @@ if(uppdatera_data == TRUE){
   start_time <- Sys.time()
 
   #source("https://raw.githubusercontent.com/Region-Dalarna/funktioner/main/func_API.R", encoding = "utf-8", echo = FALSE)
+  if (!requireNamespace("rdverktyg", quietly = TRUE)) {
+    remotes::install_github("Region-Dalarna/rdpaket", subdir = "packages/rdverktyg")
+  }
   if (!requireNamespace("pxweb2r", quietly = TRUE)) remotes::install_github("FaluPeppe/pxweb2r")
 
   Output_mapp = here("Data","/")
@@ -30,17 +33,44 @@ if(uppdatera_data == TRUE){
   vald_region = "20"
   valt_lan = "20"
   spara_diagram_som_bildfiler = FALSE
+  hoppa_over_forsok_igen = FALSE
 
-  # Antal utrikes/inrikes födda i arbetsför ålder över tid
-  source(here("skript/","andel_utrikes_inrikes_tidsserie.R"))
-  gg_andel_utrikes_inrikes <- diag_bef_inr_utr_tid(output_mapp = Output_mapp_figur,
-                                                   skriv_diagrambildfil = spara_diagram_som_bildfiler,
-                                                   returnera_data_rmarkdown= TRUE)
+  # Antal utrikes/inrikes födda i arbetsför ålder över tid - tidigare
+  # source(here("skript/","andel_utrikes_inrikes_tidsserie.R"))
+  # gg_andel_utrikes_inrikes <- diag_bef_inr_utr_tid(output_mapp = Output_mapp_figur,
+  #                                                  skriv_diagrambildfil = spara_diagram_som_bildfiler,
+  #                                                  returnera_data_rmarkdown= TRUE)
+  #
+  # andel_utrikes_inrikes_min_ar <- min(andel_utrikes_inrikes_bakgr_df$år)
+  # andel_utrikes_inrikes_max_ar <- max(andel_utrikes_inrikes_bakgr_df$år)
+  # andel_utrikes_min_ar <- gsub("\\.",",",andel_utrikes_inrikes_bakgr_df %>% filter(år == andel_utrikes_inrikes_min_ar) %>% filter(födelseregion == "Utrikes födda") %>%  .$andel)
+  # andel_utrikes_max_ar <- gsub("\\.",",",andel_utrikes_inrikes_bakgr_df %>% filter(år == andel_utrikes_inrikes_max_ar) %>% filter(födelseregion == "Utrikes födda") %>%  .$andel)
 
-  andel_utrikes_inrikes_min_ar <- min(andel_utrikes_inrikes_bakgr_df$år)
-  andel_utrikes_inrikes_max_ar <- max(andel_utrikes_inrikes_bakgr_df$år)
-  andel_utrikes_min_ar <- gsub("\\.",",",andel_utrikes_inrikes_bakgr_df %>% filter(år == andel_utrikes_inrikes_min_ar) %>% filter(födelseregion == "Utrikes födda") %>%  .$andel)
-  andel_utrikes_max_ar <- gsub("\\.",",",andel_utrikes_inrikes_bakgr_df %>% filter(år == andel_utrikes_inrikes_max_ar) %>% filter(födelseregion == "Utrikes födda") %>%  .$andel)
+  # Diagramskript istället
+  source("https://raw.githubusercontent.com/Region-Dalarna/diagram/refs/heads/main/diag_bef_inr_utr_en_aldersgrupp_scb.R")
+  gg_antal_utrikes_inrikes <- rdverktyg::funktion_upprepa_forsok_om_fel( function() {
+    diag_bef_inr_utr_en_aldersgrupp(output_mapp = Output_mapp_figur,
+                                    aldersintervall = c(20, 64),
+                                    skriv_till_diagramfil = spara_diagram_som_bildfiler,
+                                    returnera_dataframe_global_environment = TRUE)
+  }, hoppa_over = hoppa_over_forsok_igen)
+
+  # Andel utrikes födda av befolkningen i arbetsför ålder, första året
+  andel_utrikes_inrikes_min_ar <- min(bef_inr_utr_en_aldersgrupp$år)
+  andel_utrikes_inrikes_max_ar <- max(bef_inr_utr_en_aldersgrupp$år)
+
+  andel_utrikes_min_ar <- bef_inr_utr_en_aldersgrupp %>%
+                          filter(år == min(år)) %>%
+                            mutate(andel = antal / sum(antal) * 100) %>%
+                              filter(bakgrund == "Utrikes födda") %>%
+                                .$andel |> round(0)
+
+  # Andel utrikes födda av befolkningen i arbetsför ålder, sista året
+  andel_utrikes_max_ar <- bef_inr_utr_en_aldersgrupp %>%
+                                  filter(år == max(år)) %>%
+                                    mutate(andel = antal / sum(antal) * 100) %>%
+                                      filter(bakgrund == "Utrikes födda") %>%
+                                        .$andel |> round(0)
 
   # andel_utrikes_inrikes_min_ar <- min(bef_bakgr_df$år)
   # antal_utrikes_inrikes_max_ar <- max(bef_bakgr_df$år)
@@ -148,7 +178,7 @@ if(uppdatera_data == TRUE){
   gg_andel_utrikes <- diag_andel_utrikes_scb(output_mapp = Output_mapp_figur,
                                              skriv_diagrambildfil = spara_diagram_som_bildfiler,
                                              start_ar = "2000",
-                                             valda_farger = diagramfarger("rus_sex")[3:4],
+                                             valda_farger = rddiagram::diagramfarger("rus_sex")[3:4],
                                              x_axis_storlek = 9.5,
                                              ta_bort_diagramtitel = TRUE,
                                              ta_bort_caption = TRUE,
@@ -297,12 +327,11 @@ if(uppdatera_data == TRUE){
   ########################
 
   # Arbetslöshet från 1976 och framåt
-  source("https://raw.githubusercontent.com/Region-Dalarna/sarbarhetsanalys/refs/heads/main/Skript/diagram_arbetsloshet_76.R")
+  source("https://raw.githubusercontent.com/Region-Dalarna/sarbarhetsanalys/refs/heads/main/Skript/diagram_arbetsloshet_76_ny.R")
   gg_arb_76 <- diagram_data_arbetsloshet_76(region_vekt =c("00","20"),
                                             output_mapp_figur = Output_mapp_figur,
                                             vald_farg = diagramfarger("rus_sex"),
                                             spara_figur = FALSE,
-                                            returnera_figur = TRUE,
                                             returnera_data = TRUE)
 
   arbloshet_76_senaste_ar <- max(arbetsloshet_76$år)
@@ -595,11 +624,17 @@ if(uppdatera_data == TRUE){
   arblosthet_utrikes_man_kommun_min_varde <- gsub("\\.",",",arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "utrikes född") %>%
                                              filter(variabel == "arbetslöshet" ) %>% filter(varde == min(varde)) %>%  .$varde)
 
+  arblosthet_utrikes_man_kommun_min_varde_motsvarande <- gsub("\\.",",",arbetsmarknadsstatus_kommun_df %>% filter(kön == "män",födelseregion == "inrikes född", region == arblosthet_utrikes_man_min_kommun) %>%
+                                                          filter(variabel == "arbetslöshet" ) %>% filter(varde == min(varde)) %>%  .$varde)
+
   arblosthet_utrikes_kvinna_min_kommun <- arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>%
     filter(variabel == "arbetslöshet" ) %>% filter(varde == min(varde)) %>%  .$region
 
   arblosthet_utrikes_kvinna_kommun_min_varde <- gsub("\\.",",",arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "utrikes född") %>%
                                                 filter(variabel == "arbetslöshet" ) %>% filter(varde == min(varde)) %>%  .$varde)
+
+  arblosthet_utrikes_kvinna_kommun_min_varde_motsvarande <- gsub("\\.",",",arbetsmarknadsstatus_kommun_df %>% filter(kön == "kvinnor",födelseregion == "inrikes född", region == arblosthet_utrikes_kvinna_min_kommun) %>%
+                                                            filter(variabel == "arbetslöshet" ) %>% filter(varde == min(varde)) %>%  .$varde)
 
   # Inrikes
 
@@ -762,7 +797,7 @@ if(uppdatera_data == TRUE){
   #############################################
   #source("https://raw.githubusercontent.com/Region-Dalarna/diagram/main/diag_utbniva_inr_utr_fodda_lan_scb.R")
   source(here("skript/","diag_utbildingsniva_bakgrund_ny_API.R"))
-  gg_utbniva_bakgrund <- funktion_upprepa_forsok_om_fel( function() {
+  gg_utbniva_bakgrund <- rdverktyg::funktion_upprepa_forsok_om_fel( function() {
     diag_utbniva_inr_utr_fodda_kon_lan(skriv_diagramfil = spara_diagram_som_bildfiler,
                                        output_mapp = Output_mapp_figur,
                                        returnera_df_rmarkdown = TRUE)

@@ -41,7 +41,7 @@ diag_andel_utrikes_scb <- function(region = "20", # Enbart ett i taget.
   if (!requireNamespace("tidyverse", quietly = TRUE)) install.packages("tidyverse")
 
   gg_list <- list()  # skapa en tom lista att lägga flera ggplot-objekt i (om man skapar flera diagram)
-  region_namn <- rdverktyg::skapa_kortnamn_lan(hamtaregion_kod_namn(region)$region)
+  region_namn <- rdverktyg::skapa_kortnamn_lan(rdverktyg::hamtaregion_kod_namn(region)$region)
   # Används till diagrammet förändring län
 
   # Hämtar data
@@ -93,24 +93,24 @@ diag_andel_utrikes_scb <- function(region = "20", # Enbart ett i taget.
   }
 
   # Skapar diagram där etableringstiden jämförs mellan män och kvinnor, oavsett utbildning
-  gg_obj <- SkapaStapelDiagram(skickad_df = andel_utrikes_df,
-                               skickad_x_var = "region",
-                               skickad_y_var = "andel_utrikes",
-                               skickad_x_grupp = "år",
-                               manual_color = valda_farger,
-                               diagram_titel = diagram_titel,
-                               manual_x_axis_text_vjust = 1,
-                               manual_x_axis_text_hjust = 1,
-                               diagram_capt =  diagram_capt,
-                               output_mapp = "output_mapp_figur",
-                               stodlinjer_avrunda_fem = TRUE,
-                               x_axis_storlek = x_axis_storlek,
-                               vand_sortering = TRUE,
-                               x_axis_sort_value = TRUE,
-                               x_axis_sort_grp = 2,
-                               manual_y_axis_title = "procent",
-                               filnamn_diagram = diagramfilnamn,
-                               skriv_till_diagramfil = FALSE)
+  gg_obj <- rddiagram::SkapaStapelDiagram(skickad_df = andel_utrikes_df,
+                                         skickad_x_var = "region",
+                                         skickad_y_var = "andel_utrikes",
+                                         skickad_x_grupp = "år",
+                                         manual_color = valda_farger,
+                                         diagram_titel = diagram_titel,
+                                         manual_x_axis_text_vjust = 1,
+                                         manual_x_axis_text_hjust = 1,
+                                         diagram_capt =  diagram_capt,
+                                         output_mapp = output_mapp,
+                                         stodlinjer_avrunda_fem = TRUE,
+                                         x_axis_storlek = x_axis_storlek,
+                                         vand_sortering = TRUE,
+                                         x_axis_sort_value = TRUE,
+                                         x_axis_sort_grp = 2,
+                                         manual_y_axis_title = "procent",
+                                         filnamn_diagram = diagramfilnamn,
+                                         skriv_till_diagramfil = FALSE)
 
 
   gg_list <- c(gg_list, list(gg_obj))
