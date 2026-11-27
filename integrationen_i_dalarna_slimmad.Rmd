@@ -64,6 +64,7 @@ utbildning_85_df <- read.xlsx('G:/skript/projekt/data/kvinnor_man/utbildningsniv
 SLIMMAD VERSION (2026-11-26). Inget är raderat: allt som tagits bort finns kvar i filen.
 Sök på CUT: för att hitta alla ändringar.
  - 2026-11-27: kap 3 omstrukturerad. Ledande figur är arbetslöshet inrikes/utrikes över tid; 1976-2025 och länsjämförelserna är borttagna.
+ - 2026-11-27: bostadsägande (kap 4) borttaget; trångboddhet behålls.
  - Text: omges av en kommentarsrad som börjar med CUT: och en avslutande kommentarsrad. Ta bort båda raderna för att återinföra texten.
  - Delar av meningar: ligger i en inline-kommentar som börjar med CUT: . Ta bort kommentartecknen för att återinföra.
  - Figurer: chunken har fått include=FALSE (den körs fortfarande men visas inte). Ta bort include=FALSE i chunk-rubriken
@@ -98,7 +99,7 @@ I november 2015 uttryckte regeringen att trycket var stort på det svenska samh�
 -->
 
 
-År 2019 publicerade Region Dalarna rapporten [Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv](https://www.regiondalarna.se/contentassets/d845727dbc9f49c3b7b09a2c60456497/integrationsanalys.pdf){target="_blank"}^[Region Dalarna, 2019. Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv. Regionala utvecklingsförvaltningens rapportserie #1.]. Rapporten skrevs med syfte att följa upp hur den höga asylinvandringen till Sverige och Dalarna påverkat länet. År 2015 registrerades drygt 160 000 asylsökande och fram till pandemin registrerades mellan 20-30 000 årligen. År `r asylsokande_max_ar` hade asylinvandringen minskat till drygt `r asylsokande_senaste_ar_antal`, en nivå som är den lägsta sedan 1996, och en del i det paradigmskifte som regeringen Kristersson verkat för, med ambitionen att öka arbetskraftsinvandringen och minska asylinvandringen [(Regeringen, 2025)](https://www.regeringen.se/pressmeddelanden/2025/01/pressbriefing-om-migrationen-till-sverige-under-2024/){target="_blank"}^[Regeringen. Pressbriefing om migrationen till Sverige under 2024. 2025-01-10.].
+År 2019 publicerade Region Dalarna rapporten [Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv](https://www.regiondalarna.se/contentassets/d845727dbc9f49c3b7b09a2c60456497/integrationsanalys.pdf){target="_blank"}^[Region Dalarna, 2019. Nulägesbeskrivning av integrationen i Dalarna, ett regionalt perspektiv. Regionala utvecklingsförvaltningens rapportserie #1.]. Rapporten skrevs med syfte att följa upp hur den höga asylinvandringen till Sverige och Dalarna påverkat länet. Efter toppen 2015 låg antalet asylsökande på 20-30 000 per år fram till pandemin, och år `r asylsokande_max_ar` hade det minskat till drygt `r asylsokande_senaste_ar_antal`, den lägsta nivån sedan 1996. Det är en del i det paradigmskifte som regeringen Kristersson verkat för, med ambitionen att öka arbetskraftsinvandringen och minska asylinvandringen [(Regeringen, 2025)](https://www.regeringen.se/pressmeddelanden/2025/01/pressbriefing-om-migrationen-till-sverige-under-2024/){target="_blank"}^[Regeringen. Pressbriefing om migrationen till Sverige under 2024. 2025-01-10.].
 
 Integration kan ses som *en process där individer eller grupper med olika bakgrunder och förutsättningar blir en del av ett större socialt, ekonomiskt eller kulturellt sammanhang, samtidigt som deras egen identitet och särart respekteras*. 
 
@@ -218,7 +219,7 @@ På kommunnivå ökade befolkningen totalt sett i `r antal_okning_kommun_total` 
 gg_antal_utrikes$befolkningsforandring_Dalarna
 ```
 
-I det högra diagrammet nedan syns att andelen av befolkningen som är utrikes födda är lägre i samtliga Dalarnas kommuner jämfört med riket, där cirka `r andel_utrikes_Sverige_sista_ar` procent av invånarna var födda i ett annat land än Sverige år `r andel_utrikes_senaste_ar`. Undantaget är `r andel_utrikes_kommun_hogst_sista_ar`, som ligger i nivå med riket och har Dalarnas högsta andel utrikes födda (cirka `r andel_utrikes_kommun_hogst_sista_ar_varde` procent). Även Borlänge och Avesta har en relativt stor andel utrikes födda (`r andel_utrikes_Borlänge_sista_ar` respektive `r andel_utrikes_Avesta_sista_ar` procent). Lägst andel utrikes födda finns i `r andel_utrikes_kommun_lagst_sista_ar`, där endast `r andel_utrikes_kommun_lagst_sista_ar_varde` procent av befolkningen är utrikes födda. 
+I det högra diagrammet nedan syns att andelen av befolkningen som är utrikes födda är lägre i de allra flesta av Dalarnas kommuner jämfört med riket, där cirka `r andel_utrikes_Sverige_sista_ar` procent av invånarna var födda i ett annat land än Sverige år `r andel_utrikes_senaste_ar`. Undantaget är `r andel_utrikes_kommun_hogst_sista_ar`, som ligger i nivå med riket och har Dalarnas högsta andel utrikes födda (cirka `r andel_utrikes_kommun_hogst_sista_ar_varde` procent). Även Borlänge och Avesta har en relativt stor andel utrikes födda (`r andel_utrikes_Borlänge_sista_ar` respektive `r andel_utrikes_Avesta_sista_ar` procent). Lägst andel utrikes födda finns i `r andel_utrikes_kommun_lagst_sista_ar`, där endast `r andel_utrikes_kommun_lagst_sista_ar_varde` procent av befolkningen är utrikes födda. 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center',include=FALSE}
 gg_andel_utrikes$utrikes_fodda_andel_Dalarna
@@ -255,10 +256,9 @@ Det land som näst flest invånare i Dalarna var födda i år `r fodelseland_sen
 -->
 
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center', include=FALSE}
 gg_storsta_fodelseland$storsta_fodelseland_Dalarna
 ```
-<br>
 
 <!-- CUT: Kap 1: stycke om invandringsår och Ukraina
 När de utrikes födda personer som är bosatta i Dalarna kartläggs utifrån deras invandringsår till Sverige, framgår att många invandrade i mitten av 2010-talet. Sedan dess har åtskilliga lämnat Dalarna, men `r invandringsar_antal_df_max_ar` är fortfarande det år när flest utrikes födda boende i Dalarna invandrade till Sverige. År `r invandringsar_senaste` bodde ungefär `r invandringsar_senaste_antal` personer i Dalarna som hade invandrat till Sverige samma år, vilket är färre än de som invandrat året innan men klart fler än åren dessförinnan. Detta kan naturligtvis delvis förklaras av att vissa som invandrade under åren innan har lämnat Dalarna för andra delar av Sverige, men en viktig orsak är också att personer födda i Ukraina, som tidigare haft ett uppehållstillstånd med tillfälligt skydd enligt massflyktdirektivet, har haft möjlighet att ansöka om att bli folkbokförda i Sverige sedan i juni 2024. 
@@ -274,7 +274,9 @@ gg_antal_invandringsar$invandringsar_antal
 Vid en analys av åldersfördelningen bland Dalarnas befolkning uppdelat på den inrikes- och utrikes födda befolkningen blir det tydligt att den utrikes födda befolkningen i länet är väsentligt yngre än den inrikes födda, och innefattar en större andel personer i arbetsför ålder (se de svarta linjerna i diagrammet nedan). Detta beror på att personer som invandrar generellt är yngre än genomsnittet för en befolkning. Följden blir att invandringen totalt sett har gett en föryngrande effekt på befolkningen. Det finns även stora variationer i medelålder mellan olika grupper av utrikes födda beroende på invandringsår och födelseland. Utrikes födda utgör ungefär `r andel_utrikes` procent av den totala befolkningen i Dalarnas län och är därmed betydligt färre än inrikes födda.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
-knitr::include_graphics("Figurer/Befpyramid Dalarnas län 2024_jmfr_utr_inr.png")
+#knitr::include_graphics("Figurer/Befpyramid Dalarnas län 2024_jmfr_utr_inr.png")
+gg_befpyramid[[1]]
+
 ```
 <br>
 
@@ -426,7 +428,7 @@ Som långtidsarbetslös räknas den som har varit öppet arbetslös eller i prog
 För inrikes födda har arbetslösheten minskat något sedan coronapandemin (2020-2021), men varit relativt stabil på senare år. I `r arbetsloshet_tidsserie_manad` `r arbetsloshet_tidsserie_ar` var arbetslösheten bland inrikes födda `r arbetsloshet_tidserie_Dalarna_inrikes_varde` procent i Dalarna. Bland utrikes födda har arbetslösheten minskat stadigt och markant sedan en topp under pandemin (den var 22,5 procent i juni 2020), men är klart högre<!-- CUT: Kap 3: 'som sagt' hänvisade bakåt, stycket står nu först | är som sagt klart högre --> än bland inrikes födda (`r arbetsloshet_tidserie_Dalarna_utrikes_varde` procent i `r arbetsloshet_tidsserie_manad` `r arbetsloshet_tidsserie_ar`). 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height=5, fig.width=8, fig.align='center'}
-gg_arbetsloshet_tidsserie$`andel_arbetslosa_bakgr_tid_20–64ar_Dalarna`
+gg_arbetsloshet_tidsserie$andel_arbetslosa_bakgr_tid_20_64_dalarna
 ```
 <br>
 
@@ -692,16 +694,20 @@ Språk och utbildning är avgörande för etablering på arbetsmarknaden. En hö
 Vid sidan om utbildning och arbete, utgör boende och flyttmönster viktiga aspekter för att förstå integrationensprocessen i Dalarna. Boende och flyttmönster kan påverka möjligheterna till arbete, utbildning och sociala kontakter, vilket i sin tur kan påverka integrationen. 
 
 ## Boende
-Det finns flera sätt att mäta boende på och alla indikerar boendeskillnader mellan inrikes och utrikes födda. Typ av boende (villa eller lägenhet), boendeyta och bostadsägande säger alla någonting om hur människor bor, något som också speglar den ekonomiska situationen. Det innebär, precis som på de flesta andra områden, att gruppen utrikes födda kommer att ha en stor spridning avseende etablering i samhället. Några i gruppen kommer att ha bott i Sverige i mindre än ett år och andra i flera decennier. Således finns även inom boendeområdet anledning att göra analyser uppdelat på vistelsetid i Sverige. Människor som bott längre i Sverige äger i högre utsträckning sitt eget boende, antingen genom äganderätt (småhus) eller bostadsrätt (småhus eller lägenhet).
+Det finns flera sätt att mäta boende på och alla indikerar boendeskillnader mellan inrikes och utrikes födda. Typ av boende (villa eller lägenhet), boendeyta och bostadsägande säger alla någonting om hur människor bor, något som också speglar den ekonomiska situationen. Det innebär, precis som på de flesta andra områden, att gruppen utrikes födda kommer att ha en stor spridning avseende etablering i samhället. Några i gruppen kommer att ha bott i Sverige i mindre än ett år och andra i flera decennier. Således finns även inom boendeområdet anledning att göra analyser uppdelat på vistelsetid i Sverige. <!-- CUT: Kap 4: bostadsägande borttaget | Människor som bott längre i Sverige äger i högre utsträckning sitt eget boende, antingen genom äganderätt (småhus) eller bostadsrätt (småhus eller lägenhet). -->
 
+<!-- CUT: Kap 4: bostadsägande och hyresrätt (text)
 Att en större andel utrikes födda personer bor i hyresrätt, kan förklaras med att nyanlända personer generellt ännu inte hunnit etablera sig i Sverige så pass att de har ekonomiska möjligheter att äga sitt eget boende. De utrikes födda bland Dalarnas invånare som bott i Sverige länge (mer än 10 år) tenderar dock att äga sin bostad, antingen som äganderätt eller bostadsrätt, i relativt stor utsträckning, ungefär `r boendetyp_10_ar_äga` procent av de utrikes födda gör det. Det går dock att konstatera att andelen som äger sin bostad är väsentligt högre bland de som är inrikes födda, ca `r boendetyp_inrikes_äga` procent. 
+-->
 
-```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center'}
+
+<!-- CUT: Kap 4: figur bostadsägande efter vistelsetid -->
+```{r, echo=FALSE, fig.height=5, fig.width=10, fig.align='center', include=FALSE}
 gg_boendetyp_upplatelseform$boendetyp_vistelsetid_inrikes
 ```
-<br>
+<!-- CUT: <br> -->
 
-En annan analys av boendesituation är andelen trångbodda hushåll. Trångboddhet i lägenheter i flerbostadshus mäts av SCB enligt Norm 2 ([Boverket](https://www.boverket.se/sv/kommunernas-bostadsforsorjning/underlag-bostadsbehov/anstrangd-boendeekonomi/){target="_blank"}), vilket innebär att gränsen för trångboddhet går vid högst två personer per rum, exklusive kök och vardagsrum.
+Ett mått på boendesituationen är<!-- CUT: Kap 4: 'En annan analys' hänvisade till bostadsägande | En annan analys av boendesituation är --> andelen trångbodda hushåll. Trångboddhet i lägenheter i flerbostadshus mäts av SCB enligt Norm 2 ([Boverket](https://www.boverket.se/sv/kommunernas-bostadsforsorjning/underlag-bostadsbehov/anstrangd-boendeekonomi/){target="_blank"}), vilket innebär att gränsen för trångboddhet går vid högst två personer per rum, exklusive kök och vardagsrum.
 
 De hushåll i Dalarna som är trångbodda utgör en liten andel av det totala antalet lägenhetshushåll, vilket framförallt beror på att få hushåll med inrikes födda är trångbodda (bara ungefär `r trangboddhet_sista_ar_inrikes_andel` procent år `r  trangboddhet_max_ar`). Bland hushåll med utrikes födda är en klart större andel trångbodda (ungefär `r trangboddhet_sista_ar_utrikes_andel` procent år `r trangboddhet_max_ar`). Sedan 2018, kort efter invandringen p g a kriget i Syrien, har antalet hushåll som är trångbodda minskat något för såväl inrikes som utrikes födda.
 

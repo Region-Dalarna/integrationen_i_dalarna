@@ -15,7 +15,7 @@ p_load(tidyverse,
        glue)
 
 # Skall data uppdateras? Annars läses data in från en sparad global environment-fil.
-uppdatera_data = FALSE
+uppdatera_data = TRUE
 
 if(uppdatera_data == TRUE){
 
@@ -383,27 +383,27 @@ if(uppdatera_data == TRUE){
   #                                                                      diagram_facet = TRUE,
   #                                                                      returnera_figur = TRUE)
 
-  source("G:/skript/diagram/diag_bas_syss_arblosa_inr_utr_fodda_manad.R")
-  gg_arbetsloshet_tidsserie <- diag_bas_arblosa_inr_utr_fodda_manad(vald_region = valt_lan,
-                                                                    skriv_diagram = spara_diagram_som_bildfiler,
-                                                                    dataetiketter = c(FALSE),
-                                                                    x_axis_visa_var_xe_etikett = 6,
-                                                                    returnera_dataframe_global_environment = TRUE,
-                                                                    output_mapp = Output_mapp_figur)
+  gg_arbetsloshet_tidsserie <- rddiagramkatalog::diag_bas_arblos_syss_inr_utr_fodda_manad_scb(region_vekt = valt_lan,
+                                                                                              diagramtyp = c("tidsserie"),
+                                                                                              skriv_diagramfil  = spara_diagram_som_bildfiler,
+                                                                                              x_axis_visa_var_xe_etikett = 6,
+                                                                                              returnera_data = TRUE,
+                                                                                              tid_koder = "*",
+                                                                                              utmapp = Output_mapp_figur)
 
 
 
-  arbetsloshet_tidsserie_ar <-  unique(last(arbetsmarknadsstatus_tidsserie %>% filter(region=="Dalarna",födelseregion=="inrikes född") %>% .$år))
-  arbetsloshet_tidsserie_manad <- unique(last(arbetsmarknadsstatus_tidsserie %>% filter(region=="Dalarna",födelseregion=="inrikes född") %>% .$månad))
-  arbetsloshet_tidserie_Dalarna_inrikes_varde <- gsub("\\.",",",last(arbetsmarknadsstatus_tidsserie %>% filter(region=="Dalarna",födelseregion=="inrikes född") %>% .$arbetslöshet))
-  arbetsloshet_tidserie_Dalarna_utrikes_varde <- gsub("\\.",",",last(arbetsmarknadsstatus_tidsserie %>% filter(region=="Dalarna",födelseregion=="utrikes född") %>% .$arbetslöshet))
+  arbetsloshet_tidsserie_ar <-  unique(last(arblos_syss_manad %>% filter(region=="Dalarna",födelseregion=="inrikes född") %>% .$ar))
+  arbetsloshet_tidsserie_manad <- unique(last(arblos_syss_manad %>% filter(region=="Dalarna",födelseregion=="inrikes född") %>% .$manad))
+  arbetsloshet_tidserie_Dalarna_inrikes_varde <- gsub("\\.",",",last(arblos_syss_manad %>% filter(region=="Dalarna",födelseregion=="inrikes född") %>% .$varde))
+  arbetsloshet_tidserie_Dalarna_utrikes_varde <- gsub("\\.",",",last(arblos_syss_manad %>% filter(region=="Dalarna",födelseregion=="utrikes född") %>% .$varde))
 
   # Hämta antal arbetslösa (till texten enbart)
   source("https://raw.githubusercontent.com/Region-Dalarna/hamta_data/refs/heads/main/hamta_bas_arbstatus_region_kon_alder_fodelseregion_prel_manad_ArbStatusM_scb.R")
   arbstatus_df <- hamta_bas_arbstatus_region_kon_alder_fodelseregion_prel_manad_scb(region_vekt = "20",
-                                                                                    alder_klartext = unique(arbetsmarknadsstatus_tidsserie$ålder),
+                                                                                    alder_klartext = unique(arblos_syss_manad$ålder),
                                                                                     kon_klartext = "totalt",
-                                                                                    fodelseregion_klartext = unique(arbetsmarknadsstatus_tidsserie$födelseregion),
+                                                                                    fodelseregion_klartext = unique(arblos_syss_manad$födelseregion),
                                                                                     cont_klartext = "antal arbetslösa",
                                                                                     wide_om_en_contvar = FALSE,
                                                                                     tid_koder = "9999") %>%
