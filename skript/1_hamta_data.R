@@ -15,7 +15,7 @@ p_load(tidyverse,
        glue)
 
 # Skall data uppdateras? Annars läses data in från en sparad global environment-fil.
-uppdatera_data = TRUE
+uppdatera_data = FALSE
 
 if(uppdatera_data == TRUE){
 
@@ -248,13 +248,22 @@ if(uppdatera_data == TRUE){
 
 
   ############################################################
-  ########## Befolkningspyramid för Inrikes/utrikes ########## # FUNKAR INTE. FINNS DOCK ÄLDRE SPARADE FILER SOM ANVÄNDS ISTÄLLET.
+  ########## Befolkningspyramid för Inrikes/utrikes ##########
   ############################################################
 
-  # source("G:/skript/diagram/diag_befpyramid.R")
-  # gg_befpyramid <- diag_befpyramid(geo_vekt = vald_region,
-  #                                  jmfr_linje = "utr_inr",
-  #                                  output_mapp = Output_mapp_figur)
+  gg_befpyramid <- rddiagramkatalog::diag_befpyramid_scb(
+      region_vekt = "20",
+      jmfr_linje = "utr_inr",
+      aldersgrupper = FALSE,
+      grupp_namn = NA,
+      diag_fargvekt = rddiagram::diagramfarger("kon"),
+      diagram_capt = rddiagram::lagg_till_ckm_notering("Källa: SCB\nBearbetning: Samhällsanalys, Region Dalarna",har_ckm_data = TRUE),
+      utmapp = rdverktyg::utskriftsmapp(),
+      skriv_diagramfil = spara_diagram_som_bildfiler,
+      returnera_data = FALSE,
+      returnera_figur = TRUE
+    )
+
 
   ##########################################################################################################################
   # Befolkningsförändring över tid fördelad på komponenterna födelseöverskott, inrikes flyttnetto och invandringsöverskott #
